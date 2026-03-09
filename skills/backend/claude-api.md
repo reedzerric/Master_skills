@@ -32,9 +32,14 @@ Identify the project language via files (e.g., `package.json` for TS, `requireme
 - **Compaction:** Enable for long-running conversations (Opus 4.6 only, requires `compact-2026-01-12` header).
 
 ## ⚠️ Known Quirks or Edge Cases
-- **Prefill Removed:** Assistant message prefills return a 400 error on Opus 4.6. Use structured outputs or system prompts instead.
+- **Prefill Removed:** Assistant message prefills return a 400 error on Opus 4.6. Use structured outputs (`output_config.format`) or system prompts instead.
 - **JSON Parsing:** Opus 4.6 may use different escaping in tool calls; always use `json.loads()` or `JSON.parse()`.
 - **128K Output:** Requires streaming to avoid HTTP timeouts.
+
+## 🛡️ Technical Integrity
+- **Typed Exceptions:** NEVER use string matching for error handling. Use `Anthropic.RateLimitError`, `Anthropic.BadRequestError`, etc.
+- **SDK Types:** Use built-in SDK types (e.g., `Anthropic.MessageParam`, `Anthropic.Tool`) instead of redefining interfaces.
+- **Thinking:** `budget_tokens` is DEPRECATED for all 4.6 models; use `thinking: {type: "adaptive"}` exclusively.
 
 ## 🔗 Related Memories
 - [[knowledgebase/claude-models]]
