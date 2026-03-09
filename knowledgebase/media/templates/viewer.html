@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative Art Viewer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <style>
+        :root {
+            --anthropic-dark: #141413;
+            --anthropic-light: #faf9f5;
+            --anthropic-orange: #d97757;
+        }
+        body { font-family: sans-serif; background: var(--anthropic-light); display: flex; }
+        .sidebar { width: 300px; padding: 20px; border-right: 1px solid #ccc; }
+        .canvas-area { flex: 1; display: flex; justify-content: center; align-items: center; }
+        #canvas-container { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Art Title</h1>
+        <div class="control-section">
+            <h3>Seed</h3>
+            <input type="number" id="seed-input" value="12345">
+        </div>
+    </div>
+    <div class="canvas-area">
+        <div id="canvas-container"></div>
+    </div>
+    <script>
+        let params = { seed: 12345 };
+        function setup() {
+            let canvas = createCanvas(800, 800);
+            canvas.parent('canvas-container');
+            randomSeed(params.seed);
+            background(255);
+        }
+        function draw() {
+            ellipse(random(width), random(height), 10);
+        }
+    </script>
+</body>
+</html>

@@ -37,3 +37,4 @@ Guidelines for creating, editing, and analyzing `.xlsx`, `.csv`, and `.xlsm` fil
 
 ## 🔗 Related Memories
 - [[skills/documents/pdf]]
+- [[knowledgebase/documents/document-tooling-deep-dive]]

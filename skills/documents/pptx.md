@@ -35,3 +35,4 @@ Guidelines for creating and editing `.pptx` presentation decks. Use when a "deck
 ## 🔗 Related Memories
 - [[skills/media/theme-factory]]
 - [[skills/documents/docx]]
+- [[knowledgebase/documents/document-tooling-deep-dive]]

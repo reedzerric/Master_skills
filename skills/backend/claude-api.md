@@ -38,4 +38,7 @@ Identify the project language via files (e.g., `package.json` for TS, `requireme
 
 ## 🔗 Related Memories
 - [[knowledgebase/claude-models]]
+- [[knowledgebase/claude/python-deep-dive]]
+- [[knowledgebase/claude/typescript-deep-dive]]
+- [[knowledgebase/claude/tool-use-concepts]]
 - [[skills/skill-creator]]

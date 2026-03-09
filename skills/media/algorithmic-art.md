@@ -29,3 +29,4 @@ Guidelines for creating interactive, seeded generative art using p5.js. Use when
 
 ## 🔗 Related Memories
 - [[skills/media/theme-factory]]
+- [[knowledgebase/media/templates/README]]

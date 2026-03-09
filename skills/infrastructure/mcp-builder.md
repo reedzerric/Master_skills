@@ -36,3 +36,5 @@ Guidelines for building high-quality Model Context Protocol (MCP) servers to int
 ## 🔗 Related Memories
 - [[skills/skill-creator]]
 - [[skills/backend/claude-api]]
+- [[knowledgebase/infrastructure/mcp/mcp-deep-dive]]
+- [[knowledgebase/infrastructure/mcp/evaluation-guide]]

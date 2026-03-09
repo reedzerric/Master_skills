@@ -32,4 +32,5 @@ Guidelines for creating, editing, and manipulating Word documents (`.docx`). Use
 
 ## 🔗 Related Memories
 - [[skills/documents/pdf]]
+- [[knowledgebase/documents/document-tooling-deep-dive]]
 - [[skills/documents/xlsx]]

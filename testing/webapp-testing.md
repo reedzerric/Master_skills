@@ -43,3 +43,7 @@ with sync_playwright() as p:
 
 ## 🔗 Related Memories
 - [[knowledgebase/playwright-patterns]]
+- [[testing/playwright/examples/element_discovery]]
+- [[testing/playwright/examples/console_logging]]
+- [[testing/playwright/examples/static_html_automation]]
+- [[testing/playwright/scripts/with_server]]

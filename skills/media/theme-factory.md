@@ -31,3 +31,4 @@ Guidelines for applying professional styling to artifacts (slides, docs, reports
 
 ## 🔗 Related Memories
 - [[skills/documents/pdf]]
+- [[knowledgebase/media/themes]]

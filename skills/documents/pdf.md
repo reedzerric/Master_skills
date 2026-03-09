@@ -38,3 +38,4 @@ Guidelines for reading, extracting, merging, splitting, and creating PDF files. 
 
 ## 🔗 Related Memories
 - [[skills/documents/xlsx]]
+- [[knowledgebase/documents/document-tooling-deep-dive]]
