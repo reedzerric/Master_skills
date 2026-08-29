@@ -2,12 +2,15 @@
 
 Type: grilling
 Status: open
-Blocked by: 01, 02
+Blocked by: 02
 
 ## Question
 
 76 of 104 skills are `<category>/<name>.md`. If 02 confirms the runtime requires
 `<name>/SKILL.md`, they must all become directories. Decide the strategy.
+
+Scope is settled by 01: everything ships, so all 76 convert. The "only the
+shipped set" option below is discharged.
 
 The rename is not local. It moves:
 
@@ -20,9 +23,6 @@ The rename is not local. It moves:
 
 Open sub-decisions:
 
-- Convert only the shipped set, or all 104? A split corpus where some skills are
-  directories and some are files is a standing trap for anyone authoring a new
-  one. Converting everything is more churn now and less confusion later.
 - Does the directory layout keep the current category folders
   (`skills/backend/python-elite/SKILL.md`) or flatten to match upstream
   (`skills/python-elite/SKILL.md`)? Category is already carried in frontmatter,

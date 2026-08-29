@@ -4,11 +4,19 @@ Label: `wayfinder:map`
 
 ## Destination
 
-Master_skills installs as a Claude Code plugin others can add: a curated subset
-of skills loads and fires on its own `description`, and every shipped skill's
-body conforms to `SKILL_STANDARD.md`. Reaching the end means someone can run
-`/plugin marketplace add reedzerric/Master_skills`, install, and have the
-skills route without being told to grep anything.
+Master_skills installs as a Claude Code plugin **for its author**, structured as
+a marketplace hosting several plugins so it can be opened up later without
+rework. Skills load and fire on their own `description` rather than being
+grepped, and shipped bodies conform to `SKILL_STANDARD.md`.
+
+Public README, install documentation and release discipline are **out of scope**
+for this effort.
+
+> Amended after ticket 01. Charting originally set the destination as a
+> shareable plugin; the author scoped it back to a personal install while the
+> corpus is still being worked on. The marketplace structure is retained,
+> because that is the part that costs real plumbing and the part that would be
+> expensive to retrofit.
 
 ## Notes
 
@@ -41,26 +49,33 @@ dependencies; `uv run pytest tests/` green. A batch is not done until both pass.
 
 <!-- one line per resolved ticket, gist plus link -->
 
-_(none yet — charting resolves nothing)_
+- [01 — Which skills ship?](issues/01-which-skills-ship.md): the axis is
+  battle-tested, but the **cut is deferred** — `confidence_score` is false on
+  almost every file and git history cannot separate battle-tested from
+  bulk-authored (63 of 65 have exactly one authoring commit; only 9 were ever
+  revisited). Everything ships for now; a `battle_tested` flag accretes as
+  skills get used, and the cut happens later on evidence. Token budget was
+  ruled out as the binding constraint (9K of a 1M window); routing dilution is
+  the real cost, and it is low for a personal install.
 
 ## Not yet specified
 
-- **Release discipline once it is a plugin.** Version bumps, tags, changelog.
-  pocock uses changesets; unclear whether that is worth adopting here. Waits on
-  the manifest shape (02).
 - **What `skill-router` becomes.** Once Claude Code routes by description
   automatically, a hand-written router skill may be redundant, may be the
-  plugin's entry point, or may be the thing that reaches the *non-shipped*
-  reference docs. Waits on the ship list (01).
-- **How non-shipped reference material is reached.** If `error-codes` and
-  `models` do not ship, something has to point an agent at them. Waits on 01.
-- **README and install docs for a third party.** Waits on the manifest shape (02).
+  marketplace's entry point, or may be what reaches material the plugins do not
+  surface. Waits on the plugin split (08).
 - **The `security-agentic-elite` / `agentic-security-elite` near-anagram.**
-  A rename cascades through manifest paths, dependency edges and links. If the
-  directory conversion (03) is happening anyway, it may be nearly free to fold
-  in. Waits on 03.
+  A rename cascades through manifest paths, dependency edges and links. The
+  directory conversion (03) moves every path anyway, so folding it in may be
+  nearly free. Waits on 03.
 - **Whether `CLAUDE.md`'s "grep the repo" guidance survives** once skills load
-  natively. Waits on 01 and 06.
+  natively. Directive 0 tells an agent to parse the manifest to find a skill,
+  which is the job the runtime will be doing. Waits on 06.
+- **Whether the corpus tolerates being structurally mixed.** 03 wants to convert
+  all 76 files at once to avoid a split corpus; 05 may want body conformance to
+  trail `battle_tested` over months. Those pull opposite ways on the same
+  question — how much inconsistency is acceptable, and for how long. Waits on
+  03 and 05.
 
 ## Out of scope
 
@@ -71,3 +86,11 @@ _(none yet — charting resolves nothing)_
   to whether the skills load.
 - **`.gitattributes` / CRLF normalisation.** Real, trivial, unrelated to the
   destination. Do it whenever; it needs no ticket.
+- **Public README, install docs and release discipline.** Ruled out by the
+  destination amendment after ticket 01 — this is a personal install for now.
+  Returns only if the destination is redrawn to a shareable plugin, and then as
+  a fresh effort.
+- **Making the ship cut.** Deferred by
+  [01](issues/01-which-skills-ship.md) for want of evidence. It happens once
+  `battle_tested` (ticket 09) has accreted real data — a separate pass, not a
+  step on this route.
