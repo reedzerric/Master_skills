@@ -1,18 +1,17 @@
 ---
 name: pytest-elite
-description: Guidelines for writing modular, fast, and high-coverage Python tests using `pytest` and modern dependency injection. Use when working with testing, python, pytest.
-version: 1.0.0
+description: 'pytest standards: yield fixtures for teardown, explicit fixture injection over autouse, the mocker fixture from pytest-mock patched where an object is used rather than where it is defined, parametrization for edge cases, narrowest scope by default, and xdist for parallelism. Use when writing or fixing Python tests, when a mock does not take effect, or when the suite is slow or flaky. For browser-level testing, use webapp-testing.'
+version: 1.1.0
 category: core
-triggers: [testing, python, pytest, mocking, fixtures]
+triggers: [write pytest tests, my mock is not working, patch where it is used, pytest fixture teardown, parametrize a test, my test suite is slow, flaky test, mock an async function]
 dependencies: [python-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Pytest Elite Testing Standards (2026)
-date: 2026-03-08
-task_ref: all-facets-expansion
-confidence_score: 1.0
+inputs: [Python code under test]
+outputs: [pytest fixtures, mocks patched at the right site, parametrized test cases]
 tags: [testing, python, pytest, mocking, fixtures]
-links: ["[[skills/backend/python-elite]]"]
+links: ['[[python-elite]]', '[[webapp-testing]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch2
 ---
 
 # Pytest Elite Testing Standards (2026)

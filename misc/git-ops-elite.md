@@ -1,18 +1,17 @@
 ---
 name: git-ops-elite
-description: Guidelines for efficient, automated, and secure source control management. Use when working with git, gitops, workflow.
-version: 1.0.0
+description: 'Source control standards: Conventional Commits in `type(scope): description` form, rebase-first for feature branches and never for main, mandatory pre-commit hooks (ruff, pyright or tsc, secret-scan), and trunk-based branching behind protected environments. Use when writing a commit message, setting up hooks, or deciding between rebase and merge. For PR sizing, stacking and merge queues, use git-velocity-elite.'
+version: 1.1.0
 category: core
-triggers: [git, gitops, workflow, automation, ops]
+triggers: [write a commit message, conventional commits format, rebase or merge this branch, set up pre-commit hooks, force push safely, stop secrets reaching the repo, git lfs for large files]
 dependencies: [github-actions-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: GitOps Elite Workflow (2026)
-date: 2026-03-08
-task_ref: all-facets-expansion
-confidence_score: 1.0
+inputs: [a change to commit, a repository to configure]
+outputs: [a conventional commit message, a pre-commit config, a branching policy]
 tags: [misc, git, gitops, workflow, automation]
-links: ["[[skills/infrastructure/github-actions-elite]]"]
+links: ['[[github-actions-elite]]', '[[git-velocity-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch2
 ---
 
 # GitOps Elite Workflow (2026)

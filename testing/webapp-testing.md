@@ -1,18 +1,17 @@
 ---
 name: webapp-testing
-description: Guidelines for testing local web applications using native Python Playwright scripts and server management helpers. Use when working with testing, frontend, playwright.
-version: 1.0.0
+description: 'Driving a local web application with Python Playwright: a decision tree for static files versus dynamic apps, server lifecycle through scripts/with_server.py, headless browser automation, and waiting on networkidle before touching a JavaScript-rendered DOM. Use when automating or testing a running web app, when a selector is not found because the page has not rendered yet, or when a test needs a dev server up first. For Python unit testing, use pytest-elite.'
+version: 1.1.0
 category: core
-triggers: [testing, frontend, playwright, web, webapp]
+triggers: [automate a web page with playwright, test my local web app, playwright selector not found, wait for the page to render, run a dev server for tests, headless browser script, wait for networkidle]
 dependencies: []
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Web Application Testing (Playwright)
-date: 2026-03-08
-task_ref: initial-setup
-confidence_score: 1.0
+inputs: [a running web app or a static HTML file, an interaction to automate]
+outputs: [a Playwright automation script, extracted selectors or page state]
 tags: [testing, frontend, playwright, web]
-links: ["[[knowledgebase/playwright-patterns]]"]
+links: ['[[pytest-elite]]', '[[js-html-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch2
 ---
 
 # Web Application Testing (Playwright)

@@ -1,18 +1,17 @@
 ---
 name: git-velocity-elite
-description: Guidelines for maximizing engineering velocity and minimizing integration pain using 2026 version control standards. Use when working with git, velocity, trunk-based.
-version: 1.0.0
+description: 'Shipping faster through trunk-based development: branches that live under 24 hours, feature flags decoupling deployment from release, stacked PRs of 50 to 100 lines managed with Graphite or ghstack, squash-merge for linear history, and merge queues to keep the trunk green. Use when a PR is too big to review, when changes sit in review for days, or when long-lived branches are causing merge pain. For commit format and hooks, use git-ops-elite.'
+version: 1.1.0
 category: core
-triggers: [git, velocity, trunk-based, stacked-prs, graphite]
+triggers: [my pr is too big to review, stacked pull requests, graphite or ghstack, trunk based development, feature flags for incomplete work, prs sit in review too long, merge queue, long lived branch merge pain]
 dependencies: [git-ops-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Git Velocity & Trunk-Based Development (2026)
-date: 2026-03-08
-task_ref: velocity-expansion
-confidence_score: 1.0
+inputs: [a large change to split, a team's current branching habits]
+outputs: [a PR stack plan, a trunk-based branching policy]
 tags: [misc, git, velocity, trunk-based, stacked-prs, graphite]
-links: ["[[misc/git-ops-elite]]"]
+links: ['[[git-ops-elite]]', '[[github-actions-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch2
 ---
 
 # Git Velocity & Trunk-Based Development (2026)

@@ -1,18 +1,17 @@
 ---
 name: agentic-security-elite
-description: Guidelines for transitioning from static security scans to autonomous, agentic security validation and remediation. Use when working with testing, security, ai.
-version: 1.0.0
+description: 'Autonomous security validation rather than periodic scanning: objective-driven security agents that prove kill chains in safe mode, AI-augmented SAST and DAST correlated back to source lines, IAST for reachability, and security unit tests that block CI like any other test. Use when replacing scheduled pen tests with continuous validation, or when writing assertions such as endpoint(''/admin'').is_unreachable_by(Role.GUEST). For securing agents that you build, use security-agentic-elite instead — note the two names are near-identical.'
+version: 1.1.0
 category: core
-triggers: [testing, security, ai, pen-testing, sast, dast, agentic]
+triggers: [autonomous pen testing, security unit tests, block the build on a vulnerability, reduce sast false positives, prove an exploit path safely, retest a fixed vulnerability, dast correlated to source]
 dependencies: [security-agentic-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Agentic Security & Autonomous Validation (2026)
-date: 2026-03-08
-task_ref: security-expansion
-confidence_score: 1.0
+inputs: [an application and its CI pipeline, a security objective to pursue]
+outputs: [security unit tests, a validated kill chain, a CI security gate]
 tags: [testing, security, ai, pen-testing, sast, dast]
-links: ["[[knowledgebase/security-agentic-elite]]"]
+links: ['[[security-agentic-elite]]', '[[pytest-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch2
 ---
 
 # Agentic Security & Autonomous Validation (2026)

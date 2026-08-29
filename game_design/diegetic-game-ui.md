@@ -1,14 +1,16 @@
 ---
 name: diegetic-game-ui
 description: Design and implement immersive, diegetic 2D game UI artifacts (antique parchment scrolls, fantasy maps, alchemical treaties, reward modals, stone tablets). Use when the user asks to design game modals, reward popups, map screens, parchment overlays, or when requesting 9-slice cartographic frames, deckle-edge styling, image generation prompts, or technical UI architecture for tactile game surfaces.
-version: 1.0.0
+version: 1.1.0
 category: game_design
 triggers: [diegetic ui, parchment modal, map popup, deckle edge, scroll ui, fantasy ui, 9-slice map, game modal artifact]
 dependencies: [frontend-design]
 inputs: [modal requirements, game theme, reward structure]
 outputs: [diegetic UI component, SVG filter setup, image prompts, 9-slice specs]
 tags: [game-ui, diegetic, parchment, cartography, 9-slice, svg-filters, framer-motion]
-links: ["[[frontend-design]]", "[[SKILL_STANDARD]]"]
+links: ['[[frontend-design]]', '[[skill-standard]]']
+date: '2026-08-29'
+task_ref: routing-repair-batch2
 ---
 
 # Diegetic Game UI & Cartographic Artifacts

@@ -1,18 +1,17 @@
 ---
 name: sre-incident-protocol
-description: Guidelines for managing production incidents and maintaining "Six 9s" reliability through automated coordination and systemic learning. Use when working with sre, reliability, slo.
-version: 1.0.0
+description: 'Running production incidents and the reliability discipline around them: automated paging and channel creation, tail-based SLIs on p95 and p99 latency, SLO-as-code with error budgets that gate releases, blameless post-mortems focused on systemic causes, and scheduled gamedays. Use when an incident is live, when writing a post-mortem, or when setting SLOs and error budgets. For deliberately injecting failure, use chaos-engineering-elite.'
+version: 1.1.0
 category: core
-triggers: [sre, reliability, slo, post-mortem, incident, protocol]
+triggers: [we have a production incident, write a post mortem, set an slo, error budget exhausted, p99 latency spike, page the on call engineer, run a gameday, build an incident timeline]
 dependencies: [observability-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: SRE Incident Response & Reliability (2026)
-date: 2026-03-08
-task_ref: mit-professor-phase-3
-confidence_score: 1.0
+inputs: [an active incident and its telemetry, reliability targets]
+outputs: [an incident timeline, a blameless post-mortem, SLO definitions as code]
 tags: [misc, sre, reliability, slo, post-mortem, incident]
-links: ["[[skills/infrastructure/observability-elite]]"]
+links: ['[[observability-elite]]', '[[system-design-elite]]', '[[chaos-engineering-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch2
 ---
 
 # SRE Incident Response & Reliability (2026)

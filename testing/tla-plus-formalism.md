@@ -1,18 +1,17 @@
 ---
 name: tla-plus-formalism
-description: Guidelines for mathematically verifying distributed systems and complex concurrent logic before implementation. Use when working with testing, formal-methods, tla+.
-version: 1.0.0
+description: 'Formally verifying distributed and concurrent logic before implementing it: specifying what rather than how, PlusCal as the on-ramp, state-space reduction through variable economy, symmetry sets and action agglomeration, and generating executable tests from the TLC state graph. Use when a concurrent protocol must be proven correct, when a distributed bug will not reproduce, or when a design needs verifying before any code exists. For runtime failure injection instead of proof, use chaos-engineering-elite.'
+version: 1.1.0
 category: core
-triggers: [testing, formal-methods, tla+, verification, distributed-systems, tla, plus, formalism]
+triggers: [formally verify this protocol, tla+ specification, pluscal, model check a distributed algorithm, prove there is no deadlock, state space explosion, verify the design before implementing]
 dependencies: [system-design-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: TLA+ Formal Verification (2026)
-date: 2026-03-08
-task_ref: mit-professor-phase-4
-confidence_score: 1.0
+inputs: [a distributed protocol or concurrent algorithm]
+outputs: [a TLA+ specification, safety and liveness invariants, generated test cases]
 tags: [testing, formal-methods, tla+, verification, distributed-systems]
-links: ["[[knowledgebase/system-design-elite]]"]
+links: ['[[system-design-elite]]', '[[agent-consensus-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch2
 ---
 
 # TLA+ Formal Verification (2026)
