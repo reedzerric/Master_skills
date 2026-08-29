@@ -1,17 +1,17 @@
 ---
 name: rag-content-generation
 description: Build a retrieval-augmented pipeline that ingests a document tree, derives metadata from the folder hierarchy, indexes it once, then generates several differently-shaped deliverables (analytical report, podcast script, executive email) from that single index. Use when the user wants to turn a corpus of documents into multiple content formats, or asks about LlamaIndex ingestion, folder-derived metadata, or multi-format RAG output. For agentic retrieval with tool-driven query planning, use agentic-rag-elite instead.
-version: 1.0.0
+version: 1.1.0
 category: ai_infrastructure
-triggers: [rag, retrieval augmented generation, llamaindex, vector index, ingest documents, content generation, multi-format output, folder metadata]
+triggers: [rag pipeline, retrieval augmented generation, llamaindex, vector index, ingest a document tree, content generation from a corpus, multi-format output, folder derived metadata]
 dependencies: [agentic-rag-elite, python-elite]
 inputs: [a directory tree of source documents, a query topic, per-format system instructions]
 outputs: [a VectorStoreIndex, one generated artifact per requested format]
 tags: [ai, rag, llamaindex, retrieval, embeddings, content]
-links: ["[[agentic-rag-elite]]", "[[python-elite]]"]
+links: ['[[agentic-rag-elite]]', '[[python-elite]]']
 confidence_score: 0.9
-date: 2026-08-15
-task_ref: skill-consolidation
+date: '2026-08-29'
+task_ref: routing-repair-batch4
 ---
 
 # RAG Content Generation

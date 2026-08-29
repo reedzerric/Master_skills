@@ -1,18 +1,17 @@
 ---
 name: algorithmic-art
-description: Guidelines for creating interactive, seeded generative art using p5.js. Use when users request "code-based art," "flow fields," or "generative sketches."
-version: 1.0.0
+description: 'Interactive, seeded generative art with p5.js: flow fields, particle systems, noise-driven composition, and seeds that make a piece reproducible. Use when the user asks for code-based art, a generative sketch, or a flow field. For static poster and print composition, use canvas-design.'
+version: 1.1.0
 category: design_media
-triggers: [media, art, generative, p5js, javascript, algorithmic]
+triggers: [generative art sketch, p5js flow field, code based art, particle system art, seeded random art, noise based visuals]
 dependencies: [theme-factory]
-inputs: [brief, brand tokens]
-outputs: [design artifact, style spec]
-title: Algorithmic & Generative Art (p5.js)
-date: 2026-03-08
-task_ref: initial-setup
-confidence_score: 1.0
+inputs: [an aesthetic brief, a palette, a seed]
+outputs: [a p5.js sketch, rendered frames]
 tags: [media, art, generative, p5js, javascript]
-links: ["[[skills/media/theme-factory]]"]
+links: ['[[theme-factory]]', '[[canvas-design]]', '[[themes]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch4
 ---
 
 # Algorithmic & Generative Art (p5.js)

@@ -1,17 +1,17 @@
 ---
 name: product-spec-chain
 description: Run a product idea through three chained LLM interviews that produce a PRD, then a UI design document, then a software requirements specification — each one consuming the previous as context. Use when the user says "write a PRD", "spec this out", "turn my idea into requirements", or is about to hand a vague product idea to a coding agent. For implementing a spec that already exists, use the relevant backend or frontend skill instead.
-version: 1.0.0
+version: 1.1.0
 category: ai_infrastructure
 triggers: [prd, product requirements, spec my idea, software specification, ux design doc, srs, plan a new app, requirements document]
 dependencies: []
 inputs: [a product idea in the user's own words, optionally an existing boilerplate or stack constraint]
 outputs: [product-requirements.md, ux-design.md, software-specifications.md]
 tags: [ai, prompting, product, requirements, planning, meta-prompt]
-links: ["[[prompt-chaining]]", "[[architectural-patterns]]"]
+links: ['[[to-spec]]', '[[architectural-patterns]]', '[[domain-modeling]]']
 confidence_score: 0.9
-date: 2026-08-15
-task_ref: skill-consolidation
+date: '2026-08-29'
+task_ref: routing-repair-batch4
 ---
 
 # Product Spec Chain

@@ -12,7 +12,6 @@ links: ['[[claude-api]]', '[[models]]']
 confidence_score: 1.0
 date: '2026-08-29'
 task_ref: routing-repair-kb
-title: Claude API Error Codes
 ---
 
 # HTTP Error Codes Reference

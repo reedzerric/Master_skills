@@ -506,7 +506,7 @@
       "name": "product-spec-chain",
       "path": "ai_infrastructure/product-spec-chain/SKILL.md",
       "category": "ai_infrastructure",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Run a product idea through three chained LLM interviews that produce a PRD, then a UI design document, then a software requirements specification \u2014 each one consuming the previous as context. Use when the user says \"write a PRD\", \"spec this out\", \"turn my idea into requirements\", or is about to hand a vague product idea to a coding agent. For implementing a spec that already exists, use the relevant backend or frontend skill instead.",
       "triggers": [
         "prd",
@@ -579,17 +579,17 @@
       "name": "rag-content-generation",
       "path": "ai_infrastructure/rag-content-generation.md",
       "category": "ai_infrastructure",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Build a retrieval-augmented pipeline that ingests a document tree, derives metadata from the folder hierarchy, indexes it once, then generates several differently-shaped deliverables (analytical report, podcast script, executive email) from that single index. Use when the user wants to turn a corpus of documents into multiple content formats, or asks about LlamaIndex ingestion, folder-derived metadata, or multi-format RAG output. For agentic retrieval with tool-driven query planning, use agentic-rag-elite instead.",
       "triggers": [
-        "rag",
+        "rag pipeline",
         "retrieval augmented generation",
         "llamaindex",
         "vector index",
-        "ingest documents",
-        "content generation",
+        "ingest a document tree",
+        "content generation from a corpus",
         "multi-format output",
-        "folder metadata"
+        "folder derived metadata"
       ],
       "dependencies": [
         "agentic-rag-elite",
@@ -2214,7 +2214,7 @@
       "name": "skill-standard",
       "path": "SKILL_STANDARD.md",
       "category": "core",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "The canonical schema and body structure every skill file in this repository must follow. Read before authoring, migrating, or reviewing any skill file.",
       "triggers": [
         "skill authoring",
@@ -2686,26 +2686,27 @@
       "name": "algorithmic-art",
       "path": "skills/media/algorithmic-art.md",
       "category": "design_media",
-      "version": "1.0.0",
-      "description": "Guidelines for creating interactive, seeded generative art using p5.js. Use when users request \"code-based art,\" \"flow fields,\" or \"generative sketches.\"",
+      "version": "1.1.0",
+      "description": "'Interactive, seeded generative art with p5.js: flow fields, particle systems, noise-driven composition, and seeds that make a piece reproducible. Use when the user asks for code-based art, a generative sketch, or a flow field. For static poster and print composition, use canvas-design.'",
       "triggers": [
-        "media",
-        "art",
-        "generative",
-        "p5js",
-        "javascript",
-        "algorithmic"
+        "generative art sketch",
+        "p5js flow field",
+        "code based art",
+        "particle system art",
+        "seeded random art",
+        "noise based visuals"
       ],
       "dependencies": [
         "theme-factory"
       ],
       "inputs": [
-        "brief",
-        "brand tokens"
+        "an aesthetic brief",
+        "a palette",
+        "a seed"
       ],
       "outputs": [
-        "design artifact",
-        "style spec"
+        "a p5.js sketch",
+        "rendered frames"
       ],
       "tags": [
         "media",
@@ -2751,26 +2752,26 @@
       "name": "canvas-design",
       "path": "skills/media/canvas-design.md",
       "category": "design_media",
-      "version": "1.0.0",
-      "description": "Guidelines for creating high-quality, museum-ready visual art (posters, designs, static pieces). Use when a user asks for \"art,\" \"poster,\" or \"design.\"",
+      "version": "1.1.0",
+      "description": "Composing high-quality static visual art \u2014 posters, covers, print pieces \u2014 with attention to typography, grid and hierarchy. Use when the user asks for a poster, a piece of art, or a static designed image. For animated or code-driven generative work, use algorithmic-art; for interface design, use frontend-design.",
       "triggers": [
-        "media",
-        "design",
-        "poster",
-        "typography",
-        "pdf",
-        "canvas"
+        "design a poster",
+        "make a cover image",
+        "static art piece",
+        "typographic composition",
+        "print layout",
+        "museum quality visual"
       ],
       "dependencies": [
         "theme-factory"
       ],
       "inputs": [
-        "brief",
-        "brand tokens"
+        "a brief",
+        "a palette",
+        "a format and size"
       ],
       "outputs": [
-        "design artifact",
-        "style spec"
+        "a composed static image"
       ],
       "tags": [
         "media",
@@ -3188,24 +3189,26 @@
       "name": "docx",
       "path": "skills/documents/docx.md",
       "category": "utilities",
-      "version": "1.0.0",
-      "description": "Guidelines for creating, editing, and manipulating Word documents (`.docx`). Use when a \"report,\" \"memo,\" or \"letter\" is requested.",
+      "version": "1.1.0",
+      "description": "Creating, editing and manipulating Word documents, including direct OOXML editing when the Python library cannot reach a feature. Use when a report, memo, letter or contract is requested in Word format, or when an existing .docx must be modified in place. For PDFs, use pdf; for library-level detail, use document-tooling-deep-dive.",
       "triggers": [
-        "documents",
-        "word",
-        "docx",
-        "xml",
-        "javascript"
+        "create a word document",
+        "edit a docx file",
+        "generate a report in word",
+        "track changes in a docx",
+        "edit ooxml directly",
+        "write a memo or letter"
       ],
       "dependencies": [
         "pdf",
         "xlsx"
       ],
       "inputs": [
-        "input document or dataset"
+        "content to render",
+        "or an existing .docx"
       ],
       "outputs": [
-        "generated file"
+        "a .docx file"
       ],
       "tags": [
         "documents",
@@ -3407,23 +3410,27 @@
       "name": "pdf",
       "path": "skills/documents/pdf.md",
       "category": "utilities",
-      "version": "1.0.0",
-      "description": "Guidelines for reading, extracting, merging, splitting, and creating PDF files. Use when a user mentions `.pdf` or needs data from a PDF.",
+      "version": "1.1.0",
+      "description": "Reading, extracting, merging, splitting and creating PDF files, including OCR for scanned pages and table extraction. Use when the user mentions a .pdf, needs data pulled out of one, or wants a PDF produced. For library-level detail, use document-tooling-deep-dive; for spreadsheets, use xlsx.",
       "triggers": [
-        "documents",
-        "pdf",
-        "extraction",
-        "ocr",
-        "python"
+        "extract text from a pdf",
+        "merge pdf files",
+        "split a pdf",
+        "fill a pdf form",
+        "ocr a scanned document",
+        "create a pdf report",
+        "extract tables from a pdf"
       ],
       "dependencies": [
         "webapp-testing"
       ],
       "inputs": [
-        "input document or dataset"
+        "a PDF file",
+        "or content to render as one"
       ],
       "outputs": [
-        "generated file"
+        "extracted text or tables",
+        "a generated PDF"
       ],
       "tags": [
         "documents",
@@ -3438,24 +3445,26 @@
       "name": "pptx",
       "path": "skills/documents/pptx.md",
       "category": "utilities",
-      "version": "1.0.0",
-      "description": "Guidelines for creating and editing `.pptx` presentation decks. Use when a \"deck,\" \"slides,\" or \"presentation\" is requested.",
+      "version": "1.1.0",
+      "description": "'Creating and editing PowerPoint decks: slide layouts, master styling, charts and speaker notes. Use when a deck, slides or a presentation is requested, or when an existing .pptx must be edited. For the palette and typography, use theme-factory; for library-level detail, use document-tooling-deep-dive.'",
       "triggers": [
-        "documents",
-        "powerpoint",
-        "pptx",
-        "presentation",
-        "design"
+        "build a slide deck",
+        "create a powerpoint",
+        "edit a pptx file",
+        "presentation from an outline",
+        "slide layout and master",
+        "add speaker notes"
       ],
       "dependencies": [
         "theme-factory",
         "docx"
       ],
       "inputs": [
-        "input document or dataset"
+        "content or an outline",
+        "a theme"
       ],
       "outputs": [
-        "generated file"
+        "a .pptx deck"
       ],
       "tags": [
         "documents",
@@ -3583,23 +3592,27 @@
       "name": "xlsx",
       "path": "skills/documents/xlsx.md",
       "category": "utilities",
-      "version": "1.0.0",
-      "description": "Guidelines for creating, editing, and analyzing `.xlsx`, `.csv`, and `.xlsm` files. Use when tabular data is the primary input or output.",
+      "version": "1.1.0",
+      "description": "'Creating, editing and analysing .xlsx, .csv and .xlsm files: formulas, cell formatting, multi-sheet workbooks and pandas interop. Use when tabular data is the primary input or output, or when a spreadsheet must be generated or read. For library-level detail, use document-tooling-deep-dive.'",
       "triggers": [
-        "documents",
-        "excel",
-        "xlsx",
-        "formulas",
-        "pandas"
+        "create an excel file",
+        "read a spreadsheet",
+        "write formulas into a workbook",
+        "format spreadsheet cells",
+        "convert csv to xlsx",
+        "workbook with multiple sheets",
+        "pandas dataframe to excel"
       ],
       "dependencies": [
         "pdf"
       ],
       "inputs": [
-        "input document or dataset"
+        "tabular data",
+        "or an existing workbook"
       ],
       "outputs": [
-        "generated file"
+        "an xlsx or csv file",
+        "extracted tabular data"
       ],
       "tags": [
         "documents",
@@ -3645,6 +3658,9 @@
     "add claude to my app": [
       "claude-api"
     ],
+    "add speaker notes": [
+      "pptx"
+    ],
     "adjudicator pattern": [
       "agent-consensus-elite"
     ],
@@ -3662,9 +3678,6 @@
     ],
     "ai slop design": [
       "frontend-design"
-    ],
-    "algorithmic": [
-      "algorithmic-art"
     ],
     "allocate tasks across agents": [
       "agent-consensus-elite"
@@ -3704,9 +3717,6 @@
     ],
     "are my mcp tools usable": [
       "evaluation-guide"
-    ],
-    "art": [
-      "algorithmic-art"
     ],
     "ask someone else": [
       "to-questionnaire"
@@ -3774,6 +3784,9 @@
     "build a single html artifact": [
       "web-artifacts-builder"
     ],
+    "build a slide deck": [
+      "pptx"
+    ],
     "build an animation with pil": [
       "slack-gif-creator"
     ],
@@ -3809,9 +3822,6 @@
     ],
     "cannot diagnose this from the logs": [
       "observability-elite"
-    ],
-    "canvas": [
-      "canvas-design"
     ],
     "cap theorem": [
       "system-design-elite"
@@ -3873,6 +3883,9 @@
     "co-author a proposal": [
       "doc-coauthoring"
     ],
+    "code based art": [
+      "algorithmic-art"
+    ],
     "code execution tool": [
       "tool-use-concepts"
     ],
@@ -3918,7 +3931,7 @@
     "container queries": [
       "css-elite"
     ],
-    "content generation": [
+    "content generation from a corpus": [
       "rag-content-generation"
     ],
     "context poisoning": [
@@ -3935,6 +3948,9 @@
     ],
     "conventional commits format": [
       "git-ops-elite"
+    ],
+    "convert csv to xlsx": [
+      "xlsx"
     ],
     "coordinate async flows": [
       "xstate-formalism-elite"
@@ -3953,6 +3969,18 @@
     ],
     "create a new skill": [
       "skill-creator"
+    ],
+    "create a pdf report": [
+      "pdf"
+    ],
+    "create a powerpoint": [
+      "pptx"
+    ],
+    "create a word document": [
+      "docx"
+    ],
+    "create an excel file": [
+      "xlsx"
     ],
     "create tickets": [
       "to-tickets"
@@ -4002,12 +4030,11 @@
     "derive a palette": [
       "theme-factory"
     ],
-    "design": [
-      "canvas-design",
-      "pptx"
-    ],
     "design a landing page": [
       "frontend-design"
+    ],
+    "design a poster": [
+      "canvas-design"
     ],
     "design an api contract": [
       "api-contracts-elite"
@@ -4066,15 +4093,6 @@
     "docker layer caching": [
       "docker-elite"
     ],
-    "documents": [
-      "docx",
-      "pdf",
-      "pptx",
-      "xlsx"
-    ],
-    "docx": [
-      "docx"
-    ],
     "does this feel right": [
       "prototype"
     ],
@@ -4096,14 +4114,23 @@
     "edge or regional runtime": [
       "serverless-edge-elite"
     ],
+    "edit a docx file": [
+      "docx"
+    ],
     "edit a docx programmatically": [
       "document-tooling-deep-dive"
+    ],
+    "edit a pptx file": [
+      "pptx"
     ],
     "edit agents.md": [
       "writing-for-agents"
     ],
     "edit claude.md": [
       "writing-for-agents"
+    ],
+    "edit ooxml directly": [
+      "docx"
     ],
     "error budget exhausted": [
       "sre-incident-protocol"
@@ -4132,9 +4159,6 @@
     "eventual consistency drift": [
       "system-design-elite"
     ],
-    "excel": [
-      "xlsx"
-    ],
     "expand contract migration": [
       "zero-downtime-migrations"
     ],
@@ -4147,10 +4171,11 @@
     "expose my api to claude": [
       "mcp-builder"
     ],
-    "extract text from a pdf": [
-      "document-tooling-deep-dive"
+    "extract tables from a pdf": [
+      "pdf"
     ],
-    "extraction": [
+    "extract text from a pdf": [
+      "document-tooling-deep-dive",
       "pdf"
     ],
     "fable": [
@@ -4173,6 +4198,9 @@
     ],
     "fighting the borrow checker": [
       "rust-elite"
+    ],
+    "fill a pdf form": [
+      "pdf"
     ],
     "filter drawer": [
       "auth-ux-patterns"
@@ -4198,7 +4226,7 @@
     "focus billing standard": [
       "finops-value-elite"
     ],
-    "folder metadata": [
+    "folder derived metadata": [
       "rag-content-generation"
     ],
     "font pairing for a deck": [
@@ -4216,7 +4244,7 @@
     "formally verify this protocol": [
       "tla-plus-formalism"
     ],
-    "formulas": [
+    "format spreadsheet cells": [
       "xlsx"
     ],
     "frequency analysis": [
@@ -4249,6 +4277,9 @@
     "gdpr erasure request": [
       "privacy-by-design-elite"
     ],
+    "generate a report in word": [
+      "docx"
+    ],
     "generate a theme from brand colours": [
       "theme-factory"
     ],
@@ -4261,7 +4292,7 @@
     "generate an excel file from python": [
       "document-tooling-deep-dive"
     ],
-    "generative": [
+    "generative art sketch": [
       "algorithmic-art"
     ],
     "generics and protocols": [
@@ -4366,7 +4397,7 @@
     "infrastructure changed outside of code": [
       "iac-opentofu-elite"
     ],
-    "ingest documents": [
+    "ingest a document tree": [
       "rag-content-generation"
     ],
     "instrument a service": [
@@ -4407,10 +4438,6 @@
     ],
     "it is broken": [
       "diagnosing-bugs"
-    ],
-    "javascript": [
-      "algorithmic-art",
-      "docx"
     ],
     "joker stacking": [
       "roguelike-scoring"
@@ -4466,6 +4493,9 @@
     "lottery numbers": [
       "frequency-analysis-simulation"
     ],
+    "make a cover image": [
+      "canvas-design"
+    ],
     "make a slack gif": [
       "slack-gif-creator"
     ],
@@ -4499,12 +4529,11 @@
     "mcp transport stdio or http": [
       "mcp-deep-dive"
     ],
-    "media": [
-      "algorithmic-art",
-      "canvas-design"
-    ],
     "merge conflict": [
       "resolving-merge-conflicts"
+    ],
+    "merge pdf files": [
+      "pdf"
     ],
     "merge queue": [
       "git-velocity-elite"
@@ -4566,6 +4595,9 @@
     "murder mystery": [
       "social-deduction-design"
     ],
+    "museum quality visual": [
+      "canvas-design"
+    ],
     "my agent cannot use my tools": [
       "evaluation-guide"
     ],
@@ -4614,7 +4646,10 @@
     "new skill": [
       "skill-standard"
     ],
-    "ocr": [
+    "noise based visuals": [
+      "algorithmic-art"
+    ],
+    "ocr a scanned document": [
       "pdf"
     ],
     "official hex codes": [
@@ -4656,7 +4691,7 @@
     "owasp agentic top 10": [
       "security-agentic-elite"
     ],
-    "p5js": [
+    "p5js flow field": [
       "algorithmic-art"
     ],
     "p99 latency spike": [
@@ -4674,7 +4709,7 @@
     "palette for a report": [
       "themes"
     ],
-    "pandas": [
+    "pandas dataframe to excel": [
       "xlsx"
     ],
     "pandas value counts": [
@@ -4692,6 +4727,9 @@
     "parchment modal": [
       "diegetic-game-ui"
     ],
+    "particle system art": [
+      "algorithmic-art"
+    ],
     "partition and cluster a table": [
       "bigquery-elite"
     ],
@@ -4706,10 +4744,6 @@
     ],
     "patch where it is used": [
       "pytest-elite"
-    ],
-    "pdf": [
-      "canvas-design",
-      "pdf"
     ],
     "penalty scaling": [
       "run-economy-balancing"
@@ -4747,17 +4781,8 @@
     "ports and adapters": [
       "architectural-patterns"
     ],
-    "poster": [
-      "canvas-design"
-    ],
     "postgres 18 features": [
       "postgresql-elite"
-    ],
-    "powerpoint": [
-      "pptx"
-    ],
-    "pptx": [
-      "pptx"
     ],
     "prd": [
       "product-spec-chain"
@@ -4765,7 +4790,7 @@
     "pre-commit hook blocked my commit": [
       "memory-validation"
     ],
-    "presentation": [
+    "presentation from an outline": [
       "pptx"
     ],
     "preserve intent across sessions": [
@@ -4773,6 +4798,9 @@
     ],
     "pressure test this": [
       "grilling"
+    ],
+    "print layout": [
+      "canvas-design"
     ],
     "probability exercise": [
       "frequency-analysis-simulation"
@@ -4831,9 +4859,6 @@
     "pytest fixture teardown": [
       "pytest-elite"
     ],
-    "python": [
-      "pdf"
-    ],
     "python 3d": [
       "blender-procedural-modeling"
     ],
@@ -4843,7 +4868,7 @@
     "questionnaire": [
       "to-questionnaire"
     ],
-    "rag": [
+    "rag pipeline": [
       "rag-content-generation"
     ],
     "rag returns wrong context": [
@@ -4869,6 +4894,9 @@
     ],
     "reaction card": [
       "multiplayer-interruption-pattern"
+    ],
+    "read a spreadsheet": [
+      "xlsx"
     ],
     "read your writes": [
       "system-design-elite"
@@ -5035,6 +5063,9 @@
     "security unit tests": [
       "agentic-security-elite"
     ],
+    "seeded random art": [
+      "algorithmic-art"
+    ],
     "self contained dashboard": [
       "web-artifacts-builder"
     ],
@@ -5095,6 +5126,9 @@
     "slack emoji size limit": [
       "slack-gif-creator"
     ],
+    "slide layout and master": [
+      "pptx"
+    ],
     "slow": [
       "diagnosing-bugs"
     ],
@@ -5137,6 +5171,9 @@
     "spike": [
       "prototype"
     ],
+    "split a pdf": [
+      "pdf"
+    ],
     "split a skill into companion files": [
       "skill-creator"
     ],
@@ -5172,6 +5209,9 @@
     ],
     "state space explosion": [
       "tla-plus-formalism"
+    ],
+    "static art piece": [
+      "canvas-design"
     ],
     "steady state hypothesis": [
       "chaos-engineering-elite"
@@ -5302,6 +5342,9 @@
     "tracer bullets": [
       "to-tickets"
     ],
+    "track changes in a docx": [
+      "docx"
+    ],
     "transformers.js": [
       "local-first-ai-elite"
     ],
@@ -5320,7 +5363,7 @@
     "type hints for python 3.13": [
       "python-elite"
     ],
-    "typography": [
+    "typographic composition": [
       "canvas-design"
     ],
     "unit economics for infrastructure": [
@@ -5455,11 +5498,11 @@
     "why does this look off": [
       "frontend-design"
     ],
-    "word": [
-      "docx"
-    ],
     "work the backlog": [
       "implement"
+    ],
+    "workbook with multiple sheets": [
+      "xlsx"
     ],
     "workflow permissions": [
       "github-actions-elite"
@@ -5472,6 +5515,9 @@
     ],
     "write a commit message": [
       "git-ops-elite"
+    ],
+    "write a memo or letter": [
+      "docx"
     ],
     "write a post mortem": [
       "sre-incident-protocol"
@@ -5490,6 +5536,9 @@
     ],
     "write an mcp server": [
       "mcp-deep-dive"
+    ],
+    "write formulas into a workbook": [
+      "xlsx"
     ],
     "write mcp evaluations": [
       "evaluation-guide"
@@ -5511,12 +5560,6 @@
     ],
     "writing for agents": [
       "writing-for-agents"
-    ],
-    "xlsx": [
-      "xlsx"
-    ],
-    "xml": [
-      "docx"
     ],
     "xstate machine": [
       "xstate-formalism-elite"

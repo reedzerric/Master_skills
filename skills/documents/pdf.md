@@ -1,18 +1,17 @@
 ---
 name: pdf
-description: Guidelines for reading, extracting, merging, splitting, and creating PDF files. Use when a user mentions `.pdf` or needs data from a PDF.
-version: 1.0.0
+description: Reading, extracting, merging, splitting and creating PDF files, including OCR for scanned pages and table extraction. Use when the user mentions a .pdf, needs data pulled out of one, or wants a PDF produced. For library-level detail, use document-tooling-deep-dive; for spreadsheets, use xlsx.
+version: 1.1.0
 category: utilities
-triggers: [documents, pdf, extraction, ocr, python]
+triggers: [extract text from a pdf, merge pdf files, split a pdf, fill a pdf form, ocr a scanned document, create a pdf report, extract tables from a pdf]
 dependencies: [webapp-testing]
-inputs: [input document or dataset]
-outputs: [generated file]
-title: PDF Processing & Extraction
-date: 2026-03-08
-task_ref: initial-setup
-confidence_score: 1.0
+inputs: ['a PDF file, or content to render as one']
+outputs: [extracted text or tables, a generated PDF]
 tags: [documents, pdf, extraction, ocr, python]
-links: ["[[testing/webapp-testing]]"]
+links: ['[[document-tooling-deep-dive]]', '[[xlsx]]', '[[docx]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch4
 ---
 
 # PDF Processing & Extraction

@@ -7,12 +7,11 @@ triggers: [claude model, model id, claude pricing, cost per million tokens, cont
 dependencies: [claude-api, error-codes]
 inputs: [a model name or tier requirement, a token estimate]
 outputs: [an exact model ID string, a cost estimate, a valid request shape]
-title: Claude Model Catalog & Pricing
+tags: [ai, claude, models, catalog, pricing, anthropic]
+links: ['[[claude-api]]', '[[error-codes]]', '[[tool-use-concepts]]']
+confidence_score: 1.0
 date: 2026-08-15
 task_ref: skill-consolidation
-confidence_score: 1.0
-tags: [ai, claude, models, catalog, pricing, anthropic]
-links: ["[[claude-api]]", "[[error-codes]]", "[[tool-use-concepts]]"]
 ---
 
 # Claude Model Catalog & Pricing

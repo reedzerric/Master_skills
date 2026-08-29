@@ -1,18 +1,17 @@
 ---
 name: canvas-design
-description: Guidelines for creating high-quality, museum-ready visual art (posters, designs, static pieces). Use when a user asks for "art," "poster," or "design."
-version: 1.0.0
+description: Composing high-quality static visual art — posters, covers, print pieces — with attention to typography, grid and hierarchy. Use when the user asks for a poster, a piece of art, or a static designed image. For animated or code-driven generative work, use algorithmic-art; for interface design, use frontend-design.
+version: 1.1.0
 category: design_media
-triggers: [media, design, poster, typography, pdf, canvas]
+triggers: [design a poster, make a cover image, static art piece, typographic composition, print layout, museum quality visual]
 dependencies: [theme-factory]
-inputs: [brief, brand tokens]
-outputs: [design artifact, style spec]
-title: Canvas Design & Visual Philosophy
-date: 2026-03-08
-task_ref: initial-setup
-confidence_score: 1.0
+inputs: [a brief, a palette, a format and size]
+outputs: [a composed static image]
 tags: [media, design, poster, typography, pdf]
-links: ["[[skills/media/theme-factory]]"]
+links: ['[[theme-factory]]', '[[algorithmic-art]]', '[[frontend-design]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch4
 ---
 
 # Canvas Design & Visual Philosophy

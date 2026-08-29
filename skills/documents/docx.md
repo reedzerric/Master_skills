@@ -1,18 +1,17 @@
 ---
 name: docx
-description: Guidelines for creating, editing, and manipulating Word documents (`.docx`). Use when a "report," "memo," or "letter" is requested.
-version: 1.0.0
+description: Creating, editing and manipulating Word documents, including direct OOXML editing when the Python library cannot reach a feature. Use when a report, memo, letter or contract is requested in Word format, or when an existing .docx must be modified in place. For PDFs, use pdf; for library-level detail, use document-tooling-deep-dive.
+version: 1.1.0
 category: utilities
-triggers: [documents, word, docx, xml, javascript]
+triggers: [create a word document, edit a docx file, generate a report in word, track changes in a docx, edit ooxml directly, write a memo or letter]
 dependencies: [pdf, xlsx]
-inputs: [input document or dataset]
-outputs: [generated file]
-title: DOCX Document Creation & XML Editing
-date: 2026-03-08
-task_ref: initial-setup
-confidence_score: 1.0
+inputs: ['content to render, or an existing .docx']
+outputs: [a .docx file]
 tags: [documents, word, docx, xml, javascript]
-links: ["[[skills/documents/pdf]]", "[[skills/documents/xlsx]]"]
+links: ['[[document-tooling-deep-dive]]', '[[pdf]]', '[[xlsx]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch4
 ---
 
 # DOCX Document Creation & XML Editing

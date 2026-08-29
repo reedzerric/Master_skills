@@ -1,7 +1,7 @@
 ---
 name: skill-standard
 description: The canonical schema and body structure every skill file in this repository must follow. Read before authoring, migrating, or reviewing any skill file.
-version: 1.0.0
+version: 1.1.0
 category: core
 triggers: [skill authoring, schema, frontmatter, new skill, migrate skill]
 dependencies: [skill-creator]
@@ -165,6 +165,23 @@ A file fails validation if it lacks `name`, `description`, `version`,
 - **`triggers` are not `tags`.** Triggers are what a *user says*
   ("my sessions keep expiring"). Tags are what the file *is about*
   (`django`, `sessions`). Routing reads triggers; search reads tags.
+- **A single-word trigger is almost always a tag in disguise.** Write phrases
+  of three to eight words, four to eight per skill, and prefer the symptom over
+  the solution — "my migration locked the table" routes; "zero downtime
+  migration" only matches someone who already knows the answer. The exception
+  is a proper noun or acronym that is genuinely what a user types (`pacelc`,
+  `fastmcp`, `opus`). A generic single word like `ai`, `python` or
+  `infrastructure` will match a dozen skills and route to none of them.
+- **Check for collisions after editing triggers.** One phrase mapping to
+  several skills is sometimes correct and usually a bug:
+  ```bash
+  jq -r '.trigger_index | to_entries[] | select(.value|length>1) | "\(.key) -> \(.value|join(", "))"' skills_manifest.json
+  ```
+- **`links` take a skill `name`, never a path.** `[[python-elite]]` resolves;
+  `[[skills/backend/python-elite]]` does not. Links to framework documents
+  that are not skills — `[[WORKSPACE_INDEX]]`, `[[SKILL_TREE]]`,
+  `[[CORE_MEMORY_PROTOCOL]]` — are legitimate and expected; they will not
+  resolve against the manifest, which is fine.
 - **`dependencies` must be acyclic.** The manifest builder rejects cycles.
 - **Do not put trigger phrases only in `triggers`.** Agents that respect just
   the Agent Skills spec never see that field — the phrases must also appear in
