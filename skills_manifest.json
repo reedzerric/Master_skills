@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated": "2026-08-28",
+  "generated": "2026-08-29",
   "repository": "Master_skills",
   "categories": {
     "ai_infrastructure": [
@@ -125,27 +125,27 @@
       "name": "agent-consensus-elite",
       "path": "knowledgebase/agent-consensus-elite.md",
       "category": "ai_infrastructure",
-      "version": "1.0.0",
-      "description": "Guidelines for implementing consensus algorithms and coordination mechanisms for decentralized agent swarms. Use when working with knowledge, agents, consensus.",
+      "version": "1.1.0",
+      "description": "'How a swarm of agents reaches agreement: the Adjudicator pattern (Proposers generate, Refiners tweak, Adjudicator audits and scores), consensus algorithms for spatial and task allocation, distributed auction protocols, and pheromone-style reinforcement of successful branches. Use when multiple agents return conflicting outputs, when candidate answers need scoring and picking between, or when work must be allocated across a swarm. For spawning and orchestrating the swarm itself, use agent-swarms-elite.'",
       "triggers": [
-        "knowledge",
-        "agents",
-        "consensus",
-        "coordination",
-        "swarm",
-        "adjudicator",
-        "agent"
+        "my agents disagree with each other",
+        "how do agents pick a winner",
+        "score candidate agent outputs",
+        "adjudicator pattern",
+        "allocate tasks across agents",
+        "swarm coordination",
+        "consensus between agents"
       ],
       "dependencies": [
         "agent-swarms-elite"
       ],
       "inputs": [
-        "corpus or prompt",
-        "model config"
+        "candidate outputs from multiple agents",
+        "a task to allocate across a swarm"
       ],
       "outputs": [
-        "pipeline code",
-        "evaluation results"
+        "an adjudication design",
+        "a consensus or auction protocol"
       ],
       "tags": [
         "knowledge",
@@ -301,27 +301,26 @@
       "name": "error-codes",
       "path": "knowledgebase/claude/error-codes.md",
       "category": "ai_infrastructure",
-      "version": "1.0.0",
-      "description": "Always use the SDK's typed exception classes instead of string matching. Use when working with ai, claude, api.",
+      "version": "1.1.0",
+      "description": "HTTP status codes the Claude API returns, which of them are retryable, and the typed SDK exception classes to catch instead of matching on error strings. Use when handling a 429, 400, 500 or 529 from Claude, or deciding whether a failure should be retried. For model IDs, pricing and request-shape rules, use models.",
       "triggers": [
-        "ai",
-        "claude",
-        "api",
-        "errors",
-        "troubleshooting",
-        "error",
-        "codes"
+        "claude api returned 429",
+        "anthropic overloaded error",
+        "rate limited by anthropic",
+        "should i retry this claude error",
+        "catch anthropic sdk exception",
+        "529 from claude",
+        "invalid request error from claude"
       ],
       "dependencies": [
         "claude-api"
       ],
       "inputs": [
-        "corpus or prompt",
-        "model config"
+        "an HTTP status code or SDK exception"
       ],
       "outputs": [
-        "pipeline code",
-        "evaluation results"
+        "the exception class to catch",
+        "a retry decision"
       ],
       "tags": [
         "ai",
@@ -336,25 +335,26 @@
       "name": "evaluation-guide",
       "path": "knowledgebase/infrastructure/mcp/evaluation-guide.md",
       "category": "ai_infrastructure",
-      "version": "1.0.0",
-      "description": "The quality of an MCP server is measured by how well an LLM (with NO other context) can answer complex, realistic questions using ONLY the provided tools. Use when working with infrastructure, mcp, testing.",
+      "version": "1.1.0",
+      "description": "'How to measure MCP server quality: an LLM with no other context answering realistic, complex questions using only the server''s tools. Covers what makes a valid question, the evaluation XML format, and how to run the suite. Use when testing whether an MCP server''s tools are actually usable by a model, or when tool descriptions seem to be the problem. For building the server, use mcp-builder.'",
       "triggers": [
-        "infrastructure",
-        "mcp",
-        "testing",
-        "evaluation",
-        "guide"
+        "test my mcp server",
+        "are my mcp tools usable",
+        "write mcp evaluations",
+        "mcp quality check",
+        "evaluate my tool descriptions",
+        "my agent cannot use my tools"
       ],
       "dependencies": [
         "mcp-deep-dive"
       ],
       "inputs": [
-        "corpus or prompt",
-        "model config"
+        "an MCP server",
+        "realistic questions its users would ask"
       ],
       "outputs": [
-        "pipeline code",
-        "evaluation results"
+        "an evaluation XML suite",
+        "a measured quality score"
       ],
       "tags": [
         "infrastructure",
@@ -402,28 +402,25 @@
       "name": "mcp-deep-dive",
       "path": "knowledgebase/infrastructure/mcp/mcp-deep-dive.md",
       "category": "ai_infrastructure",
-      "version": "1.0.0",
-      "description": "from mcp.server.fastmcp import FastMCP. Use when working with infrastructure, mcp, protocol.",
+      "version": "1.1.0",
+      "description": "'MCP server implementation reference: FastMCP in Python and the TypeScript SDK, transport choices, resources, prompts, sampling, and the quality bar a tool description has to clear. Use when writing or debugging MCP server code. For a guided build workflow, use mcp-builder; for measuring the result, use evaluation-guide.'",
       "triggers": [
-        "infrastructure",
-        "mcp",
-        "protocol",
-        "typescript",
-        "python",
-        "deep",
-        "dive"
+        "write an mcp server",
+        "fastmcp",
+        "mcp transport stdio or http",
+        "expose a resource over mcp",
+        "mcp tool description quality",
+        "debug my mcp server"
       ],
       "dependencies": [
         "mcp-builder",
         "evaluation-guide"
       ],
       "inputs": [
-        "corpus or prompt",
-        "model config"
+        "a capability to expose over MCP"
       ],
       "outputs": [
-        "pipeline code",
-        "evaluation results"
+        "MCP server code"
       ],
       "tags": [
         "infrastructure",
@@ -470,19 +467,20 @@
       "name": "models",
       "path": "knowledgebase/claude/models.md",
       "category": "ai_infrastructure",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "description": "Canonical Claude model IDs, context windows, output caps, and per-million-token pricing, plus the request-shape rules that differ per model (thinking, effort, sampling params). Use when choosing a model, writing a model ID into code, estimating LLM cost, or debugging a 400 on thinking/effort/temperature.",
       "triggers": [
         "claude model",
         "model id",
-        "pricing",
+        "claude pricing",
+        "cost per million tokens",
         "context window",
         "which model",
         "opus",
         "sonnet",
         "haiku",
         "fable",
-        "effort",
+        "thinking effort parameter",
         "adaptive thinking"
       ],
       "dependencies": [
@@ -552,28 +550,25 @@
       "name": "python-deep-dive",
       "path": "knowledgebase/claude/python-deep-dive.md",
       "category": "ai_infrastructure",
-      "version": "1.0.0",
-      "description": "pip install anthropic. Use when working with ai, claude, api.",
+      "version": "1.1.0",
+      "description": "'Working Python patterns for the anthropic SDK: client setup, streaming, automatic prompt caching, the tool-use loop, MCP clients, and error handling. Use when writing or debugging Python that calls the Claude API. For the same ground in TypeScript, use typescript-deep-dive; for tool design rather than tool code, use tool-use-concepts.'",
       "triggers": [
-        "ai",
-        "claude",
-        "api",
-        "python",
-        "sdk",
-        "deep",
-        "dive"
+        "call claude from python",
+        "anthropic python sdk",
+        "stream a claude response in python",
+        "prompt caching in python",
+        "python tool use loop",
+        "async anthropic client"
       ],
       "dependencies": [
         "claude-api",
         "tool-use-concepts"
       ],
       "inputs": [
-        "corpus or prompt",
-        "model config"
+        "a Python Claude API integration task"
       ],
       "outputs": [
-        "pipeline code",
-        "evaluation results"
+        "working Python SDK code"
       ],
       "tags": [
         "ai",
@@ -627,28 +622,26 @@
       "name": "tool-use-concepts",
       "path": "knowledgebase/claude/tool-use-concepts.md",
       "category": "ai_infrastructure",
-      "version": "1.0.0",
-      "description": "This file covers the conceptual foundations of tool use with the Claude API. Use when working with ai, claude, api.",
+      "version": "1.1.0",
+      "description": "'The conceptual model behind Claude tool use: user-defined tools and their schemas, server-side tools (code execution, web search and fetch), and structured outputs. Use when designing a tool definition, writing a tool description, or deciding between a client-side and a server-side tool. For SDK code that runs the loop, use python-deep-dive or typescript-deep-dive.'",
       "triggers": [
-        "ai",
-        "claude",
-        "api",
-        "tools",
-        "agents",
-        "tool",
-        "use",
-        "concepts"
+        "how do i define a tool for claude",
+        "tool schema design",
+        "server side tools",
+        "code execution tool",
+        "web search tool",
+        "structured outputs from claude",
+        "client tool or server tool"
       ],
       "dependencies": [
         "claude-api"
       ],
       "inputs": [
-        "corpus or prompt",
-        "model config"
+        "a capability to expose as a tool"
       ],
       "outputs": [
-        "pipeline code",
-        "evaluation results"
+        "a tool definition",
+        "a client-versus-server decision"
       ],
       "tags": [
         "ai",
@@ -663,28 +656,24 @@
       "name": "typescript-deep-dive",
       "path": "knowledgebase/claude/typescript-deep-dive.md",
       "category": "ai_infrastructure",
-      "version": "1.0.0",
-      "description": "npm install @anthropic-ai/sdk. Use when working with ai, claude, api.",
+      "version": "1.1.0",
+      "description": "'Working TypeScript patterns for @anthropic-ai/sdk: client setup, streaming, the tool-use loop, agent patterns, and error handling. Use when writing or debugging TypeScript or Node that calls the Claude API. For the same ground in Python, use python-deep-dive; for tool design rather than tool code, use tool-use-concepts.'",
       "triggers": [
-        "ai",
-        "claude",
-        "api",
-        "typescript",
-        "sdk",
-        "deep",
-        "dive"
+        "call claude from typescript",
+        "anthropic node sdk",
+        "stream a claude response in typescript",
+        "tool use in typescript",
+        "anthropic sdk setup in node"
       ],
       "dependencies": [
         "claude-api",
         "tool-use-concepts"
       ],
       "inputs": [
-        "corpus or prompt",
-        "model config"
+        "a TypeScript or Node Claude API integration task"
       ],
       "outputs": [
-        "pipeline code",
-        "evaluation results"
+        "working TypeScript SDK code"
       ],
       "tags": [
         "ai",
@@ -737,25 +726,23 @@
       "name": "agent-skills-spec",
       "path": "knowledgebase/agent-skills-spec.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "The official specification for Agent Skills is now located at <https://agentskills.io/specification>. Use when working with spec, agents, skills.",
+      "version": "1.1.0",
+      "description": "Pointer to the official Agent Skills specification at agentskills.io, and how this repository's skill definitions relate to it. Use when you need to know what the spec itself mandates, or whether a frontmatter field is spec-standard or a local extension. For this repository's own schema and required fields, use skill-standard.",
       "triggers": [
-        "spec",
-        "agents",
-        "skills",
-        "protocol",
-        "agent"
+        "what does the agent skills spec require",
+        "is this field in the spec",
+        "official skill specification",
+        "spec field or local extension"
       ],
       "dependencies": [
         "skill-standard"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a question about the Agent Skills spec"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "a pointer to the spec",
+        "a spec-versus-local answer"
       ],
       "tags": [
         "spec",
@@ -840,27 +827,26 @@
       "name": "architectural-patterns",
       "path": "knowledgebase/architectural-patterns.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for architecting large-scale enterprise systems using Domain-Driven Design (DDD) and Hexagonal principles. Use when working with knowledge, architecture, ddd.",
+      "version": "1.1.0",
+      "description": "Domain-Driven Design bounded contexts and ubiquitous language, Hexagonal ports-and-adapters for keeping business logic framework-free, and micro-frontend federation split by business domain. Use when deciding where a service or module boundary goes, isolating a domain core from its framework, or splitting a frontend by domain rather than technical layer. For availability and consistency trade-offs, use system-design-elite.",
       "triggers": [
-        "knowledge",
-        "architecture",
-        "ddd",
-        "hexagonal",
-        "micro-frontends",
-        "architectural",
-        "patterns"
+        "where should the service boundary go",
+        "bounded context",
+        "ports and adapters",
+        "hexagonal architecture",
+        "isolate business logic from the framework",
+        "split the frontend by domain",
+        "micro frontend federation"
       ],
       "dependencies": [
         "serverless-edge-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a system or module to structure"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "bounded-context boundaries",
+        "a ports-and-adapters layout"
       ],
       "tags": [
         "knowledge",
@@ -1258,27 +1244,28 @@
       "name": "finops-value-elite",
       "path": "knowledgebase/finops-value-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for architecting financially efficient cloud systems and aligning engineering spend with business value. Use when working with knowledge, finops, cost.",
+      "version": "1.1.0",
+      "description": "'Cloud cost treated as an architectural requirement: the FOCUS billing standard for multi-cloud normalisation, unit economics such as cost per API call and cost per active user, GPU and vector-database spend control, and policy-as-code guardrails against waste. Use when a cloud bill needs explaining or cutting, or when cost per unit has to be designed in rather than measured after. For query-level SQL cost, use bigquery-elite.'",
       "triggers": [
-        "knowledge",
-        "finops",
-        "cost",
-        "cloud",
-        "ai",
-        "focus",
-        "value"
+        "our cloud bill is too high",
+        "cost per active user",
+        "reduce gpu spend",
+        "unit economics for infrastructure",
+        "forecast cloud spend",
+        "stop idle dev environments",
+        "focus billing standard",
+        "spot instances for training"
       ],
       "dependencies": [
         "bigquery-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "billing or usage data",
+        "an architecture to cost"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "a unit-cost model",
+        "waste-reduction guardrails"
       ],
       "tags": [
         "knowledge",
@@ -1667,20 +1654,25 @@
       "name": "marketplace-pattern",
       "path": "knowledgebase/architecture/marketplace-pattern.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "A blueprint for building gaming marketplaces or general e-commerce platforms with a focus on modularity, high availability, and external integrations. Use when working with marketplace, pattern.",
+      "version": "1.1.0",
+      "description": "'Blueprint for marketplace and e-commerce platforms: domain separation into Product Hub, Cart and Checkout, and Community; an adapter layer for external storefronts, auth, and review analytics; and a container-query frontend with CSS cascade layers isolating theme from layout. Use when building a storefront, a listings browser, or a checkout flow. For general DDD boundary-drawing, use architectural-patterns.'",
       "triggers": [
-        "marketplace",
-        "pattern"
+        "building a marketplace",
+        "e-commerce architecture",
+        "storefront and checkout design",
+        "product listings page",
+        "integrate shopify",
+        "where to split cart and catalogue"
       ],
-      "dependencies": [],
+      "dependencies": [
+        "architectural-patterns"
+      ],
       "inputs": [
-        "source files",
-        "project config"
+        "a marketplace or storefront requirement"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "a bounded-context breakdown",
+        "an integration adapter plan"
       ],
       "tags": [],
       "companions": []
@@ -1689,24 +1681,22 @@
       "name": "multiplayer-interruption-pattern",
       "path": "knowledgebase/architecture/multiplayer-interruption-pattern.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "In turn-based games where players need to interact out-of-turn (e.g., playing 'Disruption' or 'Reaction' cards), the standard 'Current Player' state logic is insufficient. Use when working with architecture, multiplayer, frontend.",
+      "version": "1.1.0",
+      "description": "State design for turn-based games where players act out of turn, such as reaction or disruption cards, which a plain 'current player' state machine cannot express. Use when an out-of-turn action must interrupt the active turn, or when a reaction window has to resolve before normal play resumes. For the actor-model formalism underneath, use xstate-formalism-elite.",
       "triggers": [
-        "architecture",
-        "multiplayer",
-        "frontend",
-        "state-management",
-        "interruption",
-        "pattern"
+        "player acts out of turn",
+        "reaction card",
+        "interrupt the current turn",
+        "out of turn interaction",
+        "turn based state machine",
+        "disruption card timing"
       ],
       "dependencies": [],
       "inputs": [
-        "source files",
-        "project config"
+        "a turn-based game's state model"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "an interruption-aware state design"
       ],
       "tags": [
         "architecture",
@@ -1786,28 +1776,28 @@
       "name": "privacy-by-design-elite",
       "path": "knowledgebase/privacy-by-design-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for architecting systems that meet the rigorous 2026 standards for data privacy, cryptographic erasure, and EU AI Act compliance. Use when working with knowledge, privacy, gdpr.",
+      "version": "1.1.0",
+      "description": "Cryptographic shredding through envelope encryption so right-to-erasure works in immutable systems, edge redaction with typed placeholders so raw PII never leaves the device, DPIA 2.0 under the EU AI Act, and differential privacy for aggregated training. Use when user data must be provably deleted from backups, when PII must be masked before transmission, or when an AI system needs a compliance assessment. For agent-specific threats, use security-agentic-elite.",
       "triggers": [
-        "knowledge",
-        "privacy",
-        "gdpr",
-        "cryptography",
-        "security",
-        "edge-ai",
-        "by",
-        "design"
+        "right to be forgotten",
+        "delete user data from backups",
+        "gdpr erasure request",
+        "redact pii before sending",
+        "eu ai act compliance",
+        "differential privacy",
+        "cryptographic shredding",
+        "dpia assessment"
       ],
       "dependencies": [
         "security-agentic-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a system handling PII",
+        "an erasure or compliance requirement"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "a key-hierarchy design",
+        "a redaction and compliance plan"
       ],
       "tags": [
         "knowledge",
@@ -2040,27 +2030,29 @@
       "name": "security-agentic-elite",
       "path": "knowledgebase/security-agentic-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for architecting secure, autonomous AI agents and mitigating the OWASP Agentic Top 10 (ASI). Use when working with knowledge, security, ai.",
+      "version": "1.1.0",
+      "description": "'Securing autonomous agents against the OWASP Agentic Top 10: the Intent Capsule pattern so a model never calls a tool directly, zero-trust agent identity with just-in-time scoped permissions, runtime SBOMs, semantic validation against context poisoning, and human cryptographic approval gates on high-impact actions. Use when an agent can call tools, move money, or touch production. For data privacy and erasure specifically, use privacy-by-design-elite.'",
       "triggers": [
-        "knowledge",
-        "security",
-        "ai",
-        "agents",
-        "owasp",
-        "zero-trust",
-        "agentic"
+        "secure my agent",
+        "prompt injection defence",
+        "agent calling tools safely",
+        "owasp agentic top 10",
+        "limit what an agent can do",
+        "context poisoning",
+        "human approval before an agent acts",
+        "scope agent permissions"
       ],
       "dependencies": [
         "agent-swarms-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "an agent design",
+        "its tool and data surface"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "a threat model",
+        "tool-permission scoping",
+        "human-in-the-loop gates"
       ],
       "tags": [
         "knowledge",
@@ -2279,28 +2271,27 @@
       "name": "system-design-elite",
       "path": "knowledgebase/system-design-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for architecting \"Six 9s\" (99.9999%) geo-distributed systems. Use when working with knowledge, architecture, ha.",
+      "version": "1.1.0",
+      "description": "'Designing for six-nines availability: PACELC trade-offs between consistency and latency, active-active geo-distribution, cell-based architecture to contain blast radius, CRDTs and Merkle anti-entropy for drift, circuit breakers, and tunable per-request consistency. Use when choosing between consistency and availability, containing the blast radius of a failure, or designing multi-region. For DDD and module boundaries, use architectural-patterns.'",
       "triggers": [
-        "knowledge",
-        "architecture",
-        "ha",
-        "cap",
+        "consistency versus availability",
+        "multi region architecture",
+        "cap theorem",
         "pacelc",
-        "distributed",
-        "system",
-        "design"
+        "contain the blast radius",
+        "cell based architecture",
+        "read your writes",
+        "eventual consistency drift"
       ],
       "dependencies": [
         "observability-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "availability and consistency requirements"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "a consistency strategy",
+        "a multi-region topology"
       ],
       "tags": [
         "knowledge",
@@ -2887,26 +2878,26 @@
       "name": "themes",
       "path": "knowledgebase/media/themes.md",
       "category": "design_media",
-      "version": "1.0.0",
-      "description": "A catalog of curated color palettes and typography pairings for professional presentations, reports, and generative art. Use when working with media, design, theme.",
+      "version": "1.1.0",
+      "description": "Catalogue of curated colour palettes and typography pairings \u2014 Ocean Depths, Arctic Frost, Botanical Garden, Desert Rose and others \u2014 each with hex values, a font pairing, and the industries it suits. Use when picking a palette for a deck, report, or generative piece, or when asked what colours suit a given audience. For deriving a new theme from brand tokens, use theme-factory.",
       "triggers": [
-        "media",
-        "design",
-        "theme",
-        "colors",
-        "fonts",
-        "themes"
+        "pick a colour palette",
+        "theme for a presentation",
+        "font pairing for a deck",
+        "palette for a report",
+        "corporate colour scheme",
+        "what colours suit a healthcare deck"
       ],
       "dependencies": [
         "theme-factory"
       ],
       "inputs": [
-        "brief",
-        "brand tokens"
+        "an audience or industry",
+        "a document or artwork to style"
       ],
       "outputs": [
-        "design artifact",
-        "style spec"
+        "a palette with hex values",
+        "a font pairing"
       ],
       "tags": [
         "media",
@@ -3149,17 +3140,16 @@
       "name": "document-tooling-deep-dive",
       "path": "knowledgebase/documents/document-tooling-deep-dive.md",
       "category": "utilities",
-      "version": "1.0.0",
-      "description": "Document Tooling & Automation Deep Dive. Use when working with documents, python, automation.",
+      "version": "1.1.0",
+      "description": "'Library-level reference for programmatic document work: PDF extraction and generation, XLSX formulas and formatting, DOCX through Node and raw OOXML, and PPTX layout with its QA checks. Use when choosing a library or debugging document-generation code. For an end-to-end task workflow, use the pdf, xlsx, docx or pptx skill instead.'",
       "triggers": [
-        "documents",
-        "python",
-        "automation",
-        "pdf",
-        "excel",
-        "word",
-        "powerpoint",
-        "document"
+        "which library for pdf extraction",
+        "generate an excel file from python",
+        "edit a docx programmatically",
+        "build a powerpoint from code",
+        "openpyxl formatting",
+        "extract text from a pdf",
+        "write ooxml directly"
       ],
       "dependencies": [
         "pdf",
@@ -3168,10 +3158,11 @@
         "pptx"
       ],
       "inputs": [
-        "input document or dataset"
+        "a document generation or extraction task"
       ],
       "outputs": [
-        "generated file"
+        "a library choice",
+        "working document-manipulation code"
       ],
       "tags": [
         "documents",
@@ -3375,26 +3366,24 @@
       "name": "internal-comms-deep-dive",
       "path": "knowledgebase/communication/internal-comms-deep-dive.md",
       "category": "utilities",
-      "version": "1.0.0",
-      "description": "Succinct, data-driven updates for leadership and teammates. Intended to be read in <60 seconds. Use when working with communication, management, internal-comms.",
+      "version": "1.1.0",
+      "description": "'Templates and structural rules for internal writing: 3P updates (Progress, Plans, Problems), company newsletters, and internal FAQs, all shaped to be read in under sixty seconds. Use when drafting a status update, a newsletter, or an FAQ for colleagues or leadership. For the workflow of gathering and pitching the content, use internal-comms.'",
       "triggers": [
-        "communication",
-        "management",
-        "internal-comms",
-        "patterns",
-        "internal",
-        "comms",
-        "deep",
-        "dive"
+        "write a status update",
+        "progress plans problems",
+        "weekly update for leadership",
+        "internal newsletter",
+        "write an internal faq",
+        "update the team on this"
       ],
       "dependencies": [
         "internal-comms"
       ],
       "inputs": [
-        "input document or dataset"
+        "raw status or announcement material"
       ],
       "outputs": [
-        "generated file"
+        "a formatted internal update"
       ],
       "tags": [
         "communication",
@@ -3616,6 +3605,9 @@
     "3d print": [
       "blender-procedural-modeling"
     ],
+    "529 from claude": [
+      "error-codes"
+    ],
     "9-slice map": [
       "diegetic-game-ui"
     ],
@@ -3640,70 +3632,66 @@
     "adaptive thinking": [
       "models"
     ],
-    "adjudicator": [
+    "adjudicator pattern": [
       "agent-consensus-elite"
     ],
     "agent": [
-      "agent-consensus-elite",
       "agent-handoff-elite",
-      "agent-skills-spec",
       "agent-swarms-elite",
       "mcp-builder"
+    ],
+    "agent calling tools safely": [
+      "security-agentic-elite"
     ],
     "agent instructions": [
       "writing-for-agents"
     ],
     "agentic": [
       "agentic-rag-elite",
-      "agentic-security-elite",
-      "security-agentic-elite"
+      "agentic-security-elite"
     ],
     "agents": [
-      "agent-consensus-elite",
       "agent-handoff-elite",
-      "agent-skills-spec",
       "agent-swarms-elite",
-      "agentic-rag-elite",
-      "security-agentic-elite",
-      "tool-use-concepts"
+      "agentic-rag-elite"
     ],
     "ai": [
       "agentic-security-elite",
       "chaos-engineering-elite",
       "claude-api",
-      "error-codes",
-      "finops-value-elite",
-      "local-first-ai-elite",
-      "python-deep-dive",
-      "security-agentic-elite",
-      "tool-use-concepts",
-      "typescript-deep-dive"
+      "local-first-ai-elite"
     ],
     "algorithmic": [
       "algorithmic-art"
+    ],
+    "allocate tasks across agents": [
+      "agent-consensus-elite"
     ],
     "animation": [
       "frontend-design",
       "slack-gif-creator"
     ],
-    "api": [
-      "api-contracts-elite",
-      "claude-api",
-      "error-codes",
-      "python-deep-dive",
-      "tool-use-concepts",
+    "anthropic node sdk": [
       "typescript-deep-dive"
     ],
-    "architectural": [
-      "architectural-patterns"
+    "anthropic overloaded error": [
+      "error-codes"
     ],
-    "architecture": [
-      "architectural-patterns",
-      "multiplayer-interruption-pattern",
-      "system-design-elite"
+    "anthropic python sdk": [
+      "python-deep-dive"
+    ],
+    "anthropic sdk setup in node": [
+      "typescript-deep-dive"
+    ],
+    "api": [
+      "api-contracts-elite",
+      "claude-api"
     ],
     "architecture report": [
       "improve-codebase-architecture"
+    ],
+    "are my mcp tools usable": [
+      "evaluation-guide"
     ],
     "art": [
       "algorithmic-art"
@@ -3720,11 +3708,13 @@
     "async": [
       "rust-elite"
     ],
+    "async anthropic client": [
+      "python-deep-dive"
+    ],
     "auth ux": [
       "auth-ux-patterns"
     ],
     "automation": [
-      "document-tooling-deep-dive",
       "git-ops-elite"
     ],
     "backend": [
@@ -3753,6 +3743,9 @@
     "boolean modifier": [
       "blender-procedural-modeling"
     ],
+    "bounded context": [
+      "architectural-patterns"
+    ],
     "bpy": [
       "blender-procedural-modeling"
     ],
@@ -3771,32 +3764,47 @@
     "brute force": [
       "django-auth-hardening"
     ],
+    "build a powerpoint from code": [
+      "document-tooling-deep-dive"
+    ],
     "build the tickets": [
       "implement"
     ],
     "builder": [
       "mcp-builder"
     ],
+    "building a marketplace": [
+      "marketplace-pattern"
+    ],
     "buildkit": [
       "docker-elite"
-    ],
-    "by": [
-      "privacy-by-design-elite"
     ],
     "caching": [
       "redis-elite"
     ],
+    "call claude from python": [
+      "python-deep-dive"
+    ],
+    "call claude from typescript": [
+      "typescript-deep-dive"
+    ],
     "canvas": [
       "canvas-design"
     ],
-    "cap": [
+    "cap theorem": [
       "system-design-elite"
+    ],
+    "catch anthropic sdk exception": [
+      "error-codes"
     ],
     "categorise issues": [
       "triage"
     ],
     "cd": [
       "github-actions-elite"
+    ],
+    "cell based architecture": [
+      "system-design-elite"
     ],
     "chaos": [
       "chaos-engineering-elite"
@@ -3814,17 +3822,19 @@
       "wizard"
     ],
     "claude": [
-      "claude-api",
-      "error-codes",
-      "python-deep-dive",
-      "tool-use-concepts",
-      "typescript-deep-dive"
+      "claude-api"
+    ],
+    "claude api returned 429": [
+      "error-codes"
     ],
     "claude model": [
       "models"
     ],
-    "cloud": [
-      "finops-value-elite"
+    "claude pricing": [
+      "models"
+    ],
+    "client tool or server tool": [
+      "tool-use-concepts"
     ],
     "cloud-run": [
       "gcloud-deployment-elite"
@@ -3835,30 +3845,27 @@
     "coauthoring": [
       "doc-coauthoring"
     ],
+    "code execution tool": [
+      "tool-use-concepts"
+    ],
     "code review": [
       "code-review"
-    ],
-    "codes": [
-      "error-codes"
     ],
     "collaboration": [
       "doc-coauthoring"
     ],
     "colors": [
-      "theme-factory",
-      "themes"
+      "theme-factory"
     ],
     "combo scoring": [
       "roguelike-scoring"
     ],
     "comms": [
-      "internal-comms",
-      "internal-comms-deep-dive"
+      "internal-comms"
     ],
     "communication": [
       "doc-coauthoring",
-      "internal-comms",
-      "internal-comms-deep-dive"
+      "internal-comms"
     ],
     "compact for another agent": [
       "handoff"
@@ -3866,23 +3873,29 @@
     "components": [
       "js-html-elite"
     ],
-    "concepts": [
-      "tool-use-concepts"
-    ],
     "configure the issue tracker": [
       "setup-engineering-flows"
     ],
     "conflicted files": [
       "resolving-merge-conflicts"
     ],
-    "consensus": [
+    "consensus between agents": [
       "agent-consensus-elite"
+    ],
+    "consistency versus availability": [
+      "system-design-elite"
+    ],
+    "contain the blast radius": [
+      "system-design-elite"
     ],
     "container-queries": [
       "css-elite"
     ],
     "content generation": [
       "rag-content-generation"
+    ],
+    "context poisoning": [
+      "security-agentic-elite"
     ],
     "context window": [
       "models"
@@ -3893,15 +3906,20 @@
     "contracts": [
       "api-contracts-elite"
     ],
-    "coordination": [
-      "agent-consensus-elite"
-    ],
     "corporate": [
       "brand-guidelines"
     ],
+    "corporate colour scheme": [
+      "themes"
+    ],
     "cost": [
-      "bigquery-elite",
+      "bigquery-elite"
+    ],
+    "cost per active user": [
       "finops-value-elite"
+    ],
+    "cost per million tokens": [
+      "models"
     ],
     "create tickets": [
       "to-tickets"
@@ -3913,7 +3931,7 @@
       "skill-creator",
       "slack-gif-creator"
     ],
-    "cryptography": [
+    "cryptographic shredding": [
       "privacy-by-design-elite"
     ],
     "css": [
@@ -3929,8 +3947,8 @@
       "redis-elite",
       "zero-downtime-migrations"
     ],
-    "ddd": [
-      "architectural-patterns"
+    "debug my mcp server": [
+      "mcp-deep-dive"
     ],
     "debug this": [
       "diagnosing-bugs"
@@ -3944,17 +3962,14 @@
     "deduction game": [
       "social-deduction-design"
     ],
-    "deep": [
-      "internal-comms-deep-dive",
-      "mcp-deep-dive",
-      "python-deep-dive",
-      "typescript-deep-dive"
-    ],
     "deep module": [
       "codebase-design"
     ],
     "deepening opportunities": [
       "improve-codebase-architecture"
+    ],
+    "delete user data from backups": [
+      "privacy-by-design-elite"
     ],
     "deployment": [
       "gcloud-deployment-elite"
@@ -3964,10 +3979,7 @@
       "canvas-design",
       "frontend-design",
       "pptx",
-      "privacy-by-design-elite",
-      "system-design-elite",
-      "theme-factory",
-      "themes"
+      "theme-factory"
     ],
     "devops": [
       "chaos-engineering-elite",
@@ -3987,20 +3999,17 @@
     "diegetic ui": [
       "diegetic-game-ui"
     ],
-    "distributed": [
-      "system-design-elite"
+    "differential privacy": [
+      "privacy-by-design-elite"
+    ],
+    "disruption card timing": [
+      "multiplayer-interruption-pattern"
     ],
     "distributed-systems": [
       "tla-plus-formalism"
     ],
     "distroless": [
       "docker-elite"
-    ],
-    "dive": [
-      "internal-comms-deep-dive",
-      "mcp-deep-dive",
-      "python-deep-dive",
-      "typescript-deep-dive"
     ],
     "django": [
       "django-elite",
@@ -4018,11 +4027,7 @@
     "docker": [
       "docker-elite"
     ],
-    "document": [
-      "document-tooling-deep-dive"
-    ],
     "documents": [
-      "document-tooling-deep-dive",
       "docx",
       "pdf",
       "pptx",
@@ -4043,6 +4048,12 @@
     "downtime": [
       "zero-downtime-migrations"
     ],
+    "dpia assessment": [
+      "privacy-by-design-elite"
+    ],
+    "e-commerce architecture": [
+      "marketplace-pattern"
+    ],
     "ebpf": [
       "observability-elite"
     ],
@@ -4052,8 +4063,8 @@
     "edge": [
       "serverless-edge-elite"
     ],
-    "edge-ai": [
-      "privacy-by-design-elite"
+    "edit a docx programmatically": [
+      "document-tooling-deep-dive"
     ],
     "edit agents.md": [
       "writing-for-agents"
@@ -4061,14 +4072,8 @@
     "edit claude.md": [
       "writing-for-agents"
     ],
-    "effort": [
-      "models"
-    ],
     "engineering": [
       "chaos-engineering-elite"
-    ],
-    "error": [
-      "error-codes"
     ],
     "error messages": [
       "auth-ux-patterns"
@@ -4076,11 +4081,13 @@
     "error-handling": [
       "rust-elite"
     ],
-    "errors": [
-      "error-codes"
+    "eu ai act compliance": [
+      "privacy-by-design-elite"
+    ],
+    "evaluate my tool descriptions": [
+      "evaluation-guide"
     ],
     "evaluation": [
-      "evaluation-guide",
       "skill-creator"
     ],
     "event chain": [
@@ -4092,8 +4099,10 @@
     "event-driven": [
       "serverless-edge-elite"
     ],
+    "eventual consistency drift": [
+      "system-design-elite"
+    ],
     "excel": [
-      "document-tooling-deep-dive",
       "xlsx"
     ],
     "expand-contract": [
@@ -4101,6 +4110,12 @@
     ],
     "explain this properly": [
       "teach"
+    ],
+    "expose a resource over mcp": [
+      "mcp-deep-dive"
+    ],
+    "extract text from a pdf": [
+      "document-tooling-deep-dive"
     ],
     "extraction": [
       "pdf"
@@ -4120,14 +4135,14 @@
     "faq": [
       "internal-comms"
     ],
+    "fastmcp": [
+      "mcp-deep-dive"
+    ],
     "filter drawer": [
       "auth-ux-patterns"
     ],
     "find out how x works": [
       "research"
-    ],
-    "finops": [
-      "finops-value-elite"
     ],
     "firebase": [
       "gcloud-deployment-elite"
@@ -4144,15 +4159,20 @@
     "flask": [
       "flask-elite"
     ],
-    "focus": [
+    "focus billing standard": [
       "finops-value-elite"
     ],
     "folder metadata": [
       "rag-content-generation"
     ],
-    "fonts": [
-      "theme-factory",
+    "font pairing for a deck": [
       "themes"
+    ],
+    "fonts": [
+      "theme-factory"
+    ],
+    "forecast cloud spend": [
+      "finops-value-elite"
     ],
     "form styling": [
       "auth-ux-patterns"
@@ -4175,7 +4195,6 @@
       "frontend-design",
       "js-html-elite",
       "local-first-ai-elite",
-      "multiplayer-interruption-pattern",
       "web-artifacts-builder",
       "webapp-testing",
       "xstate-formalism-elite"
@@ -4196,11 +4215,16 @@
       "gcloud-deployment-elite"
     ],
     "gdpr": [
-      "django-auth-hardening",
+      "django-auth-hardening"
+    ],
+    "gdpr erasure request": [
       "privacy-by-design-elite"
     ],
     "generate a wizard": [
       "wizard"
+    ],
+    "generate an excel file from python": [
+      "document-tooling-deep-dive"
     ],
     "generative": [
       "algorithmic-art"
@@ -4242,14 +4266,10 @@
     "grpc": [
       "api-contracts-elite"
     ],
-    "guide": [
-      "evaluation-guide"
-    ],
     "guidelines": [
       "brand-guidelines"
     ],
     "ha": [
-      "system-design-elite",
       "zero-downtime-migrations"
     ],
     "haiku": [
@@ -4268,7 +4288,7 @@
     "help me understand": [
       "teach"
     ],
-    "hexagonal": [
+    "hexagonal architecture": [
       "architectural-patterns"
     ],
     "hidden role": [
@@ -4277,8 +4297,17 @@
     "historical draw data": [
       "frequency-analysis-simulation"
     ],
+    "how do agents pick a winner": [
+      "agent-consensus-elite"
+    ],
+    "how do i define a tool for claude": [
+      "tool-use-concepts"
+    ],
     "html": [
       "js-html-elite"
+    ],
+    "human approval before an agent acts": [
+      "security-agentic-elite"
     ],
     "i cannot answer this": [
       "to-questionnaire"
@@ -4313,12 +4342,10 @@
       "agentic-rag-elite",
       "chaos-engineering-elite",
       "docker-elite",
-      "evaluation-guide",
       "gcloud-deployment-elite",
       "github-actions-elite",
       "iac-opentofu-elite",
       "mcp-builder",
-      "mcp-deep-dive",
       "observability-elite",
       "serverless-edge-elite",
       "web-artifacts-builder"
@@ -4326,24 +4353,35 @@
     "ingest documents": [
       "rag-content-generation"
     ],
+    "integrate shopify": [
+      "marketplace-pattern"
+    ],
     "integration tests": [
       "tdd"
     ],
     "internal": [
-      "internal-comms",
-      "internal-comms-deep-dive"
+      "internal-comms"
     ],
-    "internal-comms": [
+    "internal newsletter": [
       "internal-comms-deep-dive"
     ],
     "interrogate this plan": [
       "grill-with-docs"
     ],
-    "interruption": [
+    "interrupt the current turn": [
       "multiplayer-interruption-pattern"
     ],
     "interview me": [
       "grill-me"
+    ],
+    "invalid request error from claude": [
+      "error-codes"
+    ],
+    "is this field in the spec": [
+      "agent-skills-spec"
+    ],
+    "isolate business logic from the framework": [
+      "architectural-patterns"
     ],
     "issue backlog": [
       "triage"
@@ -4368,14 +4406,6 @@
     "jsonb": [
       "postgresql-elite"
     ],
-    "knowledge": [
-      "agent-consensus-elite",
-      "architectural-patterns",
-      "finops-value-elite",
-      "privacy-by-design-elite",
-      "security-agentic-elite",
-      "system-design-elite"
-    ],
     "kubernetes": [
       "chaos-engineering-elite"
     ],
@@ -4390,6 +4420,9 @@
     ],
     "layout": [
       "css-elite"
+    ],
+    "limit what an agent can do": [
+      "security-agentic-elite"
     ],
     "llamaindex": [
       "rag-content-generation"
@@ -4424,21 +4457,22 @@
     "make this testable": [
       "codebase-design"
     ],
-    "management": [
-      "internal-comms-deep-dive"
-    ],
     "manual steps": [
       "wizard"
     ],
     "map popup": [
       "diegetic-game-ui"
     ],
-    "marketplace": [
-      "marketplace-pattern"
-    ],
     "mcp": [
-      "evaluation-guide",
-      "mcp-builder",
+      "mcp-builder"
+    ],
+    "mcp quality check": [
+      "evaluation-guide"
+    ],
+    "mcp tool description quality": [
+      "mcp-deep-dive"
+    ],
+    "mcp transport stdio or http": [
       "mcp-deep-dive"
     ],
     "media": [
@@ -4447,8 +4481,7 @@
       "canvas-design",
       "frontend-design",
       "slack-gif-creator",
-      "theme-factory",
-      "themes"
+      "theme-factory"
     ],
     "memory": [
       "memory-validation"
@@ -4463,7 +4496,7 @@
       "memory-validation",
       "skill-creator"
     ],
-    "micro-frontends": [
+    "micro frontend federation": [
       "architectural-patterns"
     ],
     "migrate skill": [
@@ -4484,14 +4517,20 @@
     "monte carlo": [
       "frequency-analysis-simulation"
     ],
+    "multi region architecture": [
+      "system-design-elite"
+    ],
     "multi-format output": [
       "rag-content-generation"
     ],
-    "multiplayer": [
-      "multiplayer-interruption-pattern"
-    ],
     "murder mystery": [
       "social-deduction-design"
+    ],
+    "my agent cannot use my tools": [
+      "evaluation-guide"
+    ],
+    "my agents disagree with each other": [
+      "agent-consensus-elite"
     ],
     "need input from the team": [
       "to-questionnaire"
@@ -4505,11 +4544,17 @@
     "ocr": [
       "pdf"
     ],
+    "official skill specification": [
+      "agent-skills-spec"
+    ],
     "onnx": [
       "local-first-ai-elite"
     ],
     "openapi": [
       "api-contracts-elite"
+    ],
+    "openpyxl formatting": [
+      "document-tooling-deep-dive"
     ],
     "opentelemetry": [
       "observability-elite"
@@ -4529,7 +4574,13 @@
     "orchestration": [
       "agent-swarms-elite"
     ],
-    "owasp": [
+    "our cloud bill is too high": [
+      "finops-value-elite"
+    ],
+    "out of turn interaction": [
+      "multiplayer-interruption-pattern"
+    ],
+    "owasp agentic top 10": [
       "security-agentic-elite"
     ],
     "p5js": [
@@ -4537,6 +4588,9 @@
     ],
     "pacelc": [
       "system-design-elite"
+    ],
+    "palette for a report": [
+      "themes"
     ],
     "pandas": [
       "xlsx"
@@ -4556,19 +4610,12 @@
     "password reset": [
       "django-auth-hardening"
     ],
-    "pattern": [
-      "marketplace-pattern",
-      "multiplayer-interruption-pattern"
-    ],
     "patterns": [
-      "architectural-patterns",
       "django-elite",
-      "flask-elite",
-      "internal-comms-deep-dive"
+      "flask-elite"
     ],
     "pdf": [
       "canvas-design",
-      "document-tooling-deep-dive",
       "pdf"
     ],
     "pen-testing": [
@@ -4584,11 +4631,17 @@
     "performance regression": [
       "diagnosing-bugs"
     ],
+    "pick a colour palette": [
+      "themes"
+    ],
     "plan a big project": [
       "wayfinder"
     ],
     "plan a new app": [
       "product-spec-chain"
+    ],
+    "player acts out of turn": [
+      "multiplayer-interruption-pattern"
     ],
     "playwright": [
       "webapp-testing"
@@ -4605,6 +4658,9 @@
     "poke holes in this": [
       "grill-me"
     ],
+    "ports and adapters": [
+      "architectural-patterns"
+    ],
     "post-mortem": [
       "sre-incident-protocol"
     ],
@@ -4616,7 +4672,6 @@
       "zero-downtime-migrations"
     ],
     "powerpoint": [
-      "document-tooling-deep-dive",
       "pptx"
     ],
     "pptx": [
@@ -4631,12 +4686,6 @@
     "pressure test this": [
       "grilling"
     ],
-    "pricing": [
-      "models"
-    ],
-    "privacy": [
-      "privacy-by-design-elite"
-    ],
     "probability exercise": [
       "frequency-analysis-simulation"
     ],
@@ -4649,17 +4698,27 @@
     "process the inbox": [
       "triage"
     ],
+    "product listings page": [
+      "marketplace-pattern"
+    ],
     "product requirements": [
       "product-spec-chain"
+    ],
+    "progress plans problems": [
+      "internal-comms-deep-dive"
+    ],
+    "prompt caching in python": [
+      "python-deep-dive"
+    ],
+    "prompt injection defence": [
+      "security-agentic-elite"
     ],
     "protobuf": [
       "api-contracts-elite"
     ],
     "protocol": [
       "agent-handoff-elite",
-      "agent-skills-spec",
       "mcp-builder",
-      "mcp-deep-dive",
       "sre-incident-protocol"
     ],
     "prototype": [
@@ -4679,18 +4738,18 @@
     ],
     "python": [
       "django-elite",
-      "document-tooling-deep-dive",
       "flask-elite",
-      "mcp-deep-dive",
       "memory-validation",
       "pdf",
       "pytest-elite",
-      "python-deep-dive",
       "python-elite",
       "slack-gif-creator"
     ],
     "python 3d": [
       "blender-procedural-modeling"
+    ],
+    "python tool use loop": [
+      "python-deep-dive"
     ],
     "questionnaire": [
       "to-questionnaire"
@@ -4708,6 +4767,9 @@
     "rarity tier": [
       "run-economy-balancing"
     ],
+    "rate limited by anthropic": [
+      "error-codes"
+    ],
     "rate limiting": [
       "django-auth-hardening"
     ],
@@ -4717,6 +4779,12 @@
     "react": [
       "frontend-design",
       "web-artifacts-builder"
+    ],
+    "reaction card": [
+      "multiplayer-interruption-pattern"
+    ],
+    "read your writes": [
+      "system-design-elite"
     ],
     "reasoning": [
       "agentic-rag-elite"
@@ -4730,8 +4798,14 @@
     "red green refactor": [
       "tdd"
     ],
+    "redact pii before sending": [
+      "privacy-by-design-elite"
+    ],
     "redis": [
       "redis-elite"
+    ],
+    "reduce gpu spend": [
+      "finops-value-elite"
     ],
     "registration form": [
       "auth-ux-patterns"
@@ -4772,6 +4846,9 @@
     "reward curve": [
       "run-economy-balancing"
     ],
+    "right to be forgotten": [
+      "privacy-by-design-elite"
+    ],
     "roadmap": [
       "wayfinder"
     ],
@@ -4802,6 +4879,12 @@
     "schema": [
       "skill-standard"
     ],
+    "scope agent permissions": [
+      "security-agentic-elite"
+    ],
+    "score candidate agent outputs": [
+      "agent-consensus-elite"
+    ],
     "score target": [
       "roguelike-scoring"
     ],
@@ -4812,19 +4895,21 @@
       "diegetic-game-ui"
     ],
     "sdk": [
-      "claude-api",
-      "python-deep-dive",
-      "typescript-deep-dive"
+      "claude-api"
     ],
     "secret distribution": [
       "social-deduction-design"
     ],
+    "secure my agent": [
+      "security-agentic-elite"
+    ],
     "security": [
       "agentic-security-elite",
       "docker-elite",
-      "github-actions-elite",
-      "privacy-by-design-elite",
-      "security-agentic-elite"
+      "github-actions-elite"
+    ],
+    "server side tools": [
+      "tool-use-concepts"
     ],
     "serverless": [
       "serverless-edge-elite"
@@ -4850,6 +4935,9 @@
     "sharpen this design": [
       "grill-with-docs"
     ],
+    "should i retry this claude error": [
+      "error-codes"
+    ],
     "simulation": [
       "frequency-analysis-simulation"
     ],
@@ -4858,9 +4946,6 @@
     ],
     "skill authoring": [
       "skill-standard"
-    ],
-    "skills": [
-      "agent-skills-spec"
     ],
     "slack": [
       "slack-gif-creator"
@@ -4886,7 +4971,7 @@
     "sort controls": [
       "auth-ux-patterns"
     ],
-    "spec": [
+    "spec field or local extension": [
       "agent-skills-spec"
     ],
     "spec my idea": [
@@ -4898,8 +4983,14 @@
     "spike": [
       "prototype"
     ],
+    "split the frontend by domain": [
+      "architectural-patterns"
+    ],
     "split the work": [
       "to-tickets"
+    ],
+    "spot instances for training": [
+      "finops-value-elite"
     ],
     "sql": [
       "bigquery-elite"
@@ -4919,20 +5010,32 @@
     "state-machine": [
       "xstate-formalism-elite"
     ],
-    "state-management": [
-      "multiplayer-interruption-pattern"
-    ],
     "state-transfer": [
       "agent-handoff-elite"
     ],
     "status": [
       "internal-comms"
     ],
+    "stop idle dev environments": [
+      "finops-value-elite"
+    ],
+    "storefront and checkout design": [
+      "marketplace-pattern"
+    ],
+    "stream a claude response in python": [
+      "python-deep-dive"
+    ],
+    "stream a claude response in typescript": [
+      "typescript-deep-dive"
+    ],
     "stress test my thinking": [
       "grilling"
     ],
     "structured": [
       "doc-coauthoring"
+    ],
+    "structured outputs from claude": [
+      "tool-use-concepts"
     ],
     "style": [
       "brand-guidelines"
@@ -4941,14 +5044,13 @@
       "css-elite"
     ],
     "swarm": [
-      "agent-consensus-elite",
       "agent-swarms-elite"
+    ],
+    "swarm coordination": [
+      "agent-consensus-elite"
     ],
     "swarms": [
       "agent-swarms-elite"
-    ],
-    "system": [
-      "system-design-elite"
     ],
     "tailwind": [
       "web-artifacts-builder"
@@ -4971,9 +5073,11 @@
     "test first": [
       "tdd"
     ],
+    "test my mcp server": [
+      "evaluation-guide"
+    ],
     "testing": [
       "agentic-security-elite",
-      "evaluation-guide",
       "pytest-elite",
       "tla-plus-formalism",
       "webapp-testing"
@@ -4982,11 +5086,13 @@
       "wait-what"
     ],
     "theme": [
-      "theme-factory",
+      "theme-factory"
+    ],
+    "theme for a presentation": [
       "themes"
     ],
-    "themes": [
-      "themes"
+    "thinking effort parameter": [
+      "models"
     ],
     "throwaway": [
       "prototype"
@@ -5012,12 +5118,14 @@
     "too easy late game": [
       "run-economy-balancing"
     ],
-    "tool": [
+    "tool schema design": [
       "tool-use-concepts"
     ],
+    "tool use in typescript": [
+      "typescript-deep-dive"
+    ],
     "tools": [
-      "mcp-builder",
-      "tool-use-concepts"
+      "mcp-builder"
     ],
     "tracer bullets": [
       "to-tickets"
@@ -5028,18 +5136,14 @@
     "triage": [
       "triage"
     ],
-    "troubleshooting": [
-      "error-codes"
-    ],
     "trunk-based": [
       "git-velocity-elite"
     ],
+    "turn based state machine": [
+      "multiplayer-interruption-pattern"
+    ],
     "turn this into a spec": [
       "to-spec"
-    ],
-    "typescript": [
-      "mcp-deep-dive",
-      "typescript-deep-dive"
     ],
     "typing": [
       "python-elite"
@@ -5047,8 +5151,11 @@
     "typography": [
       "canvas-design"
     ],
-    "use": [
-      "tool-use-concepts"
+    "unit economics for infrastructure": [
+      "finops-value-elite"
+    ],
+    "update the team on this": [
+      "internal-comms-deep-dive"
     ],
     "uv": [
       "python-elite"
@@ -5061,9 +5168,6 @@
     ],
     "validation states": [
       "auth-ux-patterns"
-    ],
-    "value": [
-      "finops-value-elite"
     ],
     "vector index": [
       "rag-content-generation"
@@ -5090,17 +5194,29 @@
       "web-artifacts-builder",
       "webapp-testing"
     ],
+    "web search tool": [
+      "tool-use-concepts"
+    ],
     "webapp": [
       "webapp-testing"
     ],
     "webgpu": [
       "local-first-ai-elite"
     ],
+    "weekly update for leadership": [
+      "internal-comms-deep-dive"
+    ],
     "werewolf": [
       "social-deduction-design"
     ],
+    "what colours suit a healthcare deck": [
+      "themes"
+    ],
     "what do we call this": [
       "domain-modeling"
+    ],
+    "what does the agent skills spec require": [
+      "agent-skills-spec"
     ],
     "what skill should i use": [
       "skill-router"
@@ -5117,8 +5233,17 @@
     "where is the design shallow": [
       "improve-codebase-architecture"
     ],
+    "where should the service boundary go": [
+      "architectural-patterns"
+    ],
+    "where to split cart and catalogue": [
+      "marketplace-pattern"
+    ],
     "which flow": [
       "skill-router"
+    ],
+    "which library for pdf extraction": [
+      "document-tooling-deep-dive"
     ],
     "which model": [
       "models"
@@ -5127,7 +5252,6 @@
       "skill-router"
     ],
     "word": [
-      "document-tooling-deep-dive",
       "docx"
     ],
     "work the backlog": [
@@ -5141,6 +5265,21 @@
     ],
     "write a skill": [
       "writing-for-agents"
+    ],
+    "write a status update": [
+      "internal-comms-deep-dive"
+    ],
+    "write an internal faq": [
+      "internal-comms-deep-dive"
+    ],
+    "write an mcp server": [
+      "mcp-deep-dive"
+    ],
+    "write mcp evaluations": [
+      "evaluation-guide"
+    ],
+    "write ooxml directly": [
+      "document-tooling-deep-dive"
     ],
     "write the adr": [
       "grill-with-docs"
@@ -5171,9 +5310,6 @@
     ],
     "zero": [
       "zero-downtime-migrations"
-    ],
-    "zero-trust": [
-      "security-agentic-elite"
     ]
   },
   "dangling_dependencies": []

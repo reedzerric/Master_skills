@@ -1,18 +1,17 @@
 ---
 name: finops-value-elite
-description: Guidelines for architecting financially efficient cloud systems and aligning engineering spend with business value. Use when working with knowledge, finops, cost.
-version: 1.0.0
+description: 'Cloud cost treated as an architectural requirement: the FOCUS billing standard for multi-cloud normalisation, unit economics such as cost per API call and cost per active user, GPU and vector-database spend control, and policy-as-code guardrails against waste. Use when a cloud bill needs explaining or cutting, or when cost per unit has to be designed in rather than measured after. For query-level SQL cost, use bigquery-elite.'
+version: 1.1.0
 category: core
-triggers: [knowledge, finops, cost, cloud, ai, focus, value]
+triggers: [our cloud bill is too high, cost per active user, reduce gpu spend, unit economics for infrastructure, forecast cloud spend, stop idle dev environments, focus billing standard, spot instances for training]
 dependencies: [bigquery-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: FinOps & Cloud Value Management (2026)
-date: 2026-03-08
-task_ref: mit-professor-phase-3
-confidence_score: 1.0
+inputs: [billing or usage data, an architecture to cost]
+outputs: [a unit-cost model, waste-reduction guardrails]
 tags: [knowledge, finops, cost, cloud, ai, focus]
-links: ["[[skills/database/bigquery-elite]]"]
+links: ['[[bigquery-elite]]', '[[observability-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-kb
 ---
 
 # FinOps & Cloud Value Management (2026)

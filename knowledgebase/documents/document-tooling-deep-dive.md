@@ -1,18 +1,17 @@
 ---
 name: document-tooling-deep-dive
-description: Document Tooling & Automation Deep Dive. Use when working with documents, python, automation.
-version: 1.0.0
+description: 'Library-level reference for programmatic document work: PDF extraction and generation, XLSX formulas and formatting, DOCX through Node and raw OOXML, and PPTX layout with its QA checks. Use when choosing a library or debugging document-generation code. For an end-to-end task workflow, use the pdf, xlsx, docx or pptx skill instead.'
+version: 1.1.0
 category: utilities
-triggers: [documents, python, automation, pdf, excel, word, powerpoint, document]
+triggers: [which library for pdf extraction, generate an excel file from python, edit a docx programmatically, build a powerpoint from code, openpyxl formatting, extract text from a pdf, write ooxml directly]
 dependencies: [pdf, xlsx, docx, pptx]
-inputs: [input document or dataset]
-outputs: [generated file]
-title: Document Tooling & Automation Deep Dive
-date: 2026-03-08
-task_ref: skill-migration
-confidence_score: 1.0
+inputs: [a document generation or extraction task]
+outputs: [a library choice, working document-manipulation code]
 tags: [documents, python, automation, pdf, excel, word, powerpoint]
-links: ["[[skills/documents/pdf]]", "[[skills/documents/xlsx]]", "[[skills/documents/docx]]", "[[skills/documents/pptx]]"]
+links: ['[[pdf]]', '[[xlsx]]', '[[docx]]', '[[pptx]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-kb
 ---
 
 # Document Tooling & Automation Deep Dive

@@ -1,12 +1,15 @@
 ---
 name: marketplace-pattern
-description: A blueprint for building gaming marketplaces or general e-commerce platforms with a focus on modularity, high availability, and external integrations. Use when working with marketplace, pattern.
-version: 1.0.0
+description: 'Blueprint for marketplace and e-commerce platforms: domain separation into Product Hub, Cart and Checkout, and Community; an adapter layer for external storefronts, auth, and review analytics; and a container-query frontend with CSS cascade layers isolating theme from layout. Use when building a storefront, a listings browser, or a checkout flow. For general DDD boundary-drawing, use architectural-patterns.'
+version: 1.1.0
 category: core
-triggers: [marketplace, pattern]
-dependencies: []
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
+triggers: [building a marketplace, e-commerce architecture, storefront and checkout design, product listings page, integrate shopify, where to split cart and catalogue]
+dependencies: [architectural-patterns]
+inputs: [a marketplace or storefront requirement]
+outputs: [a bounded-context breakdown, an integration adapter plan]
+links: ['[[architectural-patterns]]']
+date: '2026-08-29'
+task_ref: routing-repair-kb
 ---
 ﻿---
 title: Marketplace & E-commerce Architectural Pattern

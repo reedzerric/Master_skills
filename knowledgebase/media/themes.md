@@ -1,18 +1,17 @@
 ---
 name: themes
-description: A catalog of curated color palettes and typography pairings for professional presentations, reports, and generative art. Use when working with media, design, theme.
-version: 1.0.0
+description: Catalogue of curated colour palettes and typography pairings — Ocean Depths, Arctic Frost, Botanical Garden, Desert Rose and others — each with hex values, a font pairing, and the industries it suits. Use when picking a palette for a deck, report, or generative piece, or when asked what colours suit a given audience. For deriving a new theme from brand tokens, use theme-factory.
+version: 1.1.0
 category: design_media
-triggers: [media, design, theme, colors, fonts, themes]
+triggers: [pick a colour palette, theme for a presentation, font pairing for a deck, palette for a report, corporate colour scheme, what colours suit a healthcare deck]
 dependencies: [theme-factory]
-inputs: [brief, brand tokens]
-outputs: [design artifact, style spec]
-title: Media & Presentation Themes
-date: 2026-03-08
-task_ref: skill-migration
-confidence_score: 1.0
+inputs: [an audience or industry, a document or artwork to style]
+outputs: [a palette with hex values, a font pairing]
 tags: [media, design, theme, colors, fonts]
-links: ["[[skills/media/theme-factory]]"]
+links: ['[[theme-factory]]', '[[brand-guidelines]]', '[[algorithmic-art]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-kb
 ---
 
 # Media & Presentation Themes

@@ -1,9 +1,9 @@
 ---
 name: models
 description: Canonical Claude model IDs, context windows, output caps, and per-million-token pricing, plus the request-shape rules that differ per model (thinking, effort, sampling params). Use when choosing a model, writing a model ID into code, estimating LLM cost, or debugging a 400 on thinking/effort/temperature.
-version: 2.0.0
+version: 2.1.0
 category: ai_infrastructure
-triggers: [claude model, model id, pricing, context window, which model, opus, sonnet, haiku, fable, effort, adaptive thinking]
+triggers: [claude model, model id, claude pricing, cost per million tokens, context window, which model, opus, sonnet, haiku, fable, thinking effort parameter, adaptive thinking]
 dependencies: [claude-api, error-codes]
 inputs: [a model name or tier requirement, a token estimate]
 outputs: [an exact model ID string, a cost estimate, a valid request shape]

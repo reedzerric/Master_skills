@@ -4,7 +4,7 @@ date: 2026-03-08
 task_ref: skill-migration
 confidence_score: 1.0
 tags: [media, art, generative, p5js, templates]
-links: ["[[skills/media/algorithmic-art]]"]
+links: ["[[algorithmic-art]]"]
 ---
 
 # Generative Art Templates

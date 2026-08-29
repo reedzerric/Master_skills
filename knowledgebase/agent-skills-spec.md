@@ -1,18 +1,18 @@
 ---
 name: agent-skills-spec
-description: The official specification for Agent Skills is now located at <https://agentskills.io/specification>. Use when working with spec, agents, skills.
-version: 1.0.0
+description: Pointer to the official Agent Skills specification at agentskills.io, and how this repository's skill definitions relate to it. Use when you need to know what the spec itself mandates, or whether a frontmatter field is spec-standard or a local extension. For this repository's own schema and required fields, use skill-standard.
+version: 1.1.0
 category: core
-triggers: [spec, agents, skills, protocol, agent]
+triggers: [what does the agent skills spec require, is this field in the spec, official skill specification, spec field or local extension]
 dependencies: [skill-standard]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Agent Skills Specification
-date: 2026-03-08
-task_ref: skill-migration
-confidence_score: 1.0
+inputs: [a question about the Agent Skills spec]
+outputs: [a pointer to the spec, a spec-versus-local answer]
 tags: [spec, agents, skills, protocol]
-links: ["[[agent.md]]"]
+links: ['[[skill-standard]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-kb
+title: Agent Skills Specification
 ---
 
 # Agent Skills Spec

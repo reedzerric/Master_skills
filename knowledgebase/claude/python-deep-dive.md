@@ -1,18 +1,17 @@
 ---
 name: python-deep-dive
-description: pip install anthropic. Use when working with ai, claude, api.
-version: 1.0.0
+description: 'Working Python patterns for the anthropic SDK: client setup, streaming, automatic prompt caching, the tool-use loop, MCP clients, and error handling. Use when writing or debugging Python that calls the Claude API. For the same ground in TypeScript, use typescript-deep-dive; for tool design rather than tool code, use tool-use-concepts.'
+version: 1.1.0
 category: ai_infrastructure
-triggers: [ai, claude, api, python, sdk, deep, dive]
+triggers: [call claude from python, anthropic python sdk, stream a claude response in python, prompt caching in python, python tool use loop, async anthropic client]
 dependencies: [claude-api, tool-use-concepts]
-inputs: [corpus or prompt, model config]
-outputs: [pipeline code, evaluation results]
-title: Claude API Python Deep Dive
-date: 2026-03-08
-task_ref: skill-migration
-confidence_score: 1.0
+inputs: [a Python Claude API integration task]
+outputs: [working Python SDK code]
 tags: [ai, claude, api, python, sdk]
-links: ["[[skills/backend/claude-api]]", "[[knowledgebase/claude/tool-use-concepts]]"]
+links: ['[[claude-api]]', '[[tool-use-concepts]]', '[[typescript-deep-dive]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-kb
 ---
 
 # Claude API Python Deep Dive

@@ -1,18 +1,17 @@
 ---
 name: evaluation-guide
-description: The quality of an MCP server is measured by how well an LLM (with NO other context) can answer complex, realistic questions using ONLY the provided tools. Use when working with infrastructure, mcp, testing.
-version: 1.0.0
+description: 'How to measure MCP server quality: an LLM with no other context answering realistic, complex questions using only the server''s tools. Covers what makes a valid question, the evaluation XML format, and how to run the suite. Use when testing whether an MCP server''s tools are actually usable by a model, or when tool descriptions seem to be the problem. For building the server, use mcp-builder.'
+version: 1.1.0
 category: ai_infrastructure
-triggers: [infrastructure, mcp, testing, evaluation, guide]
+triggers: [test my mcp server, are my mcp tools usable, write mcp evaluations, mcp quality check, evaluate my tool descriptions, my agent cannot use my tools]
 dependencies: [mcp-deep-dive]
-inputs: [corpus or prompt, model config]
-outputs: [pipeline code, evaluation results]
-title: MCP Evaluation Guide
-date: 2026-03-08
-task_ref: skill-migration
-confidence_score: 1.0
+inputs: [an MCP server, realistic questions its users would ask]
+outputs: [an evaluation XML suite, a measured quality score]
 tags: [infrastructure, mcp, testing, evaluation]
-links: ["[[knowledgebase/infrastructure/mcp/mcp-deep-dive]]"]
+links: ['[[mcp-deep-dive]]', '[[mcp-builder]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-kb
 ---
 
 # MCP Evaluation Guide

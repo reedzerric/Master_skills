@@ -1,16 +1,17 @@
 ---
 name: multiplayer-interruption-pattern
-description: In turn-based games where players need to interact out-of-turn (e.g., playing 'Disruption' or 'Reaction' cards), the standard 'Current Player' state logic is insufficient. Use when working with architecture, multiplayer, frontend.
-version: 1.0.0
+description: State design for turn-based games where players act out of turn, such as reaction or disruption cards, which a plain 'current player' state machine cannot express. Use when an out-of-turn action must interrupt the active turn, or when a reaction window has to resolve before normal play resumes. For the actor-model formalism underneath, use xstate-formalism-elite.
+version: 1.1.0
 category: core
-triggers: [architecture, multiplayer, frontend, state-management, interruption, pattern]
+triggers: [player acts out of turn, reaction card, interrupt the current turn, out of turn interaction, turn based state machine, disruption card timing]
 dependencies: []
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Multiplayer Interruption-Response Pattern
-date: 2026-03-08
-confidence_score: 0.95
+inputs: [a turn-based game's state model]
+outputs: [an interruption-aware state design]
 tags: [architecture, multiplayer, frontend, state-management]
+links: ['[[xstate-formalism-elite]]']
+confidence_score: 0.95
+date: '2026-08-29'
+task_ref: routing-repair-kb
 ---
 
 # Multiplayer Interruption-Response Pattern

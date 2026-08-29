@@ -1,18 +1,17 @@
 ---
 name: agent-consensus-elite
-description: Guidelines for implementing consensus algorithms and coordination mechanisms for decentralized agent swarms. Use when working with knowledge, agents, consensus.
-version: 1.0.0
+description: 'How a swarm of agents reaches agreement: the Adjudicator pattern (Proposers generate, Refiners tweak, Adjudicator audits and scores), consensus algorithms for spatial and task allocation, distributed auction protocols, and pheromone-style reinforcement of successful branches. Use when multiple agents return conflicting outputs, when candidate answers need scoring and picking between, or when work must be allocated across a swarm. For spawning and orchestrating the swarm itself, use agent-swarms-elite.'
+version: 1.1.0
 category: ai_infrastructure
-triggers: [knowledge, agents, consensus, coordination, swarm, adjudicator, agent]
+triggers: [my agents disagree with each other, how do agents pick a winner, score candidate agent outputs, adjudicator pattern, allocate tasks across agents, swarm coordination, consensus between agents]
 dependencies: [agent-swarms-elite]
-inputs: [corpus or prompt, model config]
-outputs: [pipeline code, evaluation results]
-title: Agent Consensus & Coordination (2026)
-date: 2026-03-08
-task_ref: swarm-deep-dive
-confidence_score: 1.0
+inputs: [candidate outputs from multiple agents, a task to allocate across a swarm]
+outputs: [an adjudication design, a consensus or auction protocol]
 tags: [knowledge, agents, consensus, coordination, swarm, adjudicator]
-links: ["[[skills/infrastructure/agent-swarms-elite]]"]
+links: ['[[agent-swarms-elite]]', '[[security-agentic-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-kb
 ---
 
 # Agent Consensus & Coordination (2026)

@@ -1,18 +1,17 @@
 ---
 name: architectural-patterns
-description: Guidelines for architecting large-scale enterprise systems using Domain-Driven Design (DDD) and Hexagonal principles. Use when working with knowledge, architecture, ddd.
-version: 1.0.0
+description: Domain-Driven Design bounded contexts and ubiquitous language, Hexagonal ports-and-adapters for keeping business logic framework-free, and micro-frontend federation split by business domain. Use when deciding where a service or module boundary goes, isolating a domain core from its framework, or splitting a frontend by domain rather than technical layer. For availability and consistency trade-offs, use system-design-elite.
+version: 1.1.0
 category: core
-triggers: [knowledge, architecture, ddd, hexagonal, micro-frontends, architectural, patterns]
+triggers: [where should the service boundary go, bounded context, ports and adapters, hexagonal architecture, isolate business logic from the framework, split the frontend by domain, micro frontend federation]
 dependencies: [serverless-edge-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Modern Architectural Patterns (2026)
-date: 2026-03-08
-task_ref: all-facets-expansion
-confidence_score: 1.0
+inputs: [a system or module to structure]
+outputs: [bounded-context boundaries, a ports-and-adapters layout]
 tags: [knowledge, architecture, ddd, hexagonal, micro-frontends]
-links: ["[[skills/infrastructure/serverless-edge-elite]]"]
+links: ['[[serverless-edge-elite]]', '[[system-design-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-kb
 ---
 
 # Modern Architectural Patterns (2026)

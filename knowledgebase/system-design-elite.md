@@ -1,18 +1,17 @@
 ---
 name: system-design-elite
-description: Guidelines for architecting "Six 9s" (99.9999%) geo-distributed systems. Use when working with knowledge, architecture, ha.
-version: 1.0.0
+description: 'Designing for six-nines availability: PACELC trade-offs between consistency and latency, active-active geo-distribution, cell-based architecture to contain blast radius, CRDTs and Merkle anti-entropy for drift, circuit breakers, and tunable per-request consistency. Use when choosing between consistency and availability, containing the blast radius of a failure, or designing multi-region. For DDD and module boundaries, use architectural-patterns.'
+version: 1.1.0
 category: core
-triggers: [knowledge, architecture, ha, cap, pacelc, distributed, system, design]
+triggers: [consistency versus availability, multi region architecture, cap theorem, pacelc, contain the blast radius, cell based architecture, read your writes, eventual consistency drift]
 dependencies: [observability-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: High-Availability System Design (2026)
-date: 2026-03-08
-task_ref: all-facets-expansion
-confidence_score: 1.0
+inputs: [availability and consistency requirements]
+outputs: [a consistency strategy, a multi-region topology]
 tags: [knowledge, architecture, ha, cap, pacelc, distributed]
-links: ["[[skills/infrastructure/observability-elite]]"]
+links: ['[[observability-elite]]', '[[architectural-patterns]]', '[[chaos-engineering-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-kb
 ---
 
 # High-Availability System Design (2026)

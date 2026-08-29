@@ -1,18 +1,18 @@
 ---
 name: error-codes
-description: Always use the SDK's typed exception classes instead of string matching. Use when working with ai, claude, api.
-version: 1.0.0
+description: HTTP status codes the Claude API returns, which of them are retryable, and the typed SDK exception classes to catch instead of matching on error strings. Use when handling a 429, 400, 500 or 529 from Claude, or deciding whether a failure should be retried. For model IDs, pricing and request-shape rules, use models.
+version: 1.1.0
 category: ai_infrastructure
-triggers: [ai, claude, api, errors, troubleshooting, error, codes]
+triggers: [claude api returned 429, anthropic overloaded error, rate limited by anthropic, should i retry this claude error, catch anthropic sdk exception, 529 from claude, invalid request error from claude]
 dependencies: [claude-api]
-inputs: [corpus or prompt, model config]
-outputs: [pipeline code, evaluation results]
-title: Claude API Error Codes
-date: 2026-03-08
-task_ref: skill-migration
-confidence_score: 1.0
+inputs: [an HTTP status code or SDK exception]
+outputs: [the exception class to catch, a retry decision]
 tags: [ai, claude, api, errors, troubleshooting]
-links: ["[[skills/backend/claude-api]]"]
+links: ['[[claude-api]]', '[[models]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-kb
+title: Claude API Error Codes
 ---
 
 # HTTP Error Codes Reference

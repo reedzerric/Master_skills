@@ -1,18 +1,17 @@
 ---
 name: privacy-by-design-elite
-description: Guidelines for architecting systems that meet the rigorous 2026 standards for data privacy, cryptographic erasure, and EU AI Act compliance. Use when working with knowledge, privacy, gdpr.
-version: 1.0.0
+description: Cryptographic shredding through envelope encryption so right-to-erasure works in immutable systems, edge redaction with typed placeholders so raw PII never leaves the device, DPIA 2.0 under the EU AI Act, and differential privacy for aggregated training. Use when user data must be provably deleted from backups, when PII must be masked before transmission, or when an AI system needs a compliance assessment. For agent-specific threats, use security-agentic-elite.
+version: 1.1.0
 category: core
-triggers: [knowledge, privacy, gdpr, cryptography, security, edge-ai, by, design]
+triggers: [right to be forgotten, delete user data from backups, gdpr erasure request, redact pii before sending, eu ai act compliance, differential privacy, cryptographic shredding, dpia assessment]
 dependencies: [security-agentic-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Privacy by Design & GDPR (2026)
-date: 2026-03-08
-task_ref: mit-professor-phase-3
-confidence_score: 1.0
+inputs: [a system handling PII, an erasure or compliance requirement]
+outputs: [a key-hierarchy design, a redaction and compliance plan]
 tags: [knowledge, privacy, gdpr, cryptography, security, edge-ai]
-links: ["[[knowledgebase/security-agentic-elite]]"]
+links: ['[[security-agentic-elite]]', '[[postgresql-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-kb
 ---
 
 # Privacy by Design & GDPR (2026)

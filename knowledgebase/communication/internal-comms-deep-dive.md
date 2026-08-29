@@ -1,18 +1,17 @@
 ---
 name: internal-comms-deep-dive
-description: Succinct, data-driven updates for leadership and teammates. Intended to be read in <60 seconds. Use when working with communication, management, internal-comms.
-version: 1.0.0
+description: 'Templates and structural rules for internal writing: 3P updates (Progress, Plans, Problems), company newsletters, and internal FAQs, all shaped to be read in under sixty seconds. Use when drafting a status update, a newsletter, or an FAQ for colleagues or leadership. For the workflow of gathering and pitching the content, use internal-comms.'
+version: 1.1.0
 category: utilities
-triggers: [communication, management, internal-comms, patterns, internal, comms, deep, dive]
+triggers: [write a status update, progress plans problems, weekly update for leadership, internal newsletter, write an internal faq, update the team on this]
 dependencies: [internal-comms]
-inputs: [input document or dataset]
-outputs: [generated file]
-title: Internal Communication Patterns
-date: 2026-03-08
-task_ref: skill-migration
-confidence_score: 1.0
+inputs: [raw status or announcement material]
+outputs: [a formatted internal update]
 tags: [communication, management, internal-comms, patterns]
-links: ["[[skills/communication/internal-comms]]"]
+links: ['[[internal-comms]]', '[[doc-coauthoring]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-kb
 ---
 
 # Internal Communication Patterns

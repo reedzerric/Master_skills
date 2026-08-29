@@ -1,18 +1,17 @@
 ---
 name: security-agentic-elite
-description: Guidelines for architecting secure, autonomous AI agents and mitigating the OWASP Agentic Top 10 (ASI). Use when working with knowledge, security, ai.
-version: 1.0.0
+description: 'Securing autonomous agents against the OWASP Agentic Top 10: the Intent Capsule pattern so a model never calls a tool directly, zero-trust agent identity with just-in-time scoped permissions, runtime SBOMs, semantic validation against context poisoning, and human cryptographic approval gates on high-impact actions. Use when an agent can call tools, move money, or touch production. For data privacy and erasure specifically, use privacy-by-design-elite.'
+version: 1.1.0
 category: core
-triggers: [knowledge, security, ai, agents, owasp, zero-trust, agentic]
+triggers: [secure my agent, prompt injection defence, agent calling tools safely, owasp agentic top 10, limit what an agent can do, context poisoning, human approval before an agent acts, scope agent permissions]
 dependencies: [agent-swarms-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Agentic AI Security (2026)
-date: 2026-03-08
-task_ref: all-facets-expansion
-confidence_score: 1.0
+inputs: [an agent design, its tool and data surface]
+outputs: [a threat model, tool-permission scoping, human-in-the-loop gates]
 tags: [knowledge, security, ai, agents, owasp, zero-trust]
-links: ["[[agent]]"]
+links: ['[[agent-swarms-elite]]', '[[privacy-by-design-elite]]', '[[agentic-security-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-kb
 ---
 
 # Agentic AI Security (2026)

@@ -1,18 +1,17 @@
 ---
 name: tool-use-concepts
-description: This file covers the conceptual foundations of tool use with the Claude API. Use when working with ai, claude, api.
-version: 1.0.0
+description: 'The conceptual model behind Claude tool use: user-defined tools and their schemas, server-side tools (code execution, web search and fetch), and structured outputs. Use when designing a tool definition, writing a tool description, or deciding between a client-side and a server-side tool. For SDK code that runs the loop, use python-deep-dive or typescript-deep-dive.'
+version: 1.1.0
 category: ai_infrastructure
-triggers: [ai, claude, api, tools, agents, tool, use, concepts]
+triggers: [how do i define a tool for claude, tool schema design, server side tools, code execution tool, web search tool, structured outputs from claude, client tool or server tool]
 dependencies: [claude-api]
-inputs: [corpus or prompt, model config]
-outputs: [pipeline code, evaluation results]
-title: Claude API Tool Use Concepts
-date: 2026-03-08
-task_ref: skill-migration
-confidence_score: 1.0
+inputs: [a capability to expose as a tool]
+outputs: [a tool definition, a client-versus-server decision]
 tags: [ai, claude, api, tools, agents]
-links: ["[[skills/backend/claude-api]]"]
+links: ['[[claude-api]]', '[[python-deep-dive]]', '[[typescript-deep-dive]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-kb
 ---
 
 # Tool Use Concepts

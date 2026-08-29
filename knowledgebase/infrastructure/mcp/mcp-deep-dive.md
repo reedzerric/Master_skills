@@ -1,18 +1,17 @@
 ---
 name: mcp-deep-dive
-description: from mcp.server.fastmcp import FastMCP. Use when working with infrastructure, mcp, protocol.
-version: 1.0.0
+description: 'MCP server implementation reference: FastMCP in Python and the TypeScript SDK, transport choices, resources, prompts, sampling, and the quality bar a tool description has to clear. Use when writing or debugging MCP server code. For a guided build workflow, use mcp-builder; for measuring the result, use evaluation-guide.'
+version: 1.1.0
 category: ai_infrastructure
-triggers: [infrastructure, mcp, protocol, typescript, python, deep, dive]
+triggers: [write an mcp server, fastmcp, mcp transport stdio or http, expose a resource over mcp, mcp tool description quality, debug my mcp server]
 dependencies: [mcp-builder, evaluation-guide]
-inputs: [corpus or prompt, model config]
-outputs: [pipeline code, evaluation results]
-title: MCP Server Deep Dive
-date: 2026-03-08
-task_ref: skill-migration
-confidence_score: 1.0
+inputs: [a capability to expose over MCP]
+outputs: [MCP server code]
 tags: [infrastructure, mcp, protocol, typescript, python]
-links: ["[[skills/infrastructure/mcp-builder]]", "[[knowledgebase/infrastructure/mcp/evaluation-guide]]"]
+links: ['[[mcp-builder]]', '[[evaluation-guide]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-kb
 ---
 
 # MCP Server Deep Dive
