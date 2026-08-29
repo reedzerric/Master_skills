@@ -1,18 +1,17 @@
 ---
 name: redis-elite
-description: Guidelines for architecting high-performance caching, rate-limiting, and messaging using Redis. Use when working with database, redis, caching.
-version: 1.0.0
+description: 'Redis for caching and coordination: picking the data structure that matches the access pattern, TTL strategies with jitter so keys do not expire together, and concurrency patterns for locks and atomic updates. Use when cache misses spike simultaneously, when choosing between a hash, sorted set or stream, or when implementing a distributed lock. For durable storage, use postgresql-elite.'
+version: 1.1.0
 category: core
-triggers: [database, redis, caching, pub-sub, performance]
+triggers: [cache stampede, redis ttl strategy, which redis data structure, distributed lock in redis, sorted set leaderboard, redis stream or list, thundering herd]
 dependencies: [postgresql-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Redis High-Performance Caching (2026)
-date: 2026-03-08
-task_ref: all-facets-expansion
-confidence_score: 1.0
+inputs: [an access pattern, a caching or coordination requirement]
+outputs: [a data-structure choice, a TTL and eviction policy, a lock implementation]
 tags: [database, redis, caching, pub-sub, performance]
-links: ["[[skills/database/postgresql-elite]]"]
+links: ['[[postgresql-elite]]', '[[observability-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Redis High-Performance Caching (2026)

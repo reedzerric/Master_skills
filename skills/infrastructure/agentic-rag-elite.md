@@ -1,18 +1,17 @@
 ---
 name: agentic-rag-elite
-description: Guidelines for architecting autonomous reasoning systems that go beyond simple "Retrieve -> Generate" pipelines. Use when working with infrastructure, agents, rag.
-version: 1.0.0
+description: 'RAG that reasons rather than retrieving once: Self-RAG self-correction loops, multi-hop and GraphRAG traversal for questions a single lookup cannot answer, and the latency work that makes the loop affordable. Use when retrieval returns plausible but wrong context, when a question needs several hops, or when the RAG loop is too slow. For exposing tools to an agent, use mcp-builder.'
+version: 1.1.0
 category: ai_infrastructure
-triggers: [infrastructure, agents, rag, reasoning, loops, graphrag, agentic]
+triggers: [rag returns wrong context, multi hop question, graphrag, self correcting retrieval, my rag loop is too slow, retrieval quality is poor, rerank retrieved results]
 dependencies: [agent-swarms-elite]
-inputs: [corpus or prompt, model config]
-outputs: [pipeline code, evaluation results]
-title: Agentic RAG & Reasoning Loops (2026)
-date: 2026-03-08
-task_ref: swarm-deep-dive
-confidence_score: 1.0
+inputs: [a corpus and the distribution of questions asked of it]
+outputs: [a retrieval loop design, a graph or multi-hop strategy]
 tags: [infrastructure, agents, rag, reasoning, loops, graphrag]
-links: ["[[skills/infrastructure/agent-swarms-elite]]"]
+links: ['[[agent-swarms-elite]]', '[[evaluation-guide]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Agentic RAG & Reasoning Loops (2026)

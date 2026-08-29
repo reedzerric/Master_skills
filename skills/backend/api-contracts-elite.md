@@ -1,18 +1,17 @@
 ---
 name: api-contracts-elite
-description: Guidelines for enforcing strict, machine-readable contracts between all microservices, frontends, and AI agents BEFORE writing business logic. Use when working with backend, api, openapi.
-version: 1.0.0
+description: 'Contract-first API engineering: design the OpenAPI or gRPC contract before writing code, generate server stubs and typed clients from it, and evolve it without breaking consumers through additive change and explicit versioning. Use when designing a new endpoint, when client and server have drifted apart, or when a schema change might break existing callers. For the storage layer beneath the API, use postgresql-elite.'
+version: 1.1.0
 category: core
-triggers: [backend, api, openapi, grpc, protobuf, contracts]
+triggers: [design an api contract, openapi spec first, generate a typed client, grpc schema design, breaking change for api consumers, version an endpoint, client and server have drifted]
 dependencies: [architectural-patterns]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: API Contract-First Engineering (2026)
-date: 2026-03-08
-task_ref: mit-professor-critique
-confidence_score: 1.0
+inputs: [an API requirement or an existing contract]
+outputs: [an OpenAPI or protobuf contract, generated stubs and clients, a versioning plan]
 tags: [backend, api, openapi, grpc, protobuf, contracts]
-links: ["[[knowledgebase/architectural-patterns]]"]
+links: ['[[architectural-patterns]]', '[[postgresql-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # API Contract-First Engineering (2026)

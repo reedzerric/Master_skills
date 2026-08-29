@@ -1,18 +1,17 @@
 ---
 name: serverless-edge-elite
-description: Guidelines for architecting latency-optimized, event-driven systems using a hybrid Serverless/Edge strategy. Use when working with infrastructure, serverless, edge.
-version: 1.0.0
+description: 'Serverless and edge compute: choosing between edge and regional runtimes per workload, cold-start mitigation, and event-driven architecture patterns. Use when cold starts hurt latency, when deciding what belongs at the edge, or when designing an event-driven flow. For always-on containers, use docker-elite.'
+version: 1.1.0
 category: core
-triggers: [infrastructure, serverless, edge, wasm, latency, event-driven]
+triggers: [cold start latency, edge or regional runtime, serverless function timeout, event driven architecture, what belongs at the edge, lambda or workers]
 dependencies: [github-actions-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Serverless & Edge Computing Mastery (2026)
-date: 2026-03-08
-task_ref: all-facets-expansion
-confidence_score: 1.0
+inputs: [a workload and its latency requirements]
+outputs: [a runtime placement decision, an event-driven design]
 tags: [infrastructure, serverless, edge, wasm, latency, event-driven]
-links: ["[[skills/infrastructure/github-actions-elite]]"]
+links: ['[[architectural-patterns]]', '[[docker-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Serverless & Edge Computing Mastery (2026)

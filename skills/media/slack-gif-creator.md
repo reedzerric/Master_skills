@@ -1,18 +1,17 @@
 ---
 name: slack-gif-creator
-description: Guidelines for creating animated GIFs optimized for Slack (emojis or messages). Use when working with media, animation, gif.
-version: 1.0.0
+description: 'Producing animated GIFs for Slack with Python PIL: the size and dimension limits Slack enforces, frame construction, and the optimization needed to stay under them. Use when making a Slack emoji or reaction GIF, or when a GIF is rejected for being too large. For static image composition, use canvas-design.'
+version: 1.1.0
 category: design_media
-triggers: [media, animation, gif, slack, python, creator]
+triggers: [make a slack gif, animated emoji for slack, gif is too large for slack, slack emoji size limit, build an animation with pil]
 dependencies: [canvas-design]
-inputs: [brief, brand tokens]
-outputs: [design artifact, style spec]
-title: Slack GIF Creator (Animated GIFs)
-date: 2026-03-08
-task_ref: initial-setup
-confidence_score: 1.0
+inputs: [a concept or source frames]
+outputs: [an optimized GIF within Slack's limits]
 tags: [media, animation, gif, slack, python]
-links: ["[[skills/media/canvas-design]]"]
+links: ['[[canvas-design]]', '[[algorithmic-art]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Slack GIF Creator (Animated GIFs)

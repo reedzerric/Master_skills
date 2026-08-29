@@ -1,18 +1,17 @@
 ---
 name: theme-factory
-description: Guidelines for applying professional styling to artifacts (slides, docs, reports) using curated themes. Use when working with media, design, theme.
-version: 1.0.0
+description: 'Generating and applying a coherent theme: the usage loop from brand tokens through to applied styles, and the theme set available out of the box. Use when deriving a palette and type system from brand inputs, or when applying one theme consistently across documents and slides. For a ready-made palette catalogue instead, use themes.'
+version: 1.1.0
 category: design_media
-triggers: [media, design, theme, colors, fonts, factory]
+triggers: [generate a theme from brand colours, apply a consistent theme, derive a palette, theme my slides, style tokens from a brand]
 dependencies: [pdf]
-inputs: [brief, brand tokens]
-outputs: [design artifact, style spec]
-title: Theme Factory & Styling
-date: 2026-03-08
-task_ref: initial-setup
-confidence_score: 1.0
+inputs: [brand tokens or a source palette]
+outputs: [a theme definition, applied styles]
 tags: [media, design, theme, colors, fonts]
-links: ["[[skills/documents/pdf]]"]
+links: ['[[themes]]', '[[brand-guidelines]]', '[[pptx]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Theme Factory & Styling

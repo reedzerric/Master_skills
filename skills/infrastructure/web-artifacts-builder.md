@@ -1,18 +1,17 @@
 ---
 name: web-artifacts-builder
-description: Guidelines for building complex, multi-component React artifacts using `shadcn/ui`, `Tailwind CSS`, and `Vite`. Use when working with infrastructure, frontend, react.
-version: 1.0.0
+description: 'Building self-contained web artifacts with React and shadcn/ui: initialising the project and bundling everything into a single HTML file that makes no external requests. Use when producing a standalone interactive page, dashboard, or visualization that has to run from one file. For visual design judgement, use frontend-design.'
+version: 1.1.0
 category: ai_infrastructure
-triggers: [infrastructure, frontend, react, shadcn, tailwind, vite, web, artifacts]
+triggers: [build a single html artifact, standalone interactive page, bundle react into one file, shadcn artifact, self contained dashboard, page with no external dependencies]
 dependencies: [frontend-design, skill-creator]
-inputs: [corpus or prompt, model config]
-outputs: [pipeline code, evaluation results]
-title: Web Artifacts Builder (React & shadcn/ui)
-date: 2026-03-08
-task_ref: initial-setup
-confidence_score: 1.0
+inputs: [an artifact requirement]
+outputs: [a single self-contained HTML file]
 tags: [infrastructure, frontend, react, shadcn, tailwind, vite]
-links: ["[[skills/media/frontend-design]]", "[[skills/skill-creator]]"]
+links: ['[[frontend-design]]', '[[js-html-elite]]', '[[css-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Web Artifacts Builder (React & shadcn/ui)

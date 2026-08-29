@@ -1,18 +1,17 @@
 ---
 name: frontend-design
-description: Guidelines for creating distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics. Use when working with media, frontend, design.
-version: 1.0.0
+description: 'Design judgement for interfaces that do not look machine-generated: the philosophy of restraint, hierarchy and intentional spacing, and the implementation rules that follow from it. Use when a UI looks generic or AI-generated, when choosing a spacing and type scale, or when a design needs a point of view. For CSS mechanics, use css-elite.'
+version: 1.1.0
 category: design_media
-triggers: [media, frontend, design, css, react, animation]
+triggers: [my ui looks generic, make this look designed, ai slop design, spacing and type scale, visual hierarchy, why does this look off, design a landing page]
 dependencies: [web-artifacts-builder, theme-factory]
-inputs: [brief, brand tokens]
-outputs: [design artifact, style spec]
-title: Frontend Design & Aesthetics
-date: 2026-03-08
-task_ref: initial-setup
-confidence_score: 1.0
+inputs: [an interface or a design brief]
+outputs: [design direction, spacing and type decisions]
 tags: [media, frontend, design, css, react, animation]
-links: ["[[skills/infrastructure/web-artifacts-builder]]", "[[skills/media/theme-factory]]"]
+links: ['[[css-elite]]', '[[themes]]', '[[brand-guidelines]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Frontend Design & Aesthetics

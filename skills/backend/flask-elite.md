@@ -1,18 +1,17 @@
 ---
 name: flask-elite
-description: Guidelines for building enterprise-grade, modular Flask applications. Use for any non-trivial Flask backend. Use when working with backend, python, flask.
-version: 1.0.0
+description: 'Flask architecture: the create_app application factory, feature-based package organisation rather than technical layering, and extension isolation in extensions.py to break circular imports. Use when structuring a Flask app, when blueprints and extensions have tangled into import cycles, or when moving off a single-module app. For Django instead, use django-elite.'
+version: 1.1.0
 category: core
-triggers: [backend, python, flask, blueprints, patterns]
+triggers: [structure a flask app, application factory pattern, circular import in flask, flask blueprints layout, flask extensions setup, move off single file flask]
 dependencies: [python-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Flask Elite Backend Architecture (2026)
-date: 2026-03-08
-task_ref: tech-expansion
-confidence_score: 1.0
+inputs: [a Flask application or requirement]
+outputs: [an app factory, a package layout, extension wiring]
 tags: [backend, python, flask, blueprints, patterns]
-links: ["[[skills/backend/python-elite]]"]
+links: ['[[python-elite]]', '[[api-contracts-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Flask Elite Backend Architecture (2026)

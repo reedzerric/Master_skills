@@ -1,18 +1,17 @@
 ---
 name: agent-handoff-elite
-description: Guidelines for implementing reliable, state-aware handoffs between specialized agents to prevent intent drift and context explosion. Use when working with infrastructure, agents, protocol.
-version: 1.0.0
+description: 'Passing work between agents without losing intent: the protocol stack, Structured State Objects that carry task state, and the practices that preserve why a decision was made rather than only what was decided. Use when one agent must continue another''s work, when context is about to run out, or when briefing a subagent. For compacting a human conversation into a document, use handoff.'
+version: 1.1.0
 category: ai_infrastructure
-triggers: [infrastructure, agents, protocol, handoff, a2a, state-transfer, agent]
+triggers: [pass work to another agent, agent is losing context, structured state object, brief a subagent, continue another agents work, preserve intent across sessions]
 dependencies: [agent-swarms-elite]
-inputs: [corpus or prompt, model config]
-outputs: [pipeline code, evaluation results]
-title: Agent Handoff Protocols (2026)
-date: 2026-03-08
-task_ref: swarm-deep-dive
-confidence_score: 1.0
+inputs: [an in-flight task and its state]
+outputs: [a structured handoff object, a continuation brief]
 tags: [infrastructure, agents, protocol, handoff, a2a, state-transfer]
-links: ["[[skills/infrastructure/agent-swarms-elite]]"]
+links: ['[[agent-swarms-elite]]', '[[handoff]]', '[[agent-consensus-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Agent Handoff Protocols (2026)

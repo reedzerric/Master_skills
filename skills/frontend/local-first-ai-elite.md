@@ -1,18 +1,17 @@
 ---
 name: local-first-ai-elite
-description: Guidelines for architecting privacy-centric, low-latency applications that run AI models entirely on-device (browser or edge). Use when working with frontend, ai, local-first.
-version: 1.0.0
+description: 'Running AI in the browser: the WebGPU and transformers.js stack, the load-and-warm lifecycle, progressive enhancement so the page works before the model arrives, and hybrid patterns that fall back to a server. Use when running inference client-side, when model download blocks first paint, or when deciding what stays local and what goes to the server. For the privacy rationale, use privacy-by-design-elite.'
+version: 1.1.0
 category: core
-triggers: [frontend, ai, local-first, webgpu, onnx, transformersjs, local, first]
+triggers: [run a model in the browser, webgpu inference, transformers.js, model download blocks the page, offline ai features, local or server inference, progressive enhancement for ai]
 dependencies: [js-html-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Local-First & Edge AI Mastery (2026)
-date: 2026-03-08
-task_ref: mit-professor-phase-2
-confidence_score: 1.0
+inputs: [a model and a target device budget]
+outputs: [a client-side inference pipeline, a server fallback strategy]
 tags: [frontend, ai, local-first, webgpu, onnx, transformersjs]
-links: ["[[skills/frontend/js-html-elite]]"]
+links: ['[[js-html-elite]]', '[[privacy-by-design-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Local-First & Edge AI Mastery (2026)

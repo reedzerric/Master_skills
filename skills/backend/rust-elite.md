@@ -1,18 +1,17 @@
 ---
 name: rust-elite
-description: Guidelines for writing efficient, safe, and idiomatic Rust code with a focus on modern async patterns. Use when working with backend, rust, async.
-version: 1.0.0
+description: 'Rust systems practice: async patterns on Tokio for 1.75 and later, the error-handling trio of thiserror, anyhow and Result, and the concurrency rules that keep the borrow checker on your side. Use when writing async Rust, designing error types across a library and binary boundary, or sharing state between tasks. For Python instead, use python-elite.'
+version: 1.1.0
 category: core
-triggers: [backend, rust, async, tokio, error-handling]
+triggers: [async rust with tokio, thiserror or anyhow, rust error type design, share state between tasks, arc and mutex in rust, fighting the borrow checker, spawn a tokio task]
 dependencies: [python-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Rust Systems Mastery (2026)
-date: 2026-03-08
-task_ref: tech-expansion
-confidence_score: 1.0
+inputs: [a Rust crate or async workload]
+outputs: [async Rust code, an error type hierarchy]
 tags: [backend, rust, async, tokio, error-handling]
-links: ["[[skills/backend/python-elite]]"]
+links: ['[[python-elite]]', '[[postgresql-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Rust Systems Mastery (2026)

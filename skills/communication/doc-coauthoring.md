@@ -1,18 +1,17 @@
 ---
 name: doc-coauthoring
-description: Guidelines for collaborative document creation (PRDs, technical specs, decision docs). Use when working with communication, doc, writing.
-version: 1.0.0
+description: 'A three-stage workflow for writing a document with someone: gathering context before drafting, refining structure together, then reader-testing the result on someone who was not in the room. Use when co-writing a design doc, proposal, or announcement, or when a draft is technically correct but not landing. For internal status formats, use internal-comms.'
+version: 1.1.0
 category: utilities
-triggers: [communication, doc, writing, collaboration, structured, coauthoring]
+triggers: [help me write this doc, co-author a proposal, my draft is not landing, structure this document, reader test my writing, review my design doc]
 dependencies: [internal-comms]
-inputs: [input document or dataset]
-outputs: [generated file]
-title: Doc Co-Authoring Workflow
-date: 2026-03-08
-task_ref: initial-setup
-confidence_score: 1.0
+inputs: [a document goal, source material, a target reader]
+outputs: [a structured draft, reader-test findings]
 tags: [communication, doc, writing, collaboration, structured]
-links: ["[[skills/communication/internal-comms]]"]
+links: ['[[internal-comms]]', '[[internal-comms-deep-dive]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Doc Co-Authoring Workflow

@@ -1,18 +1,17 @@
 ---
 name: claude-api
-description: Guidelines for building LLM-powered applications using the Claude API, Anthropic SDK, and Agent SDK. Covers model selection, thinking parameters, and language-specific patterns. Use when working with backend, ai, claude.
-version: 1.0.0
+description: 'Integrating the Claude API and Anthropic SDK: model selection for a workload, detecting which language SDK applies, the surface tiers (Messages, tool runner, managed agents) and the implementation pattern for each. Use when adding Claude to an application, choosing between SDK surfaces, or wiring up streaming and tools. For exact model IDs and pricing, use models; for failure handling, use error-codes.'
+version: 1.1.0
 category: ai_infrastructure
-triggers: [backend, ai, claude, api, sdk]
+triggers: [add claude to my app, which anthropic sdk surface, messages api or tool runner, integrate the anthropic sdk, call an llm from my backend, managed agents]
 dependencies: [models]
-inputs: [corpus or prompt, model config]
-outputs: [pipeline code, evaluation results]
-title: Claude API & Anthropic SDK Integration
-date: 2026-03-08
-task_ref: initial-setup
-confidence_score: 1.0
+inputs: [an application needing LLM capability, a workload description]
+outputs: [SDK integration code, a model and surface choice]
 tags: [backend, ai, claude, api, sdk]
-links: ["[[knowledgebase/claude/models]]"]
+links: ['[[models]]', '[[error-codes]]', '[[tool-use-concepts]]', '[[python-deep-dive]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Claude API & Anthropic SDK Integration

@@ -1,18 +1,17 @@
 ---
 name: bigquery-elite
-description: Guidelines for architecting and querying BigQuery with a "Cost-First" approach. Use when working with database, bigquery, sql.
-version: 1.0.0
+description: 'BigQuery cost-first engineering: partitioning and clustering as the primary lever, SQL patterns that avoid full table scans, and governance controls that cap spend before it happens. Use when a query costs too much or runs too long, when designing table layout, or when setting up cost guardrails. For transactional Postgres work, use postgresql-elite.'
+version: 1.1.0
 category: core
-triggers: [database, bigquery, sql, optimization, cost]
+triggers: [my bigquery query is expensive, partition and cluster a table, bigquery scanned too much data, reduce query cost, bigquery slot usage, set a query cost limit]
 dependencies: [python-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: BigQuery Data Engineering Mastery (2026)
-date: 2026-03-08
-task_ref: tech-expansion
-confidence_score: 1.0
+inputs: [a query or table schema, a cost target]
+outputs: [a partitioning and clustering plan, an optimized query, cost guardrails]
 tags: [database, bigquery, sql, optimization, cost]
-links: ["[[skills/backend/python-elite]]"]
+links: ['[[finops-value-elite]]', '[[postgresql-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # BigQuery Data Engineering Mastery (2026)

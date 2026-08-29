@@ -161,27 +161,25 @@
       "name": "agent-handoff-elite",
       "path": "skills/infrastructure/agent-handoff-elite.md",
       "category": "ai_infrastructure",
-      "version": "1.0.0",
-      "description": "Guidelines for implementing reliable, state-aware handoffs between specialized agents to prevent intent drift and context explosion. Use when working with infrastructure, agents, protocol.",
+      "version": "1.1.0",
+      "description": "'Passing work between agents without losing intent: the protocol stack, Structured State Objects that carry task state, and the practices that preserve why a decision was made rather than only what was decided. Use when one agent must continue another''s work, when context is about to run out, or when briefing a subagent. For compacting a human conversation into a document, use handoff.'",
       "triggers": [
-        "infrastructure",
-        "agents",
-        "protocol",
-        "handoff",
-        "a2a",
-        "state-transfer",
-        "agent"
+        "pass work to another agent",
+        "agent is losing context",
+        "structured state object",
+        "brief a subagent",
+        "continue another agents work",
+        "preserve intent across sessions"
       ],
       "dependencies": [
         "agent-swarms-elite"
       ],
       "inputs": [
-        "corpus or prompt",
-        "model config"
+        "an in-flight task and its state"
       ],
       "outputs": [
-        "pipeline code",
-        "evaluation results"
+        "a structured handoff object",
+        "a continuation brief"
       ],
       "tags": [
         "infrastructure",
@@ -197,27 +195,26 @@
       "name": "agent-swarms-elite",
       "path": "skills/infrastructure/agent-swarms-elite.md",
       "category": "ai_infrastructure",
-      "version": "1.0.0",
-      "description": "Guidelines for architecting multi-agent systems (MAS) to solve complex, non-linear tasks with high reliability and low hallucination. Use when working with infrastructure, agents, swarm.",
+      "version": "1.1.0",
+      "description": "'Orchestrating multiple agents: the architectural patterns (supervisor, hierarchical, network), LangGraph state management, and role definitions that stop agents duplicating each other''s work. Use when one agent is not enough, when parallelising agent work, or when agents keep redoing the same task. For resolving their conflicting outputs, use agent-consensus-elite.'",
       "triggers": [
-        "infrastructure",
-        "agents",
-        "swarm",
-        "langgraph",
-        "orchestration",
-        "agent",
-        "swarms"
+        "orchestrate multiple agents",
+        "supervisor agent pattern",
+        "langgraph state",
+        "agents duplicating work",
+        "parallelise agent tasks",
+        "multi agent architecture"
       ],
       "dependencies": [
         "agent-handoff-elite"
       ],
       "inputs": [
-        "corpus or prompt",
-        "model config"
+        "a task too large for a single agent"
       ],
       "outputs": [
-        "pipeline code",
-        "evaluation results"
+        "a swarm topology",
+        "role definitions",
+        "a graph state schema"
       ],
       "tags": [
         "infrastructure",
@@ -232,27 +229,26 @@
       "name": "agentic-rag-elite",
       "path": "skills/infrastructure/agentic-rag-elite.md",
       "category": "ai_infrastructure",
-      "version": "1.0.0",
-      "description": "Guidelines for architecting autonomous reasoning systems that go beyond simple \"Retrieve -> Generate\" pipelines. Use when working with infrastructure, agents, rag.",
+      "version": "1.1.0",
+      "description": "'RAG that reasons rather than retrieving once: Self-RAG self-correction loops, multi-hop and GraphRAG traversal for questions a single lookup cannot answer, and the latency work that makes the loop affordable. Use when retrieval returns plausible but wrong context, when a question needs several hops, or when the RAG loop is too slow. For exposing tools to an agent, use mcp-builder.'",
       "triggers": [
-        "infrastructure",
-        "agents",
-        "rag",
-        "reasoning",
-        "loops",
+        "rag returns wrong context",
+        "multi hop question",
         "graphrag",
-        "agentic"
+        "self correcting retrieval",
+        "my rag loop is too slow",
+        "retrieval quality is poor",
+        "rerank retrieved results"
       ],
       "dependencies": [
         "agent-swarms-elite"
       ],
       "inputs": [
-        "corpus or prompt",
-        "model config"
+        "a corpus and the distribution of questions asked of it"
       ],
       "outputs": [
-        "pipeline code",
-        "evaluation results"
+        "a retrieval loop design",
+        "a graph or multi-hop strategy"
       ],
       "tags": [
         "infrastructure",
@@ -268,25 +264,26 @@
       "name": "claude-api",
       "path": "skills/backend/claude-api.md",
       "category": "ai_infrastructure",
-      "version": "1.0.0",
-      "description": "Guidelines for building LLM-powered applications using the Claude API, Anthropic SDK, and Agent SDK. Covers model selection, thinking parameters, and language-specific patterns. Use when working with backend, ai, claude.",
+      "version": "1.1.0",
+      "description": "'Integrating the Claude API and Anthropic SDK: model selection for a workload, detecting which language SDK applies, the surface tiers (Messages, tool runner, managed agents) and the implementation pattern for each. Use when adding Claude to an application, choosing between SDK surfaces, or wiring up streaming and tools. For exact model IDs and pricing, use models; for failure handling, use error-codes.'",
       "triggers": [
-        "backend",
-        "ai",
-        "claude",
-        "api",
-        "sdk"
+        "add claude to my app",
+        "which anthropic sdk surface",
+        "messages api or tool runner",
+        "integrate the anthropic sdk",
+        "call an llm from my backend",
+        "managed agents"
       ],
       "dependencies": [
         "models"
       ],
       "inputs": [
-        "corpus or prompt",
-        "model config"
+        "an application needing LLM capability",
+        "a workload description"
       ],
       "outputs": [
-        "pipeline code",
-        "evaluation results"
+        "SDK integration code",
+        "a model and surface choice"
       ],
       "tags": [
         "backend",
@@ -368,26 +365,25 @@
       "name": "mcp-builder",
       "path": "skills/infrastructure/mcp-builder.md",
       "category": "ai_infrastructure",
-      "version": "1.0.0",
-      "description": "Guidelines for building high-quality Model Context Protocol (MCP) servers to integrate external APIs/services with LLMs. Use when working with infrastructure, mcp, protocol.",
+      "version": "1.1.0",
+      "description": "'Building an MCP server end to end: choosing the stack, the implementation cycle, and verifying the result is usable by a model with no other context. Use when exposing a system''s capabilities to an agent over MCP. For SDK-level reference, use mcp-deep-dive; for measuring the result, use evaluation-guide.'",
       "triggers": [
-        "infrastructure",
-        "mcp",
-        "protocol",
-        "tools",
-        "agent",
-        "builder"
+        "build an mcp server",
+        "expose my api to claude",
+        "wrap a service as mcp tools",
+        "mcp server from scratch",
+        "connect my system to an agent"
       ],
       "dependencies": [
         "skill-creator"
       ],
       "inputs": [
-        "corpus or prompt",
-        "model config"
+        "a system to expose",
+        "its API surface"
       ],
       "outputs": [
-        "pipeline code",
-        "evaluation results"
+        "a working MCP server",
+        "tool definitions"
       ],
       "tags": [
         "infrastructure",
@@ -435,25 +431,25 @@
       "name": "memory-validation",
       "path": "skills/infrastructure/memory-validation.md",
       "category": "ai_infrastructure",
-      "version": "1.0.0",
-      "description": "Automated validation of the \"Master Skills\" memory system to ensure every memory file adheres to elite metadata standards (YAML headers, confidence scores). Use when working with infra, validation, meta.",
+      "version": "1.1.0",
+      "description": "'Validating this repository''s skill files against the schema: running the validator, the mandatory field set, and the verification workflow before committing. Use when a skill file fails validation, when the pre-commit hook blocks a commit, or when the routing manifest goes stale. For the schema definition itself, use skill-standard.'",
       "triggers": [
-        "infra",
-        "validation",
-        "meta",
-        "python",
-        "memory"
+        "skill file fails validation",
+        "pre-commit hook blocked my commit",
+        "run the memory validator",
+        "required frontmatter fields",
+        "the manifest is stale",
+        "validate the skills"
       ],
       "dependencies": [
         "pytest-elite"
       ],
       "inputs": [
-        "corpus or prompt",
-        "model config"
+        "skill files to validate"
       ],
       "outputs": [
-        "pipeline code",
-        "evaluation results"
+        "a validation report",
+        "a corrected skill file"
       ],
       "tags": [
         "infra",
@@ -688,29 +684,25 @@
       "name": "web-artifacts-builder",
       "path": "skills/infrastructure/web-artifacts-builder.md",
       "category": "ai_infrastructure",
-      "version": "1.0.0",
-      "description": "Guidelines for building complex, multi-component React artifacts using `shadcn/ui`, `Tailwind CSS`, and `Vite`. Use when working with infrastructure, frontend, react.",
+      "version": "1.1.0",
+      "description": "'Building self-contained web artifacts with React and shadcn/ui: initialising the project and bundling everything into a single HTML file that makes no external requests. Use when producing a standalone interactive page, dashboard, or visualization that has to run from one file. For visual design judgement, use frontend-design.'",
       "triggers": [
-        "infrastructure",
-        "frontend",
-        "react",
-        "shadcn",
-        "tailwind",
-        "vite",
-        "web",
-        "artifacts"
+        "build a single html artifact",
+        "standalone interactive page",
+        "bundle react into one file",
+        "shadcn artifact",
+        "self contained dashboard",
+        "page with no external dependencies"
       ],
       "dependencies": [
         "frontend-design",
         "skill-creator"
       ],
       "inputs": [
-        "corpus or prompt",
-        "model config"
+        "an artifact requirement"
       ],
       "outputs": [
-        "pipeline code",
-        "evaluation results"
+        "a single self-contained HTML file"
       ],
       "tags": [
         "infrastructure",
@@ -793,26 +785,27 @@
       "name": "api-contracts-elite",
       "path": "skills/backend/api-contracts-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for enforcing strict, machine-readable contracts between all microservices, frontends, and AI agents BEFORE writing business logic. Use when working with backend, api, openapi.",
+      "version": "1.1.0",
+      "description": "'Contract-first API engineering: design the OpenAPI or gRPC contract before writing code, generate server stubs and typed clients from it, and evolve it without breaking consumers through additive change and explicit versioning. Use when designing a new endpoint, when client and server have drifted apart, or when a schema change might break existing callers. For the storage layer beneath the API, use postgresql-elite.'",
       "triggers": [
-        "backend",
-        "api",
-        "openapi",
-        "grpc",
-        "protobuf",
-        "contracts"
+        "design an api contract",
+        "openapi spec first",
+        "generate a typed client",
+        "grpc schema design",
+        "breaking change for api consumers",
+        "version an endpoint",
+        "client and server have drifted"
       ],
       "dependencies": [
         "architectural-patterns"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "an API requirement or an existing contract"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "an OpenAPI or protobuf contract",
+        "generated stubs and clients",
+        "a versioning plan"
       ],
       "tags": [
         "backend",
@@ -902,25 +895,27 @@
       "name": "bigquery-elite",
       "path": "skills/database/bigquery-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for architecting and querying BigQuery with a \"Cost-First\" approach. Use when working with database, bigquery, sql.",
+      "version": "1.1.0",
+      "description": "'BigQuery cost-first engineering: partitioning and clustering as the primary lever, SQL patterns that avoid full table scans, and governance controls that cap spend before it happens. Use when a query costs too much or runs too long, when designing table layout, or when setting up cost guardrails. For transactional Postgres work, use postgresql-elite.'",
       "triggers": [
-        "database",
-        "bigquery",
-        "sql",
-        "optimization",
-        "cost"
+        "my bigquery query is expensive",
+        "partition and cluster a table",
+        "bigquery scanned too much data",
+        "reduce query cost",
+        "bigquery slot usage",
+        "set a query cost limit"
       ],
       "dependencies": [
         "python-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a query or table schema",
+        "a cost target"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "a partitioning and clustering plan",
+        "an optimized query",
+        "cost guardrails"
       ],
       "tags": [
         "database",
@@ -935,27 +930,27 @@
       "name": "chaos-engineering-elite",
       "path": "skills/infrastructure/chaos-engineering-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for architecting self-healing systems and validating their resilience through continuous fault injection. Use when working with infrastructure, devops, chaos.",
+      "version": "1.1.0",
+      "description": "'Proving resilience by breaking things on purpose: forming a steady-state hypothesis, running experiments continuously in a pipeline rather than once a year, and bounding blast radius with explicit abort conditions. Use when you need evidence a system survives failure, when designing a fault-injection experiment, or when a gameday needs abort criteria. For running a real incident, use sre-incident-protocol.'",
       "triggers": [
-        "infrastructure",
-        "devops",
-        "chaos",
-        "resilience",
-        "kubernetes",
-        "ai",
-        "engineering"
+        "chaos experiment",
+        "fault injection",
+        "prove the system survives failure",
+        "steady state hypothesis",
+        "limit the blast radius",
+        "kill a pod on purpose",
+        "resilience testing"
       ],
       "dependencies": [
         "observability-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a system and its steady-state metrics"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "an experiment design",
+        "abort conditions",
+        "resilience findings"
       ],
       "tags": [
         "infrastructure",
@@ -1032,26 +1027,27 @@
       "name": "css-elite",
       "path": "skills/frontend/css-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for architecting scalable, component-first CSS using native 2026 features. Use for all modern web interfaces. Use when working with frontend, css, layout.",
+      "version": "1.1.0",
+      "description": "'Modern CSS architecture: cascade layers to control specificity deliberately, container queries for components that adapt to their container rather than the viewport, grid and subgrid for deep alignment, and current selector logic. Use when specificity fights break styling, when a component must be portable across contexts, or when aligning nested grids. For visual design judgement, use frontend-design.'",
       "triggers": [
-        "frontend",
-        "css",
-        "layout",
-        "subgrid",
-        "layers",
-        "container-queries"
+        "specificity war in css",
+        "cascade layers",
+        "container queries",
+        "subgrid alignment",
+        "component that adapts to its container",
+        "css nesting",
+        "has selector"
       ],
       "dependencies": [
         "frontend-design"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a stylesheet or component to lay out"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "layered CSS",
+        "container-query components",
+        "grid layouts"
       ],
       "tags": [
         "frontend",
@@ -1144,25 +1140,26 @@
       "name": "django-elite",
       "path": "skills/backend/django-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for architecting scalable, maintainable, and high-performance Django applications using modern Python tooling and database patterns. Use when working with backend, django, python.",
+      "version": "1.1.0",
+      "description": "'Django standards: uv-based project tooling, PostgreSQL 18 integration, modern middleware and ASGI serving, and the testing setup. Use when starting or maintaining a Django project, wiring the database, or configuring middleware and static serving. For auth hardening, use django-auth-hardening; for schema changes against a live table, use zero-downtime-migrations.'",
       "triggers": [
-        "backend",
-        "django",
-        "python",
-        "patterns"
+        "start a django project",
+        "django settings layout",
+        "django with postgres",
+        "django asgi deployment",
+        "django middleware order",
+        "django test setup"
       ],
       "dependencies": [
         "python-elite",
         "zero-downtime-migrations"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a Django project or requirement"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "project scaffolding",
+        "settings and middleware configuration"
       ],
       "tags": [
         "backend",
@@ -1177,26 +1174,26 @@
       "name": "docker-elite",
       "path": "skills/infrastructure/docker-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for building high-performance, ultra-secure containerized applications. Use when working with infrastructure, devops, docker.",
+      "version": "1.1.0",
+      "description": "'Container images built small and secure: multi-stage BuildKit builds, distroless and scratch base images, Compose watch for development, and the practices that stop images bloating. Use when an image is too large, when hardening a container, or when rebuilds are slow. For deploying it, use gcloud-deployment-elite or github-actions-elite.'",
       "triggers": [
-        "infrastructure",
-        "devops",
-        "docker",
-        "security",
-        "distroless",
-        "buildkit"
+        "my docker image is too big",
+        "multi stage build",
+        "distroless base image",
+        "docker build is slow",
+        "compose watch",
+        "run container as non root",
+        "docker layer caching"
       ],
       "dependencies": [
         "github-actions-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "an application to containerize"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "a multi-stage Dockerfile",
+        "a hardened image"
       ],
       "tags": [
         "infrastructure",
@@ -1282,25 +1279,26 @@
       "name": "flask-elite",
       "path": "skills/backend/flask-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for building enterprise-grade, modular Flask applications. Use for any non-trivial Flask backend. Use when working with backend, python, flask.",
+      "version": "1.1.0",
+      "description": "'Flask architecture: the create_app application factory, feature-based package organisation rather than technical layering, and extension isolation in extensions.py to break circular imports. Use when structuring a Flask app, when blueprints and extensions have tangled into import cycles, or when moving off a single-module app. For Django instead, use django-elite.'",
       "triggers": [
-        "backend",
-        "python",
-        "flask",
-        "blueprints",
-        "patterns"
+        "structure a flask app",
+        "application factory pattern",
+        "circular import in flask",
+        "flask blueprints layout",
+        "flask extensions setup",
+        "move off single file flask"
       ],
       "dependencies": [
         "python-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a Flask application or requirement"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "an app factory",
+        "a package layout",
+        "extension wiring"
       ],
       "tags": [
         "backend",
@@ -1315,26 +1313,27 @@
       "name": "gcloud-deployment-elite",
       "path": "skills/infrastructure/gcloud-deployment-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for resolving common deployment hurdles when using Google Cloud SDK, Cloud Run, and Firebase Hosting. Use when working with infrastructure, gcloud, firebase.",
+      "version": "1.1.0",
+      "description": "'Deploying to Google Cloud and Firebase: fixing the gcloud CLI''s Python environment conflict, controlling build context with .gcloudignore, dependency handling for Cloud Build, and a deploy workflow that does not re-upload the world. Use when a gcloud deploy fails or uploads too much, when Cloud Build cannot resolve dependencies, or when the gcloud CLI breaks against the local Python. For containers generally, use docker-elite.'",
       "triggers": [
-        "infrastructure",
-        "gcloud",
-        "firebase",
-        "cloud-run",
-        "django",
-        "deployment"
+        "gcloud deploy fails",
+        "cloud build dependency error",
+        "gcloudignore",
+        "gcloud cli python error",
+        "firebase deploy",
+        "cloud run deployment",
+        "build context too large"
       ],
       "dependencies": [
         "docker-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "an application and a GCP or Firebase target"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "a working deploy command",
+        "a .gcloudignore",
+        "build configuration"
       ],
       "tags": [
         "infrastructure",
@@ -1423,28 +1422,26 @@
       "name": "github-actions-elite",
       "path": "skills/infrastructure/github-actions-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for architecting high-performance, zero-secret CI/CD pipelines. Use when working with infrastructure, devops, ci.",
+      "version": "1.1.0",
+      "description": "'CI/CD on GitHub Actions: OIDC for zero-secret cloud deployment, caching that actually hits, and matrix and monorepo scaling patterns. Use when a workflow is slow, when removing long-lived cloud credentials from repository secrets, or when scaling CI across a monorepo. For the git workflow around it, use git-ops-elite.'",
       "triggers": [
-        "infrastructure",
-        "devops",
-        "ci",
-        "cd",
-        "github-actions",
-        "security",
-        "github",
-        "actions"
+        "my ci is slow",
+        "oidc instead of stored secrets",
+        "github actions cache miss",
+        "matrix build",
+        "monorepo ci",
+        "deploy from actions without keys",
+        "workflow permissions"
       ],
       "dependencies": [
         "docker-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a repository and its build and deploy needs"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "a workflow file",
+        "an OIDC trust configuration"
       ],
       "tags": [
         "infrastructure",
@@ -1493,26 +1490,26 @@
       "name": "iac-opentofu-elite",
       "path": "skills/infrastructure/iac-opentofu-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for managing cloud infrastructure deterministically using OpenTofu/Terraform with strict state and drift governance. Use when working with infrastructure, devops, iac.",
+      "version": "1.1.0",
+      "description": "'Infrastructure-as-code governance with OpenTofu: remote state and locking, the GitOps pipeline from plan to apply, and drift detection between declared and actual infrastructure. Use when state is locked or corrupted, when infrastructure has drifted from code, or when setting up plan-and-apply review. For the CI that runs it, use github-actions-elite.'",
       "triggers": [
-        "infrastructure",
-        "devops",
-        "iac",
-        "opentofu",
-        "terraform",
-        "governance"
+        "terraform state is locked",
+        "opentofu drift",
+        "infrastructure changed outside of code",
+        "plan and apply pipeline",
+        "remote state backend",
+        "import an existing resource"
       ],
       "dependencies": [
         "github-actions-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "infrastructure definitions and current cloud state"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "state configuration",
+        "a GitOps pipeline",
+        "a drift report"
       ],
       "tags": [
         "infrastructure",
@@ -1588,27 +1585,26 @@
       "name": "js-html-elite",
       "path": "skills/frontend/js-html-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for building modern, high-performance web applications using the 2026 native web platform features. Use when working with frontend, javascript, html.",
+      "version": "1.1.0",
+      "description": "'Modern browser JavaScript and HTML: the Temporal API replacing Date, explicit resource management, declarative shadow DOM for server-rendered web components, and WCAG 2.2 accessibility requirements. Use when handling dates and time zones, writing web components, or meeting accessibility standards. For layout and styling, use css-elite.'",
       "triggers": [
-        "frontend",
-        "javascript",
-        "html",
-        "temporal",
-        "accessibility",
-        "components",
-        "js"
+        "replace javascript date",
+        "temporal api",
+        "time zone handling in javascript",
+        "declarative shadow dom",
+        "web component server rendering",
+        "wcag 2.2 compliance",
+        "accessible markup"
       ],
       "dependencies": [
         "css-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "browser JavaScript or markup"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "Temporal-based date code",
+        "accessible components"
       ],
       "tags": [
         "frontend",
@@ -1624,28 +1620,26 @@
       "name": "local-first-ai-elite",
       "path": "skills/frontend/local-first-ai-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for architecting privacy-centric, low-latency applications that run AI models entirely on-device (browser or edge). Use when working with frontend, ai, local-first.",
+      "version": "1.1.0",
+      "description": "'Running AI in the browser: the WebGPU and transformers.js stack, the load-and-warm lifecycle, progressive enhancement so the page works before the model arrives, and hybrid patterns that fall back to a server. Use when running inference client-side, when model download blocks first paint, or when deciding what stays local and what goes to the server. For the privacy rationale, use privacy-by-design-elite.'",
       "triggers": [
-        "frontend",
-        "ai",
-        "local-first",
-        "webgpu",
-        "onnx",
-        "transformersjs",
-        "local",
-        "first"
+        "run a model in the browser",
+        "webgpu inference",
+        "transformers.js",
+        "model download blocks the page",
+        "offline ai features",
+        "local or server inference",
+        "progressive enhancement for ai"
       ],
       "dependencies": [
         "js-html-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a model and a target device budget"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "a client-side inference pipeline",
+        "a server fallback strategy"
       ],
       "tags": [
         "frontend",
@@ -1717,25 +1711,28 @@
       "name": "observability-elite",
       "path": "skills/infrastructure/observability-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for architecting unified, actionable, and cost-aware observability systems. Use when working with infrastructure, observability, opentelemetry.",
+      "version": "1.1.0",
+      "description": "'Production observability: the PLTG stack, OpenTelemetry instrumentation as the default everywhere, and patterns for correlating traces, logs and metrics without collecting everything. Use when an issue cannot be diagnosed from existing telemetry, when instrumenting a new service, or when telemetry cost is out of control. For incident process, use sre-incident-protocol.'",
       "triggers": [
-        "infrastructure",
-        "observability",
-        "opentelemetry",
-        "ebpf",
-        "pltg"
+        "cannot diagnose this from the logs",
+        "instrument a service",
+        "opentelemetry setup",
+        "correlate traces and logs",
+        "telemetry cost is too high",
+        "what should i be measuring",
+        "distributed tracing"
       ],
       "dependencies": [
         "github-actions-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a service to instrument",
+        "an undiagnosable issue"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "instrumentation code",
+        "a telemetry pipeline",
+        "dashboards and alerts"
       ],
       "tags": [
         "infrastructure",
@@ -1750,25 +1747,28 @@
       "name": "postgresql-elite",
       "path": "skills/database/postgresql-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for architecting high-concurrency, performant relational databases using PostgreSQL 18+ features. Use when working with database, postgresql, indexing.",
+      "version": "1.1.0",
+      "description": "'PostgreSQL 18 practice: the async I/O architecture and UUIDv7 keys, JSONB performance patterns, and index selection driven by the query shapes actually run. Use when a query is slow, when choosing a primary key type, when deciding between JSONB and real columns, or when picking an index. For schema changes against a live table, use zero-downtime-migrations.'",
       "triggers": [
-        "database",
-        "postgresql",
-        "indexing",
-        "jsonb",
-        "performance"
+        "my postgres query is slow",
+        "which index should i add",
+        "uuid or bigint primary key",
+        "jsonb or separate columns",
+        "gin index",
+        "postgres 18 features",
+        "reading explain analyze"
       ],
       "dependencies": [
         "rust-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a schema",
+        "a slow query or EXPLAIN output"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "an index plan",
+        "a schema design",
+        "a rewritten query"
       ],
       "tags": [
         "database",
@@ -1887,26 +1887,26 @@
       "name": "python-elite",
       "path": "skills/backend/python-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for writing high-performance, type-safe, and maintainable Python code using the 2026 Astral toolchain (`uv`, `ruff`) and advanced type hinting. Use when working with backend, python, astral.",
+      "version": "1.1.0",
+      "description": "'Python standards on the Astral toolchain: uv for environments and dependency resolution, ruff for lint and format, advanced typing for 3.13 and later, and the idiomatic patterns expected of code in this repository. Use when starting a Python project, adding or locking dependencies, or deciding how to type something. For test structure, use pytest-elite.'",
       "triggers": [
-        "backend",
-        "python",
-        "astral",
-        "uv",
-        "ruff",
-        "typing"
+        "start a python project",
+        "uv instead of pip",
+        "ruff configuration",
+        "type hints for python 3.13",
+        "generics and protocols",
+        "pyproject setup",
+        "lock dependencies"
       ],
       "dependencies": [
         "flask-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a Python project or module"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "a pyproject and uv setup",
+        "typed idiomatic Python"
       ],
       "tags": [
         "backend",
@@ -1922,25 +1922,28 @@
       "name": "redis-elite",
       "path": "skills/database/redis-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for architecting high-performance caching, rate-limiting, and messaging using Redis. Use when working with database, redis, caching.",
+      "version": "1.1.0",
+      "description": "'Redis for caching and coordination: picking the data structure that matches the access pattern, TTL strategies with jitter so keys do not expire together, and concurrency patterns for locks and atomic updates. Use when cache misses spike simultaneously, when choosing between a hash, sorted set or stream, or when implementing a distributed lock. For durable storage, use postgresql-elite.'",
       "triggers": [
-        "database",
-        "redis",
-        "caching",
-        "pub-sub",
-        "performance"
+        "cache stampede",
+        "redis ttl strategy",
+        "which redis data structure",
+        "distributed lock in redis",
+        "sorted set leaderboard",
+        "redis stream or list",
+        "thundering herd"
       ],
       "dependencies": [
         "postgresql-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "an access pattern",
+        "a caching or coordination requirement"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "a data-structure choice",
+        "a TTL and eviction policy",
+        "a lock implementation"
       ],
       "tags": [
         "database",
@@ -2007,25 +2010,26 @@
       "name": "rust-elite",
       "path": "skills/backend/rust-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for writing efficient, safe, and idiomatic Rust code with a focus on modern async patterns. Use when working with backend, rust, async.",
+      "version": "1.1.0",
+      "description": "'Rust systems practice: async patterns on Tokio for 1.75 and later, the error-handling trio of thiserror, anyhow and Result, and the concurrency rules that keep the borrow checker on your side. Use when writing async Rust, designing error types across a library and binary boundary, or sharing state between tasks. For Python instead, use python-elite.'",
       "triggers": [
-        "backend",
-        "rust",
-        "async",
-        "tokio",
-        "error-handling"
+        "async rust with tokio",
+        "thiserror or anyhow",
+        "rust error type design",
+        "share state between tasks",
+        "arc and mutex in rust",
+        "fighting the borrow checker",
+        "spawn a tokio task"
       ],
       "dependencies": [
         "python-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a Rust crate or async workload"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "async Rust code",
+        "an error type hierarchy"
       ],
       "tags": [
         "backend",
@@ -2078,26 +2082,25 @@
       "name": "serverless-edge-elite",
       "path": "skills/infrastructure/serverless-edge-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for architecting latency-optimized, event-driven systems using a hybrid Serverless/Edge strategy. Use when working with infrastructure, serverless, edge.",
+      "version": "1.1.0",
+      "description": "'Serverless and edge compute: choosing between edge and regional runtimes per workload, cold-start mitigation, and event-driven architecture patterns. Use when cold starts hurt latency, when deciding what belongs at the edge, or when designing an event-driven flow. For always-on containers, use docker-elite.'",
       "triggers": [
-        "infrastructure",
-        "serverless",
-        "edge",
-        "wasm",
-        "latency",
-        "event-driven"
+        "cold start latency",
+        "edge or regional runtime",
+        "serverless function timeout",
+        "event driven architecture",
+        "what belongs at the edge",
+        "lambda or workers"
       ],
       "dependencies": [
         "github-actions-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a workload and its latency requirements"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "a runtime placement decision",
+        "an event-driven design"
       ],
       "tags": [
         "infrastructure",
@@ -2148,26 +2151,24 @@
       "name": "skill-creator",
       "path": "skills/skill-creator.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "A meta-skill for building, testing, and iteratively improving other skills. Use when working with meta, skill, creation.",
+      "version": "1.1.0",
+      "description": "'Authoring a new skill for this repository: the creation lifecycle, writing descriptions and triggers that route correctly, and when to split bulk into companion files. Use when adding a skill, splitting an oversized one, or when a skill is not being picked up by routing. For the schema it must satisfy, use skill-standard; for validating it, use memory-validation.'",
       "triggers": [
-        "meta",
-        "skill",
-        "creation",
-        "evaluation",
-        "benchmark",
-        "creator"
+        "create a new skill",
+        "my skill is not being triggered",
+        "split a skill into companion files",
+        "write a skill description",
+        "add a skill to the manifest"
       ],
       "dependencies": [
         "skill-standard"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a capability to capture as a skill"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "a conforming skill file",
+        "a manifest entry"
       ],
       "tags": [
         "meta",
@@ -2577,25 +2578,26 @@
       "name": "xstate-formalism-elite",
       "path": "skills/frontend/xstate-formalism-elite.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for managing complex frontend logic using deterministic state machines and the Actor Model (XState v5+). Use when working with frontend, xstate, state-machine.",
+      "version": "1.1.0",
+      "description": "'Actor-model state management with XState: actor-first architecture, type-safe machine definitions, and model-based tests generated from the machine itself. Use when UI state has grown into tangled booleans, when impossible states keep occurring, or when coordinating long-running async flows. For formally proving a distributed protocol, use tla-plus-formalism.'",
       "triggers": [
-        "frontend",
-        "xstate",
-        "state-machine",
-        "actor-model",
-        "formalism"
+        "tangled boolean state",
+        "impossible ui state",
+        "xstate machine",
+        "actor model in the frontend",
+        "coordinate async flows",
+        "model based testing for ui",
+        "state chart"
       ],
       "dependencies": [
         "js-html-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a UI flow or component state"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "a typed state machine",
+        "generated model-based tests"
       ],
       "tags": [
         "frontend",
@@ -2610,27 +2612,26 @@
       "name": "zero-downtime-migrations",
       "path": "skills/database/zero-downtime-migrations.md",
       "category": "core",
-      "version": "1.0.0",
-      "description": "Guidelines for executing database schema changes in high-availability systems without locking tables or dropping traffic. Use when working with database, postgresql, migrations.",
+      "version": "1.1.0",
+      "description": "'Changing a live schema without downtime: the expand-contract pattern spread across deploys, PostgreSQL-specific safety rules about locks and defaults, and staged approaches to renaming a column or changing a type. Use when a migration would lock a table, when renaming or retyping a column in production, or when a deploy must tolerate old and new code running at once. For index choice, use postgresql-elite.'",
       "triggers": [
-        "database",
-        "postgresql",
-        "migrations",
-        "expand-contract",
-        "ha",
-        "zero",
-        "downtime"
+        "my migration locked the table",
+        "rename a column in production",
+        "change a column type safely",
+        "expand contract migration",
+        "add a not null column",
+        "deploy a schema change without downtime"
       ],
       "dependencies": [
         "postgresql-elite"
       ],
       "inputs": [
-        "source files",
-        "project config"
+        "a schema change",
+        "the deploy process"
       ],
       "outputs": [
-        "refactored code",
-        "review findings"
+        "a staged migration plan",
+        "safe DDL statements"
       ],
       "tags": [
         "database",
@@ -2719,27 +2720,23 @@
       "name": "brand-guidelines",
       "path": "skills/media/brand-guidelines.md",
       "category": "design_media",
-      "version": "1.0.0",
-      "description": "Guidelines for applying Anthropic's official brand colors and typography to artifacts. Use when working with media, design, branding.",
+      "version": "1.1.0",
+      "description": "'Anthropic''s brand specifics: the exact hex codes and typography pairings for producing Anthropic-branded material. Use when a deliverable has to match Anthropic brand, or when asked for the official colours or fonts. For choosing a palette freely, use themes; for deriving one from tokens, use theme-factory.'",
       "triggers": [
-        "media",
-        "design",
-        "branding",
-        "corporate",
-        "style",
-        "brand",
-        "guidelines"
+        "anthropic brand colours",
+        "official hex codes",
+        "anthropic typography",
+        "brand compliant deck",
+        "what font does anthropic use"
       ],
       "dependencies": [
         "theme-factory"
       ],
       "inputs": [
-        "brief",
-        "brand tokens"
+        "a deliverable to brand"
       ],
       "outputs": [
-        "design artifact",
-        "style spec"
+        "brand-compliant colours and type"
       ],
       "tags": [
         "media",
@@ -2788,27 +2785,27 @@
       "name": "frontend-design",
       "path": "skills/media/frontend-design.md",
       "category": "design_media",
-      "version": "1.0.0",
-      "description": "Guidelines for creating distinctive, production-grade frontend interfaces that avoid generic \"AI slop\" aesthetics. Use when working with media, frontend, design.",
+      "version": "1.1.0",
+      "description": "'Design judgement for interfaces that do not look machine-generated: the philosophy of restraint, hierarchy and intentional spacing, and the implementation rules that follow from it. Use when a UI looks generic or AI-generated, when choosing a spacing and type scale, or when a design needs a point of view. For CSS mechanics, use css-elite.'",
       "triggers": [
-        "media",
-        "frontend",
-        "design",
-        "css",
-        "react",
-        "animation"
+        "my ui looks generic",
+        "make this look designed",
+        "ai slop design",
+        "spacing and type scale",
+        "visual hierarchy",
+        "why does this look off",
+        "design a landing page"
       ],
       "dependencies": [
         "web-artifacts-builder",
         "theme-factory"
       ],
       "inputs": [
-        "brief",
-        "brand tokens"
+        "an interface or a design brief"
       ],
       "outputs": [
-        "design artifact",
-        "style spec"
+        "design direction",
+        "spacing and type decisions"
       ],
       "tags": [
         "media",
@@ -2824,26 +2821,23 @@
       "name": "slack-gif-creator",
       "path": "skills/media/slack-gif-creator.md",
       "category": "design_media",
-      "version": "1.0.0",
-      "description": "Guidelines for creating animated GIFs optimized for Slack (emojis or messages). Use when working with media, animation, gif.",
+      "version": "1.1.0",
+      "description": "'Producing animated GIFs for Slack with Python PIL: the size and dimension limits Slack enforces, frame construction, and the optimization needed to stay under them. Use when making a Slack emoji or reaction GIF, or when a GIF is rejected for being too large. For static image composition, use canvas-design.'",
       "triggers": [
-        "media",
-        "animation",
-        "gif",
-        "slack",
-        "python",
-        "creator"
+        "make a slack gif",
+        "animated emoji for slack",
+        "gif is too large for slack",
+        "slack emoji size limit",
+        "build an animation with pil"
       ],
       "dependencies": [
         "canvas-design"
       ],
       "inputs": [
-        "brief",
-        "brand tokens"
+        "a concept or source frames"
       ],
       "outputs": [
-        "design artifact",
-        "style spec"
+        "an optimized GIF within Slack's limits"
       ],
       "tags": [
         "media",
@@ -2858,26 +2852,24 @@
       "name": "theme-factory",
       "path": "skills/media/theme-factory.md",
       "category": "design_media",
-      "version": "1.0.0",
-      "description": "Guidelines for applying professional styling to artifacts (slides, docs, reports) using curated themes. Use when working with media, design, theme.",
+      "version": "1.1.0",
+      "description": "'Generating and applying a coherent theme: the usage loop from brand tokens through to applied styles, and the theme set available out of the box. Use when deriving a palette and type system from brand inputs, or when applying one theme consistently across documents and slides. For a ready-made palette catalogue instead, use themes.'",
       "triggers": [
-        "media",
-        "design",
-        "theme",
-        "colors",
-        "fonts",
-        "factory"
+        "generate a theme from brand colours",
+        "apply a consistent theme",
+        "derive a palette",
+        "theme my slides",
+        "style tokens from a brand"
       ],
       "dependencies": [
         "pdf"
       ],
       "inputs": [
-        "brief",
-        "brand tokens"
+        "brand tokens or a source palette"
       ],
       "outputs": [
-        "design artifact",
-        "style spec"
+        "a theme definition",
+        "applied styles"
       ],
       "tags": [
         "media",
@@ -3122,24 +3114,27 @@
       "name": "doc-coauthoring",
       "path": "skills/communication/doc-coauthoring.md",
       "category": "utilities",
-      "version": "1.0.0",
-      "description": "Guidelines for collaborative document creation (PRDs, technical specs, decision docs). Use when working with communication, doc, writing.",
+      "version": "1.1.0",
+      "description": "'A three-stage workflow for writing a document with someone: gathering context before drafting, refining structure together, then reader-testing the result on someone who was not in the room. Use when co-writing a design doc, proposal, or announcement, or when a draft is technically correct but not landing. For internal status formats, use internal-comms.'",
       "triggers": [
-        "communication",
-        "doc",
-        "writing",
-        "collaboration",
-        "structured",
-        "coauthoring"
+        "help me write this doc",
+        "co-author a proposal",
+        "my draft is not landing",
+        "structure this document",
+        "reader test my writing",
+        "review my design doc"
       ],
       "dependencies": [
         "internal-comms"
       ],
       "inputs": [
-        "input document or dataset"
+        "a document goal",
+        "source material",
+        "a target reader"
       ],
       "outputs": [
-        "generated file"
+        "a structured draft",
+        "reader-test findings"
       ],
       "tags": [
         "communication",
@@ -3348,24 +3343,25 @@
       "name": "internal-comms",
       "path": "skills/communication/internal-comms.md",
       "category": "utilities",
-      "version": "1.0.0",
-      "description": "Guidelines for writing effective internal communications (status reports, project updates, newsletters). Use when working with communication, reporting, status.",
+      "version": "1.1.0",
+      "description": "Choosing and executing the right internal communication format \u2014 status update, announcement, escalation, FAQ \u2014 and the strategy for pitching each to its audience. Use when deciding how to tell colleagues or leadership something. For the templates themselves, use internal-comms-deep-dive; for long-form co-writing, use doc-coauthoring.",
       "triggers": [
-        "communication",
-        "reporting",
-        "status",
-        "faq",
-        "internal",
-        "comms"
+        "how should i announce this",
+        "tell leadership about a delay",
+        "escalate an issue in writing",
+        "what format for this update",
+        "communicate a decision to the team"
       ],
       "dependencies": [
         "doc-coauthoring"
       ],
       "inputs": [
-        "input document or dataset"
+        "something to communicate",
+        "an audience"
       ],
       "outputs": [
-        "generated file"
+        "a format choice",
+        "a drafted message"
       ],
       "tags": [
         "communication",
@@ -3625,10 +3621,7 @@
     "9-slice map": [
       "diegetic-game-ui"
     ],
-    "a2a": [
-      "agent-handoff-elite"
-    ],
-    "accessibility": [
+    "accessible markup": [
       "js-html-elite"
     ],
     "account deletion": [
@@ -3637,22 +3630,23 @@
     "action bar": [
       "auth-ux-patterns"
     ],
-    "actions": [
-      "github-actions-elite"
-    ],
-    "actor-model": [
+    "actor model in the frontend": [
       "xstate-formalism-elite"
     ],
     "adaptive thinking": [
       "models"
     ],
+    "add a not null column": [
+      "zero-downtime-migrations"
+    ],
+    "add a skill to the manifest": [
+      "skill-creator"
+    ],
+    "add claude to my app": [
+      "claude-api"
+    ],
     "adjudicator pattern": [
       "agent-consensus-elite"
-    ],
-    "agent": [
-      "agent-handoff-elite",
-      "agent-swarms-elite",
-      "mcp-builder"
     ],
     "agent calling tools safely": [
       "security-agentic-elite"
@@ -3660,18 +3654,14 @@
     "agent instructions": [
       "writing-for-agents"
     ],
-    "agentic": [
-      "agentic-rag-elite"
+    "agent is losing context": [
+      "agent-handoff-elite"
     ],
-    "agents": [
-      "agent-handoff-elite",
-      "agent-swarms-elite",
-      "agentic-rag-elite"
+    "agents duplicating work": [
+      "agent-swarms-elite"
     ],
-    "ai": [
-      "chaos-engineering-elite",
-      "claude-api",
-      "local-first-ai-elite"
+    "ai slop design": [
+      "frontend-design"
     ],
     "algorithmic": [
       "algorithmic-art"
@@ -3679,9 +3669,11 @@
     "allocate tasks across agents": [
       "agent-consensus-elite"
     ],
-    "animation": [
-      "frontend-design",
+    "animated emoji for slack": [
       "slack-gif-creator"
+    ],
+    "anthropic brand colours": [
+      "brand-guidelines"
     ],
     "anthropic node sdk": [
       "typescript-deep-dive"
@@ -3695,9 +3687,17 @@
     "anthropic sdk setup in node": [
       "typescript-deep-dive"
     ],
-    "api": [
-      "api-contracts-elite",
-      "claude-api"
+    "anthropic typography": [
+      "brand-guidelines"
+    ],
+    "application factory pattern": [
+      "flask-elite"
+    ],
+    "apply a consistent theme": [
+      "theme-factory"
+    ],
+    "arc and mutex in rust": [
+      "rust-elite"
     ],
     "architecture report": [
       "improve-codebase-architecture"
@@ -3708,20 +3708,14 @@
     "art": [
       "algorithmic-art"
     ],
-    "artifacts": [
-      "web-artifacts-builder"
-    ],
     "ask someone else": [
       "to-questionnaire"
     ],
-    "astral": [
-      "python-elite"
-    ],
-    "async": [
-      "rust-elite"
-    ],
     "async anthropic client": [
       "python-deep-dive"
+    ],
+    "async rust with tokio": [
+      "rust-elite"
     ],
     "auth ux": [
       "auth-ux-patterns"
@@ -3732,21 +3726,13 @@
     "autonomous pen testing": [
       "agentic-security-elite"
     ],
-    "backend": [
-      "api-contracts-elite",
-      "claude-api",
-      "django-elite",
-      "flask-elite",
-      "python-elite",
-      "rust-elite"
-    ],
     "balatro": [
       "roguelike-scoring"
     ],
-    "benchmark": [
-      "skill-creator"
+    "bigquery scanned too much data": [
+      "bigquery-elite"
     ],
-    "bigquery": [
+    "bigquery slot usage": [
       "bigquery-elite"
     ],
     "blender": [
@@ -3754,9 +3740,6 @@
     ],
     "block the build on a vulnerability": [
       "agentic-security-elite"
-    ],
-    "blueprints": [
-      "flask-elite"
     ],
     "boolean modifier": [
       "blender-procedural-modeling"
@@ -3770,14 +3753,17 @@
     "branching narrative": [
       "narrative-event-system"
     ],
-    "brand": [
-      "brand-guidelines"
-    ],
-    "branding": [
+    "brand compliant deck": [
       "brand-guidelines"
     ],
     "break this into tickets": [
       "to-tickets"
+    ],
+    "breaking change for api consumers": [
+      "api-contracts-elite"
+    ],
+    "brief a subagent": [
+      "agent-handoff-elite"
     ],
     "brute force": [
       "django-auth-hardening"
@@ -3785,23 +3771,35 @@
     "build a powerpoint from code": [
       "document-tooling-deep-dive"
     ],
+    "build a single html artifact": [
+      "web-artifacts-builder"
+    ],
+    "build an animation with pil": [
+      "slack-gif-creator"
+    ],
     "build an incident timeline": [
       "sre-incident-protocol"
+    ],
+    "build an mcp server": [
+      "mcp-builder"
+    ],
+    "build context too large": [
+      "gcloud-deployment-elite"
     ],
     "build the tickets": [
       "implement"
     ],
-    "builder": [
-      "mcp-builder"
-    ],
     "building a marketplace": [
       "marketplace-pattern"
     ],
-    "buildkit": [
-      "docker-elite"
+    "bundle react into one file": [
+      "web-artifacts-builder"
     ],
-    "caching": [
+    "cache stampede": [
       "redis-elite"
+    ],
+    "call an llm from my backend": [
+      "claude-api"
     ],
     "call claude from python": [
       "python-deep-dive"
@@ -3809,11 +3807,17 @@
     "call claude from typescript": [
       "typescript-deep-dive"
     ],
+    "cannot diagnose this from the logs": [
+      "observability-elite"
+    ],
     "canvas": [
       "canvas-design"
     ],
     "cap theorem": [
       "system-design-elite"
+    ],
+    "cascade layers": [
+      "css-elite"
     ],
     "catch anthropic sdk exception": [
       "error-codes"
@@ -3821,13 +3825,13 @@
     "categorise issues": [
       "triage"
     ],
-    "cd": [
-      "github-actions-elite"
-    ],
     "cell based architecture": [
       "system-design-elite"
     ],
-    "chaos": [
+    "change a column type safely": [
+      "zero-downtime-migrations"
+    ],
+    "chaos experiment": [
       "chaos-engineering-elite"
     ],
     "check my changes": [
@@ -3836,14 +3840,11 @@
     "chips and mult": [
       "roguelike-scoring"
     ],
-    "ci": [
-      "github-actions-elite"
-    ],
     "ci secrets": [
       "wizard"
     ],
-    "claude": [
-      "claude-api"
+    "circular import in flask": [
+      "flask-elite"
     ],
     "claude api returned 429": [
       "error-codes"
@@ -3854,16 +3855,22 @@
     "claude pricing": [
       "models"
     ],
+    "client and server have drifted": [
+      "api-contracts-elite"
+    ],
     "client tool or server tool": [
       "tool-use-concepts"
     ],
-    "cloud-run": [
+    "cloud build dependency error": [
+      "gcloud-deployment-elite"
+    ],
+    "cloud run deployment": [
       "gcloud-deployment-elite"
     ],
     "clue design": [
       "social-deduction-design"
     ],
-    "coauthoring": [
+    "co-author a proposal": [
       "doc-coauthoring"
     ],
     "code execution tool": [
@@ -3872,33 +3879,32 @@
     "code review": [
       "code-review"
     ],
-    "collaboration": [
-      "doc-coauthoring"
-    ],
-    "colors": [
-      "theme-factory"
+    "cold start latency": [
+      "serverless-edge-elite"
     ],
     "combo scoring": [
       "roguelike-scoring"
     ],
-    "comms": [
-      "internal-comms"
-    ],
-    "communication": [
-      "doc-coauthoring",
+    "communicate a decision to the team": [
       "internal-comms"
     ],
     "compact for another agent": [
       "handoff"
     ],
-    "components": [
-      "js-html-elite"
+    "component that adapts to its container": [
+      "css-elite"
+    ],
+    "compose watch": [
+      "docker-elite"
     ],
     "configure the issue tracker": [
       "setup-engineering-flows"
     ],
     "conflicted files": [
       "resolving-merge-conflicts"
+    ],
+    "connect my system to an agent": [
+      "mcp-builder"
     ],
     "consensus between agents": [
       "agent-consensus-elite"
@@ -3909,7 +3915,7 @@
     "contain the blast radius": [
       "system-design-elite"
     ],
-    "container-queries": [
+    "container queries": [
       "css-elite"
     ],
     "content generation": [
@@ -3924,20 +3930,20 @@
     "context.md": [
       "domain-modeling"
     ],
-    "contracts": [
-      "api-contracts-elite"
+    "continue another agents work": [
+      "agent-handoff-elite"
     ],
     "conventional commits format": [
       "git-ops-elite"
     ],
-    "corporate": [
-      "brand-guidelines"
+    "coordinate async flows": [
+      "xstate-formalism-elite"
     ],
     "corporate colour scheme": [
       "themes"
     ],
-    "cost": [
-      "bigquery-elite"
+    "correlate traces and logs": [
+      "observability-elite"
     ],
     "cost per active user": [
       "finops-value-elite"
@@ -3945,31 +3951,20 @@
     "cost per million tokens": [
       "models"
     ],
-    "create tickets": [
-      "to-tickets"
-    ],
-    "creation": [
+    "create a new skill": [
       "skill-creator"
     ],
-    "creator": [
-      "skill-creator",
-      "slack-gif-creator"
+    "create tickets": [
+      "to-tickets"
     ],
     "cryptographic shredding": [
       "privacy-by-design-elite"
     ],
-    "css": [
-      "css-elite",
-      "frontend-design"
+    "css nesting": [
+      "css-elite"
     ],
     "dast correlated to source": [
       "agentic-security-elite"
-    ],
-    "database": [
-      "bigquery-elite",
-      "postgresql-elite",
-      "redis-elite",
-      "zero-downtime-migrations"
     ],
     "debug my mcp server": [
       "mcp-deep-dive"
@@ -3983,6 +3978,9 @@
     "deckle edge": [
       "diegetic-game-ui"
     ],
+    "declarative shadow dom": [
+      "js-html-elite"
+    ],
     "deduction game": [
       "social-deduction-design"
     ],
@@ -3995,21 +3993,24 @@
     "delete user data from backups": [
       "privacy-by-design-elite"
     ],
-    "deployment": [
-      "gcloud-deployment-elite"
+    "deploy a schema change without downtime": [
+      "zero-downtime-migrations"
     ],
-    "design": [
-      "brand-guidelines",
-      "canvas-design",
-      "frontend-design",
-      "pptx",
+    "deploy from actions without keys": [
+      "github-actions-elite"
+    ],
+    "derive a palette": [
       "theme-factory"
     ],
-    "devops": [
-      "chaos-engineering-elite",
-      "docker-elite",
-      "github-actions-elite",
-      "iac-opentofu-elite"
+    "design": [
+      "canvas-design",
+      "pptx"
+    ],
+    "design a landing page": [
+      "frontend-design"
+    ],
+    "design an api contract": [
+      "api-contracts-elite"
     ],
     "diagnose": [
       "diagnosing-bugs"
@@ -4029,23 +4030,40 @@
     "disruption card timing": [
       "multiplayer-interruption-pattern"
     ],
-    "distroless": [
+    "distributed lock in redis": [
+      "redis-elite"
+    ],
+    "distributed tracing": [
+      "observability-elite"
+    ],
+    "distroless base image": [
       "docker-elite"
     ],
-    "django": [
-      "django-elite",
-      "gcloud-deployment-elite"
+    "django asgi deployment": [
+      "django-elite"
     ],
     "django auth": [
       "django-auth-hardening"
     ],
+    "django middleware order": [
+      "django-elite"
+    ],
+    "django settings layout": [
+      "django-elite"
+    ],
+    "django test setup": [
+      "django-elite"
+    ],
+    "django with postgres": [
+      "django-elite"
+    ],
     "django-axes": [
       "django-auth-hardening"
     ],
-    "doc": [
-      "doc-coauthoring"
+    "docker build is slow": [
+      "docker-elite"
     ],
-    "docker": [
+    "docker layer caching": [
       "docker-elite"
     ],
     "documents": [
@@ -4066,22 +4084,16 @@
     "dovetail": [
       "blender-procedural-modeling"
     ],
-    "downtime": [
-      "zero-downtime-migrations"
-    ],
     "dpia assessment": [
       "privacy-by-design-elite"
     ],
     "e-commerce architecture": [
       "marketplace-pattern"
     ],
-    "ebpf": [
-      "observability-elite"
-    ],
     "economy tuning": [
       "run-economy-balancing"
     ],
-    "edge": [
+    "edge or regional runtime": [
       "serverless-edge-elite"
     ],
     "edit a docx programmatically": [
@@ -4093,17 +4105,14 @@
     "edit claude.md": [
       "writing-for-agents"
     ],
-    "engineering": [
-      "chaos-engineering-elite"
-    ],
     "error budget exhausted": [
       "sre-incident-protocol"
     ],
     "error messages": [
       "auth-ux-patterns"
     ],
-    "error-handling": [
-      "rust-elite"
+    "escalate an issue in writing": [
+      "internal-comms"
     ],
     "eu ai act compliance": [
       "privacy-by-design-elite"
@@ -4111,17 +4120,14 @@
     "evaluate my tool descriptions": [
       "evaluation-guide"
     ],
-    "evaluation": [
-      "skill-creator"
-    ],
     "event chain": [
       "narrative-event-system"
     ],
+    "event driven architecture": [
+      "serverless-edge-elite"
+    ],
     "event system": [
       "narrative-event-system"
-    ],
-    "event-driven": [
-      "serverless-edge-elite"
     ],
     "eventual consistency drift": [
       "system-design-elite"
@@ -4129,7 +4135,7 @@
     "excel": [
       "xlsx"
     ],
-    "expand-contract": [
+    "expand contract migration": [
       "zero-downtime-migrations"
     ],
     "explain this properly": [
@@ -4137,6 +4143,9 @@
     ],
     "expose a resource over mcp": [
       "mcp-deep-dive"
+    ],
+    "expose my api to claude": [
+      "mcp-builder"
     ],
     "extract text from a pdf": [
       "document-tooling-deep-dive"
@@ -4147,23 +4156,23 @@
     "fable": [
       "models"
     ],
-    "factory": [
-      "theme-factory"
-    ],
     "failing": [
       "diagnosing-bugs"
     ],
     "fantasy ui": [
       "diegetic-game-ui"
     ],
-    "faq": [
-      "internal-comms"
-    ],
     "fastmcp": [
       "mcp-deep-dive"
     ],
+    "fault injection": [
+      "chaos-engineering-elite"
+    ],
     "feature flags for incomplete work": [
       "git-velocity-elite"
+    ],
+    "fighting the borrow checker": [
+      "rust-elite"
     ],
     "filter drawer": [
       "auth-ux-patterns"
@@ -4171,11 +4180,8 @@
     "find out how x works": [
       "research"
     ],
-    "firebase": [
+    "firebase deploy": [
       "gcloud-deployment-elite"
-    ],
-    "first": [
-      "local-first-ai-elite"
     ],
     "first time setup": [
       "setup-engineering-flows"
@@ -4183,7 +4189,10 @@
     "flaky test": [
       "pytest-elite"
     ],
-    "flask": [
+    "flask blueprints layout": [
+      "flask-elite"
+    ],
+    "flask extensions setup": [
       "flask-elite"
     ],
     "focus billing standard": [
@@ -4195,9 +4204,6 @@
     "font pairing for a deck": [
       "themes"
     ],
-    "fonts": [
-      "theme-factory"
-    ],
     "force push safely": [
       "git-ops-elite"
     ],
@@ -4207,9 +4213,6 @@
     "form styling": [
       "auth-ux-patterns"
     ],
-    "formalism": [
-      "xstate-formalism-elite"
-    ],
     "formally verify this protocol": [
       "tla-plus-formalism"
     ],
@@ -4218,14 +4221,6 @@
     ],
     "frequency analysis": [
       "frequency-analysis-simulation"
-    ],
-    "frontend": [
-      "css-elite",
-      "frontend-design",
-      "js-html-elite",
-      "local-first-ai-elite",
-      "web-artifacts-builder",
-      "xstate-formalism-elite"
     ],
     "frontmatter": [
       "skill-standard"
@@ -4239,7 +4234,13 @@
     "gather sources": [
       "research"
     ],
-    "gcloud": [
+    "gcloud cli python error": [
+      "gcloud-deployment-elite"
+    ],
+    "gcloud deploy fails": [
+      "gcloud-deployment-elite"
+    ],
+    "gcloudignore": [
       "gcloud-deployment-elite"
     ],
     "gdpr": [
@@ -4247,6 +4248,12 @@
     ],
     "gdpr erasure request": [
       "privacy-by-design-elite"
+    ],
+    "generate a theme from brand colours": [
+      "theme-factory"
+    ],
+    "generate a typed client": [
+      "api-contracts-elite"
     ],
     "generate a wizard": [
       "wizard"
@@ -4257,20 +4264,20 @@
     "generative": [
       "algorithmic-art"
     ],
-    "gif": [
+    "generics and protocols": [
+      "python-elite"
+    ],
+    "gif is too large for slack": [
       "slack-gif-creator"
+    ],
+    "gin index": [
+      "postgresql-elite"
     ],
     "git lfs for large files": [
       "git-ops-elite"
     ],
-    "github": [
+    "github actions cache miss": [
       "github-actions-elite"
-    ],
-    "github-actions": [
-      "github-actions-elite"
-    ],
-    "governance": [
-      "iac-opentofu-elite"
     ],
     "graphite or ghstack": [
       "git-velocity-elite"
@@ -4287,14 +4294,8 @@
     "grill with docs": [
       "grill-with-docs"
     ],
-    "grpc": [
+    "grpc schema design": [
       "api-contracts-elite"
-    ],
-    "guidelines": [
-      "brand-guidelines"
-    ],
-    "ha": [
-      "zero-downtime-migrations"
     ],
     "haiku": [
       "models"
@@ -4303,8 +4304,10 @@
       "handoff"
     ],
     "handoff": [
-      "agent-handoff-elite",
       "handoff"
+    ],
+    "has selector": [
+      "css-elite"
     ],
     "headless browser script": [
       "webapp-testing"
@@ -4314,6 +4317,9 @@
     ],
     "help me understand": [
       "teach"
+    ],
+    "help me write this doc": [
+      "doc-coauthoring"
     ],
     "hexagonal architecture": [
       "architectural-patterns"
@@ -4330,8 +4336,8 @@
     "how do i define a tool for claude": [
       "tool-use-concepts"
     ],
-    "html": [
-      "js-html-elite"
+    "how should i announce this": [
+      "internal-comms"
     ],
     "human approval before an agent acts": [
       "security-agentic-elite"
@@ -4342,11 +4348,14 @@
     "i want to learn": [
       "teach"
     ],
-    "iac": [
-      "iac-opentofu-elite"
-    ],
     "implement the spec": [
       "implement"
+    ],
+    "import an existing resource": [
+      "iac-opentofu-elite"
+    ],
+    "impossible ui state": [
+      "xstate-formalism-elite"
     ],
     "improve the architecture": [
       "improve-codebase-architecture"
@@ -4354,37 +4363,23 @@
     "incoming pr": [
       "triage"
     ],
-    "indexing": [
-      "postgresql-elite"
-    ],
-    "infra": [
-      "memory-validation"
-    ],
-    "infrastructure": [
-      "agent-handoff-elite",
-      "agent-swarms-elite",
-      "agentic-rag-elite",
-      "chaos-engineering-elite",
-      "docker-elite",
-      "gcloud-deployment-elite",
-      "github-actions-elite",
-      "iac-opentofu-elite",
-      "mcp-builder",
-      "observability-elite",
-      "serverless-edge-elite",
-      "web-artifacts-builder"
+    "infrastructure changed outside of code": [
+      "iac-opentofu-elite"
     ],
     "ingest documents": [
       "rag-content-generation"
     ],
+    "instrument a service": [
+      "observability-elite"
+    ],
     "integrate shopify": [
       "marketplace-pattern"
     ],
+    "integrate the anthropic sdk": [
+      "claude-api"
+    ],
     "integration tests": [
       "tdd"
-    ],
-    "internal": [
-      "internal-comms"
     ],
     "internal newsletter": [
       "internal-comms-deep-dive"
@@ -4415,35 +4410,28 @@
     ],
     "javascript": [
       "algorithmic-art",
-      "docx",
-      "js-html-elite"
+      "docx"
     ],
     "joker stacking": [
       "roguelike-scoring"
     ],
-    "js": [
-      "js-html-elite"
-    ],
     "json schema game content": [
       "narrative-event-system"
     ],
-    "jsonb": [
+    "jsonb or separate columns": [
       "postgresql-elite"
     ],
-    "kubernetes": [
+    "kill a pod on purpose": [
       "chaos-engineering-elite"
     ],
-    "langgraph": [
-      "agent-swarms-elite"
-    ],
-    "latency": [
+    "lambda or workers": [
       "serverless-edge-elite"
     ],
-    "layers": [
-      "css-elite"
+    "langgraph state": [
+      "agent-swarms-elite"
     ],
-    "layout": [
-      "css-elite"
+    "limit the blast radius": [
+      "chaos-engineering-elite"
     ],
     "limit what an agent can do": [
       "security-agentic-elite"
@@ -4451,11 +4439,11 @@
     "llamaindex": [
       "rag-content-generation"
     ],
-    "local": [
+    "local or server inference": [
       "local-first-ai-elite"
     ],
-    "local-first": [
-      "local-first-ai-elite"
+    "lock dependencies": [
+      "python-elite"
     ],
     "login errors": [
       "auth-ux-patterns"
@@ -4472,17 +4460,23 @@
     "look up the docs": [
       "research"
     ],
-    "loops": [
-      "agentic-rag-elite"
-    ],
     "lore": [
       "narrative-event-system"
     ],
     "lottery numbers": [
       "frequency-analysis-simulation"
     ],
+    "make a slack gif": [
+      "slack-gif-creator"
+    ],
+    "make this look designed": [
+      "frontend-design"
+    ],
     "make this testable": [
       "codebase-design"
+    ],
+    "managed agents": [
+      "claude-api"
     ],
     "manual steps": [
       "wizard"
@@ -4490,11 +4484,14 @@
     "map popup": [
       "diegetic-game-ui"
     ],
-    "mcp": [
-      "mcp-builder"
+    "matrix build": [
+      "github-actions-elite"
     ],
     "mcp quality check": [
       "evaluation-guide"
+    ],
+    "mcp server from scratch": [
+      "mcp-builder"
     ],
     "mcp tool description quality": [
       "mcp-deep-dive"
@@ -4504,14 +4501,7 @@
     ],
     "media": [
       "algorithmic-art",
-      "brand-guidelines",
-      "canvas-design",
-      "frontend-design",
-      "slack-gif-creator",
-      "theme-factory"
-    ],
-    "memory": [
-      "memory-validation"
+      "canvas-design"
     ],
     "merge conflict": [
       "resolving-merge-conflicts"
@@ -4522,9 +4512,8 @@
     "mesh generation": [
       "blender-procedural-modeling"
     ],
-    "meta": [
-      "memory-validation",
-      "skill-creator"
+    "messages api or tool runner": [
+      "claude-api"
     ],
     "micro frontend federation": [
       "architectural-patterns"
@@ -4532,14 +4521,17 @@
     "migrate skill": [
       "skill-standard"
     ],
-    "migrations": [
-      "zero-downtime-migrations"
-    ],
     "mock an async function": [
       "pytest-elite"
     ],
+    "model based testing for ui": [
+      "xstate-formalism-elite"
+    ],
     "model check a distributed algorithm": [
       "tla-plus-formalism"
+    ],
+    "model download blocks the page": [
+      "local-first-ai-elite"
     ],
     "model id": [
       "models"
@@ -4547,11 +4539,26 @@
     "module interface": [
       "codebase-design"
     ],
+    "monorepo ci": [
+      "github-actions-elite"
+    ],
     "monte carlo": [
       "frequency-analysis-simulation"
     ],
+    "move off single file flask": [
+      "flask-elite"
+    ],
+    "multi agent architecture": [
+      "agent-swarms-elite"
+    ],
+    "multi hop question": [
+      "agentic-rag-elite"
+    ],
     "multi region architecture": [
       "system-design-elite"
+    ],
+    "multi stage build": [
+      "docker-elite"
     ],
     "multi-format output": [
       "rag-content-generation"
@@ -4565,14 +4572,41 @@
     "my agents disagree with each other": [
       "agent-consensus-elite"
     ],
+    "my bigquery query is expensive": [
+      "bigquery-elite"
+    ],
+    "my ci is slow": [
+      "github-actions-elite"
+    ],
+    "my docker image is too big": [
+      "docker-elite"
+    ],
+    "my draft is not landing": [
+      "doc-coauthoring"
+    ],
+    "my migration locked the table": [
+      "zero-downtime-migrations"
+    ],
     "my mock is not working": [
       "pytest-elite"
+    ],
+    "my postgres query is slow": [
+      "postgresql-elite"
     ],
     "my pr is too big to review": [
       "git-velocity-elite"
     ],
+    "my rag loop is too slow": [
+      "agentic-rag-elite"
+    ],
+    "my skill is not being triggered": [
+      "skill-creator"
+    ],
     "my test suite is slow": [
       "pytest-elite"
+    ],
+    "my ui looks generic": [
+      "frontend-design"
     ],
     "need input from the team": [
       "to-questionnaire"
@@ -4580,37 +4614,37 @@
     "new skill": [
       "skill-standard"
     ],
-    "observability": [
-      "observability-elite"
-    ],
     "ocr": [
       "pdf"
+    ],
+    "official hex codes": [
+      "brand-guidelines"
     ],
     "official skill specification": [
       "agent-skills-spec"
     ],
-    "onnx": [
+    "offline ai features": [
       "local-first-ai-elite"
     ],
-    "openapi": [
+    "oidc instead of stored secrets": [
+      "github-actions-elite"
+    ],
+    "openapi spec first": [
       "api-contracts-elite"
     ],
     "openpyxl formatting": [
       "document-tooling-deep-dive"
     ],
-    "opentelemetry": [
+    "opentelemetry setup": [
       "observability-elite"
     ],
-    "opentofu": [
+    "opentofu drift": [
       "iac-opentofu-elite"
-    ],
-    "optimization": [
-      "bigquery-elite"
     ],
     "opus": [
       "models"
     ],
-    "orchestration": [
+    "orchestrate multiple agents": [
       "agent-swarms-elite"
     ],
     "our cloud bill is too high": [
@@ -4634,6 +4668,9 @@
     "page the on call engineer": [
       "sre-incident-protocol"
     ],
+    "page with no external dependencies": [
+      "web-artifacts-builder"
+    ],
     "palette for a report": [
       "themes"
     ],
@@ -4642,6 +4679,9 @@
     ],
     "pandas value counts": [
       "frequency-analysis-simulation"
+    ],
+    "parallelise agent tasks": [
+      "agent-swarms-elite"
     ],
     "parametric model": [
       "blender-procedural-modeling"
@@ -4652,8 +4692,14 @@
     "parchment modal": [
       "diegetic-game-ui"
     ],
+    "partition and cluster a table": [
+      "bigquery-elite"
+    ],
     "party game": [
       "social-deduction-design"
+    ],
+    "pass work to another agent": [
+      "agent-handoff-elite"
     ],
     "password reset": [
       "django-auth-hardening"
@@ -4661,20 +4707,12 @@
     "patch where it is used": [
       "pytest-elite"
     ],
-    "patterns": [
-      "django-elite",
-      "flask-elite"
-    ],
     "pdf": [
       "canvas-design",
       "pdf"
     ],
     "penalty scaling": [
       "run-economy-balancing"
-    ],
-    "performance": [
-      "postgresql-elite",
-      "redis-elite"
     ],
     "performance regression": [
       "diagnosing-bugs"
@@ -4688,14 +4726,14 @@
     "plan a new app": [
       "product-spec-chain"
     ],
+    "plan and apply pipeline": [
+      "iac-opentofu-elite"
+    ],
     "player acts out of turn": [
       "multiplayer-interruption-pattern"
     ],
     "playwright selector not found": [
       "webapp-testing"
-    ],
-    "pltg": [
-      "observability-elite"
     ],
     "pluscal": [
       "tla-plus-formalism"
@@ -4712,9 +4750,8 @@
     "poster": [
       "canvas-design"
     ],
-    "postgresql": [
-      "postgresql-elite",
-      "zero-downtime-migrations"
+    "postgres 18 features": [
+      "postgresql-elite"
     ],
     "powerpoint": [
       "pptx"
@@ -4725,8 +4762,14 @@
     "prd": [
       "product-spec-chain"
     ],
+    "pre-commit hook blocked my commit": [
+      "memory-validation"
+    ],
     "presentation": [
       "pptx"
+    ],
+    "preserve intent across sessions": [
+      "agent-handoff-elite"
     ],
     "pressure test this": [
       "grilling"
@@ -4752,24 +4795,23 @@
     "progress plans problems": [
       "internal-comms-deep-dive"
     ],
+    "progressive enhancement for ai": [
+      "local-first-ai-elite"
+    ],
     "prompt caching in python": [
       "python-deep-dive"
     ],
     "prompt injection defence": [
       "security-agentic-elite"
     ],
-    "protobuf": [
-      "api-contracts-elite"
-    ],
-    "protocol": [
-      "agent-handoff-elite",
-      "mcp-builder"
-    ],
     "prototype": [
       "prototype"
     ],
     "prove an exploit path safely": [
       "agentic-security-elite"
+    ],
+    "prove the system survives failure": [
+      "chaos-engineering-elite"
     ],
     "prove there is no deadlock": [
       "tla-plus-formalism"
@@ -4780,22 +4822,17 @@
     "prs sit in review too long": [
       "git-velocity-elite"
     ],
-    "pub-sub": [
-      "redis-elite"
-    ],
     "publish a spec": [
       "to-spec"
+    ],
+    "pyproject setup": [
+      "python-elite"
     ],
     "pytest fixture teardown": [
       "pytest-elite"
     ],
     "python": [
-      "django-elite",
-      "flask-elite",
-      "memory-validation",
-      "pdf",
-      "python-elite",
-      "slack-gif-creator"
+      "pdf"
     ],
     "python 3d": [
       "blender-procedural-modeling"
@@ -4807,8 +4844,10 @@
       "to-questionnaire"
     ],
     "rag": [
-      "agentic-rag-elite",
       "rag-content-generation"
+    ],
+    "rag returns wrong context": [
+      "agentic-rag-elite"
     ],
     "random events": [
       "narrative-event-system"
@@ -4828,18 +4867,17 @@
     "re-pitch that": [
       "wait-what"
     ],
-    "react": [
-      "frontend-design",
-      "web-artifacts-builder"
-    ],
     "reaction card": [
       "multiplayer-interruption-pattern"
     ],
     "read your writes": [
       "system-design-elite"
     ],
-    "reasoning": [
-      "agentic-rag-elite"
+    "reader test my writing": [
+      "doc-coauthoring"
+    ],
+    "reading explain analyze": [
+      "postgresql-elite"
     ],
     "rebase conflict": [
       "resolving-merge-conflicts"
@@ -4856,11 +4894,17 @@
     "redact pii before sending": [
       "privacy-by-design-elite"
     ],
-    "redis": [
+    "redis stream or list": [
+      "redis-elite"
+    ],
+    "redis ttl strategy": [
       "redis-elite"
     ],
     "reduce gpu spend": [
       "finops-value-elite"
+    ],
+    "reduce query cost": [
+      "bigquery-elite"
     ],
     "reduce sast false positives": [
       "agentic-security-elite"
@@ -4868,16 +4912,28 @@
     "registration form": [
       "auth-ux-patterns"
     ],
-    "reporting": [
-      "internal-comms"
+    "remote state backend": [
+      "iac-opentofu-elite"
+    ],
+    "rename a column in production": [
+      "zero-downtime-migrations"
+    ],
+    "replace javascript date": [
+      "js-html-elite"
+    ],
+    "required frontmatter fields": [
+      "memory-validation"
     ],
     "requirements document": [
       "product-spec-chain"
     ],
+    "rerank retrieved results": [
+      "agentic-rag-elite"
+    ],
     "research this": [
       "research"
     ],
-    "resilience": [
+    "resilience testing": [
       "chaos-engineering-elite"
     ],
     "resolve conflicts": [
@@ -4891,6 +4947,12 @@
     ],
     "retrieval augmented generation": [
       "rag-content-generation"
+    ],
+    "retrieval quality is poor": [
+      "agentic-rag-elite"
+    ],
+    "review my design doc": [
+      "doc-coauthoring"
     ],
     "review since": [
       "code-review"
@@ -4916,7 +4978,7 @@
     "roleplay game": [
       "social-deduction-design"
     ],
-    "ruff": [
+    "ruff configuration": [
       "python-elite"
     ],
     "run a dev server for tests": [
@@ -4925,10 +4987,19 @@
     "run a gameday": [
       "sre-incident-protocol"
     ],
+    "run a model in the browser": [
+      "local-first-ai-elite"
+    ],
+    "run container as non root": [
+      "docker-elite"
+    ],
+    "run the memory validator": [
+      "memory-validation"
+    ],
     "running out of context": [
       "handoff"
     ],
-    "rust": [
+    "rust error type design": [
       "rust-elite"
     ],
     "sanity check the design": [
@@ -4955,30 +5026,32 @@
     "scroll ui": [
       "diegetic-game-ui"
     ],
-    "sdk": [
-      "claude-api"
-    ],
     "secret distribution": [
       "social-deduction-design"
     ],
     "secure my agent": [
       "security-agentic-elite"
     ],
-    "security": [
-      "docker-elite",
-      "github-actions-elite"
-    ],
     "security unit tests": [
       "agentic-security-elite"
+    ],
+    "self contained dashboard": [
+      "web-artifacts-builder"
+    ],
+    "self correcting retrieval": [
+      "agentic-rag-elite"
     ],
     "server side tools": [
       "tool-use-concepts"
     ],
-    "serverless": [
+    "serverless function timeout": [
       "serverless-edge-elite"
     ],
     "session security": [
       "django-auth-hardening"
+    ],
+    "set a query cost limit": [
+      "bigquery-elite"
     ],
     "set an slo": [
       "sre-incident-protocol"
@@ -4992,11 +5065,14 @@
     "set up triage labels": [
       "setup-engineering-flows"
     ],
-    "shadcn": [
+    "shadcn artifact": [
       "web-artifacts-builder"
     ],
     "shallow abstraction": [
       "codebase-design"
+    ],
+    "share state between tasks": [
+      "rust-elite"
     ],
     "sharpen my plan": [
       "grill-me"
@@ -5010,13 +5086,13 @@
     "simulation": [
       "frequency-analysis-simulation"
     ],
-    "skill": [
-      "skill-creator"
-    ],
     "skill authoring": [
       "skill-standard"
     ],
-    "slack": [
+    "skill file fails validation": [
+      "memory-validation"
+    ],
+    "slack emoji size limit": [
       "slack-gif-creator"
     ],
     "slow": [
@@ -5037,6 +5113,15 @@
     "sort controls": [
       "auth-ux-patterns"
     ],
+    "sorted set leaderboard": [
+      "redis-elite"
+    ],
+    "spacing and type scale": [
+      "frontend-design"
+    ],
+    "spawn a tokio task": [
+      "rust-elite"
+    ],
     "spec field or local extension": [
       "agent-skills-spec"
     ],
@@ -5046,8 +5131,14 @@
     "spec this out": [
       "to-spec"
     ],
+    "specificity war in css": [
+      "css-elite"
+    ],
     "spike": [
       "prototype"
+    ],
+    "split a skill into companion files": [
+      "skill-creator"
     ],
     "split the frontend by domain": [
       "architectural-patterns"
@@ -5058,29 +5149,32 @@
     "spot instances for training": [
       "finops-value-elite"
     ],
-    "sql": [
-      "bigquery-elite"
-    ],
     "srs": [
       "product-spec-chain"
     ],
     "stacked pull requests": [
       "git-velocity-elite"
     ],
+    "standalone interactive page": [
+      "web-artifacts-builder"
+    ],
+    "start a django project": [
+      "django-elite"
+    ],
+    "start a python project": [
+      "python-elite"
+    ],
     "start implementation": [
       "implement"
+    ],
+    "state chart": [
+      "xstate-formalism-elite"
     ],
     "state space explosion": [
       "tla-plus-formalism"
     ],
-    "state-machine": [
-      "xstate-formalism-elite"
-    ],
-    "state-transfer": [
-      "agent-handoff-elite"
-    ],
-    "status": [
-      "internal-comms"
+    "steady state hypothesis": [
+      "chaos-engineering-elite"
     ],
     "stop idle dev environments": [
       "finops-value-elite"
@@ -5100,29 +5194,32 @@
     "stress test my thinking": [
       "grilling"
     ],
-    "structured": [
+    "structure a flask app": [
+      "flask-elite"
+    ],
+    "structure this document": [
       "doc-coauthoring"
     ],
     "structured outputs from claude": [
       "tool-use-concepts"
     ],
-    "style": [
-      "brand-guidelines"
+    "structured state object": [
+      "agent-handoff-elite"
     ],
-    "subgrid": [
+    "style tokens from a brand": [
+      "theme-factory"
+    ],
+    "subgrid alignment": [
       "css-elite"
     ],
-    "swarm": [
+    "supervisor agent pattern": [
       "agent-swarms-elite"
     ],
     "swarm coordination": [
       "agent-consensus-elite"
     ],
-    "swarms": [
-      "agent-swarms-elite"
-    ],
-    "tailwind": [
-      "web-artifacts-builder"
+    "tangled boolean state": [
+      "xstate-formalism-elite"
     ],
     "tdd": [
       "tdd"
@@ -5130,13 +5227,19 @@
     "teach me": [
       "teach"
     ],
-    "temporal": [
+    "telemetry cost is too high": [
+      "observability-elite"
+    ],
+    "tell leadership about a delay": [
+      "internal-comms"
+    ],
+    "temporal api": [
       "js-html-elite"
     ],
     "terminology": [
       "domain-modeling"
     ],
-    "terraform": [
+    "terraform state is locked": [
       "iac-opentofu-elite"
     ],
     "test first": [
@@ -5151,14 +5254,20 @@
     "that did not land": [
       "wait-what"
     ],
-    "theme": [
-      "theme-factory"
+    "the manifest is stale": [
+      "memory-validation"
     ],
     "theme for a presentation": [
       "themes"
     ],
+    "theme my slides": [
+      "theme-factory"
+    ],
     "thinking effort parameter": [
       "models"
+    ],
+    "thiserror or anyhow": [
+      "rust-elite"
     ],
     "throwaway": [
       "prototype"
@@ -5166,11 +5275,14 @@
     "throwing": [
       "diagnosing-bugs"
     ],
+    "thundering herd": [
+      "redis-elite"
+    ],
+    "time zone handling in javascript": [
+      "js-html-elite"
+    ],
     "tla+ specification": [
       "tla-plus-formalism"
-    ],
-    "tokio": [
-      "rust-elite"
     ],
     "tolerance": [
       "blender-procedural-modeling"
@@ -5187,13 +5299,10 @@
     "tool use in typescript": [
       "typescript-deep-dive"
     ],
-    "tools": [
-      "mcp-builder"
-    ],
     "tracer bullets": [
       "to-tickets"
     ],
-    "transformersjs": [
+    "transformers.js": [
       "local-first-ai-elite"
     ],
     "triage": [
@@ -5208,7 +5317,7 @@
     "turn this into a spec": [
       "to-spec"
     ],
-    "typing": [
+    "type hints for python 3.13": [
       "python-elite"
     ],
     "typography": [
@@ -5220,13 +5329,16 @@
     "update the team on this": [
       "internal-comms-deep-dive"
     ],
-    "uv": [
+    "uuid or bigint primary key": [
+      "postgresql-elite"
+    ],
+    "uv instead of pip": [
       "python-elite"
     ],
     "ux design doc": [
       "product-spec-chain"
     ],
-    "validation": [
+    "validate the skills": [
       "memory-validation"
     ],
     "validation states": [
@@ -5238,8 +5350,11 @@
     "verify the design before implementing": [
       "tla-plus-formalism"
     ],
-    "vite": [
-      "web-artifacts-builder"
+    "version an endpoint": [
+      "api-contracts-elite"
+    ],
+    "visual hierarchy": [
+      "frontend-design"
     ],
     "wait for networkidle": [
       "webapp-testing"
@@ -5253,19 +5368,19 @@
     "walk me through setup": [
       "wizard"
     ],
-    "wasm": [
-      "serverless-edge-elite"
+    "wcag 2.2 compliance": [
+      "js-html-elite"
     ],
     "we have a production incident": [
       "sre-incident-protocol"
     ],
-    "web": [
-      "web-artifacts-builder"
+    "web component server rendering": [
+      "js-html-elite"
     ],
     "web search tool": [
       "tool-use-concepts"
     ],
-    "webgpu": [
+    "webgpu inference": [
       "local-first-ai-elite"
     ],
     "weekly update for leadership": [
@@ -5273,6 +5388,9 @@
     ],
     "werewolf": [
       "social-deduction-design"
+    ],
+    "what belongs at the edge": [
+      "serverless-edge-elite"
     ],
     "what colours suit a healthcare deck": [
       "themes"
@@ -5282,6 +5400,15 @@
     ],
     "what does the agent skills spec require": [
       "agent-skills-spec"
+    ],
+    "what font does anthropic use": [
+      "brand-guidelines"
+    ],
+    "what format for this update": [
+      "internal-comms"
+    ],
+    "what should i be measuring": [
+      "observability-elite"
     ],
     "what skill should i use": [
       "skill-router"
@@ -5304,8 +5431,14 @@
     "where to split cart and catalogue": [
       "marketplace-pattern"
     ],
+    "which anthropic sdk surface": [
+      "claude-api"
+    ],
     "which flow": [
       "skill-router"
+    ],
+    "which index should i add": [
+      "postgresql-elite"
     ],
     "which library for pdf extraction": [
       "document-tooling-deep-dive"
@@ -5313,8 +5446,14 @@
     "which model": [
       "models"
     ],
+    "which redis data structure": [
+      "redis-elite"
+    ],
     "which skill": [
       "skill-router"
+    ],
+    "why does this look off": [
+      "frontend-design"
     ],
     "word": [
       "docx"
@@ -5322,8 +5461,14 @@
     "work the backlog": [
       "implement"
     ],
+    "workflow permissions": [
+      "github-actions-elite"
+    ],
     "worldbuilding": [
       "narrative-event-system"
+    ],
+    "wrap a service as mcp tools": [
+      "mcp-builder"
     ],
     "write a commit message": [
       "git-ops-elite"
@@ -5333,6 +5478,9 @@
     ],
     "write a skill": [
       "writing-for-agents"
+    ],
+    "write a skill description": [
+      "skill-creator"
     ],
     "write a status update": [
       "internal-comms-deep-dive"
@@ -5361,9 +5509,6 @@
     "write the test first": [
       "tdd"
     ],
-    "writing": [
-      "doc-coauthoring"
-    ],
     "writing for agents": [
       "writing-for-agents"
     ],
@@ -5373,14 +5518,11 @@
     "xml": [
       "docx"
     ],
-    "xstate": [
+    "xstate machine": [
       "xstate-formalism-elite"
     ],
     "yahtzee": [
       "roguelike-scoring"
-    ],
-    "zero": [
-      "zero-downtime-migrations"
     ]
   },
   "dangling_dependencies": []

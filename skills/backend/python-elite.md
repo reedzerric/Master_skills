@@ -1,18 +1,17 @@
 ---
 name: python-elite
-description: Guidelines for writing high-performance, type-safe, and maintainable Python code using the 2026 Astral toolchain (`uv`, `ruff`) and advanced type hinting. Use when working with backend, python, astral.
-version: 1.0.0
+description: 'Python standards on the Astral toolchain: uv for environments and dependency resolution, ruff for lint and format, advanced typing for 3.13 and later, and the idiomatic patterns expected of code in this repository. Use when starting a Python project, adding or locking dependencies, or deciding how to type something. For test structure, use pytest-elite.'
+version: 1.1.0
 category: core
-triggers: [backend, python, astral, uv, ruff, typing]
+triggers: [start a python project, uv instead of pip, ruff configuration, type hints for python 3.13, generics and protocols, pyproject setup, lock dependencies]
 dependencies: [flask-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Python Elite Standards (2026)
-date: 2026-03-08
-task_ref: tech-expansion
-confidence_score: 1.0
+inputs: [a Python project or module]
+outputs: [a pyproject and uv setup, typed idiomatic Python]
 tags: [backend, python, astral, uv, ruff, typing]
-links: ["[[skills/backend/flask-elite]]"]
+links: ['[[pytest-elite]]', '[[flask-elite]]', '[[django-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Python Elite Standards (2026)

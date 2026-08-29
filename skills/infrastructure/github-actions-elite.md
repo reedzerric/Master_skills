@@ -1,18 +1,17 @@
 ---
 name: github-actions-elite
-description: Guidelines for architecting high-performance, zero-secret CI/CD pipelines. Use when working with infrastructure, devops, ci.
-version: 1.0.0
+description: 'CI/CD on GitHub Actions: OIDC for zero-secret cloud deployment, caching that actually hits, and matrix and monorepo scaling patterns. Use when a workflow is slow, when removing long-lived cloud credentials from repository secrets, or when scaling CI across a monorepo. For the git workflow around it, use git-ops-elite.'
+version: 1.1.0
 category: core
-triggers: [infrastructure, devops, ci, cd, github-actions, security, github, actions]
+triggers: [my ci is slow, oidc instead of stored secrets, github actions cache miss, matrix build, monorepo ci, deploy from actions without keys, workflow permissions]
 dependencies: [docker-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: GitHub Actions Elite CI/CD (2026)
-date: 2026-03-08
-task_ref: all-facets-expansion
-confidence_score: 1.0
+inputs: [a repository and its build and deploy needs]
+outputs: [a workflow file, an OIDC trust configuration]
 tags: [infrastructure, devops, ci, cd, github-actions, security]
-links: ["[[skills/infrastructure/docker-elite]]"]
+links: ['[[git-ops-elite]]', '[[docker-elite]]', '[[iac-opentofu-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # GitHub Actions Elite CI/CD (2026)

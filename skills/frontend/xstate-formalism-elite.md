@@ -1,18 +1,17 @@
 ---
 name: xstate-formalism-elite
-description: Guidelines for managing complex frontend logic using deterministic state machines and the Actor Model (XState v5+). Use when working with frontend, xstate, state-machine.
-version: 1.0.0
+description: 'Actor-model state management with XState: actor-first architecture, type-safe machine definitions, and model-based tests generated from the machine itself. Use when UI state has grown into tangled booleans, when impossible states keep occurring, or when coordinating long-running async flows. For formally proving a distributed protocol, use tla-plus-formalism.'
+version: 1.1.0
 category: core
-triggers: [frontend, xstate, state-machine, actor-model, formalism]
+triggers: [tangled boolean state, impossible ui state, xstate machine, actor model in the frontend, coordinate async flows, model based testing for ui, state chart]
 dependencies: [js-html-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: XState & Actor Model Formalism (2026)
-date: 2026-03-08
-task_ref: mit-professor-phase-4
-confidence_score: 1.0
+inputs: [a UI flow or component state]
+outputs: [a typed state machine, generated model-based tests]
 tags: [frontend, xstate, state-machine, actor-model, formalism]
-links: ["[[skills/frontend/js-html-elite]]"]
+links: ['[[js-html-elite]]', '[[tla-plus-formalism]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # XState & Actor Model Formalism (2026)

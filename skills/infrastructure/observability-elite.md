@@ -1,18 +1,17 @@
 ---
 name: observability-elite
-description: Guidelines for architecting unified, actionable, and cost-aware observability systems. Use when working with infrastructure, observability, opentelemetry.
-version: 1.0.0
+description: 'Production observability: the PLTG stack, OpenTelemetry instrumentation as the default everywhere, and patterns for correlating traces, logs and metrics without collecting everything. Use when an issue cannot be diagnosed from existing telemetry, when instrumenting a new service, or when telemetry cost is out of control. For incident process, use sre-incident-protocol.'
+version: 1.1.0
 category: core
-triggers: [infrastructure, observability, opentelemetry, ebpf, pltg]
+triggers: [cannot diagnose this from the logs, instrument a service, opentelemetry setup, correlate traces and logs, telemetry cost is too high, what should i be measuring, distributed tracing]
 dependencies: [github-actions-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Enterprise Observability & Monitoring (2026)
-date: 2026-03-08
-task_ref: all-facets-expansion
-confidence_score: 1.0
+inputs: [a service to instrument, an undiagnosable issue]
+outputs: [instrumentation code, a telemetry pipeline, dashboards and alerts]
 tags: [infrastructure, observability, opentelemetry, ebpf, pltg]
-links: ["[[skills/infrastructure/github-actions-elite]]"]
+links: ['[[sre-incident-protocol]]', '[[chaos-engineering-elite]]', '[[finops-value-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Enterprise Observability & Monitoring (2026)

@@ -1,18 +1,17 @@
 ---
 name: css-elite
-description: Guidelines for architecting scalable, component-first CSS using native 2026 features. Use for all modern web interfaces. Use when working with frontend, css, layout.
-version: 1.0.0
+description: 'Modern CSS architecture: cascade layers to control specificity deliberately, container queries for components that adapt to their container rather than the viewport, grid and subgrid for deep alignment, and current selector logic. Use when specificity fights break styling, when a component must be portable across contexts, or when aligning nested grids. For visual design judgement, use frontend-design.'
+version: 1.1.0
 category: core
-triggers: [frontend, css, layout, subgrid, layers, container-queries]
+triggers: [specificity war in css, cascade layers, container queries, subgrid alignment, component that adapts to its container, css nesting, has selector]
 dependencies: [frontend-design]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: CSS Elite Architecture (2026)
-date: 2026-03-08
-task_ref: tech-expansion
-confidence_score: 1.0
+inputs: [a stylesheet or component to lay out]
+outputs: [layered CSS, container-query components, grid layouts]
 tags: [frontend, css, layout, subgrid, layers, container-queries]
-links: ["[[skills/media/frontend-design]]"]
+links: ['[[js-html-elite]]', '[[frontend-design]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # CSS Elite Architecture (2026)

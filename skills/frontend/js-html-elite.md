@@ -1,18 +1,17 @@
 ---
 name: js-html-elite
-description: Guidelines for building modern, high-performance web applications using the 2026 native web platform features. Use when working with frontend, javascript, html.
-version: 1.0.0
+description: 'Modern browser JavaScript and HTML: the Temporal API replacing Date, explicit resource management, declarative shadow DOM for server-rendered web components, and WCAG 2.2 accessibility requirements. Use when handling dates and time zones, writing web components, or meeting accessibility standards. For layout and styling, use css-elite.'
+version: 1.1.0
 category: core
-triggers: [frontend, javascript, html, temporal, accessibility, components, js]
+triggers: [replace javascript date, temporal api, time zone handling in javascript, declarative shadow dom, web component server rendering, wcag 2.2 compliance, accessible markup]
 dependencies: [css-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: JS & HTML Elite Engineering (2026)
-date: 2026-03-08
-task_ref: tech-expansion
-confidence_score: 1.0
+inputs: [browser JavaScript or markup]
+outputs: [Temporal-based date code, accessible components]
 tags: [frontend, javascript, html, temporal, accessibility, components]
-links: ["[[skills/frontend/css-elite]]"]
+links: ['[[css-elite]]', '[[local-first-ai-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # JS & HTML Elite Engineering (2026)

@@ -1,18 +1,17 @@
 ---
 name: django-elite
-description: Guidelines for architecting scalable, maintainable, and high-performance Django applications using modern Python tooling and database patterns. Use when working with backend, django, python.
-version: 1.0.0
+description: 'Django standards: uv-based project tooling, PostgreSQL 18 integration, modern middleware and ASGI serving, and the testing setup. Use when starting or maintaining a Django project, wiring the database, or configuring middleware and static serving. For auth hardening, use django-auth-hardening; for schema changes against a live table, use zero-downtime-migrations.'
+version: 1.1.0
 category: core
-triggers: [backend, django, python, patterns]
+triggers: [start a django project, django settings layout, django with postgres, django asgi deployment, django middleware order, django test setup]
 dependencies: [python-elite, zero-downtime-migrations]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Django Elite Backend Standards (2026)
-date: 2026-03-08
-task_ref: game-market-modernization
-confidence_score: 1.0
+inputs: [a Django project or requirement]
+outputs: [project scaffolding, settings and middleware configuration]
 tags: [backend, django, python, elite, patterns]
-links: ["[[skills/backend/python-elite]]", "[[skills/database/zero-downtime-migrations]]"]
+links: ['[[python-elite]]', '[[postgresql-elite]]', '[[django-auth-hardening]]', '[[zero-downtime-migrations]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Django Elite Backend Standards (2026)

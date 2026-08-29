@@ -1,18 +1,17 @@
 ---
 name: internal-comms
-description: Guidelines for writing effective internal communications (status reports, project updates, newsletters). Use when working with communication, reporting, status.
-version: 1.0.0
+description: Choosing and executing the right internal communication format — status update, announcement, escalation, FAQ — and the strategy for pitching each to its audience. Use when deciding how to tell colleagues or leadership something. For the templates themselves, use internal-comms-deep-dive; for long-form co-writing, use doc-coauthoring.
+version: 1.1.0
 category: utilities
-triggers: [communication, reporting, status, faq, internal, comms]
+triggers: [how should i announce this, tell leadership about a delay, escalate an issue in writing, what format for this update, communicate a decision to the team]
 dependencies: [doc-coauthoring]
-inputs: [input document or dataset]
-outputs: [generated file]
-title: Internal Communications & Reporting
-date: 2026-03-08
-task_ref: initial-setup
-confidence_score: 1.0
+inputs: [something to communicate, an audience]
+outputs: [a format choice, a drafted message]
 tags: [communication, reporting, status, faq, internal]
-links: ["[[skills/communication/doc-coauthoring]]"]
+links: ['[[internal-comms-deep-dive]]', '[[doc-coauthoring]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Internal Communications & Reporting

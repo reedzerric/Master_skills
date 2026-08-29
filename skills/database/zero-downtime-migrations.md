@@ -1,18 +1,17 @@
 ---
 name: zero-downtime-migrations
-description: Guidelines for executing database schema changes in high-availability systems without locking tables or dropping traffic. Use when working with database, postgresql, migrations.
-version: 1.0.0
+description: 'Changing a live schema without downtime: the expand-contract pattern spread across deploys, PostgreSQL-specific safety rules about locks and defaults, and staged approaches to renaming a column or changing a type. Use when a migration would lock a table, when renaming or retyping a column in production, or when a deploy must tolerate old and new code running at once. For index choice, use postgresql-elite.'
+version: 1.1.0
 category: core
-triggers: [database, postgresql, migrations, expand-contract, ha, zero, downtime]
+triggers: [my migration locked the table, rename a column in production, change a column type safely, expand contract migration, add a not null column, deploy a schema change without downtime]
 dependencies: [postgresql-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Zero-Downtime Database Schema Migrations (2026)
-date: 2026-03-08
-task_ref: mit-professor-phase-2
-confidence_score: 1.0
+inputs: [a schema change, the deploy process]
+outputs: [a staged migration plan, safe DDL statements]
 tags: [database, postgresql, migrations, expand-contract, ha]
-links: ["[[skills/database/postgresql-elite]]"]
+links: ['[[postgresql-elite]]', '[[django-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Zero-Downtime Database Schema Migrations (2026)

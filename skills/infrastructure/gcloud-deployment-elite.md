@@ -1,18 +1,17 @@
 ---
 name: gcloud-deployment-elite
-description: Guidelines for resolving common deployment hurdles when using Google Cloud SDK, Cloud Run, and Firebase Hosting. Use when working with infrastructure, gcloud, firebase.
-version: 1.0.0
+description: 'Deploying to Google Cloud and Firebase: fixing the gcloud CLI''s Python environment conflict, controlling build context with .gcloudignore, dependency handling for Cloud Build, and a deploy workflow that does not re-upload the world. Use when a gcloud deploy fails or uploads too much, when Cloud Build cannot resolve dependencies, or when the gcloud CLI breaks against the local Python. For containers generally, use docker-elite.'
+version: 1.1.0
 category: core
-triggers: [infrastructure, gcloud, firebase, cloud-run, django, deployment]
+triggers: [gcloud deploy fails, cloud build dependency error, gcloudignore, gcloud cli python error, firebase deploy, cloud run deployment, build context too large]
 dependencies: [docker-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: GCloud & Firebase Deployment Elite (2026)
-date: 2026-03-08
-task_ref: gcloud-deployment-resolutions
-confidence_score: 1.0
+inputs: [an application and a GCP or Firebase target]
+outputs: [a working deploy command, a .gcloudignore, build configuration]
 tags: [infrastructure, gcloud, firebase, cloud-run, django, deployment]
-links: ["[[skills/infrastructure/docker-elite]]"]
+links: ['[[docker-elite]]', '[[github-actions-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # GCloud & Firebase Deployment Elite (2026)

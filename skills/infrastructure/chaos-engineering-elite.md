@@ -1,18 +1,17 @@
 ---
 name: chaos-engineering-elite
-description: Guidelines for architecting self-healing systems and validating their resilience through continuous fault injection. Use when working with infrastructure, devops, chaos.
-version: 1.0.0
+description: 'Proving resilience by breaking things on purpose: forming a steady-state hypothesis, running experiments continuously in a pipeline rather than once a year, and bounding blast radius with explicit abort conditions. Use when you need evidence a system survives failure, when designing a fault-injection experiment, or when a gameday needs abort criteria. For running a real incident, use sre-incident-protocol.'
+version: 1.1.0
 category: core
-triggers: [infrastructure, devops, chaos, resilience, kubernetes, ai, engineering]
+triggers: [chaos experiment, fault injection, prove the system survives failure, steady state hypothesis, limit the blast radius, kill a pod on purpose, resilience testing]
 dependencies: [observability-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Chaos Engineering & Continuous Resilience (2026)
-date: 2026-03-08
-task_ref: mit-professor-phase-3
-confidence_score: 1.0
+inputs: [a system and its steady-state metrics]
+outputs: [an experiment design, abort conditions, resilience findings]
 tags: [infrastructure, devops, chaos, resilience, kubernetes, ai]
-links: ["[[skills/infrastructure/observability-elite]]"]
+links: ['[[sre-incident-protocol]]', '[[observability-elite]]', '[[system-design-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Chaos Engineering & Continuous Resilience (2026)

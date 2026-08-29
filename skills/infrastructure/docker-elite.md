@@ -1,18 +1,17 @@
 ---
 name: docker-elite
-description: Guidelines for building high-performance, ultra-secure containerized applications. Use when working with infrastructure, devops, docker.
-version: 1.0.0
+description: 'Container images built small and secure: multi-stage BuildKit builds, distroless and scratch base images, Compose watch for development, and the practices that stop images bloating. Use when an image is too large, when hardening a container, or when rebuilds are slow. For deploying it, use gcloud-deployment-elite or github-actions-elite.'
+version: 1.1.0
 category: core
-triggers: [infrastructure, devops, docker, security, distroless, buildkit]
+triggers: [my docker image is too big, multi stage build, distroless base image, docker build is slow, compose watch, run container as non root, docker layer caching]
 dependencies: [github-actions-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Docker Elite & Container Security (2026)
-date: 2026-03-08
-task_ref: all-facets-expansion
-confidence_score: 1.0
+inputs: [an application to containerize]
+outputs: [a multi-stage Dockerfile, a hardened image]
 tags: [infrastructure, devops, docker, security, distroless, buildkit]
-links: ["[[skills/infrastructure/github-actions-elite]]"]
+links: ['[[github-actions-elite]]', '[[gcloud-deployment-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Docker Elite & Container Security (2026)

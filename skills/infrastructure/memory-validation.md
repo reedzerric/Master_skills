@@ -1,18 +1,17 @@
 ---
 name: memory-validation
-description: Automated validation of the "Master Skills" memory system to ensure every memory file adheres to elite metadata standards (YAML headers, confidence scores). Use when working with infra, validation, meta.
-version: 1.0.0
+description: 'Validating this repository''s skill files against the schema: running the validator, the mandatory field set, and the verification workflow before committing. Use when a skill file fails validation, when the pre-commit hook blocks a commit, or when the routing manifest goes stale. For the schema definition itself, use skill-standard.'
+version: 1.1.0
 category: ai_infrastructure
-triggers: [infra, validation, meta, python, memory]
+triggers: [skill file fails validation, pre-commit hook blocked my commit, run the memory validator, required frontmatter fields, the manifest is stale, validate the skills]
 dependencies: [pytest-elite]
-inputs: [corpus or prompt, model config]
-outputs: [pipeline code, evaluation results]
-title: Memory Integrity Validation
-date: 2026-03-08
-task_ref: framework-practice
-confidence_score: 1.0
+inputs: [skill files to validate]
+outputs: [a validation report, a corrected skill file]
 tags: [infra, validation, meta, python]
-links: ["[[CORE_MEMORY_PROTOCOL]]", "[[testing/pytest-elite]]"]
+links: ['[[skill-standard]]', '[[skill-creator]]', '[[pytest-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Memory Integrity Validation

@@ -1,18 +1,17 @@
 ---
 name: agent-swarms-elite
-description: Guidelines for architecting multi-agent systems (MAS) to solve complex, non-linear tasks with high reliability and low hallucination. Use when working with infrastructure, agents, swarm.
-version: 1.0.0
+description: 'Orchestrating multiple agents: the architectural patterns (supervisor, hierarchical, network), LangGraph state management, and role definitions that stop agents duplicating each other''s work. Use when one agent is not enough, when parallelising agent work, or when agents keep redoing the same task. For resolving their conflicting outputs, use agent-consensus-elite.'
+version: 1.1.0
 category: ai_infrastructure
-triggers: [infrastructure, agents, swarm, langgraph, orchestration, agent, swarms]
+triggers: [orchestrate multiple agents, supervisor agent pattern, langgraph state, agents duplicating work, parallelise agent tasks, multi agent architecture]
 dependencies: [agent-handoff-elite]
-inputs: [corpus or prompt, model config]
-outputs: [pipeline code, evaluation results]
-title: Agent Swarm Orchestration (2026)
-date: 2026-03-08
-task_ref: swarm-deep-dive
-confidence_score: 1.0
+inputs: [a task too large for a single agent]
+outputs: [a swarm topology, role definitions, a graph state schema]
 tags: [infrastructure, agents, swarm, langgraph, orchestration]
-links: ["[[skills/infrastructure/agent-handoff-elite]]", "[[agent]]"]
+links: ['[[agent-consensus-elite]]', '[[agent-handoff-elite]]', '[[security-agentic-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Agent Swarm Orchestration (2026)

@@ -1,18 +1,17 @@
 ---
 name: postgresql-elite
-description: Guidelines for architecting high-concurrency, performant relational databases using PostgreSQL 18+ features. Use when working with database, postgresql, indexing.
-version: 1.0.0
+description: 'PostgreSQL 18 practice: the async I/O architecture and UUIDv7 keys, JSONB performance patterns, and index selection driven by the query shapes actually run. Use when a query is slow, when choosing a primary key type, when deciding between JSONB and real columns, or when picking an index. For schema changes against a live table, use zero-downtime-migrations.'
+version: 1.1.0
 category: core
-triggers: [database, postgresql, indexing, jsonb, performance]
+triggers: [my postgres query is slow, which index should i add, uuid or bigint primary key, jsonb or separate columns, gin index, postgres 18 features, reading explain analyze]
 dependencies: [rust-elite]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: PostgreSQL Elite Storage & Indexing (2026)
-date: 2026-03-08
-task_ref: all-facets-expansion
-confidence_score: 1.0
+inputs: [a schema, a slow query or EXPLAIN output]
+outputs: [an index plan, a schema design, a rewritten query]
 tags: [database, postgresql, indexing, jsonb, performance]
-links: ["[[skills/backend/rust-elite]]"]
+links: ['[[zero-downtime-migrations]]', '[[redis-elite]]', '[[rust-elite]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # PostgreSQL Elite Storage & Indexing (2026)

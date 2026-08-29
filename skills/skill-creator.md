@@ -1,18 +1,17 @@
 ---
 name: skill-creator
-description: A meta-skill for building, testing, and iteratively improving other skills. Use when working with meta, skill, creation.
-version: 1.0.0
+description: 'Authoring a new skill for this repository: the creation lifecycle, writing descriptions and triggers that route correctly, and when to split bulk into companion files. Use when adding a skill, splitting an oversized one, or when a skill is not being picked up by routing. For the schema it must satisfy, use skill-standard; for validating it, use memory-validation.'
+version: 1.1.0
 category: core
-triggers: [meta, skill, creation, evaluation, benchmark, creator]
+triggers: [create a new skill, my skill is not being triggered, split a skill into companion files, write a skill description, add a skill to the manifest]
 dependencies: [skill-standard]
-inputs: [source files, project config]
-outputs: [refactored code, review findings]
-title: Skill Creator Framework
-date: 2026-03-08
-task_ref: initial-setup
-confidence_score: 1.0
+inputs: [a capability to capture as a skill]
+outputs: [a conforming skill file, a manifest entry]
 tags: [meta, skill, creation, evaluation, benchmark]
-links: ["[[CORE_MEMORY_PROTOCOL]]"]
+links: ['[[skill-standard]]', '[[memory-validation]]', '[[writing-for-agents]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Skill Creator Framework

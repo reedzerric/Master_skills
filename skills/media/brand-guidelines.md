@@ -1,18 +1,17 @@
 ---
 name: brand-guidelines
-description: Guidelines for applying Anthropic's official brand colors and typography to artifacts. Use when working with media, design, branding.
-version: 1.0.0
+description: 'Anthropic''s brand specifics: the exact hex codes and typography pairings for producing Anthropic-branded material. Use when a deliverable has to match Anthropic brand, or when asked for the official colours or fonts. For choosing a palette freely, use themes; for deriving one from tokens, use theme-factory.'
+version: 1.1.0
 category: design_media
-triggers: [media, design, branding, corporate, style, brand, guidelines]
+triggers: [anthropic brand colours, official hex codes, anthropic typography, brand compliant deck, what font does anthropic use]
 dependencies: [theme-factory]
-inputs: [brief, brand tokens]
-outputs: [design artifact, style spec]
-title: Anthropic Brand Guidelines
-date: 2026-03-08
-task_ref: initial-setup
-confidence_score: 1.0
+inputs: [a deliverable to brand]
+outputs: [brand-compliant colours and type]
 tags: [media, design, branding, corporate, style]
-links: ["[[skills/media/theme-factory]]"]
+links: ['[[themes]]', '[[theme-factory]]', '[[frontend-design]]']
+confidence_score: 1.0
+date: '2026-08-29'
+task_ref: routing-repair-batch3
 ---
 
 # Anthropic Brand Guidelines
