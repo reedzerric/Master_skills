@@ -15,7 +15,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "skills_manifest.json"
 
-SKIP_DIRS = {".git", ".pytest_cache", ".venv", ".templates", "__pycache__"}
+SKIP_DIRS = {
+    ".git", ".pytest_cache", ".venv", ".templates", "__pycache__", ".scratch",
+}
 SKIP_FILES = {
     "SKILL_TREE.md",
     "README.md",

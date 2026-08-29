@@ -38,7 +38,11 @@ NON_SKILL_FILES = frozenset({
     "THIRD_PARTY_LICENSES.md",
 })
 
-SKIP_DIRS = frozenset({".git", ".pytest_cache", ".venv", ".templates", "__pycache__"})
+#: `.scratch` holds the local-markdown issue tracker (maps, tickets, specs).
+#: Those are work artifacts, not skills, and carry no frontmatter.
+SKIP_DIRS = frozenset({
+    ".git", ".pytest_cache", ".venv", ".templates", "__pycache__", ".scratch",
+})
 
 _FRONTMATTER = re.compile(r"\A---\s*$(.*?)^---\s*$", re.DOTALL | re.MULTILINE)
 _SEMVER = re.compile(r"^\d+\.\d+\.\d+$")
