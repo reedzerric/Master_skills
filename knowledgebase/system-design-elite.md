@@ -1,4 +1,12 @@
 ---
+name: system-design-elite
+description: Guidelines for architecting "Six 9s" (99.9999%) geo-distributed systems. Use when working with knowledge, architecture, ha.
+version: 1.0.0
+category: core
+triggers: [knowledge, architecture, ha, cap, pacelc, distributed, system, design]
+dependencies: [observability-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: High-Availability System Design (2026)
 date: 2026-03-08
 task_ref: all-facets-expansion

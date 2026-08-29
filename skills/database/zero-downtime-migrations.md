@@ -1,4 +1,12 @@
 ---
+name: zero-downtime-migrations
+description: Guidelines for executing database schema changes in high-availability systems without locking tables or dropping traffic. Use when working with database, postgresql, migrations.
+version: 1.0.0
+category: core
+triggers: [database, postgresql, migrations, expand-contract, ha, zero, downtime]
+dependencies: [postgresql-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Zero-Downtime Database Schema Migrations (2026)
 date: 2026-03-08
 task_ref: mit-professor-phase-2

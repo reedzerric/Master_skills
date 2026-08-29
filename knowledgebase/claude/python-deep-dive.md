@@ -1,4 +1,12 @@
 ---
+name: python-deep-dive
+description: pip install anthropic. Use when working with ai, claude, api.
+version: 1.0.0
+category: ai_infrastructure
+triggers: [ai, claude, api, python, sdk, deep, dive]
+dependencies: [claude-api, tool-use-concepts]
+inputs: [corpus or prompt, model config]
+outputs: [pipeline code, evaluation results]
 title: Claude API Python Deep Dive
 date: 2026-03-08
 task_ref: skill-migration

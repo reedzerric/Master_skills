@@ -1,4 +1,12 @@
 ---
+name: docx
+description: Guidelines for creating, editing, and manipulating Word documents (`.docx`). Use when a "report," "memo," or "letter" is requested.
+version: 1.0.0
+category: utilities
+triggers: [documents, word, docx, xml, javascript]
+dependencies: [pdf, xlsx]
+inputs: [input document or dataset]
+outputs: [generated file]
 title: DOCX Document Creation & XML Editing
 date: 2026-03-08
 task_ref: initial-setup

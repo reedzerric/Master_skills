@@ -1,4 +1,12 @@
 ---
+name: security-agentic-elite
+description: Guidelines for architecting secure, autonomous AI agents and mitigating the OWASP Agentic Top 10 (ASI). Use when working with knowledge, security, ai.
+version: 1.0.0
+category: core
+triggers: [knowledge, security, ai, agents, owasp, zero-trust, agentic]
+dependencies: [agent-swarms-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Agentic AI Security (2026)
 date: 2026-03-08
 task_ref: all-facets-expansion

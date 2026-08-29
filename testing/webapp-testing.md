@@ -1,4 +1,12 @@
 ---
+name: webapp-testing
+description: Guidelines for testing local web applications using native Python Playwright scripts and server management helpers. Use when working with testing, frontend, playwright.
+version: 1.0.0
+category: core
+triggers: [testing, frontend, playwright, web, webapp]
+dependencies: []
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Web Application Testing (Playwright)
 date: 2026-03-08
 task_ref: initial-setup

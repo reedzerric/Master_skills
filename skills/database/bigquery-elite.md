@@ -1,4 +1,12 @@
 ---
+name: bigquery-elite
+description: Guidelines for architecting and querying BigQuery with a "Cost-First" approach. Use when working with database, bigquery, sql.
+version: 1.0.0
+category: core
+triggers: [database, bigquery, sql, optimization, cost]
+dependencies: [python-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: BigQuery Data Engineering Mastery (2026)
 date: 2026-03-08
 task_ref: tech-expansion

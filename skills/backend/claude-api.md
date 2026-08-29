@@ -1,10 +1,18 @@
 ---
+name: claude-api
+description: Guidelines for building LLM-powered applications using the Claude API, Anthropic SDK, and Agent SDK. Covers model selection, thinking parameters, and language-specific patterns. Use when working with backend, ai, claude.
+version: 1.0.0
+category: ai_infrastructure
+triggers: [backend, ai, claude, api, sdk]
+dependencies: [models]
+inputs: [corpus or prompt, model config]
+outputs: [pipeline code, evaluation results]
 title: Claude API & Anthropic SDK Integration
 date: 2026-03-08
 task_ref: initial-setup
 confidence_score: 1.0
 tags: [backend, ai, claude, api, sdk]
-links: ["[[knowledgebase/claude-models]]"]
+links: ["[[knowledgebase/claude/models]]"]
 ---
 
 # Claude API & Anthropic SDK Integration
@@ -42,7 +50,7 @@ Identify the project language via files (e.g., `package.json` for TS, `requireme
 - **Thinking:** `budget_tokens` is DEPRECATED for all 4.6 models; use `thinking: {type: "adaptive"}` exclusively.
 
 ## 🔗 Related Memories
-- [[knowledgebase/claude-models]]
+- [[knowledgebase/claude/models]]
 - [[knowledgebase/claude/python-deep-dive]]
 - [[knowledgebase/claude/typescript-deep-dive]]
 - [[knowledgebase/claude/tool-use-concepts]]

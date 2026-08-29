@@ -1,6 +1,15 @@
 # 🗺️ Master Workspace Cognitive Index
 
-This index provides a thematic map of the repository's memory system. Every file listed here represents an "Elite" standard or core protocol.
+This index is the **directory map** — what lives where on disk.
+
+For **capability routing** — which skill handles a given task, and what must
+load first — use [`SKILL_TREE.md`](SKILL_TREE.md) or parse
+[`skills_manifest.json`](skills_manifest.json) directly. Category and folder are
+decoupled: a skill's `category` says what it is for, its path says where it
+lives.
+
+Every skill file conforms to [`SKILL_STANDARD.md`](SKILL_STANDARD.md); the
+schema is enforced by `uv run pytest tests/`.
 
 ## 📂 /skills/ - Actionable Processes
 *How to build things with 2026-level precision.*
@@ -13,6 +22,14 @@ This index provides a thematic map of the repository's memory system. Every file
 | **Database** | `postgresql-elite.md`, `bigquery-elite.md`, `redis-elite.md`, `zero-downtime-migrations.md` | AIO/UUIDv7, Cost-first SQL, TTL Jitter, Expand-Contract. |
 | **Documents** | `pdf.md`, `xlsx.md`, `docx.md`, `pptx.md` | Specialized document extraction and creation. |
 | **Media** | `frontend-design.md`, `theme-factory.md`, `algorithmic-art.md`, `brand-guidelines.md`, `slack-gif-creator.md`, `canvas-design.md` | Anti-AI-slop design, Branding, Generative Art. |
+| **Engineering** | `skill-router/`, `grill-with-docs/`, `to-spec/`, `to-tickets/`, `implement/`, `tdd/`, `code-review/`, `diagnosing-bugs/`, `wayfinder/`, `triage/`, +8 more | Process flows: idea → spec → tickets → build → review. Start at `skill-router`. See [`skills/engineering/README.md`](skills/engineering/README.md). |
+| **Productivity** | `grilling/`, `grill-me/`, `handoff/`, `teach/`, `to-questionnaire/`, `wait-what/`, `writing-for-agents/` | Thinking and communication aids, mostly user-invoked. See [`skills/productivity/README.md`](skills/productivity/README.md). |
+
+> The two folders above hold **process** skills — *what to do next*. Everything
+> else in `/skills/` holds **domain standards** — *how to write the code*. They
+> stack: `implement` and `tdd` load the domain standard for whatever file they
+> are touching. Both are imported from
+> [mattpocock/skills](https://github.com/mattpocock/skills) (MIT).
 
 ## 📂 /knowledgebase/ - Factual References
 *Architectural decisions, theorems, and immutable facts.*
@@ -21,7 +38,7 @@ This index provides a thematic map of the repository's memory system. Every file
 | :--- | :--- | :--- |
 | **Architecture** | `architectural-patterns.md`, `system-design-elite.md`, `agent-consensus-elite.md` | DDD, Hexagonal, PACELC, Cell-based design, Adjudicator Pattern. |
 | **Security** | `security-agentic-elite.md`, `privacy-by-design-elite.md` | OWASP Agentic Top 10, Zero-Trust, Cryptographic Shredding. |
-| **Business** | `finops-value-elite.md`, `claude-models.md` | FOCUS standards, Unit Economics, LLM Tiers. |
+| **Business** | `finops-value-elite.md`, `claude/models.md` | FOCUS standards, Unit Economics, LLM Tiers. |
 
 ## 📂 /testing/ - Validation Rules
 *Mathematical verification and test-driven standards.*
@@ -47,5 +64,27 @@ If you are looking for a specific topic, use `grep_search` across the root:
 - `grep -r "#tags" .` to find domain-specific memories (e.g., `#backend`, `#distributed`).
 - `grep -r "confidence_score: 1.0" .` to find the most battle-tested protocols.
 
+## 📂 Domains added in the consolidation pass
+
+| Folder | Contents |
+| :--- | :--- |
+| `/game_design/` | `roguelike-scoring`, `run-economy-balancing`, `narrative-event-system`, `social-deduction-design` |
+| `/ai_infrastructure/` | `product-spec-chain/` (multi-file), `rag-content-generation` |
+| `/creative_3d/` | `blender-procedural-modeling` |
+| `/utilities/` | `frequency-analysis-simulation` |
+| `/tools/` | `build_manifest.py` — regenerates `skills_manifest.json` |
+| `/tools/hooks/` | `pre-commit` — blocks commits on a stale manifest or an invalid skill file |
+
 ## 🔄 How to Expand
-Use `/.templates/standard-memory.md` for all new entries. Always link back to `WORKSPACE_INDEX.md` or a related domain file.
+1. Author the file against [`SKILL_STANDARD.md`](SKILL_STANDARD.md) — the
+   hybrid schema (`name`, `description`, `version`, `category` required).
+2. Link it to related skills with `[[wiki-links]]` and `dependencies`.
+3. Regenerate and validate — the pre-commit hook does this for you once
+   installed (`git config core.hooksPath tools/hooks`, once per clone):
+   ```bash
+   python tools/build_manifest.py
+   uv run pytest tests/
+   ```
+
+`/.templates/standard-memory.md` is the legacy memory template, superseded by
+`SKILL_STANDARD.md` for anything that is a skill.

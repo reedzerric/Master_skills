@@ -1,4 +1,12 @@
 ---
+name: mcp-builder
+description: Guidelines for building high-quality Model Context Protocol (MCP) servers to integrate external APIs/services with LLMs. Use when working with infrastructure, mcp, protocol.
+version: 1.0.0
+category: ai_infrastructure
+triggers: [infrastructure, mcp, protocol, tools, agent, builder]
+dependencies: [skill-creator]
+inputs: [corpus or prompt, model config]
+outputs: [pipeline code, evaluation results]
 title: MCP Server Development
 date: 2026-03-08
 task_ref: initial-setup

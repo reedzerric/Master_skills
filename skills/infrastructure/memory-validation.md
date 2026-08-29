@@ -1,4 +1,12 @@
 ---
+name: memory-validation
+description: Automated validation of the "Master Skills" memory system to ensure every memory file adheres to elite metadata standards (YAML headers, confidence scores). Use when working with infra, validation, meta.
+version: 1.0.0
+category: ai_infrastructure
+triggers: [infra, validation, meta, python, memory]
+dependencies: [pytest-elite]
+inputs: [corpus or prompt, model config]
+outputs: [pipeline code, evaluation results]
 title: Memory Integrity Validation
 date: 2026-03-08
 task_ref: framework-practice

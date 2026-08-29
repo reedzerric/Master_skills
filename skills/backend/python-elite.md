@@ -1,4 +1,12 @@
 ---
+name: python-elite
+description: Guidelines for writing high-performance, type-safe, and maintainable Python code using the 2026 Astral toolchain (`uv`, `ruff`) and advanced type hinting. Use when working with backend, python, astral.
+version: 1.0.0
+category: core
+triggers: [backend, python, astral, uv, ruff, typing]
+dependencies: [flask-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Python Elite Standards (2026)
 date: 2026-03-08
 task_ref: tech-expansion

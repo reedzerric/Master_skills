@@ -1,4 +1,12 @@
 ---
+name: git-ops-elite
+description: Guidelines for efficient, automated, and secure source control management. Use when working with git, gitops, workflow.
+version: 1.0.0
+category: core
+triggers: [git, gitops, workflow, automation, ops]
+dependencies: [github-actions-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: GitOps Elite Workflow (2026)
 date: 2026-03-08
 task_ref: all-facets-expansion

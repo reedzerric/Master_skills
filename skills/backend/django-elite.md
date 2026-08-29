@@ -1,4 +1,12 @@
 ---
+name: django-elite
+description: Guidelines for architecting scalable, maintainable, and high-performance Django applications using modern Python tooling and database patterns. Use when working with backend, django, python.
+version: 1.0.0
+category: core
+triggers: [backend, django, python, patterns]
+dependencies: [python-elite, zero-downtime-migrations]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Django Elite Backend Standards (2026)
 date: 2026-03-08
 task_ref: game-market-modernization

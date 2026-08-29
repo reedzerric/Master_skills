@@ -1,4 +1,12 @@
 ---
+name: agent-swarms-elite
+description: Guidelines for architecting multi-agent systems (MAS) to solve complex, non-linear tasks with high reliability and low hallucination. Use when working with infrastructure, agents, swarm.
+version: 1.0.0
+category: ai_infrastructure
+triggers: [infrastructure, agents, swarm, langgraph, orchestration, agent, swarms]
+dependencies: [agent-handoff-elite]
+inputs: [corpus or prompt, model config]
+outputs: [pipeline code, evaluation results]
 title: Agent Swarm Orchestration (2026)
 date: 2026-03-08
 task_ref: swarm-deep-dive

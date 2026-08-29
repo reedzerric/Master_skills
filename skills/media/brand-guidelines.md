@@ -1,4 +1,12 @@
 ---
+name: brand-guidelines
+description: Guidelines for applying Anthropic's official brand colors and typography to artifacts. Use when working with media, design, branding.
+version: 1.0.0
+category: design_media
+triggers: [media, design, branding, corporate, style, brand, guidelines]
+dependencies: [theme-factory]
+inputs: [brief, brand tokens]
+outputs: [design artifact, style spec]
 title: Anthropic Brand Guidelines
 date: 2026-03-08
 task_ref: initial-setup

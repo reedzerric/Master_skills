@@ -1,0 +1,5180 @@
+{
+  "schema_version": "1.0.0",
+  "generated": "2026-08-28",
+  "repository": "Master_skills",
+  "categories": {
+    "ai_infrastructure": [
+      "agent-consensus-elite",
+      "agent-handoff-elite",
+      "agent-swarms-elite",
+      "agentic-rag-elite",
+      "claude-api",
+      "error-codes",
+      "evaluation-guide",
+      "mcp-builder",
+      "mcp-deep-dive",
+      "memory-validation",
+      "models",
+      "product-spec-chain",
+      "python-deep-dive",
+      "rag-content-generation",
+      "tool-use-concepts",
+      "typescript-deep-dive",
+      "web-artifacts-builder"
+    ],
+    "core": [
+      "agent-skills-spec",
+      "agentic-security-elite",
+      "api-contracts-elite",
+      "architectural-patterns",
+      "auth-ux-patterns",
+      "bigquery-elite",
+      "chaos-engineering-elite",
+      "code-review",
+      "codebase-design",
+      "css-elite",
+      "diagnosing-bugs",
+      "django-auth-hardening",
+      "django-elite",
+      "docker-elite",
+      "domain-modeling",
+      "finops-value-elite",
+      "flask-elite",
+      "gcloud-deployment-elite",
+      "git-ops-elite",
+      "git-velocity-elite",
+      "github-actions-elite",
+      "grill-with-docs",
+      "iac-opentofu-elite",
+      "implement",
+      "improve-codebase-architecture",
+      "js-html-elite",
+      "local-first-ai-elite",
+      "marketplace-pattern",
+      "multiplayer-interruption-pattern",
+      "observability-elite",
+      "postgresql-elite",
+      "privacy-by-design-elite",
+      "prototype",
+      "pytest-elite",
+      "python-elite",
+      "redis-elite",
+      "research",
+      "resolving-merge-conflicts",
+      "rust-elite",
+      "security-agentic-elite",
+      "serverless-edge-elite",
+      "setup-engineering-flows",
+      "skill-creator",
+      "skill-router",
+      "skill-standard",
+      "sre-incident-protocol",
+      "system-design-elite",
+      "tdd",
+      "tla-plus-formalism",
+      "to-spec",
+      "to-tickets",
+      "trading-safety-guard",
+      "triage",
+      "wayfinder",
+      "webapp-testing",
+      "wizard",
+      "xstate-formalism-elite",
+      "zero-downtime-migrations"
+    ],
+    "creative_3d": [
+      "blender-procedural-modeling"
+    ],
+    "design_media": [
+      "algorithmic-art",
+      "brand-guidelines",
+      "canvas-design",
+      "frontend-design",
+      "slack-gif-creator",
+      "theme-factory",
+      "themes"
+    ],
+    "game_design": [
+      "diegetic-game-ui",
+      "narrative-event-system",
+      "roguelike-scoring",
+      "run-economy-balancing",
+      "social-deduction-design"
+    ],
+    "utilities": [
+      "doc-coauthoring",
+      "document-tooling-deep-dive",
+      "docx",
+      "frequency-analysis-simulation",
+      "grill-me",
+      "grilling",
+      "handoff",
+      "internal-comms",
+      "internal-comms-deep-dive",
+      "pdf",
+      "pptx",
+      "teach",
+      "to-questionnaire",
+      "wait-what",
+      "writing-for-agents",
+      "xlsx"
+    ]
+  },
+  "skills": [
+    {
+      "name": "agent-consensus-elite",
+      "path": "knowledgebase/agent-consensus-elite.md",
+      "category": "ai_infrastructure",
+      "version": "1.0.0",
+      "description": "Guidelines for implementing consensus algorithms and coordination mechanisms for decentralized agent swarms. Use when working with knowledge, agents, consensus.",
+      "triggers": [
+        "knowledge",
+        "agents",
+        "consensus",
+        "coordination",
+        "swarm",
+        "adjudicator",
+        "agent"
+      ],
+      "dependencies": [
+        "agent-swarms-elite"
+      ],
+      "inputs": [
+        "corpus or prompt",
+        "model config"
+      ],
+      "outputs": [
+        "pipeline code",
+        "evaluation results"
+      ],
+      "tags": [
+        "knowledge",
+        "agents",
+        "consensus",
+        "coordination",
+        "swarm",
+        "adjudicator"
+      ],
+      "companions": []
+    },
+    {
+      "name": "agent-handoff-elite",
+      "path": "skills/infrastructure/agent-handoff-elite.md",
+      "category": "ai_infrastructure",
+      "version": "1.0.0",
+      "description": "Guidelines for implementing reliable, state-aware handoffs between specialized agents to prevent intent drift and context explosion. Use when working with infrastructure, agents, protocol.",
+      "triggers": [
+        "infrastructure",
+        "agents",
+        "protocol",
+        "handoff",
+        "a2a",
+        "state-transfer",
+        "agent"
+      ],
+      "dependencies": [
+        "agent-swarms-elite"
+      ],
+      "inputs": [
+        "corpus or prompt",
+        "model config"
+      ],
+      "outputs": [
+        "pipeline code",
+        "evaluation results"
+      ],
+      "tags": [
+        "infrastructure",
+        "agents",
+        "protocol",
+        "handoff",
+        "a2a",
+        "state-transfer"
+      ],
+      "companions": []
+    },
+    {
+      "name": "agent-swarms-elite",
+      "path": "skills/infrastructure/agent-swarms-elite.md",
+      "category": "ai_infrastructure",
+      "version": "1.0.0",
+      "description": "Guidelines for architecting multi-agent systems (MAS) to solve complex, non-linear tasks with high reliability and low hallucination. Use when working with infrastructure, agents, swarm.",
+      "triggers": [
+        "infrastructure",
+        "agents",
+        "swarm",
+        "langgraph",
+        "orchestration",
+        "agent",
+        "swarms"
+      ],
+      "dependencies": [
+        "agent-handoff-elite"
+      ],
+      "inputs": [
+        "corpus or prompt",
+        "model config"
+      ],
+      "outputs": [
+        "pipeline code",
+        "evaluation results"
+      ],
+      "tags": [
+        "infrastructure",
+        "agents",
+        "swarm",
+        "langgraph",
+        "orchestration"
+      ],
+      "companions": []
+    },
+    {
+      "name": "agentic-rag-elite",
+      "path": "skills/infrastructure/agentic-rag-elite.md",
+      "category": "ai_infrastructure",
+      "version": "1.0.0",
+      "description": "Guidelines for architecting autonomous reasoning systems that go beyond simple \"Retrieve -> Generate\" pipelines. Use when working with infrastructure, agents, rag.",
+      "triggers": [
+        "infrastructure",
+        "agents",
+        "rag",
+        "reasoning",
+        "loops",
+        "graphrag",
+        "agentic"
+      ],
+      "dependencies": [
+        "agent-swarms-elite"
+      ],
+      "inputs": [
+        "corpus or prompt",
+        "model config"
+      ],
+      "outputs": [
+        "pipeline code",
+        "evaluation results"
+      ],
+      "tags": [
+        "infrastructure",
+        "agents",
+        "rag",
+        "reasoning",
+        "loops",
+        "graphrag"
+      ],
+      "companions": []
+    },
+    {
+      "name": "claude-api",
+      "path": "skills/backend/claude-api.md",
+      "category": "ai_infrastructure",
+      "version": "1.0.0",
+      "description": "Guidelines for building LLM-powered applications using the Claude API, Anthropic SDK, and Agent SDK. Covers model selection, thinking parameters, and language-specific patterns. Use when working with backend, ai, claude.",
+      "triggers": [
+        "backend",
+        "ai",
+        "claude",
+        "api",
+        "sdk"
+      ],
+      "dependencies": [
+        "models"
+      ],
+      "inputs": [
+        "corpus or prompt",
+        "model config"
+      ],
+      "outputs": [
+        "pipeline code",
+        "evaluation results"
+      ],
+      "tags": [
+        "backend",
+        "ai",
+        "claude",
+        "api",
+        "sdk"
+      ],
+      "companions": []
+    },
+    {
+      "name": "error-codes",
+      "path": "knowledgebase/claude/error-codes.md",
+      "category": "ai_infrastructure",
+      "version": "1.0.0",
+      "description": "Always use the SDK's typed exception classes instead of string matching. Use when working with ai, claude, api.",
+      "triggers": [
+        "ai",
+        "claude",
+        "api",
+        "errors",
+        "troubleshooting",
+        "error",
+        "codes"
+      ],
+      "dependencies": [
+        "claude-api"
+      ],
+      "inputs": [
+        "corpus or prompt",
+        "model config"
+      ],
+      "outputs": [
+        "pipeline code",
+        "evaluation results"
+      ],
+      "tags": [
+        "ai",
+        "claude",
+        "api",
+        "errors",
+        "troubleshooting"
+      ],
+      "companions": []
+    },
+    {
+      "name": "evaluation-guide",
+      "path": "knowledgebase/infrastructure/mcp/evaluation-guide.md",
+      "category": "ai_infrastructure",
+      "version": "1.0.0",
+      "description": "The quality of an MCP server is measured by how well an LLM (with NO other context) can answer complex, realistic questions using ONLY the provided tools. Use when working with infrastructure, mcp, testing.",
+      "triggers": [
+        "infrastructure",
+        "mcp",
+        "testing",
+        "evaluation",
+        "guide"
+      ],
+      "dependencies": [
+        "mcp-deep-dive"
+      ],
+      "inputs": [
+        "corpus or prompt",
+        "model config"
+      ],
+      "outputs": [
+        "pipeline code",
+        "evaluation results"
+      ],
+      "tags": [
+        "infrastructure",
+        "mcp",
+        "testing",
+        "evaluation"
+      ],
+      "companions": []
+    },
+    {
+      "name": "mcp-builder",
+      "path": "skills/infrastructure/mcp-builder.md",
+      "category": "ai_infrastructure",
+      "version": "1.0.0",
+      "description": "Guidelines for building high-quality Model Context Protocol (MCP) servers to integrate external APIs/services with LLMs. Use when working with infrastructure, mcp, protocol.",
+      "triggers": [
+        "infrastructure",
+        "mcp",
+        "protocol",
+        "tools",
+        "agent",
+        "builder"
+      ],
+      "dependencies": [
+        "skill-creator"
+      ],
+      "inputs": [
+        "corpus or prompt",
+        "model config"
+      ],
+      "outputs": [
+        "pipeline code",
+        "evaluation results"
+      ],
+      "tags": [
+        "infrastructure",
+        "mcp",
+        "protocol",
+        "tools",
+        "agent"
+      ],
+      "companions": []
+    },
+    {
+      "name": "mcp-deep-dive",
+      "path": "knowledgebase/infrastructure/mcp/mcp-deep-dive.md",
+      "category": "ai_infrastructure",
+      "version": "1.0.0",
+      "description": "from mcp.server.fastmcp import FastMCP. Use when working with infrastructure, mcp, protocol.",
+      "triggers": [
+        "infrastructure",
+        "mcp",
+        "protocol",
+        "typescript",
+        "python",
+        "deep",
+        "dive"
+      ],
+      "dependencies": [
+        "mcp-builder",
+        "evaluation-guide"
+      ],
+      "inputs": [
+        "corpus or prompt",
+        "model config"
+      ],
+      "outputs": [
+        "pipeline code",
+        "evaluation results"
+      ],
+      "tags": [
+        "infrastructure",
+        "mcp",
+        "protocol",
+        "typescript",
+        "python"
+      ],
+      "companions": []
+    },
+    {
+      "name": "memory-validation",
+      "path": "skills/infrastructure/memory-validation.md",
+      "category": "ai_infrastructure",
+      "version": "1.0.0",
+      "description": "Automated validation of the \"Master Skills\" memory system to ensure every memory file adheres to elite metadata standards (YAML headers, confidence scores). Use when working with infra, validation, meta.",
+      "triggers": [
+        "infra",
+        "validation",
+        "meta",
+        "python",
+        "memory"
+      ],
+      "dependencies": [
+        "pytest-elite"
+      ],
+      "inputs": [
+        "corpus or prompt",
+        "model config"
+      ],
+      "outputs": [
+        "pipeline code",
+        "evaluation results"
+      ],
+      "tags": [
+        "infra",
+        "validation",
+        "meta",
+        "python"
+      ],
+      "companions": []
+    },
+    {
+      "name": "models",
+      "path": "knowledgebase/claude/models.md",
+      "category": "ai_infrastructure",
+      "version": "2.0.0",
+      "description": "Canonical Claude model IDs, context windows, output caps, and per-million-token pricing, plus the request-shape rules that differ per model (thinking, effort, sampling params). Use when choosing a model, writing a model ID into code, estimating LLM cost, or debugging a 400 on thinking/effort/temperature.",
+      "triggers": [
+        "claude model",
+        "model id",
+        "pricing",
+        "context window",
+        "which model",
+        "opus",
+        "sonnet",
+        "haiku",
+        "fable",
+        "effort",
+        "adaptive thinking"
+      ],
+      "dependencies": [
+        "claude-api",
+        "error-codes"
+      ],
+      "inputs": [
+        "a model name or tier requirement",
+        "a token estimate"
+      ],
+      "outputs": [
+        "an exact model ID string",
+        "a cost estimate",
+        "a valid request shape"
+      ],
+      "tags": [
+        "ai",
+        "claude",
+        "models",
+        "catalog",
+        "pricing",
+        "anthropic"
+      ],
+      "companions": []
+    },
+    {
+      "name": "product-spec-chain",
+      "path": "ai_infrastructure/product-spec-chain/SKILL.md",
+      "category": "ai_infrastructure",
+      "version": "1.0.0",
+      "description": "Run a product idea through three chained LLM interviews that produce a PRD, then a UI design document, then a software requirements specification \u2014 each one consuming the previous as context. Use when the user says \"write a PRD\", \"spec this out\", \"turn my idea into requirements\", or is about to hand a vague product idea to a coding agent. For implementing a spec that already exists, use the relevant backend or frontend skill instead.",
+      "triggers": [
+        "prd",
+        "product requirements",
+        "spec my idea",
+        "software specification",
+        "ux design doc",
+        "srs",
+        "plan a new app",
+        "requirements document"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "a product idea in the user's own words",
+        "optionally an existing boilerplate or stack constraint"
+      ],
+      "outputs": [
+        "product-requirements.md",
+        "ux-design.md",
+        "software-specifications.md"
+      ],
+      "tags": [
+        "ai",
+        "prompting",
+        "product",
+        "requirements",
+        "planning",
+        "meta-prompt"
+      ],
+      "companions": [
+        "PRD-TEMPLATE.md",
+        "SRS-TEMPLATE.md",
+        "UX-TEMPLATE.md"
+      ]
+    },
+    {
+      "name": "python-deep-dive",
+      "path": "knowledgebase/claude/python-deep-dive.md",
+      "category": "ai_infrastructure",
+      "version": "1.0.0",
+      "description": "pip install anthropic. Use when working with ai, claude, api.",
+      "triggers": [
+        "ai",
+        "claude",
+        "api",
+        "python",
+        "sdk",
+        "deep",
+        "dive"
+      ],
+      "dependencies": [
+        "claude-api",
+        "tool-use-concepts"
+      ],
+      "inputs": [
+        "corpus or prompt",
+        "model config"
+      ],
+      "outputs": [
+        "pipeline code",
+        "evaluation results"
+      ],
+      "tags": [
+        "ai",
+        "claude",
+        "api",
+        "python",
+        "sdk"
+      ],
+      "companions": []
+    },
+    {
+      "name": "rag-content-generation",
+      "path": "ai_infrastructure/rag-content-generation.md",
+      "category": "ai_infrastructure",
+      "version": "1.0.0",
+      "description": "Build a retrieval-augmented pipeline that ingests a document tree, derives metadata from the folder hierarchy, indexes it once, then generates several differently-shaped deliverables (analytical report, podcast script, executive email) from that single index. Use when the user wants to turn a corpus of documents into multiple content formats, or asks about LlamaIndex ingestion, folder-derived metadata, or multi-format RAG output. For agentic retrieval with tool-driven query planning, use agentic-rag-elite instead.",
+      "triggers": [
+        "rag",
+        "retrieval augmented generation",
+        "llamaindex",
+        "vector index",
+        "ingest documents",
+        "content generation",
+        "multi-format output",
+        "folder metadata"
+      ],
+      "dependencies": [
+        "agentic-rag-elite",
+        "python-elite"
+      ],
+      "inputs": [
+        "a directory tree of source documents",
+        "a query topic",
+        "per-format system instructions"
+      ],
+      "outputs": [
+        "a VectorStoreIndex",
+        "one generated artifact per requested format"
+      ],
+      "tags": [
+        "ai",
+        "rag",
+        "llamaindex",
+        "retrieval",
+        "embeddings",
+        "content"
+      ],
+      "companions": []
+    },
+    {
+      "name": "tool-use-concepts",
+      "path": "knowledgebase/claude/tool-use-concepts.md",
+      "category": "ai_infrastructure",
+      "version": "1.0.0",
+      "description": "This file covers the conceptual foundations of tool use with the Claude API. Use when working with ai, claude, api.",
+      "triggers": [
+        "ai",
+        "claude",
+        "api",
+        "tools",
+        "agents",
+        "tool",
+        "use",
+        "concepts"
+      ],
+      "dependencies": [
+        "claude-api"
+      ],
+      "inputs": [
+        "corpus or prompt",
+        "model config"
+      ],
+      "outputs": [
+        "pipeline code",
+        "evaluation results"
+      ],
+      "tags": [
+        "ai",
+        "claude",
+        "api",
+        "tools",
+        "agents"
+      ],
+      "companions": []
+    },
+    {
+      "name": "typescript-deep-dive",
+      "path": "knowledgebase/claude/typescript-deep-dive.md",
+      "category": "ai_infrastructure",
+      "version": "1.0.0",
+      "description": "npm install @anthropic-ai/sdk. Use when working with ai, claude, api.",
+      "triggers": [
+        "ai",
+        "claude",
+        "api",
+        "typescript",
+        "sdk",
+        "deep",
+        "dive"
+      ],
+      "dependencies": [
+        "claude-api",
+        "tool-use-concepts"
+      ],
+      "inputs": [
+        "corpus or prompt",
+        "model config"
+      ],
+      "outputs": [
+        "pipeline code",
+        "evaluation results"
+      ],
+      "tags": [
+        "ai",
+        "claude",
+        "api",
+        "typescript",
+        "sdk"
+      ],
+      "companions": []
+    },
+    {
+      "name": "web-artifacts-builder",
+      "path": "skills/infrastructure/web-artifacts-builder.md",
+      "category": "ai_infrastructure",
+      "version": "1.0.0",
+      "description": "Guidelines for building complex, multi-component React artifacts using `shadcn/ui`, `Tailwind CSS`, and `Vite`. Use when working with infrastructure, frontend, react.",
+      "triggers": [
+        "infrastructure",
+        "frontend",
+        "react",
+        "shadcn",
+        "tailwind",
+        "vite",
+        "web",
+        "artifacts"
+      ],
+      "dependencies": [
+        "frontend-design",
+        "skill-creator"
+      ],
+      "inputs": [
+        "corpus or prompt",
+        "model config"
+      ],
+      "outputs": [
+        "pipeline code",
+        "evaluation results"
+      ],
+      "tags": [
+        "infrastructure",
+        "frontend",
+        "react",
+        "shadcn",
+        "tailwind",
+        "vite"
+      ],
+      "companions": []
+    },
+    {
+      "name": "agent-skills-spec",
+      "path": "knowledgebase/agent-skills-spec.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "The official specification for Agent Skills is now located at <https://agentskills.io/specification>. Use when working with spec, agents, skills.",
+      "triggers": [
+        "spec",
+        "agents",
+        "skills",
+        "protocol",
+        "agent"
+      ],
+      "dependencies": [
+        "skill-standard"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "spec",
+        "agents",
+        "skills",
+        "protocol"
+      ],
+      "companions": []
+    },
+    {
+      "name": "agentic-security-elite",
+      "path": "testing/agentic-security-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for transitioning from static security scans to autonomous, agentic security validation and remediation. Use when working with testing, security, ai.",
+      "triggers": [
+        "testing",
+        "security",
+        "ai",
+        "pen-testing",
+        "sast",
+        "dast",
+        "agentic"
+      ],
+      "dependencies": [
+        "security-agentic-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "testing",
+        "security",
+        "ai",
+        "pen-testing",
+        "sast",
+        "dast"
+      ],
+      "companions": []
+    },
+    {
+      "name": "api-contracts-elite",
+      "path": "skills/backend/api-contracts-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for enforcing strict, machine-readable contracts between all microservices, frontends, and AI agents BEFORE writing business logic. Use when working with backend, api, openapi.",
+      "triggers": [
+        "backend",
+        "api",
+        "openapi",
+        "grpc",
+        "protobuf",
+        "contracts"
+      ],
+      "dependencies": [
+        "architectural-patterns"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "backend",
+        "api",
+        "openapi",
+        "grpc",
+        "protobuf",
+        "contracts"
+      ],
+      "companions": []
+    },
+    {
+      "name": "architectural-patterns",
+      "path": "knowledgebase/architectural-patterns.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for architecting large-scale enterprise systems using Domain-Driven Design (DDD) and Hexagonal principles. Use when working with knowledge, architecture, ddd.",
+      "triggers": [
+        "knowledge",
+        "architecture",
+        "ddd",
+        "hexagonal",
+        "micro-frontends",
+        "architectural",
+        "patterns"
+      ],
+      "dependencies": [
+        "serverless-edge-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "knowledge",
+        "architecture",
+        "ddd",
+        "hexagonal",
+        "micro-frontends"
+      ],
+      "companions": []
+    },
+    {
+      "name": "auth-ux-patterns",
+      "path": "skills/frontend/auth-ux-patterns.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Design the presentation layer of authentication \u2014 form styling, validation states, error copy that tells the user what actually went wrong, and the filter/sort action-bar pattern for content listings. Use when login errors are unhelpful or unstyled, when auth forms look inconsistent across pages, or when building a listing page's control bar. For the server-side security work behind these forms, use django-auth-hardening instead.",
+      "triggers": [
+        "login errors",
+        "form styling",
+        "validation states",
+        "auth ux",
+        "registration form",
+        "error messages",
+        "action bar",
+        "filter drawer",
+        "sort controls"
+      ],
+      "dependencies": [
+        "css-elite",
+        "frontend-design"
+      ],
+      "inputs": [
+        "existing auth templates",
+        "a design token set or brand palette"
+      ],
+      "outputs": [
+        "a form CSS layer",
+        "error message copy",
+        "styled validation states"
+      ],
+      "tags": [
+        "frontend",
+        "ux",
+        "forms",
+        "auth",
+        "css",
+        "error-handling"
+      ],
+      "companions": []
+    },
+    {
+      "name": "bigquery-elite",
+      "path": "skills/database/bigquery-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for architecting and querying BigQuery with a \"Cost-First\" approach. Use when working with database, bigquery, sql.",
+      "triggers": [
+        "database",
+        "bigquery",
+        "sql",
+        "optimization",
+        "cost"
+      ],
+      "dependencies": [
+        "python-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "database",
+        "bigquery",
+        "sql",
+        "optimization",
+        "cost"
+      ],
+      "companions": []
+    },
+    {
+      "name": "chaos-engineering-elite",
+      "path": "skills/infrastructure/chaos-engineering-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for architecting self-healing systems and validating their resilience through continuous fault injection. Use when working with infrastructure, devops, chaos.",
+      "triggers": [
+        "infrastructure",
+        "devops",
+        "chaos",
+        "resilience",
+        "kubernetes",
+        "ai",
+        "engineering"
+      ],
+      "dependencies": [
+        "observability-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "infrastructure",
+        "devops",
+        "chaos",
+        "resilience",
+        "kubernetes",
+        "ai"
+      ],
+      "companions": []
+    },
+    {
+      "name": "code-review",
+      "path": "skills/engineering/code-review/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "'Reviews changes since a fixed point along two axes in parallel sub-agents: Standards (does it follow the repo''s documented standards) and Spec (does it match what the originating issue asked for). Use when the user wants a branch, PR, or work-in-progress reviewed, or says ''review since X''.'",
+      "triggers": [
+        "review this branch",
+        "review the pr",
+        "review since",
+        "code review",
+        "check my changes"
+      ],
+      "dependencies": [
+        "setup-engineering-flows"
+      ],
+      "inputs": [
+        "a git ref to review from",
+        "the originating issue or spec"
+      ],
+      "outputs": [
+        "a standards review",
+        "a spec-conformance review"
+      ],
+      "tags": [
+        "review",
+        "quality",
+        "git"
+      ],
+      "companions": []
+    },
+    {
+      "name": "codebase-design",
+      "path": "skills/engineering/codebase-design/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, or make code more testable and AI-navigable. For a whole-repo sweep, use improve-codebase-architecture.",
+      "triggers": [
+        "deep module",
+        "module interface",
+        "where does the seam go",
+        "make this testable",
+        "shallow abstraction"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "a module or package"
+      ],
+      "outputs": [
+        "a design for a deeper module"
+      ],
+      "tags": [
+        "architecture",
+        "design",
+        "modules"
+      ],
+      "companions": [
+        "DEEPENING.md",
+        "DESIGN-IT-TWICE.md"
+      ]
+    },
+    {
+      "name": "css-elite",
+      "path": "skills/frontend/css-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for architecting scalable, component-first CSS using native 2026 features. Use for all modern web interfaces. Use when working with frontend, css, layout.",
+      "triggers": [
+        "frontend",
+        "css",
+        "layout",
+        "subgrid",
+        "layers",
+        "container-queries"
+      ],
+      "dependencies": [
+        "frontend-design"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "frontend",
+        "css",
+        "layout",
+        "subgrid",
+        "layers",
+        "container-queries"
+      ],
+      "companions": []
+    },
+    {
+      "name": "diagnosing-bugs",
+      "path": "skills/engineering/diagnosing-bugs/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "'A diagnosis loop for hard bugs and performance regressions: reproduce, bisect hypotheses, prove the cause before changing code. Use when the user says ''diagnose'', ''debug this'', or reports something broken, throwing, failing, or slow. For fixing a bug test-first once the cause is known, use tdd.'",
+      "triggers": [
+        "diagnose",
+        "debug this",
+        "it is broken",
+        "throwing",
+        "failing",
+        "slow",
+        "performance regression"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "a bug report",
+        "a failing command or test",
+        "the repository"
+      ],
+      "outputs": [
+        "a proven root cause",
+        "a minimal reproduction"
+      ],
+      "tags": [
+        "debugging",
+        "diagnosis",
+        "performance"
+      ],
+      "companions": []
+    },
+    {
+      "name": "django-auth-hardening",
+      "path": "skills/backend/django-auth-hardening/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Harden a Django authentication system end to end \u2014 session cookie security, brute-force rate limiting, working logout, password reset by email, profile editing, and GDPR-compliant account deletion. Use when auditing or building Django auth, when logout silently fails, when there is no password recovery, or when sessions need production hardening. For the login/register form UI and error presentation, use auth-ux-patterns instead.",
+      "triggers": [
+        "django auth",
+        "session security",
+        "logout broken",
+        "password reset",
+        "rate limiting",
+        "brute force",
+        "account deletion",
+        "gdpr",
+        "django-axes",
+        "login security"
+      ],
+      "dependencies": [
+        "django-elite",
+        "security-agentic-elite"
+      ],
+      "inputs": [
+        "a Django project with django.contrib.auth installed",
+        "settings.py",
+        "urls.py"
+      ],
+      "outputs": [
+        "hardened settings",
+        "auth URL routes",
+        "reset and deletion views",
+        "registration templates"
+      ],
+      "tags": [
+        "backend",
+        "django",
+        "auth",
+        "security",
+        "sessions",
+        "gdpr"
+      ],
+      "companions": [
+        "RECIPES.md"
+      ]
+    },
+    {
+      "name": "django-elite",
+      "path": "skills/backend/django-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for architecting scalable, maintainable, and high-performance Django applications using modern Python tooling and database patterns. Use when working with backend, django, python.",
+      "triggers": [
+        "backend",
+        "django",
+        "python",
+        "patterns"
+      ],
+      "dependencies": [
+        "python-elite",
+        "zero-downtime-migrations"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "backend",
+        "django",
+        "python",
+        "elite",
+        "patterns"
+      ],
+      "companions": []
+    },
+    {
+      "name": "docker-elite",
+      "path": "skills/infrastructure/docker-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for building high-performance, ultra-secure containerized applications. Use when working with infrastructure, devops, docker.",
+      "triggers": [
+        "infrastructure",
+        "devops",
+        "docker",
+        "security",
+        "distroless",
+        "buildkit"
+      ],
+      "dependencies": [
+        "github-actions-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "infrastructure",
+        "devops",
+        "docker",
+        "security",
+        "distroless",
+        "buildkit"
+      ],
+      "companions": []
+    },
+    {
+      "name": "domain-modeling",
+      "path": "skills/engineering/domain-modeling/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Builds and sharpens a project's domain model. Use when discussing codebase terminology, writing or editing a CONTEXT.md, or recording an ADR. For module boundaries and interfaces, use codebase-design.",
+      "triggers": [
+        "domain model",
+        "context.md",
+        "record an adr",
+        "terminology",
+        "what do we call this"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "the repository",
+        "existing CONTEXT.md and ADRs"
+      ],
+      "outputs": [
+        "an updated CONTEXT.md",
+        "ADR files"
+      ],
+      "tags": [
+        "ddd",
+        "domain",
+        "adr",
+        "documentation"
+      ],
+      "companions": [
+        "ADR-FORMAT.md",
+        "CONTEXT-FORMAT.md"
+      ]
+    },
+    {
+      "name": "finops-value-elite",
+      "path": "knowledgebase/finops-value-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for architecting financially efficient cloud systems and aligning engineering spend with business value. Use when working with knowledge, finops, cost.",
+      "triggers": [
+        "knowledge",
+        "finops",
+        "cost",
+        "cloud",
+        "ai",
+        "focus",
+        "value"
+      ],
+      "dependencies": [
+        "bigquery-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "knowledge",
+        "finops",
+        "cost",
+        "cloud",
+        "ai",
+        "focus"
+      ],
+      "companions": []
+    },
+    {
+      "name": "flask-elite",
+      "path": "skills/backend/flask-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for building enterprise-grade, modular Flask applications. Use for any non-trivial Flask backend. Use when working with backend, python, flask.",
+      "triggers": [
+        "backend",
+        "python",
+        "flask",
+        "blueprints",
+        "patterns"
+      ],
+      "dependencies": [
+        "python-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "backend",
+        "python",
+        "flask",
+        "blueprints",
+        "patterns"
+      ],
+      "companions": []
+    },
+    {
+      "name": "gcloud-deployment-elite",
+      "path": "skills/infrastructure/gcloud-deployment-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for resolving common deployment hurdles when using Google Cloud SDK, Cloud Run, and Firebase Hosting. Use when working with infrastructure, gcloud, firebase.",
+      "triggers": [
+        "infrastructure",
+        "gcloud",
+        "firebase",
+        "cloud-run",
+        "django",
+        "deployment"
+      ],
+      "dependencies": [
+        "docker-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "infrastructure",
+        "gcloud",
+        "firebase",
+        "cloud-run",
+        "django",
+        "deployment"
+      ],
+      "companions": []
+    },
+    {
+      "name": "git-ops-elite",
+      "path": "misc/git-ops-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for efficient, automated, and secure source control management. Use when working with git, gitops, workflow.",
+      "triggers": [
+        "git",
+        "gitops",
+        "workflow",
+        "automation",
+        "ops"
+      ],
+      "dependencies": [
+        "github-actions-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "misc",
+        "git",
+        "gitops",
+        "workflow",
+        "automation"
+      ],
+      "companions": []
+    },
+    {
+      "name": "git-velocity-elite",
+      "path": "misc/git-velocity-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for maximizing engineering velocity and minimizing integration pain using 2026 version control standards. Use when working with git, velocity, trunk-based.",
+      "triggers": [
+        "git",
+        "velocity",
+        "trunk-based",
+        "stacked-prs",
+        "graphite"
+      ],
+      "dependencies": [
+        "git-ops-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "misc",
+        "git",
+        "velocity",
+        "trunk-based",
+        "stacked-prs",
+        "graphite"
+      ],
+      "companions": []
+    },
+    {
+      "name": "github-actions-elite",
+      "path": "skills/infrastructure/github-actions-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for architecting high-performance, zero-secret CI/CD pipelines. Use when working with infrastructure, devops, ci.",
+      "triggers": [
+        "infrastructure",
+        "devops",
+        "ci",
+        "cd",
+        "github-actions",
+        "security",
+        "github",
+        "actions"
+      ],
+      "dependencies": [
+        "docker-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "infrastructure",
+        "devops",
+        "ci",
+        "cd",
+        "github-actions",
+        "security"
+      ],
+      "companions": []
+    },
+    {
+      "name": "grill-with-docs",
+      "path": "skills/engineering/grill-with-docs/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "A relentless interview that sharpens a plan or design while writing the docs (ADRs and glossary entries) as it goes. Use when the user wants a design pressure-tested and recorded. For grilling with no doc output, use grilling.",
+      "triggers": [
+        "grill with docs",
+        "sharpen this design",
+        "write the adr",
+        "interrogate this plan"
+      ],
+      "dependencies": [
+        "grilling",
+        "domain-modeling"
+      ],
+      "inputs": [
+        "a plan or design",
+        "the repository's domain docs"
+      ],
+      "outputs": [
+        "a sharpened plan",
+        "ADR files",
+        "glossary entries"
+      ],
+      "tags": [
+        "design",
+        "interview",
+        "adr",
+        "documentation"
+      ],
+      "companions": []
+    },
+    {
+      "name": "iac-opentofu-elite",
+      "path": "skills/infrastructure/iac-opentofu-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for managing cloud infrastructure deterministically using OpenTofu/Terraform with strict state and drift governance. Use when working with infrastructure, devops, iac.",
+      "triggers": [
+        "infrastructure",
+        "devops",
+        "iac",
+        "opentofu",
+        "terraform",
+        "governance"
+      ],
+      "dependencies": [
+        "github-actions-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "infrastructure",
+        "devops",
+        "iac",
+        "opentofu",
+        "terraform",
+        "governance"
+      ],
+      "companions": []
+    },
+    {
+      "name": "implement",
+      "path": "skills/engineering/implement/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Implements a piece of work from a spec or a set of tickets, driving tests and review as it goes. Use when the user says to build the spec or work the tickets. For deciding what to build, use to-spec or to-tickets first.",
+      "triggers": [
+        "implement the spec",
+        "build the tickets",
+        "start implementation",
+        "work the backlog"
+      ],
+      "dependencies": [
+        "tdd",
+        "code-review"
+      ],
+      "inputs": [
+        "a spec or tickets"
+      ],
+      "outputs": [
+        "implemented and reviewed code"
+      ],
+      "tags": [
+        "implementation",
+        "workflow"
+      ],
+      "companions": []
+    },
+    {
+      "name": "improve-codebase-architecture",
+      "path": "skills/engineering/improve-codebase-architecture/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Scans a codebase for module-deepening opportunities, presents them as a visual HTML report, then grills through whichever one the user picks. Use when the user asks to improve the architecture or find where the design is shallow. For designing a single module, use codebase-design.",
+      "triggers": [
+        "improve the architecture",
+        "deepening opportunities",
+        "architecture report",
+        "where is the design shallow"
+      ],
+      "dependencies": [
+        "codebase-design",
+        "grill-with-docs"
+      ],
+      "inputs": [
+        "the repository"
+      ],
+      "outputs": [
+        "an HTML opportunity report",
+        "a chosen and grilled design change"
+      ],
+      "tags": [
+        "architecture",
+        "refactoring",
+        "audit"
+      ],
+      "companions": [
+        "HTML-REPORT.md"
+      ]
+    },
+    {
+      "name": "js-html-elite",
+      "path": "skills/frontend/js-html-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for building modern, high-performance web applications using the 2026 native web platform features. Use when working with frontend, javascript, html.",
+      "triggers": [
+        "frontend",
+        "javascript",
+        "html",
+        "temporal",
+        "accessibility",
+        "components",
+        "js"
+      ],
+      "dependencies": [
+        "css-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "frontend",
+        "javascript",
+        "html",
+        "temporal",
+        "accessibility",
+        "components"
+      ],
+      "companions": []
+    },
+    {
+      "name": "local-first-ai-elite",
+      "path": "skills/frontend/local-first-ai-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for architecting privacy-centric, low-latency applications that run AI models entirely on-device (browser or edge). Use when working with frontend, ai, local-first.",
+      "triggers": [
+        "frontend",
+        "ai",
+        "local-first",
+        "webgpu",
+        "onnx",
+        "transformersjs",
+        "local",
+        "first"
+      ],
+      "dependencies": [
+        "js-html-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "frontend",
+        "ai",
+        "local-first",
+        "webgpu",
+        "onnx",
+        "transformersjs"
+      ],
+      "companions": []
+    },
+    {
+      "name": "marketplace-pattern",
+      "path": "knowledgebase/architecture/marketplace-pattern.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "A blueprint for building gaming marketplaces or general e-commerce platforms with a focus on modularity, high availability, and external integrations. Use when working with marketplace, pattern.",
+      "triggers": [
+        "marketplace",
+        "pattern"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [],
+      "companions": []
+    },
+    {
+      "name": "multiplayer-interruption-pattern",
+      "path": "knowledgebase/architecture/multiplayer-interruption-pattern.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "In turn-based games where players need to interact out-of-turn (e.g., playing 'Disruption' or 'Reaction' cards), the standard 'Current Player' state logic is insufficient. Use when working with architecture, multiplayer, frontend.",
+      "triggers": [
+        "architecture",
+        "multiplayer",
+        "frontend",
+        "state-management",
+        "interruption",
+        "pattern"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "architecture",
+        "multiplayer",
+        "frontend",
+        "state-management"
+      ],
+      "companions": []
+    },
+    {
+      "name": "observability-elite",
+      "path": "skills/infrastructure/observability-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for architecting unified, actionable, and cost-aware observability systems. Use when working with infrastructure, observability, opentelemetry.",
+      "triggers": [
+        "infrastructure",
+        "observability",
+        "opentelemetry",
+        "ebpf",
+        "pltg"
+      ],
+      "dependencies": [
+        "github-actions-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "infrastructure",
+        "observability",
+        "opentelemetry",
+        "ebpf",
+        "pltg"
+      ],
+      "companions": []
+    },
+    {
+      "name": "postgresql-elite",
+      "path": "skills/database/postgresql-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for architecting high-concurrency, performant relational databases using PostgreSQL 18+ features. Use when working with database, postgresql, indexing.",
+      "triggers": [
+        "database",
+        "postgresql",
+        "indexing",
+        "jsonb",
+        "performance"
+      ],
+      "dependencies": [
+        "rust-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "database",
+        "postgresql",
+        "indexing",
+        "jsonb",
+        "performance"
+      ],
+      "companions": []
+    },
+    {
+      "name": "privacy-by-design-elite",
+      "path": "knowledgebase/privacy-by-design-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for architecting systems that meet the rigorous 2026 standards for data privacy, cryptographic erasure, and EU AI Act compliance. Use when working with knowledge, privacy, gdpr.",
+      "triggers": [
+        "knowledge",
+        "privacy",
+        "gdpr",
+        "cryptography",
+        "security",
+        "edge-ai",
+        "by",
+        "design"
+      ],
+      "dependencies": [
+        "security-agentic-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "knowledge",
+        "privacy",
+        "gdpr",
+        "cryptography",
+        "security",
+        "edge-ai"
+      ],
+      "companions": []
+    },
+    {
+      "name": "prototype",
+      "path": "skills/engineering/prototype/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Builds a throwaway prototype to answer one design question. Use when the user wants to sanity-check whether a state model or piece of logic feels right, or explore what a UI should look like. Prototypes are deleted, not shipped.",
+      "triggers": [
+        "prototype",
+        "spike",
+        "throwaway",
+        "sanity check the design",
+        "does this feel right"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "a design question"
+      ],
+      "outputs": [
+        "a throwaway prototype",
+        "an answer to the design question"
+      ],
+      "tags": [
+        "prototyping",
+        "design",
+        "ui"
+      ],
+      "companions": [
+        "LOGIC.md",
+        "UI.md"
+      ]
+    },
+    {
+      "name": "pytest-elite",
+      "path": "testing/pytest-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for writing modular, fast, and high-coverage Python tests using `pytest` and modern dependency injection. Use when working with testing, python, pytest.",
+      "triggers": [
+        "testing",
+        "python",
+        "pytest",
+        "mocking",
+        "fixtures"
+      ],
+      "dependencies": [
+        "python-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "testing",
+        "python",
+        "pytest",
+        "mocking",
+        "fixtures"
+      ],
+      "companions": []
+    },
+    {
+      "name": "python-elite",
+      "path": "skills/backend/python-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for writing high-performance, type-safe, and maintainable Python code using the 2026 Astral toolchain (`uv`, `ruff`) and advanced type hinting. Use when working with backend, python, astral.",
+      "triggers": [
+        "backend",
+        "python",
+        "astral",
+        "uv",
+        "ruff",
+        "typing"
+      ],
+      "dependencies": [
+        "flask-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "backend",
+        "python",
+        "astral",
+        "uv",
+        "ruff",
+        "typing"
+      ],
+      "companions": []
+    },
+    {
+      "name": "redis-elite",
+      "path": "skills/database/redis-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for architecting high-performance caching, rate-limiting, and messaging using Redis. Use when working with database, redis, caching.",
+      "triggers": [
+        "database",
+        "redis",
+        "caching",
+        "pub-sub",
+        "performance"
+      ],
+      "dependencies": [
+        "postgresql-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "database",
+        "redis",
+        "caching",
+        "pub-sub",
+        "performance"
+      ],
+      "companions": []
+    },
+    {
+      "name": "research",
+      "path": "skills/engineering/research/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Investigates a question against high-trust primary sources and captures the findings as a Markdown file in the repository. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated.",
+      "triggers": [
+        "research this",
+        "look up the docs",
+        "gather sources",
+        "find out how x works"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "a research question"
+      ],
+      "outputs": [
+        "a Markdown findings file with cited sources"
+      ],
+      "tags": [
+        "research",
+        "documentation"
+      ],
+      "companions": []
+    },
+    {
+      "name": "resolving-merge-conflicts",
+      "path": "skills/engineering/resolving-merge-conflicts/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Resolves an in-progress git merge or rebase conflict by reconstructing intent on both sides before choosing. Use when the user is mid-merge or mid-rebase with conflicts. For general git workflow, use git-ops-elite.",
+      "triggers": [
+        "merge conflict",
+        "rebase conflict",
+        "resolve conflicts",
+        "conflicted files"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "a repository in a conflicted merge or rebase state"
+      ],
+      "outputs": [
+        "resolved files",
+        "a completed merge or rebase"
+      ],
+      "tags": [
+        "git",
+        "merge",
+        "conflicts"
+      ],
+      "companions": []
+    },
+    {
+      "name": "rust-elite",
+      "path": "skills/backend/rust-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for writing efficient, safe, and idiomatic Rust code with a focus on modern async patterns. Use when working with backend, rust, async.",
+      "triggers": [
+        "backend",
+        "rust",
+        "async",
+        "tokio",
+        "error-handling"
+      ],
+      "dependencies": [
+        "python-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "backend",
+        "rust",
+        "async",
+        "tokio",
+        "error-handling"
+      ],
+      "companions": []
+    },
+    {
+      "name": "security-agentic-elite",
+      "path": "knowledgebase/security-agentic-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for architecting secure, autonomous AI agents and mitigating the OWASP Agentic Top 10 (ASI). Use when working with knowledge, security, ai.",
+      "triggers": [
+        "knowledge",
+        "security",
+        "ai",
+        "agents",
+        "owasp",
+        "zero-trust",
+        "agentic"
+      ],
+      "dependencies": [
+        "agent-swarms-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "knowledge",
+        "security",
+        "ai",
+        "agents",
+        "owasp",
+        "zero-trust"
+      ],
+      "companions": []
+    },
+    {
+      "name": "serverless-edge-elite",
+      "path": "skills/infrastructure/serverless-edge-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for architecting latency-optimized, event-driven systems using a hybrid Serverless/Edge strategy. Use when working with infrastructure, serverless, edge.",
+      "triggers": [
+        "infrastructure",
+        "serverless",
+        "edge",
+        "wasm",
+        "latency",
+        "event-driven"
+      ],
+      "dependencies": [
+        "github-actions-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "infrastructure",
+        "serverless",
+        "edge",
+        "wasm",
+        "latency",
+        "event-driven"
+      ],
+      "companions": []
+    },
+    {
+      "name": "setup-engineering-flows",
+      "path": "skills/engineering/setup-engineering-flows/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "'Configures a repository for the engineering skills: issue tracker, triage label vocabulary, and domain doc layout. Run once per repository before first use of triage, to-spec, to-tickets, wayfinder, or code-review.'",
+      "triggers": [
+        "set up the engineering skills",
+        "configure the issue tracker",
+        "set up triage labels",
+        "first time setup"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "the repository",
+        "the user's tracker choice"
+      ],
+      "outputs": [
+        "docs/agents/issue-tracker.md",
+        "triage label mapping",
+        "domain doc layout"
+      ],
+      "tags": [
+        "setup",
+        "configuration",
+        "issues"
+      ],
+      "companions": [
+        "domain.md",
+        "issue-tracker-github.md",
+        "issue-tracker-gitlab.md",
+        "issue-tracker-local.md",
+        "triage-labels.md"
+      ]
+    },
+    {
+      "name": "skill-creator",
+      "path": "skills/skill-creator.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "A meta-skill for building, testing, and iteratively improving other skills. Use when working with meta, skill, creation.",
+      "triggers": [
+        "meta",
+        "skill",
+        "creation",
+        "evaluation",
+        "benchmark",
+        "creator"
+      ],
+      "dependencies": [
+        "skill-standard"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "meta",
+        "skill",
+        "creation",
+        "evaluation",
+        "benchmark"
+      ],
+      "companions": []
+    },
+    {
+      "name": "skill-router",
+      "path": "skills/engineering/skill-router/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Routes a described situation to the right skill and flow in this repository. Use when the user asks which skill to use, what flow fits, where to start, or says 'help me pick'. For authoring a new skill instead, use skill-creator.",
+      "triggers": [
+        "which skill",
+        "what skill should i use",
+        "which flow",
+        "where do i start",
+        "help me pick"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "a description of the situation",
+        "skills_manifest.json"
+      ],
+      "outputs": [
+        "a recommended skill",
+        "the flow it sits in"
+      ],
+      "tags": [
+        "meta",
+        "routing",
+        "engineering"
+      ],
+      "companions": [
+        "PHASE-BOUNDARIES.md"
+      ]
+    },
+    {
+      "name": "skill-standard",
+      "path": "SKILL_STANDARD.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "The canonical schema and body structure every skill file in this repository must follow. Read before authoring, migrating, or reviewing any skill file.",
+      "triggers": [
+        "skill authoring",
+        "schema",
+        "frontmatter",
+        "new skill",
+        "migrate skill"
+      ],
+      "dependencies": [
+        "skill-creator"
+      ],
+      "inputs": [
+        "a draft skill",
+        "an existing memory file",
+        "a raw prompt or design doc"
+      ],
+      "outputs": [
+        "a conforming SKILL.md or <name>.md",
+        "updated SKILL_TREE.md",
+        "updated skills_manifest.json"
+      ],
+      "tags": [
+        "meta",
+        "standard",
+        "schema"
+      ],
+      "companions": []
+    },
+    {
+      "name": "sre-incident-protocol",
+      "path": "misc/sre-incident-protocol.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for managing production incidents and maintaining \"Six 9s\" reliability through automated coordination and systemic learning. Use when working with sre, reliability, slo.",
+      "triggers": [
+        "sre",
+        "reliability",
+        "slo",
+        "post-mortem",
+        "incident",
+        "protocol"
+      ],
+      "dependencies": [
+        "observability-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "misc",
+        "sre",
+        "reliability",
+        "slo",
+        "post-mortem",
+        "incident"
+      ],
+      "companions": []
+    },
+    {
+      "name": "system-design-elite",
+      "path": "knowledgebase/system-design-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for architecting \"Six 9s\" (99.9999%) geo-distributed systems. Use when working with knowledge, architecture, ha.",
+      "triggers": [
+        "knowledge",
+        "architecture",
+        "ha",
+        "cap",
+        "pacelc",
+        "distributed",
+        "system",
+        "design"
+      ],
+      "dependencies": [
+        "observability-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "knowledge",
+        "architecture",
+        "ha",
+        "cap",
+        "pacelc",
+        "distributed"
+      ],
+      "companions": []
+    },
+    {
+      "name": "tdd",
+      "path": "skills/engineering/tdd/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Test-driven development, red-green-refactor, biased toward integration tests. Use when the user wants to build a feature or fix a bug test-first, or mentions red-green-refactor. For finding an unknown root cause first, use diagnosing-bugs.",
+      "triggers": [
+        "tdd",
+        "test first",
+        "red green refactor",
+        "write the test first",
+        "integration tests"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "a feature request or bug"
+      ],
+      "outputs": [
+        "failing test then passing implementation"
+      ],
+      "tags": [
+        "testing",
+        "tdd",
+        "workflow"
+      ],
+      "companions": [
+        "mocking.md",
+        "tests.md"
+      ]
+    },
+    {
+      "name": "tla-plus-formalism",
+      "path": "testing/tla-plus-formalism.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for mathematically verifying distributed systems and complex concurrent logic before implementation. Use when working with testing, formal-methods, tla+.",
+      "triggers": [
+        "testing",
+        "formal-methods",
+        "tla+",
+        "verification",
+        "distributed-systems",
+        "tla",
+        "plus",
+        "formalism"
+      ],
+      "dependencies": [
+        "system-design-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "testing",
+        "formal-methods",
+        "tla+",
+        "verification",
+        "distributed-systems"
+      ],
+      "companions": []
+    },
+    {
+      "name": "to-spec",
+      "path": "skills/engineering/to-spec/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Turns the current conversation into a spec and publishes it to the project issue tracker. No interview, pure synthesis of what has already been discussed. Use when the user says 'write that up as a spec'. To interrogate the idea first, use grilling.",
+      "triggers": [
+        "turn this into a spec",
+        "write the spec",
+        "publish a spec",
+        "spec this out"
+      ],
+      "dependencies": [
+        "setup-engineering-flows"
+      ],
+      "inputs": [
+        "the current conversation"
+      ],
+      "outputs": [
+        "a spec published to the tracker"
+      ],
+      "tags": [
+        "spec",
+        "planning",
+        "issues"
+      ],
+      "companions": []
+    },
+    {
+      "name": "to-tickets",
+      "path": "skills/engineering/to-tickets/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Breaks a plan, spec, or the current conversation into tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker. Use when the user asks to break work into tickets. For a project too large for one pass, use wayfinder.",
+      "triggers": [
+        "break this into tickets",
+        "create tickets",
+        "tracer bullets",
+        "split the work"
+      ],
+      "dependencies": [
+        "setup-engineering-flows"
+      ],
+      "inputs": [
+        "a plan or spec or the conversation"
+      ],
+      "outputs": [
+        "tickets with blocking edges on the tracker"
+      ],
+      "tags": [
+        "tickets",
+        "planning",
+        "issues"
+      ],
+      "companions": []
+    },
+    {
+      "name": "trading-safety-guard",
+      "path": "skills/trading-safety-guard/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Mandatory persistent safety constraints and execution boundaries for automated trading agents. Enforces per-trade caps, daily volume ceilings, position book deduplication, -10% crash filters, and options bans.",
+      "triggers": [],
+      "dependencies": [],
+      "inputs": [],
+      "outputs": [],
+      "tags": [],
+      "companions": []
+    },
+    {
+      "name": "triage",
+      "path": "skills/engineering/triage/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "'Moves issues and external PRs through a state machine of triage roles: categorise, verify, grill when underspecified, and write agent-ready briefs. Use when the user wants their issue tracker inbox processed or an incoming PR assessed. Requires setup-engineering-flows to have configured the tracker.'",
+      "triggers": [
+        "triage",
+        "process the inbox",
+        "categorise issues",
+        "incoming pr",
+        "issue backlog"
+      ],
+      "dependencies": [
+        "setup-engineering-flows"
+      ],
+      "inputs": [
+        "issues or PRs from the configured tracker"
+      ],
+      "outputs": [
+        "labelled issues",
+        "agent-ready briefs"
+      ],
+      "tags": [
+        "triage",
+        "issues",
+        "workflow"
+      ],
+      "companions": [
+        "AGENT-BRIEF.md",
+        "OUT-OF-SCOPE.md"
+      ]
+    },
+    {
+      "name": "wayfinder",
+      "path": "skills/engineering/wayfinder/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Plans a chunk of work larger than one agent session as a shared map of decision tickets, then resolves them one at a time until the route is clear. Use when the user has a project too big to hold in one context. For work that already fits, use to-tickets.",
+      "triggers": [
+        "plan a big project",
+        "too big for one session",
+        "decision tickets",
+        "roadmap",
+        "where do we even start"
+      ],
+      "dependencies": [
+        "setup-engineering-flows"
+      ],
+      "inputs": [
+        "a large goal",
+        "the configured tracker"
+      ],
+      "outputs": [
+        "a decision map",
+        "resolved decision tickets"
+      ],
+      "tags": [
+        "planning",
+        "architecture",
+        "long-horizon"
+      ],
+      "companions": []
+    },
+    {
+      "name": "webapp-testing",
+      "path": "testing/webapp-testing.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for testing local web applications using native Python Playwright scripts and server management helpers. Use when working with testing, frontend, playwright.",
+      "triggers": [
+        "testing",
+        "frontend",
+        "playwright",
+        "web",
+        "webapp"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "testing",
+        "frontend",
+        "playwright",
+        "web"
+      ],
+      "companions": []
+    },
+    {
+      "name": "wizard",
+      "path": "skills/engineering/wizard/SKILL.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Generates an interactive bash wizard that walks a human through steps only they can perform. Use when provisioning infrastructure, setting up credentials or CI secrets, navigating a third-party dashboard, or running a one-off cutover. Do not use for steps the agent can perform itself.",
+      "triggers": [
+        "generate a wizard",
+        "walk me through setup",
+        "provision credentials",
+        "ci secrets",
+        "manual steps"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "a manual procedure"
+      ],
+      "outputs": [
+        "an interactive bash wizard script"
+      ],
+      "tags": [
+        "automation",
+        "bash",
+        "setup"
+      ],
+      "companions": []
+    },
+    {
+      "name": "xstate-formalism-elite",
+      "path": "skills/frontend/xstate-formalism-elite.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for managing complex frontend logic using deterministic state machines and the Actor Model (XState v5+). Use when working with frontend, xstate, state-machine.",
+      "triggers": [
+        "frontend",
+        "xstate",
+        "state-machine",
+        "actor-model",
+        "formalism"
+      ],
+      "dependencies": [
+        "js-html-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "frontend",
+        "xstate",
+        "state-machine",
+        "actor-model",
+        "formalism"
+      ],
+      "companions": []
+    },
+    {
+      "name": "zero-downtime-migrations",
+      "path": "skills/database/zero-downtime-migrations.md",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Guidelines for executing database schema changes in high-availability systems without locking tables or dropping traffic. Use when working with database, postgresql, migrations.",
+      "triggers": [
+        "database",
+        "postgresql",
+        "migrations",
+        "expand-contract",
+        "ha",
+        "zero",
+        "downtime"
+      ],
+      "dependencies": [
+        "postgresql-elite"
+      ],
+      "inputs": [
+        "source files",
+        "project config"
+      ],
+      "outputs": [
+        "refactored code",
+        "review findings"
+      ],
+      "tags": [
+        "database",
+        "postgresql",
+        "migrations",
+        "expand-contract",
+        "ha"
+      ],
+      "companions": []
+    },
+    {
+      "name": "blender-procedural-modeling",
+      "path": "creative_3d/blender-procedural-modeling.md",
+      "category": "creative_3d",
+      "version": "1.0.0",
+      "description": "Build parametric 3D models in Blender with the bpy API \u2014 primitive-plus-boolean construction, named-constant dimensioning, sliding-fit tolerances for 3D printing, and repeatable script-driven geometry. Use when scripting Blender, generating printable parts from parameters, cutting grooves or joints with boolean modifiers, or when a model needs to be regenerated at different dimensions. For 2D generative art, use algorithmic-art.",
+      "triggers": [
+        "blender",
+        "bpy",
+        "procedural modeling",
+        "boolean modifier",
+        "3d print",
+        "parametric model",
+        "dovetail",
+        "tolerance",
+        "mesh generation",
+        "python 3d"
+      ],
+      "dependencies": [
+        "python-elite"
+      ],
+      "inputs": [
+        "a set of dimension parameters",
+        "a target print process and material"
+      ],
+      "outputs": [
+        "a Blender scene",
+        "an exported mesh",
+        "a parameterized generator script"
+      ],
+      "tags": [
+        "creative_3d",
+        "blender",
+        "bpy",
+        "procedural",
+        "3d-printing",
+        "parametric"
+      ],
+      "companions": []
+    },
+    {
+      "name": "algorithmic-art",
+      "path": "skills/media/algorithmic-art.md",
+      "category": "design_media",
+      "version": "1.0.0",
+      "description": "Guidelines for creating interactive, seeded generative art using p5.js. Use when users request \"code-based art,\" \"flow fields,\" or \"generative sketches.\"",
+      "triggers": [
+        "media",
+        "art",
+        "generative",
+        "p5js",
+        "javascript",
+        "algorithmic"
+      ],
+      "dependencies": [
+        "theme-factory"
+      ],
+      "inputs": [
+        "brief",
+        "brand tokens"
+      ],
+      "outputs": [
+        "design artifact",
+        "style spec"
+      ],
+      "tags": [
+        "media",
+        "art",
+        "generative",
+        "p5js",
+        "javascript"
+      ],
+      "companions": []
+    },
+    {
+      "name": "brand-guidelines",
+      "path": "skills/media/brand-guidelines.md",
+      "category": "design_media",
+      "version": "1.0.0",
+      "description": "Guidelines for applying Anthropic's official brand colors and typography to artifacts. Use when working with media, design, branding.",
+      "triggers": [
+        "media",
+        "design",
+        "branding",
+        "corporate",
+        "style",
+        "brand",
+        "guidelines"
+      ],
+      "dependencies": [
+        "theme-factory"
+      ],
+      "inputs": [
+        "brief",
+        "brand tokens"
+      ],
+      "outputs": [
+        "design artifact",
+        "style spec"
+      ],
+      "tags": [
+        "media",
+        "design",
+        "branding",
+        "corporate",
+        "style"
+      ],
+      "companions": []
+    },
+    {
+      "name": "canvas-design",
+      "path": "skills/media/canvas-design.md",
+      "category": "design_media",
+      "version": "1.0.0",
+      "description": "Guidelines for creating high-quality, museum-ready visual art (posters, designs, static pieces). Use when a user asks for \"art,\" \"poster,\" or \"design.\"",
+      "triggers": [
+        "media",
+        "design",
+        "poster",
+        "typography",
+        "pdf",
+        "canvas"
+      ],
+      "dependencies": [
+        "theme-factory"
+      ],
+      "inputs": [
+        "brief",
+        "brand tokens"
+      ],
+      "outputs": [
+        "design artifact",
+        "style spec"
+      ],
+      "tags": [
+        "media",
+        "design",
+        "poster",
+        "typography",
+        "pdf"
+      ],
+      "companions": []
+    },
+    {
+      "name": "frontend-design",
+      "path": "skills/media/frontend-design.md",
+      "category": "design_media",
+      "version": "1.0.0",
+      "description": "Guidelines for creating distinctive, production-grade frontend interfaces that avoid generic \"AI slop\" aesthetics. Use when working with media, frontend, design.",
+      "triggers": [
+        "media",
+        "frontend",
+        "design",
+        "css",
+        "react",
+        "animation"
+      ],
+      "dependencies": [
+        "web-artifacts-builder",
+        "theme-factory"
+      ],
+      "inputs": [
+        "brief",
+        "brand tokens"
+      ],
+      "outputs": [
+        "design artifact",
+        "style spec"
+      ],
+      "tags": [
+        "media",
+        "frontend",
+        "design",
+        "css",
+        "react",
+        "animation"
+      ],
+      "companions": []
+    },
+    {
+      "name": "slack-gif-creator",
+      "path": "skills/media/slack-gif-creator.md",
+      "category": "design_media",
+      "version": "1.0.0",
+      "description": "Guidelines for creating animated GIFs optimized for Slack (emojis or messages). Use when working with media, animation, gif.",
+      "triggers": [
+        "media",
+        "animation",
+        "gif",
+        "slack",
+        "python",
+        "creator"
+      ],
+      "dependencies": [
+        "canvas-design"
+      ],
+      "inputs": [
+        "brief",
+        "brand tokens"
+      ],
+      "outputs": [
+        "design artifact",
+        "style spec"
+      ],
+      "tags": [
+        "media",
+        "animation",
+        "gif",
+        "slack",
+        "python"
+      ],
+      "companions": []
+    },
+    {
+      "name": "theme-factory",
+      "path": "skills/media/theme-factory.md",
+      "category": "design_media",
+      "version": "1.0.0",
+      "description": "Guidelines for applying professional styling to artifacts (slides, docs, reports) using curated themes. Use when working with media, design, theme.",
+      "triggers": [
+        "media",
+        "design",
+        "theme",
+        "colors",
+        "fonts",
+        "factory"
+      ],
+      "dependencies": [
+        "pdf"
+      ],
+      "inputs": [
+        "brief",
+        "brand tokens"
+      ],
+      "outputs": [
+        "design artifact",
+        "style spec"
+      ],
+      "tags": [
+        "media",
+        "design",
+        "theme",
+        "colors",
+        "fonts"
+      ],
+      "companions": []
+    },
+    {
+      "name": "themes",
+      "path": "knowledgebase/media/themes.md",
+      "category": "design_media",
+      "version": "1.0.0",
+      "description": "A catalog of curated color palettes and typography pairings for professional presentations, reports, and generative art. Use when working with media, design, theme.",
+      "triggers": [
+        "media",
+        "design",
+        "theme",
+        "colors",
+        "fonts",
+        "themes"
+      ],
+      "dependencies": [
+        "theme-factory"
+      ],
+      "inputs": [
+        "brief",
+        "brand tokens"
+      ],
+      "outputs": [
+        "design artifact",
+        "style spec"
+      ],
+      "tags": [
+        "media",
+        "design",
+        "theme",
+        "colors",
+        "fonts"
+      ],
+      "companions": []
+    },
+    {
+      "name": "diegetic-game-ui",
+      "path": "game_design/diegetic-game-ui.md",
+      "category": "game_design",
+      "version": "1.0.0",
+      "description": "Design and implement immersive, diegetic 2D game UI artifacts (antique parchment scrolls, fantasy maps, alchemical treaties, reward modals, stone tablets). Use when the user asks to design game modals, reward popups, map screens, parchment overlays, or when requesting 9-slice cartographic frames, deckle-edge styling, image generation prompts, or technical UI architecture for tactile game surfaces.",
+      "triggers": [
+        "diegetic ui",
+        "parchment modal",
+        "map popup",
+        "deckle edge",
+        "scroll ui",
+        "fantasy ui",
+        "9-slice map",
+        "game modal artifact"
+      ],
+      "dependencies": [
+        "frontend-design"
+      ],
+      "inputs": [
+        "modal requirements",
+        "game theme",
+        "reward structure"
+      ],
+      "outputs": [
+        "diegetic UI component",
+        "SVG filter setup",
+        "image prompts",
+        "9-slice specs"
+      ],
+      "tags": [
+        "game-ui",
+        "diegetic",
+        "parchment",
+        "cartography",
+        "9-slice",
+        "svg-filters",
+        "framer-motion"
+      ],
+      "companions": []
+    },
+    {
+      "name": "narrative-event-system",
+      "path": "game_design/narrative-event-system.md",
+      "category": "game_design",
+      "version": "1.0.0",
+      "description": "Design a data-driven branching event system for a roguelike or RPG \u2014 a JSON schema separating game logic from narrative content, outcome gating on run state, weighted selection so rare lore does not drown, event chaining, and an LLM generator prompt that produces schema-valid content at volume. Use when building random events, dialogue trees, or lore systems, or when authored content needs to scale beyond hand-writing. For the scoring effects events grant, use roguelike-scoring.",
+      "triggers": [
+        "event system",
+        "branching narrative",
+        "dialogue tree",
+        "lore",
+        "random events",
+        "json schema game content",
+        "event chain",
+        "procedural narrative",
+        "worldbuilding"
+      ],
+      "dependencies": [
+        "roguelike-scoring"
+      ],
+      "inputs": [
+        "an event schema",
+        "a run-state model",
+        "a lore bible or setting premise"
+      ],
+      "outputs": [
+        "event JSON",
+        "a generator prompt",
+        "mutation definitions",
+        "a weighting table"
+      ],
+      "tags": [
+        "game_design",
+        "narrative",
+        "events",
+        "schema",
+        "procedural",
+        "llm"
+      ],
+      "companions": []
+    },
+    {
+      "name": "roguelike-scoring",
+      "path": "game_design/roguelike-scoring.md",
+      "category": "game_design",
+      "version": "1.0.0",
+      "description": "Design a Balatro-style multiplicative scoring engine \u2014 a chips-plus-multiplier core, a hand/combo evaluation table, a deterministic modifier resolution order, and escalating score targets. Use when building a roguelike deckbuilder, a dice or card scoring system, or when scores are exploding out of control and the modifier stacking needs a defined order. For tuning the economy and rarity around such a system, use run-economy-balancing.",
+      "triggers": [
+        "balatro",
+        "chips and mult",
+        "scoring system",
+        "combo scoring",
+        "roguelike deckbuilder",
+        "dice scoring",
+        "yahtzee",
+        "score target",
+        "joker stacking"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "a hand or roll of game pieces",
+        "equipped modifiers",
+        "the current score target"
+      ],
+      "outputs": [
+        "a scoring table",
+        "a resolution order spec",
+        "a target curve"
+      ],
+      "tags": [
+        "game_design",
+        "roguelike",
+        "scoring",
+        "mechanics",
+        "balance"
+      ],
+      "companions": []
+    },
+    {
+      "name": "run-economy-balancing",
+      "path": "game_design/run-economy-balancing.md",
+      "category": "game_design",
+      "version": "1.0.0",
+      "description": "Diagnose and fix roguelike economy problems \u2014 flat penalties that scale wrong, uncapped resource stacking, rarity tiers with no ceiling, and reward curves that trivialize the late run. Use when a game feels brutal early and trivial late, when a resource stacks without bound, or when adding a new rarity tier. For the scoring math itself, use roguelike-scoring.",
+      "triggers": [
+        "game balance",
+        "economy tuning",
+        "rarity tier",
+        "resource cap",
+        "reward curve",
+        "penalty scaling",
+        "too easy late game",
+        "snowball"
+      ],
+      "dependencies": [
+        "roguelike-scoring"
+      ],
+      "inputs": [
+        "current mechanic values grounded in the codebase",
+        "playtest or simulation data"
+      ],
+      "outputs": [
+        "a balance proposal with exact call sites",
+        "revised formulas",
+        "new tier definitions"
+      ],
+      "tags": [
+        "game_design",
+        "balance",
+        "economy",
+        "roguelike",
+        "tuning"
+      ],
+      "companions": []
+    },
+    {
+      "name": "social-deduction-design",
+      "path": "game_design/social-deduction-design.md",
+      "category": "game_design",
+      "version": "1.0.0",
+      "description": "Design social deduction and murder mystery games against the psychological drives that make them work \u2014 theory-of-mind engagement, safe transgression, earned revelation, identity adoption, and shared narrative. Covers narrative-first clue generation (scene fragments over inventory labels), the three-layer story model, and secret distribution for offline play. Use when designing a hidden-role game, when clues feel like a form to fill in rather than a mystery, or when players disengage after elimination.",
+      "triggers": [
+        "social deduction",
+        "murder mystery",
+        "hidden role",
+        "werewolf",
+        "clue design",
+        "deduction game",
+        "party game",
+        "secret distribution",
+        "roleplay game"
+      ],
+      "dependencies": [
+        "narrative-event-system"
+      ],
+      "inputs": [
+        "a player count",
+        "a scenario premise",
+        "a distribution mechanism"
+      ],
+      "outputs": [
+        "a clue generation model",
+        "role dossiers",
+        "a story layer spec",
+        "a distribution flow"
+      ],
+      "tags": [
+        "game_design",
+        "social_deduction",
+        "narrative",
+        "mystery",
+        "multiplayer"
+      ],
+      "companions": []
+    },
+    {
+      "name": "doc-coauthoring",
+      "path": "skills/communication/doc-coauthoring.md",
+      "category": "utilities",
+      "version": "1.0.0",
+      "description": "Guidelines for collaborative document creation (PRDs, technical specs, decision docs). Use when working with communication, doc, writing.",
+      "triggers": [
+        "communication",
+        "doc",
+        "writing",
+        "collaboration",
+        "structured",
+        "coauthoring"
+      ],
+      "dependencies": [
+        "internal-comms"
+      ],
+      "inputs": [
+        "input document or dataset"
+      ],
+      "outputs": [
+        "generated file"
+      ],
+      "tags": [
+        "communication",
+        "doc",
+        "writing",
+        "collaboration",
+        "structured"
+      ],
+      "companions": []
+    },
+    {
+      "name": "document-tooling-deep-dive",
+      "path": "knowledgebase/documents/document-tooling-deep-dive.md",
+      "category": "utilities",
+      "version": "1.0.0",
+      "description": "Document Tooling & Automation Deep Dive. Use when working with documents, python, automation.",
+      "triggers": [
+        "documents",
+        "python",
+        "automation",
+        "pdf",
+        "excel",
+        "word",
+        "powerpoint",
+        "document"
+      ],
+      "dependencies": [
+        "pdf",
+        "xlsx",
+        "docx",
+        "pptx"
+      ],
+      "inputs": [
+        "input document or dataset"
+      ],
+      "outputs": [
+        "generated file"
+      ],
+      "tags": [
+        "documents",
+        "python",
+        "automation",
+        "pdf",
+        "excel",
+        "word",
+        "powerpoint"
+      ],
+      "companions": []
+    },
+    {
+      "name": "docx",
+      "path": "skills/documents/docx.md",
+      "category": "utilities",
+      "version": "1.0.0",
+      "description": "Guidelines for creating, editing, and manipulating Word documents (`.docx`). Use when a \"report,\" \"memo,\" or \"letter\" is requested.",
+      "triggers": [
+        "documents",
+        "word",
+        "docx",
+        "xml",
+        "javascript"
+      ],
+      "dependencies": [
+        "pdf",
+        "xlsx"
+      ],
+      "inputs": [
+        "input document or dataset"
+      ],
+      "outputs": [
+        "generated file"
+      ],
+      "tags": [
+        "documents",
+        "word",
+        "docx",
+        "xml",
+        "javascript"
+      ],
+      "companions": []
+    },
+    {
+      "name": "frequency-analysis-simulation",
+      "path": "utilities/frequency-analysis-simulation.md",
+      "category": "utilities",
+      "version": "1.0.0",
+      "description": "Analyze historical draw or event data with pandas \u2014 parse delimited value columns into lists, build frequency counts, score combinations by rarity, and simulate outcomes \u2014 while stating plainly where the statistics do and do not support inference. Use when doing frequency analysis on lottery, dice, or sampled event data, or when a \"pick the best numbers\" request needs an honest answer alongside the code. For production data pipelines, use python-elite and the database skills.",
+      "triggers": [
+        "frequency analysis",
+        "lottery numbers",
+        "pandas value counts",
+        "rareness score",
+        "monte carlo",
+        "simulation",
+        "historical draw data",
+        "probability exercise"
+      ],
+      "dependencies": [
+        "python-elite"
+      ],
+      "inputs": [
+        "a CSV or dataframe of historical draws",
+        "a scoring definition"
+      ],
+      "outputs": [
+        "frequency tables",
+        "scored combinations",
+        "a simulation result with caveats"
+      ],
+      "tags": [
+        "utilities",
+        "pandas",
+        "statistics",
+        "simulation",
+        "probability",
+        "data-analysis"
+      ],
+      "companions": []
+    },
+    {
+      "name": "grill-me",
+      "path": "skills/productivity/grill-me/SKILL.md",
+      "category": "utilities",
+      "version": "1.0.0",
+      "description": "A relentless interview that sharpens a plan or design, one question at a time. User-invoked. Use when the user asks to be grilled on their own thinking. To grill a document or artifact instead, use grilling.",
+      "triggers": [
+        "grill me",
+        "interview me",
+        "sharpen my plan",
+        "poke holes in this"
+      ],
+      "dependencies": [
+        "grilling"
+      ],
+      "inputs": [
+        "a plan",
+        "decision",
+        "or idea"
+      ],
+      "outputs": [
+        "a sharpened plan",
+        "surfaced assumptions"
+      ],
+      "tags": [
+        "thinking",
+        "interview",
+        "planning"
+      ],
+      "companions": []
+    },
+    {
+      "name": "grilling",
+      "path": "skills/productivity/grilling/SKILL.md",
+      "category": "utilities",
+      "version": "1.0.0",
+      "description": "Grills the user relentlessly about a plan, decision, or idea to stress-test it. Use when the user wants their thinking pressure-tested or uses any grill trigger phrase. For an interview that also writes ADRs, use grill-with-docs.",
+      "triggers": [
+        "grill this",
+        "stress test my thinking",
+        "poke holes",
+        "pressure test this"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "a plan",
+        "decision",
+        "or idea"
+      ],
+      "outputs": [
+        "surfaced weaknesses and unstated assumptions"
+      ],
+      "tags": [
+        "thinking",
+        "interview",
+        "critique"
+      ],
+      "companions": []
+    },
+    {
+      "name": "handoff",
+      "path": "skills/productivity/handoff/SKILL.md",
+      "category": "utilities",
+      "version": "1.0.0",
+      "description": "Compacts the current conversation into a handoff document another agent can pick up cold. User-invoked. Use when the user says 'hand this off' or context is running out. For multi-agent runtime handoff protocols, use agent-handoff-elite.",
+      "triggers": [
+        "handoff",
+        "hand this off",
+        "compact for another agent",
+        "running out of context"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "the current conversation"
+      ],
+      "outputs": [
+        "a handoff document"
+      ],
+      "tags": [
+        "context",
+        "agents",
+        "documentation"
+      ],
+      "companions": []
+    },
+    {
+      "name": "internal-comms",
+      "path": "skills/communication/internal-comms.md",
+      "category": "utilities",
+      "version": "1.0.0",
+      "description": "Guidelines for writing effective internal communications (status reports, project updates, newsletters). Use when working with communication, reporting, status.",
+      "triggers": [
+        "communication",
+        "reporting",
+        "status",
+        "faq",
+        "internal",
+        "comms"
+      ],
+      "dependencies": [
+        "doc-coauthoring"
+      ],
+      "inputs": [
+        "input document or dataset"
+      ],
+      "outputs": [
+        "generated file"
+      ],
+      "tags": [
+        "communication",
+        "reporting",
+        "status",
+        "faq",
+        "internal"
+      ],
+      "companions": []
+    },
+    {
+      "name": "internal-comms-deep-dive",
+      "path": "knowledgebase/communication/internal-comms-deep-dive.md",
+      "category": "utilities",
+      "version": "1.0.0",
+      "description": "Succinct, data-driven updates for leadership and teammates. Intended to be read in <60 seconds. Use when working with communication, management, internal-comms.",
+      "triggers": [
+        "communication",
+        "management",
+        "internal-comms",
+        "patterns",
+        "internal",
+        "comms",
+        "deep",
+        "dive"
+      ],
+      "dependencies": [
+        "internal-comms"
+      ],
+      "inputs": [
+        "input document or dataset"
+      ],
+      "outputs": [
+        "generated file"
+      ],
+      "tags": [
+        "communication",
+        "management",
+        "internal-comms",
+        "patterns"
+      ],
+      "companions": []
+    },
+    {
+      "name": "pdf",
+      "path": "skills/documents/pdf.md",
+      "category": "utilities",
+      "version": "1.0.0",
+      "description": "Guidelines for reading, extracting, merging, splitting, and creating PDF files. Use when a user mentions `.pdf` or needs data from a PDF.",
+      "triggers": [
+        "documents",
+        "pdf",
+        "extraction",
+        "ocr",
+        "python"
+      ],
+      "dependencies": [
+        "webapp-testing"
+      ],
+      "inputs": [
+        "input document or dataset"
+      ],
+      "outputs": [
+        "generated file"
+      ],
+      "tags": [
+        "documents",
+        "pdf",
+        "extraction",
+        "ocr",
+        "python"
+      ],
+      "companions": []
+    },
+    {
+      "name": "pptx",
+      "path": "skills/documents/pptx.md",
+      "category": "utilities",
+      "version": "1.0.0",
+      "description": "Guidelines for creating and editing `.pptx` presentation decks. Use when a \"deck,\" \"slides,\" or \"presentation\" is requested.",
+      "triggers": [
+        "documents",
+        "powerpoint",
+        "pptx",
+        "presentation",
+        "design"
+      ],
+      "dependencies": [
+        "theme-factory",
+        "docx"
+      ],
+      "inputs": [
+        "input document or dataset"
+      ],
+      "outputs": [
+        "generated file"
+      ],
+      "tags": [
+        "documents",
+        "powerpoint",
+        "pptx",
+        "presentation",
+        "design"
+      ],
+      "companions": []
+    },
+    {
+      "name": "teach",
+      "path": "skills/productivity/teach/SKILL.md",
+      "category": "utilities",
+      "version": "1.0.0",
+      "description": "Teaches the user a new skill or concept inside their own workspace, tracking a mission, glossary, and learning record. User-invoked. Use when the user says 'teach me' or wants to learn something properly rather than be handed an answer.",
+      "triggers": [
+        "teach me",
+        "i want to learn",
+        "explain this properly",
+        "help me understand"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "a topic to learn",
+        "the workspace"
+      ],
+      "outputs": [
+        "a mission file",
+        "a glossary",
+        "a learning record"
+      ],
+      "tags": [
+        "learning",
+        "teaching",
+        "documentation"
+      ],
+      "companions": [
+        "GLOSSARY-FORMAT.md",
+        "LEARNING-RECORD-FORMAT.md",
+        "MISSION-FORMAT.md",
+        "RESOURCES-FORMAT.md"
+      ]
+    },
+    {
+      "name": "to-questionnaire",
+      "path": "skills/productivity/to-questionnaire/SKILL.md",
+      "category": "utilities",
+      "version": "1.0.0",
+      "description": "Turns a decision the agent cannot fully answer into a questionnaire for someone else to fill in. User-invoked. Use when the blocker is missing human knowledge rather than missing analysis.",
+      "triggers": [
+        "questionnaire",
+        "ask someone else",
+        "i cannot answer this",
+        "need input from the team"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "an unresolved decision"
+      ],
+      "outputs": [
+        "a questionnaire document"
+      ],
+      "tags": [
+        "decisions",
+        "collaboration"
+      ],
+      "companions": []
+    },
+    {
+      "name": "wait-what",
+      "path": "skills/productivity/wait-what/SKILL.md",
+      "category": "utilities",
+      "version": "1.0.0",
+      "description": "Stops and re-pitches the last message when it did not land. User-invoked. Use when the user says 'wait, what', 'that made no sense', or asks for the last explanation again from a different angle.",
+      "triggers": [
+        "wait what",
+        "that did not land",
+        "re-pitch that",
+        "say that again differently"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "the previous message"
+      ],
+      "outputs": [
+        "a re-pitched explanation"
+      ],
+      "tags": [
+        "communication",
+        "clarity"
+      ],
+      "companions": []
+    },
+    {
+      "name": "writing-for-agents",
+      "path": "skills/productivity/writing-for-agents/SKILL.md",
+      "category": "utilities",
+      "version": "1.0.0",
+      "description": "'Standards for writing documents that agents read: skills, AGENTS.md, CLAUDE.md. Use when creating or editing a skill file or an agent instruction document. For this repository''s frontmatter schema specifically, read SKILL_STANDARD.md.'",
+      "triggers": [
+        "write a skill",
+        "edit agents.md",
+        "edit claude.md",
+        "writing for agents",
+        "agent instructions"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "a draft skill or agent doc"
+      ],
+      "outputs": [
+        "a rewritten agent-facing document"
+      ],
+      "tags": [
+        "meta",
+        "writing",
+        "documentation"
+      ],
+      "companions": [
+        "SKILL-MECHANICS.md"
+      ]
+    },
+    {
+      "name": "xlsx",
+      "path": "skills/documents/xlsx.md",
+      "category": "utilities",
+      "version": "1.0.0",
+      "description": "Guidelines for creating, editing, and analyzing `.xlsx`, `.csv`, and `.xlsm` files. Use when tabular data is the primary input or output.",
+      "triggers": [
+        "documents",
+        "excel",
+        "xlsx",
+        "formulas",
+        "pandas"
+      ],
+      "dependencies": [
+        "pdf"
+      ],
+      "inputs": [
+        "input document or dataset"
+      ],
+      "outputs": [
+        "generated file"
+      ],
+      "tags": [
+        "documents",
+        "excel",
+        "xlsx",
+        "formulas",
+        "pandas"
+      ],
+      "companions": []
+    }
+  ],
+  "trigger_index": {
+    "3d print": [
+      "blender-procedural-modeling"
+    ],
+    "9-slice map": [
+      "diegetic-game-ui"
+    ],
+    "a2a": [
+      "agent-handoff-elite"
+    ],
+    "accessibility": [
+      "js-html-elite"
+    ],
+    "account deletion": [
+      "django-auth-hardening"
+    ],
+    "action bar": [
+      "auth-ux-patterns"
+    ],
+    "actions": [
+      "github-actions-elite"
+    ],
+    "actor-model": [
+      "xstate-formalism-elite"
+    ],
+    "adaptive thinking": [
+      "models"
+    ],
+    "adjudicator": [
+      "agent-consensus-elite"
+    ],
+    "agent": [
+      "agent-consensus-elite",
+      "agent-handoff-elite",
+      "agent-skills-spec",
+      "agent-swarms-elite",
+      "mcp-builder"
+    ],
+    "agent instructions": [
+      "writing-for-agents"
+    ],
+    "agentic": [
+      "agentic-rag-elite",
+      "agentic-security-elite",
+      "security-agentic-elite"
+    ],
+    "agents": [
+      "agent-consensus-elite",
+      "agent-handoff-elite",
+      "agent-skills-spec",
+      "agent-swarms-elite",
+      "agentic-rag-elite",
+      "security-agentic-elite",
+      "tool-use-concepts"
+    ],
+    "ai": [
+      "agentic-security-elite",
+      "chaos-engineering-elite",
+      "claude-api",
+      "error-codes",
+      "finops-value-elite",
+      "local-first-ai-elite",
+      "python-deep-dive",
+      "security-agentic-elite",
+      "tool-use-concepts",
+      "typescript-deep-dive"
+    ],
+    "algorithmic": [
+      "algorithmic-art"
+    ],
+    "animation": [
+      "frontend-design",
+      "slack-gif-creator"
+    ],
+    "api": [
+      "api-contracts-elite",
+      "claude-api",
+      "error-codes",
+      "python-deep-dive",
+      "tool-use-concepts",
+      "typescript-deep-dive"
+    ],
+    "architectural": [
+      "architectural-patterns"
+    ],
+    "architecture": [
+      "architectural-patterns",
+      "multiplayer-interruption-pattern",
+      "system-design-elite"
+    ],
+    "architecture report": [
+      "improve-codebase-architecture"
+    ],
+    "art": [
+      "algorithmic-art"
+    ],
+    "artifacts": [
+      "web-artifacts-builder"
+    ],
+    "ask someone else": [
+      "to-questionnaire"
+    ],
+    "astral": [
+      "python-elite"
+    ],
+    "async": [
+      "rust-elite"
+    ],
+    "auth ux": [
+      "auth-ux-patterns"
+    ],
+    "automation": [
+      "document-tooling-deep-dive",
+      "git-ops-elite"
+    ],
+    "backend": [
+      "api-contracts-elite",
+      "claude-api",
+      "django-elite",
+      "flask-elite",
+      "python-elite",
+      "rust-elite"
+    ],
+    "balatro": [
+      "roguelike-scoring"
+    ],
+    "benchmark": [
+      "skill-creator"
+    ],
+    "bigquery": [
+      "bigquery-elite"
+    ],
+    "blender": [
+      "blender-procedural-modeling"
+    ],
+    "blueprints": [
+      "flask-elite"
+    ],
+    "boolean modifier": [
+      "blender-procedural-modeling"
+    ],
+    "bpy": [
+      "blender-procedural-modeling"
+    ],
+    "branching narrative": [
+      "narrative-event-system"
+    ],
+    "brand": [
+      "brand-guidelines"
+    ],
+    "branding": [
+      "brand-guidelines"
+    ],
+    "break this into tickets": [
+      "to-tickets"
+    ],
+    "brute force": [
+      "django-auth-hardening"
+    ],
+    "build the tickets": [
+      "implement"
+    ],
+    "builder": [
+      "mcp-builder"
+    ],
+    "buildkit": [
+      "docker-elite"
+    ],
+    "by": [
+      "privacy-by-design-elite"
+    ],
+    "caching": [
+      "redis-elite"
+    ],
+    "canvas": [
+      "canvas-design"
+    ],
+    "cap": [
+      "system-design-elite"
+    ],
+    "categorise issues": [
+      "triage"
+    ],
+    "cd": [
+      "github-actions-elite"
+    ],
+    "chaos": [
+      "chaos-engineering-elite"
+    ],
+    "check my changes": [
+      "code-review"
+    ],
+    "chips and mult": [
+      "roguelike-scoring"
+    ],
+    "ci": [
+      "github-actions-elite"
+    ],
+    "ci secrets": [
+      "wizard"
+    ],
+    "claude": [
+      "claude-api",
+      "error-codes",
+      "python-deep-dive",
+      "tool-use-concepts",
+      "typescript-deep-dive"
+    ],
+    "claude model": [
+      "models"
+    ],
+    "cloud": [
+      "finops-value-elite"
+    ],
+    "cloud-run": [
+      "gcloud-deployment-elite"
+    ],
+    "clue design": [
+      "social-deduction-design"
+    ],
+    "coauthoring": [
+      "doc-coauthoring"
+    ],
+    "code review": [
+      "code-review"
+    ],
+    "codes": [
+      "error-codes"
+    ],
+    "collaboration": [
+      "doc-coauthoring"
+    ],
+    "colors": [
+      "theme-factory",
+      "themes"
+    ],
+    "combo scoring": [
+      "roguelike-scoring"
+    ],
+    "comms": [
+      "internal-comms",
+      "internal-comms-deep-dive"
+    ],
+    "communication": [
+      "doc-coauthoring",
+      "internal-comms",
+      "internal-comms-deep-dive"
+    ],
+    "compact for another agent": [
+      "handoff"
+    ],
+    "components": [
+      "js-html-elite"
+    ],
+    "concepts": [
+      "tool-use-concepts"
+    ],
+    "configure the issue tracker": [
+      "setup-engineering-flows"
+    ],
+    "conflicted files": [
+      "resolving-merge-conflicts"
+    ],
+    "consensus": [
+      "agent-consensus-elite"
+    ],
+    "container-queries": [
+      "css-elite"
+    ],
+    "content generation": [
+      "rag-content-generation"
+    ],
+    "context window": [
+      "models"
+    ],
+    "context.md": [
+      "domain-modeling"
+    ],
+    "contracts": [
+      "api-contracts-elite"
+    ],
+    "coordination": [
+      "agent-consensus-elite"
+    ],
+    "corporate": [
+      "brand-guidelines"
+    ],
+    "cost": [
+      "bigquery-elite",
+      "finops-value-elite"
+    ],
+    "create tickets": [
+      "to-tickets"
+    ],
+    "creation": [
+      "skill-creator"
+    ],
+    "creator": [
+      "skill-creator",
+      "slack-gif-creator"
+    ],
+    "cryptography": [
+      "privacy-by-design-elite"
+    ],
+    "css": [
+      "css-elite",
+      "frontend-design"
+    ],
+    "dast": [
+      "agentic-security-elite"
+    ],
+    "database": [
+      "bigquery-elite",
+      "postgresql-elite",
+      "redis-elite",
+      "zero-downtime-migrations"
+    ],
+    "ddd": [
+      "architectural-patterns"
+    ],
+    "debug this": [
+      "diagnosing-bugs"
+    ],
+    "decision tickets": [
+      "wayfinder"
+    ],
+    "deckle edge": [
+      "diegetic-game-ui"
+    ],
+    "deduction game": [
+      "social-deduction-design"
+    ],
+    "deep": [
+      "internal-comms-deep-dive",
+      "mcp-deep-dive",
+      "python-deep-dive",
+      "typescript-deep-dive"
+    ],
+    "deep module": [
+      "codebase-design"
+    ],
+    "deepening opportunities": [
+      "improve-codebase-architecture"
+    ],
+    "deployment": [
+      "gcloud-deployment-elite"
+    ],
+    "design": [
+      "brand-guidelines",
+      "canvas-design",
+      "frontend-design",
+      "pptx",
+      "privacy-by-design-elite",
+      "system-design-elite",
+      "theme-factory",
+      "themes"
+    ],
+    "devops": [
+      "chaos-engineering-elite",
+      "docker-elite",
+      "github-actions-elite",
+      "iac-opentofu-elite"
+    ],
+    "diagnose": [
+      "diagnosing-bugs"
+    ],
+    "dialogue tree": [
+      "narrative-event-system"
+    ],
+    "dice scoring": [
+      "roguelike-scoring"
+    ],
+    "diegetic ui": [
+      "diegetic-game-ui"
+    ],
+    "distributed": [
+      "system-design-elite"
+    ],
+    "distributed-systems": [
+      "tla-plus-formalism"
+    ],
+    "distroless": [
+      "docker-elite"
+    ],
+    "dive": [
+      "internal-comms-deep-dive",
+      "mcp-deep-dive",
+      "python-deep-dive",
+      "typescript-deep-dive"
+    ],
+    "django": [
+      "django-elite",
+      "gcloud-deployment-elite"
+    ],
+    "django auth": [
+      "django-auth-hardening"
+    ],
+    "django-axes": [
+      "django-auth-hardening"
+    ],
+    "doc": [
+      "doc-coauthoring"
+    ],
+    "docker": [
+      "docker-elite"
+    ],
+    "document": [
+      "document-tooling-deep-dive"
+    ],
+    "documents": [
+      "document-tooling-deep-dive",
+      "docx",
+      "pdf",
+      "pptx",
+      "xlsx"
+    ],
+    "docx": [
+      "docx"
+    ],
+    "does this feel right": [
+      "prototype"
+    ],
+    "domain model": [
+      "domain-modeling"
+    ],
+    "dovetail": [
+      "blender-procedural-modeling"
+    ],
+    "downtime": [
+      "zero-downtime-migrations"
+    ],
+    "ebpf": [
+      "observability-elite"
+    ],
+    "economy tuning": [
+      "run-economy-balancing"
+    ],
+    "edge": [
+      "serverless-edge-elite"
+    ],
+    "edge-ai": [
+      "privacy-by-design-elite"
+    ],
+    "edit agents.md": [
+      "writing-for-agents"
+    ],
+    "edit claude.md": [
+      "writing-for-agents"
+    ],
+    "effort": [
+      "models"
+    ],
+    "engineering": [
+      "chaos-engineering-elite"
+    ],
+    "error": [
+      "error-codes"
+    ],
+    "error messages": [
+      "auth-ux-patterns"
+    ],
+    "error-handling": [
+      "rust-elite"
+    ],
+    "errors": [
+      "error-codes"
+    ],
+    "evaluation": [
+      "evaluation-guide",
+      "skill-creator"
+    ],
+    "event chain": [
+      "narrative-event-system"
+    ],
+    "event system": [
+      "narrative-event-system"
+    ],
+    "event-driven": [
+      "serverless-edge-elite"
+    ],
+    "excel": [
+      "document-tooling-deep-dive",
+      "xlsx"
+    ],
+    "expand-contract": [
+      "zero-downtime-migrations"
+    ],
+    "explain this properly": [
+      "teach"
+    ],
+    "extraction": [
+      "pdf"
+    ],
+    "fable": [
+      "models"
+    ],
+    "factory": [
+      "theme-factory"
+    ],
+    "failing": [
+      "diagnosing-bugs"
+    ],
+    "fantasy ui": [
+      "diegetic-game-ui"
+    ],
+    "faq": [
+      "internal-comms"
+    ],
+    "filter drawer": [
+      "auth-ux-patterns"
+    ],
+    "find out how x works": [
+      "research"
+    ],
+    "finops": [
+      "finops-value-elite"
+    ],
+    "firebase": [
+      "gcloud-deployment-elite"
+    ],
+    "first": [
+      "local-first-ai-elite"
+    ],
+    "first time setup": [
+      "setup-engineering-flows"
+    ],
+    "fixtures": [
+      "pytest-elite"
+    ],
+    "flask": [
+      "flask-elite"
+    ],
+    "focus": [
+      "finops-value-elite"
+    ],
+    "folder metadata": [
+      "rag-content-generation"
+    ],
+    "fonts": [
+      "theme-factory",
+      "themes"
+    ],
+    "form styling": [
+      "auth-ux-patterns"
+    ],
+    "formal-methods": [
+      "tla-plus-formalism"
+    ],
+    "formalism": [
+      "tla-plus-formalism",
+      "xstate-formalism-elite"
+    ],
+    "formulas": [
+      "xlsx"
+    ],
+    "frequency analysis": [
+      "frequency-analysis-simulation"
+    ],
+    "frontend": [
+      "css-elite",
+      "frontend-design",
+      "js-html-elite",
+      "local-first-ai-elite",
+      "multiplayer-interruption-pattern",
+      "web-artifacts-builder",
+      "webapp-testing",
+      "xstate-formalism-elite"
+    ],
+    "frontmatter": [
+      "skill-standard"
+    ],
+    "game balance": [
+      "run-economy-balancing"
+    ],
+    "game modal artifact": [
+      "diegetic-game-ui"
+    ],
+    "gather sources": [
+      "research"
+    ],
+    "gcloud": [
+      "gcloud-deployment-elite"
+    ],
+    "gdpr": [
+      "django-auth-hardening",
+      "privacy-by-design-elite"
+    ],
+    "generate a wizard": [
+      "wizard"
+    ],
+    "generative": [
+      "algorithmic-art"
+    ],
+    "gif": [
+      "slack-gif-creator"
+    ],
+    "git": [
+      "git-ops-elite",
+      "git-velocity-elite"
+    ],
+    "github": [
+      "github-actions-elite"
+    ],
+    "github-actions": [
+      "github-actions-elite"
+    ],
+    "gitops": [
+      "git-ops-elite"
+    ],
+    "governance": [
+      "iac-opentofu-elite"
+    ],
+    "graphite": [
+      "git-velocity-elite"
+    ],
+    "graphrag": [
+      "agentic-rag-elite"
+    ],
+    "grill me": [
+      "grill-me"
+    ],
+    "grill this": [
+      "grilling"
+    ],
+    "grill with docs": [
+      "grill-with-docs"
+    ],
+    "grpc": [
+      "api-contracts-elite"
+    ],
+    "guide": [
+      "evaluation-guide"
+    ],
+    "guidelines": [
+      "brand-guidelines"
+    ],
+    "ha": [
+      "system-design-elite",
+      "zero-downtime-migrations"
+    ],
+    "haiku": [
+      "models"
+    ],
+    "hand this off": [
+      "handoff"
+    ],
+    "handoff": [
+      "agent-handoff-elite",
+      "handoff"
+    ],
+    "help me pick": [
+      "skill-router"
+    ],
+    "help me understand": [
+      "teach"
+    ],
+    "hexagonal": [
+      "architectural-patterns"
+    ],
+    "hidden role": [
+      "social-deduction-design"
+    ],
+    "historical draw data": [
+      "frequency-analysis-simulation"
+    ],
+    "html": [
+      "js-html-elite"
+    ],
+    "i cannot answer this": [
+      "to-questionnaire"
+    ],
+    "i want to learn": [
+      "teach"
+    ],
+    "iac": [
+      "iac-opentofu-elite"
+    ],
+    "implement the spec": [
+      "implement"
+    ],
+    "improve the architecture": [
+      "improve-codebase-architecture"
+    ],
+    "incident": [
+      "sre-incident-protocol"
+    ],
+    "incoming pr": [
+      "triage"
+    ],
+    "indexing": [
+      "postgresql-elite"
+    ],
+    "infra": [
+      "memory-validation"
+    ],
+    "infrastructure": [
+      "agent-handoff-elite",
+      "agent-swarms-elite",
+      "agentic-rag-elite",
+      "chaos-engineering-elite",
+      "docker-elite",
+      "evaluation-guide",
+      "gcloud-deployment-elite",
+      "github-actions-elite",
+      "iac-opentofu-elite",
+      "mcp-builder",
+      "mcp-deep-dive",
+      "observability-elite",
+      "serverless-edge-elite",
+      "web-artifacts-builder"
+    ],
+    "ingest documents": [
+      "rag-content-generation"
+    ],
+    "integration tests": [
+      "tdd"
+    ],
+    "internal": [
+      "internal-comms",
+      "internal-comms-deep-dive"
+    ],
+    "internal-comms": [
+      "internal-comms-deep-dive"
+    ],
+    "interrogate this plan": [
+      "grill-with-docs"
+    ],
+    "interruption": [
+      "multiplayer-interruption-pattern"
+    ],
+    "interview me": [
+      "grill-me"
+    ],
+    "issue backlog": [
+      "triage"
+    ],
+    "it is broken": [
+      "diagnosing-bugs"
+    ],
+    "javascript": [
+      "algorithmic-art",
+      "docx",
+      "js-html-elite"
+    ],
+    "joker stacking": [
+      "roguelike-scoring"
+    ],
+    "js": [
+      "js-html-elite"
+    ],
+    "json schema game content": [
+      "narrative-event-system"
+    ],
+    "jsonb": [
+      "postgresql-elite"
+    ],
+    "knowledge": [
+      "agent-consensus-elite",
+      "architectural-patterns",
+      "finops-value-elite",
+      "privacy-by-design-elite",
+      "security-agentic-elite",
+      "system-design-elite"
+    ],
+    "kubernetes": [
+      "chaos-engineering-elite"
+    ],
+    "langgraph": [
+      "agent-swarms-elite"
+    ],
+    "latency": [
+      "serverless-edge-elite"
+    ],
+    "layers": [
+      "css-elite"
+    ],
+    "layout": [
+      "css-elite"
+    ],
+    "llamaindex": [
+      "rag-content-generation"
+    ],
+    "local": [
+      "local-first-ai-elite"
+    ],
+    "local-first": [
+      "local-first-ai-elite"
+    ],
+    "login errors": [
+      "auth-ux-patterns"
+    ],
+    "login security": [
+      "django-auth-hardening"
+    ],
+    "logout broken": [
+      "django-auth-hardening"
+    ],
+    "look up the docs": [
+      "research"
+    ],
+    "loops": [
+      "agentic-rag-elite"
+    ],
+    "lore": [
+      "narrative-event-system"
+    ],
+    "lottery numbers": [
+      "frequency-analysis-simulation"
+    ],
+    "make this testable": [
+      "codebase-design"
+    ],
+    "management": [
+      "internal-comms-deep-dive"
+    ],
+    "manual steps": [
+      "wizard"
+    ],
+    "map popup": [
+      "diegetic-game-ui"
+    ],
+    "marketplace": [
+      "marketplace-pattern"
+    ],
+    "mcp": [
+      "evaluation-guide",
+      "mcp-builder",
+      "mcp-deep-dive"
+    ],
+    "media": [
+      "algorithmic-art",
+      "brand-guidelines",
+      "canvas-design",
+      "frontend-design",
+      "slack-gif-creator",
+      "theme-factory",
+      "themes"
+    ],
+    "memory": [
+      "memory-validation"
+    ],
+    "merge conflict": [
+      "resolving-merge-conflicts"
+    ],
+    "mesh generation": [
+      "blender-procedural-modeling"
+    ],
+    "meta": [
+      "memory-validation",
+      "skill-creator"
+    ],
+    "micro-frontends": [
+      "architectural-patterns"
+    ],
+    "migrate skill": [
+      "skill-standard"
+    ],
+    "migrations": [
+      "zero-downtime-migrations"
+    ],
+    "mocking": [
+      "pytest-elite"
+    ],
+    "model id": [
+      "models"
+    ],
+    "module interface": [
+      "codebase-design"
+    ],
+    "monte carlo": [
+      "frequency-analysis-simulation"
+    ],
+    "multi-format output": [
+      "rag-content-generation"
+    ],
+    "multiplayer": [
+      "multiplayer-interruption-pattern"
+    ],
+    "murder mystery": [
+      "social-deduction-design"
+    ],
+    "need input from the team": [
+      "to-questionnaire"
+    ],
+    "new skill": [
+      "skill-standard"
+    ],
+    "observability": [
+      "observability-elite"
+    ],
+    "ocr": [
+      "pdf"
+    ],
+    "onnx": [
+      "local-first-ai-elite"
+    ],
+    "openapi": [
+      "api-contracts-elite"
+    ],
+    "opentelemetry": [
+      "observability-elite"
+    ],
+    "opentofu": [
+      "iac-opentofu-elite"
+    ],
+    "ops": [
+      "git-ops-elite"
+    ],
+    "optimization": [
+      "bigquery-elite"
+    ],
+    "opus": [
+      "models"
+    ],
+    "orchestration": [
+      "agent-swarms-elite"
+    ],
+    "owasp": [
+      "security-agentic-elite"
+    ],
+    "p5js": [
+      "algorithmic-art"
+    ],
+    "pacelc": [
+      "system-design-elite"
+    ],
+    "pandas": [
+      "xlsx"
+    ],
+    "pandas value counts": [
+      "frequency-analysis-simulation"
+    ],
+    "parametric model": [
+      "blender-procedural-modeling"
+    ],
+    "parchment modal": [
+      "diegetic-game-ui"
+    ],
+    "party game": [
+      "social-deduction-design"
+    ],
+    "password reset": [
+      "django-auth-hardening"
+    ],
+    "pattern": [
+      "marketplace-pattern",
+      "multiplayer-interruption-pattern"
+    ],
+    "patterns": [
+      "architectural-patterns",
+      "django-elite",
+      "flask-elite",
+      "internal-comms-deep-dive"
+    ],
+    "pdf": [
+      "canvas-design",
+      "document-tooling-deep-dive",
+      "pdf"
+    ],
+    "pen-testing": [
+      "agentic-security-elite"
+    ],
+    "penalty scaling": [
+      "run-economy-balancing"
+    ],
+    "performance": [
+      "postgresql-elite",
+      "redis-elite"
+    ],
+    "performance regression": [
+      "diagnosing-bugs"
+    ],
+    "plan a big project": [
+      "wayfinder"
+    ],
+    "plan a new app": [
+      "product-spec-chain"
+    ],
+    "playwright": [
+      "webapp-testing"
+    ],
+    "pltg": [
+      "observability-elite"
+    ],
+    "plus": [
+      "tla-plus-formalism"
+    ],
+    "poke holes": [
+      "grilling"
+    ],
+    "poke holes in this": [
+      "grill-me"
+    ],
+    "post-mortem": [
+      "sre-incident-protocol"
+    ],
+    "poster": [
+      "canvas-design"
+    ],
+    "postgresql": [
+      "postgresql-elite",
+      "zero-downtime-migrations"
+    ],
+    "powerpoint": [
+      "document-tooling-deep-dive",
+      "pptx"
+    ],
+    "pptx": [
+      "pptx"
+    ],
+    "prd": [
+      "product-spec-chain"
+    ],
+    "presentation": [
+      "pptx"
+    ],
+    "pressure test this": [
+      "grilling"
+    ],
+    "pricing": [
+      "models"
+    ],
+    "privacy": [
+      "privacy-by-design-elite"
+    ],
+    "probability exercise": [
+      "frequency-analysis-simulation"
+    ],
+    "procedural modeling": [
+      "blender-procedural-modeling"
+    ],
+    "procedural narrative": [
+      "narrative-event-system"
+    ],
+    "process the inbox": [
+      "triage"
+    ],
+    "product requirements": [
+      "product-spec-chain"
+    ],
+    "protobuf": [
+      "api-contracts-elite"
+    ],
+    "protocol": [
+      "agent-handoff-elite",
+      "agent-skills-spec",
+      "mcp-builder",
+      "mcp-deep-dive",
+      "sre-incident-protocol"
+    ],
+    "prototype": [
+      "prototype"
+    ],
+    "provision credentials": [
+      "wizard"
+    ],
+    "pub-sub": [
+      "redis-elite"
+    ],
+    "publish a spec": [
+      "to-spec"
+    ],
+    "pytest": [
+      "pytest-elite"
+    ],
+    "python": [
+      "django-elite",
+      "document-tooling-deep-dive",
+      "flask-elite",
+      "mcp-deep-dive",
+      "memory-validation",
+      "pdf",
+      "pytest-elite",
+      "python-deep-dive",
+      "python-elite",
+      "slack-gif-creator"
+    ],
+    "python 3d": [
+      "blender-procedural-modeling"
+    ],
+    "questionnaire": [
+      "to-questionnaire"
+    ],
+    "rag": [
+      "agentic-rag-elite",
+      "rag-content-generation"
+    ],
+    "random events": [
+      "narrative-event-system"
+    ],
+    "rareness score": [
+      "frequency-analysis-simulation"
+    ],
+    "rarity tier": [
+      "run-economy-balancing"
+    ],
+    "rate limiting": [
+      "django-auth-hardening"
+    ],
+    "re-pitch that": [
+      "wait-what"
+    ],
+    "react": [
+      "frontend-design",
+      "web-artifacts-builder"
+    ],
+    "reasoning": [
+      "agentic-rag-elite"
+    ],
+    "rebase conflict": [
+      "resolving-merge-conflicts"
+    ],
+    "record an adr": [
+      "domain-modeling"
+    ],
+    "red green refactor": [
+      "tdd"
+    ],
+    "redis": [
+      "redis-elite"
+    ],
+    "registration form": [
+      "auth-ux-patterns"
+    ],
+    "reliability": [
+      "sre-incident-protocol"
+    ],
+    "reporting": [
+      "internal-comms"
+    ],
+    "requirements document": [
+      "product-spec-chain"
+    ],
+    "research this": [
+      "research"
+    ],
+    "resilience": [
+      "chaos-engineering-elite"
+    ],
+    "resolve conflicts": [
+      "resolving-merge-conflicts"
+    ],
+    "resource cap": [
+      "run-economy-balancing"
+    ],
+    "retrieval augmented generation": [
+      "rag-content-generation"
+    ],
+    "review since": [
+      "code-review"
+    ],
+    "review the pr": [
+      "code-review"
+    ],
+    "review this branch": [
+      "code-review"
+    ],
+    "reward curve": [
+      "run-economy-balancing"
+    ],
+    "roadmap": [
+      "wayfinder"
+    ],
+    "roguelike deckbuilder": [
+      "roguelike-scoring"
+    ],
+    "roleplay game": [
+      "social-deduction-design"
+    ],
+    "ruff": [
+      "python-elite"
+    ],
+    "running out of context": [
+      "handoff"
+    ],
+    "rust": [
+      "rust-elite"
+    ],
+    "sanity check the design": [
+      "prototype"
+    ],
+    "sast": [
+      "agentic-security-elite"
+    ],
+    "say that again differently": [
+      "wait-what"
+    ],
+    "schema": [
+      "skill-standard"
+    ],
+    "score target": [
+      "roguelike-scoring"
+    ],
+    "scoring system": [
+      "roguelike-scoring"
+    ],
+    "scroll ui": [
+      "diegetic-game-ui"
+    ],
+    "sdk": [
+      "claude-api",
+      "python-deep-dive",
+      "typescript-deep-dive"
+    ],
+    "secret distribution": [
+      "social-deduction-design"
+    ],
+    "security": [
+      "agentic-security-elite",
+      "docker-elite",
+      "github-actions-elite",
+      "privacy-by-design-elite",
+      "security-agentic-elite"
+    ],
+    "serverless": [
+      "serverless-edge-elite"
+    ],
+    "session security": [
+      "django-auth-hardening"
+    ],
+    "set up the engineering skills": [
+      "setup-engineering-flows"
+    ],
+    "set up triage labels": [
+      "setup-engineering-flows"
+    ],
+    "shadcn": [
+      "web-artifacts-builder"
+    ],
+    "shallow abstraction": [
+      "codebase-design"
+    ],
+    "sharpen my plan": [
+      "grill-me"
+    ],
+    "sharpen this design": [
+      "grill-with-docs"
+    ],
+    "simulation": [
+      "frequency-analysis-simulation"
+    ],
+    "skill": [
+      "skill-creator"
+    ],
+    "skill authoring": [
+      "skill-standard"
+    ],
+    "skills": [
+      "agent-skills-spec"
+    ],
+    "slack": [
+      "slack-gif-creator"
+    ],
+    "slo": [
+      "sre-incident-protocol"
+    ],
+    "slow": [
+      "diagnosing-bugs"
+    ],
+    "snowball": [
+      "run-economy-balancing"
+    ],
+    "social deduction": [
+      "social-deduction-design"
+    ],
+    "software specification": [
+      "product-spec-chain"
+    ],
+    "sonnet": [
+      "models"
+    ],
+    "sort controls": [
+      "auth-ux-patterns"
+    ],
+    "spec": [
+      "agent-skills-spec"
+    ],
+    "spec my idea": [
+      "product-spec-chain"
+    ],
+    "spec this out": [
+      "to-spec"
+    ],
+    "spike": [
+      "prototype"
+    ],
+    "split the work": [
+      "to-tickets"
+    ],
+    "sql": [
+      "bigquery-elite"
+    ],
+    "sre": [
+      "sre-incident-protocol"
+    ],
+    "srs": [
+      "product-spec-chain"
+    ],
+    "stacked-prs": [
+      "git-velocity-elite"
+    ],
+    "start implementation": [
+      "implement"
+    ],
+    "state-machine": [
+      "xstate-formalism-elite"
+    ],
+    "state-management": [
+      "multiplayer-interruption-pattern"
+    ],
+    "state-transfer": [
+      "agent-handoff-elite"
+    ],
+    "status": [
+      "internal-comms"
+    ],
+    "stress test my thinking": [
+      "grilling"
+    ],
+    "structured": [
+      "doc-coauthoring"
+    ],
+    "style": [
+      "brand-guidelines"
+    ],
+    "subgrid": [
+      "css-elite"
+    ],
+    "swarm": [
+      "agent-consensus-elite",
+      "agent-swarms-elite"
+    ],
+    "swarms": [
+      "agent-swarms-elite"
+    ],
+    "system": [
+      "system-design-elite"
+    ],
+    "tailwind": [
+      "web-artifacts-builder"
+    ],
+    "tdd": [
+      "tdd"
+    ],
+    "teach me": [
+      "teach"
+    ],
+    "temporal": [
+      "js-html-elite"
+    ],
+    "terminology": [
+      "domain-modeling"
+    ],
+    "terraform": [
+      "iac-opentofu-elite"
+    ],
+    "test first": [
+      "tdd"
+    ],
+    "testing": [
+      "agentic-security-elite",
+      "evaluation-guide",
+      "pytest-elite",
+      "tla-plus-formalism",
+      "webapp-testing"
+    ],
+    "that did not land": [
+      "wait-what"
+    ],
+    "theme": [
+      "theme-factory",
+      "themes"
+    ],
+    "themes": [
+      "themes"
+    ],
+    "throwaway": [
+      "prototype"
+    ],
+    "throwing": [
+      "diagnosing-bugs"
+    ],
+    "tla": [
+      "tla-plus-formalism"
+    ],
+    "tla+": [
+      "tla-plus-formalism"
+    ],
+    "tokio": [
+      "rust-elite"
+    ],
+    "tolerance": [
+      "blender-procedural-modeling"
+    ],
+    "too big for one session": [
+      "wayfinder"
+    ],
+    "too easy late game": [
+      "run-economy-balancing"
+    ],
+    "tool": [
+      "tool-use-concepts"
+    ],
+    "tools": [
+      "mcp-builder",
+      "tool-use-concepts"
+    ],
+    "tracer bullets": [
+      "to-tickets"
+    ],
+    "transformersjs": [
+      "local-first-ai-elite"
+    ],
+    "triage": [
+      "triage"
+    ],
+    "troubleshooting": [
+      "error-codes"
+    ],
+    "trunk-based": [
+      "git-velocity-elite"
+    ],
+    "turn this into a spec": [
+      "to-spec"
+    ],
+    "typescript": [
+      "mcp-deep-dive",
+      "typescript-deep-dive"
+    ],
+    "typing": [
+      "python-elite"
+    ],
+    "typography": [
+      "canvas-design"
+    ],
+    "use": [
+      "tool-use-concepts"
+    ],
+    "uv": [
+      "python-elite"
+    ],
+    "ux design doc": [
+      "product-spec-chain"
+    ],
+    "validation": [
+      "memory-validation"
+    ],
+    "validation states": [
+      "auth-ux-patterns"
+    ],
+    "value": [
+      "finops-value-elite"
+    ],
+    "vector index": [
+      "rag-content-generation"
+    ],
+    "velocity": [
+      "git-velocity-elite"
+    ],
+    "verification": [
+      "tla-plus-formalism"
+    ],
+    "vite": [
+      "web-artifacts-builder"
+    ],
+    "wait what": [
+      "wait-what"
+    ],
+    "walk me through setup": [
+      "wizard"
+    ],
+    "wasm": [
+      "serverless-edge-elite"
+    ],
+    "web": [
+      "web-artifacts-builder",
+      "webapp-testing"
+    ],
+    "webapp": [
+      "webapp-testing"
+    ],
+    "webgpu": [
+      "local-first-ai-elite"
+    ],
+    "werewolf": [
+      "social-deduction-design"
+    ],
+    "what do we call this": [
+      "domain-modeling"
+    ],
+    "what skill should i use": [
+      "skill-router"
+    ],
+    "where do i start": [
+      "skill-router"
+    ],
+    "where do we even start": [
+      "wayfinder"
+    ],
+    "where does the seam go": [
+      "codebase-design"
+    ],
+    "where is the design shallow": [
+      "improve-codebase-architecture"
+    ],
+    "which flow": [
+      "skill-router"
+    ],
+    "which model": [
+      "models"
+    ],
+    "which skill": [
+      "skill-router"
+    ],
+    "word": [
+      "document-tooling-deep-dive",
+      "docx"
+    ],
+    "work the backlog": [
+      "implement"
+    ],
+    "workflow": [
+      "git-ops-elite"
+    ],
+    "worldbuilding": [
+      "narrative-event-system"
+    ],
+    "write a skill": [
+      "writing-for-agents"
+    ],
+    "write the adr": [
+      "grill-with-docs"
+    ],
+    "write the spec": [
+      "to-spec"
+    ],
+    "write the test first": [
+      "tdd"
+    ],
+    "writing": [
+      "doc-coauthoring"
+    ],
+    "writing for agents": [
+      "writing-for-agents"
+    ],
+    "xlsx": [
+      "xlsx"
+    ],
+    "xml": [
+      "docx"
+    ],
+    "xstate": [
+      "xstate-formalism-elite"
+    ],
+    "yahtzee": [
+      "roguelike-scoring"
+    ],
+    "zero": [
+      "zero-downtime-migrations"
+    ],
+    "zero-trust": [
+      "security-agentic-elite"
+    ]
+  },
+  "dangling_dependencies": []
+}

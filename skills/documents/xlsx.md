@@ -1,4 +1,12 @@
 ---
+name: xlsx
+description: Guidelines for creating, editing, and analyzing `.xlsx`, `.csv`, and `.xlsm` files. Use when tabular data is the primary input or output.
+version: 1.0.0
+category: utilities
+triggers: [documents, excel, xlsx, formulas, pandas]
+dependencies: [pdf]
+inputs: [input document or dataset]
+outputs: [generated file]
 title: XLSX Spreadsheet Mastery
 date: 2026-03-08
 task_ref: initial-setup

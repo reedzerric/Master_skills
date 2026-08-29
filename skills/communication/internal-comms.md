@@ -1,4 +1,12 @@
 ---
+name: internal-comms
+description: Guidelines for writing effective internal communications (status reports, project updates, newsletters). Use when working with communication, reporting, status.
+version: 1.0.0
+category: utilities
+triggers: [communication, reporting, status, faq, internal, comms]
+dependencies: [doc-coauthoring]
+inputs: [input document or dataset]
+outputs: [generated file]
 title: Internal Communications & Reporting
 date: 2026-03-08
 task_ref: initial-setup

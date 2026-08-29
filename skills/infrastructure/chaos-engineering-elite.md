@@ -1,4 +1,12 @@
 ---
+name: chaos-engineering-elite
+description: Guidelines for architecting self-healing systems and validating their resilience through continuous fault injection. Use when working with infrastructure, devops, chaos.
+version: 1.0.0
+category: core
+triggers: [infrastructure, devops, chaos, resilience, kubernetes, ai, engineering]
+dependencies: [observability-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Chaos Engineering & Continuous Resilience (2026)
 date: 2026-03-08
 task_ref: mit-professor-phase-3

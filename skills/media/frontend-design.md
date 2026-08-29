@@ -1,4 +1,12 @@
 ---
+name: frontend-design
+description: Guidelines for creating distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics. Use when working with media, frontend, design.
+version: 1.0.0
+category: design_media
+triggers: [media, frontend, design, css, react, animation]
+dependencies: [web-artifacts-builder, theme-factory]
+inputs: [brief, brand tokens]
+outputs: [design artifact, style spec]
 title: Frontend Design & Aesthetics
 date: 2026-03-08
 task_ref: initial-setup

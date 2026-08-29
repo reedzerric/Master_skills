@@ -1,4 +1,12 @@
 ---
+name: pytest-elite
+description: Guidelines for writing modular, fast, and high-coverage Python tests using `pytest` and modern dependency injection. Use when working with testing, python, pytest.
+version: 1.0.0
+category: core
+triggers: [testing, python, pytest, mocking, fixtures]
+dependencies: [python-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Pytest Elite Testing Standards (2026)
 date: 2026-03-08
 task_ref: all-facets-expansion

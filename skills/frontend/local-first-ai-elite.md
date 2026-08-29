@@ -1,4 +1,12 @@
 ---
+name: local-first-ai-elite
+description: Guidelines for architecting privacy-centric, low-latency applications that run AI models entirely on-device (browser or edge). Use when working with frontend, ai, local-first.
+version: 1.0.0
+category: core
+triggers: [frontend, ai, local-first, webgpu, onnx, transformersjs, local, first]
+dependencies: [js-html-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Local-First & Edge AI Mastery (2026)
 date: 2026-03-08
 task_ref: mit-professor-phase-2

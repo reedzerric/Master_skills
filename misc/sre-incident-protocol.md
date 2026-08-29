@@ -1,4 +1,12 @@
 ---
+name: sre-incident-protocol
+description: Guidelines for managing production incidents and maintaining "Six 9s" reliability through automated coordination and systemic learning. Use when working with sre, reliability, slo.
+version: 1.0.0
+category: core
+triggers: [sre, reliability, slo, post-mortem, incident, protocol]
+dependencies: [observability-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: SRE Incident Response & Reliability (2026)
 date: 2026-03-08
 task_ref: mit-professor-phase-3

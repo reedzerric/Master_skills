@@ -1,4 +1,12 @@
 ---
+name: canvas-design
+description: Guidelines for creating high-quality, museum-ready visual art (posters, designs, static pieces). Use when a user asks for "art," "poster," or "design."
+version: 1.0.0
+category: design_media
+triggers: [media, design, poster, typography, pdf, canvas]
+dependencies: [theme-factory]
+inputs: [brief, brand tokens]
+outputs: [design artifact, style spec]
 title: Canvas Design & Visual Philosophy
 date: 2026-03-08
 task_ref: initial-setup

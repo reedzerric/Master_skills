@@ -1,4 +1,12 @@
 ---
+name: iac-opentofu-elite
+description: Guidelines for managing cloud infrastructure deterministically using OpenTofu/Terraform with strict state and drift governance. Use when working with infrastructure, devops, iac.
+version: 1.0.0
+category: core
+triggers: [infrastructure, devops, iac, opentofu, terraform, governance]
+dependencies: [github-actions-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Infrastructure as Code (IaC) Governance (2026)
 date: 2026-03-08
 task_ref: mit-professor-critique

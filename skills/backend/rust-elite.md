@@ -1,4 +1,12 @@
 ---
+name: rust-elite
+description: Guidelines for writing efficient, safe, and idiomatic Rust code with a focus on modern async patterns. Use when working with backend, rust, async.
+version: 1.0.0
+category: core
+triggers: [backend, rust, async, tokio, error-handling]
+dependencies: [python-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Rust Systems Mastery (2026)
 date: 2026-03-08
 task_ref: tech-expansion

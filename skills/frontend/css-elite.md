@@ -1,4 +1,12 @@
 ---
+name: css-elite
+description: Guidelines for architecting scalable, component-first CSS using native 2026 features. Use for all modern web interfaces. Use when working with frontend, css, layout.
+version: 1.0.0
+category: core
+triggers: [frontend, css, layout, subgrid, layers, container-queries]
+dependencies: [frontend-design]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: CSS Elite Architecture (2026)
 date: 2026-03-08
 task_ref: tech-expansion

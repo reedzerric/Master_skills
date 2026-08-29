@@ -1,4 +1,12 @@
 ---
+name: pptx
+description: Guidelines for creating and editing `.pptx` presentation decks. Use when a "deck," "slides," or "presentation" is requested.
+version: 1.0.0
+category: utilities
+triggers: [documents, powerpoint, pptx, presentation, design]
+dependencies: [theme-factory, docx]
+inputs: [input document or dataset]
+outputs: [generated file]
 title: PPTX Presentation Creation & Editing
 date: 2026-03-08
 task_ref: initial-setup

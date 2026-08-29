@@ -1,4 +1,12 @@
 ---
+name: gcloud-deployment-elite
+description: Guidelines for resolving common deployment hurdles when using Google Cloud SDK, Cloud Run, and Firebase Hosting. Use when working with infrastructure, gcloud, firebase.
+version: 1.0.0
+category: core
+triggers: [infrastructure, gcloud, firebase, cloud-run, django, deployment]
+dependencies: [docker-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: GCloud & Firebase Deployment Elite (2026)
 date: 2026-03-08
 task_ref: gcloud-deployment-resolutions
@@ -25,8 +33,10 @@ Guidelines for resolving common deployment hurdles when using Google Cloud SDK, 
 - **Practice:** Remove exclusions for db.sqlite3 and /static/ (source) in .gcloudignore to ensure they are uploaded to Cloud Build and bundled into the container image.
 
 ### 3. Dependency Management for Cloud Build
-- **Requirement:** Ensure all runtime dependencies used in settings.py (like python-dotenv) are explicitly listed in equirements.txt.
-- **Verification:** Always check that python-dotenv is pinned in equirements.txt before submitting a build that relies on .env loading.
+- **Requirement:** Ensure all runtime dependencies used in settings.py (like python-dotenv) are explicitly listed in 
+equirements.txt.
+- **Verification:** Always check that python-dotenv is pinned in 
+equirements.txt before submitting a build that relies on .env loading.
 
 ### 4. Optimized Deployment Workflow
 - **Frontend (Firebase):** Always run collectstatic locally before irebase deploy to ensure Hosting points to current assets.

@@ -1,4 +1,12 @@
 ---
+name: tool-use-concepts
+description: This file covers the conceptual foundations of tool use with the Claude API. Use when working with ai, claude, api.
+version: 1.0.0
+category: ai_infrastructure
+triggers: [ai, claude, api, tools, agents, tool, use, concepts]
+dependencies: [claude-api]
+inputs: [corpus or prompt, model config]
+outputs: [pipeline code, evaluation results]
 title: Claude API Tool Use Concepts
 date: 2026-03-08
 task_ref: skill-migration

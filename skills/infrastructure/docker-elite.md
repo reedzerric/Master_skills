@@ -1,4 +1,12 @@
 ---
+name: docker-elite
+description: Guidelines for building high-performance, ultra-secure containerized applications. Use when working with infrastructure, devops, docker.
+version: 1.0.0
+category: core
+triggers: [infrastructure, devops, docker, security, distroless, buildkit]
+dependencies: [github-actions-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Docker Elite & Container Security (2026)
 date: 2026-03-08
 task_ref: all-facets-expansion

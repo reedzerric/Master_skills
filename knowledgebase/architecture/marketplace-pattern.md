@@ -1,3 +1,13 @@
+---
+name: marketplace-pattern
+description: A blueprint for building gaming marketplaces or general e-commerce platforms with a focus on modularity, high availability, and external integrations. Use when working with marketplace, pattern.
+version: 1.0.0
+category: core
+triggers: [marketplace, pattern]
+dependencies: []
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
+---
 ﻿---
 title: Marketplace & E-commerce Architectural Pattern
 date: 2026-03-08

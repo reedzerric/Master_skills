@@ -1,4 +1,12 @@
 ---
+name: js-html-elite
+description: Guidelines for building modern, high-performance web applications using the 2026 native web platform features. Use when working with frontend, javascript, html.
+version: 1.0.0
+category: core
+triggers: [frontend, javascript, html, temporal, accessibility, components, js]
+dependencies: [css-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: JS & HTML Elite Engineering (2026)
 date: 2026-03-08
 task_ref: tech-expansion

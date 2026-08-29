@@ -1,4 +1,12 @@
 ---
+name: pdf
+description: Guidelines for reading, extracting, merging, splitting, and creating PDF files. Use when a user mentions `.pdf` or needs data from a PDF.
+version: 1.0.0
+category: utilities
+triggers: [documents, pdf, extraction, ocr, python]
+dependencies: [webapp-testing]
+inputs: [input document or dataset]
+outputs: [generated file]
 title: PDF Processing & Extraction
 date: 2026-03-08
 task_ref: initial-setup

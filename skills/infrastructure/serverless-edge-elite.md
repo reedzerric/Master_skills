@@ -1,4 +1,12 @@
 ---
+name: serverless-edge-elite
+description: Guidelines for architecting latency-optimized, event-driven systems using a hybrid Serverless/Edge strategy. Use when working with infrastructure, serverless, edge.
+version: 1.0.0
+category: core
+triggers: [infrastructure, serverless, edge, wasm, latency, event-driven]
+dependencies: [github-actions-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Serverless & Edge Computing Mastery (2026)
 date: 2026-03-08
 task_ref: all-facets-expansion

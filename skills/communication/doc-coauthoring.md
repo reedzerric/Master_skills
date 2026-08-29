@@ -1,4 +1,12 @@
 ---
+name: doc-coauthoring
+description: Guidelines for collaborative document creation (PRDs, technical specs, decision docs). Use when working with communication, doc, writing.
+version: 1.0.0
+category: utilities
+triggers: [communication, doc, writing, collaboration, structured, coauthoring]
+dependencies: [internal-comms]
+inputs: [input document or dataset]
+outputs: [generated file]
 title: Doc Co-Authoring Workflow
 date: 2026-03-08
 task_ref: initial-setup

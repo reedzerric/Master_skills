@@ -1,4 +1,12 @@
 ---
+name: architectural-patterns
+description: Guidelines for architecting large-scale enterprise systems using Domain-Driven Design (DDD) and Hexagonal principles. Use when working with knowledge, architecture, ddd.
+version: 1.0.0
+category: core
+triggers: [knowledge, architecture, ddd, hexagonal, micro-frontends, architectural, patterns]
+dependencies: [serverless-edge-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Modern Architectural Patterns (2026)
 date: 2026-03-08
 task_ref: all-facets-expansion

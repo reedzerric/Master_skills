@@ -1,4 +1,12 @@
 ---
+name: evaluation-guide
+description: The quality of an MCP server is measured by how well an LLM (with NO other context) can answer complex, realistic questions using ONLY the provided tools. Use when working with infrastructure, mcp, testing.
+version: 1.0.0
+category: ai_infrastructure
+triggers: [infrastructure, mcp, testing, evaluation, guide]
+dependencies: [mcp-deep-dive]
+inputs: [corpus or prompt, model config]
+outputs: [pipeline code, evaluation results]
 title: MCP Evaluation Guide
 date: 2026-03-08
 task_ref: skill-migration

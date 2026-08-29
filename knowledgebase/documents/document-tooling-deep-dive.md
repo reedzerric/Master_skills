@@ -1,4 +1,12 @@
 ---
+name: document-tooling-deep-dive
+description: Document Tooling & Automation Deep Dive. Use when working with documents, python, automation.
+version: 1.0.0
+category: utilities
+triggers: [documents, python, automation, pdf, excel, word, powerpoint, document]
+dependencies: [pdf, xlsx, docx, pptx]
+inputs: [input document or dataset]
+outputs: [generated file]
 title: Document Tooling & Automation Deep Dive
 date: 2026-03-08
 task_ref: skill-migration

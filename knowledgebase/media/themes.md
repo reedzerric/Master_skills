@@ -1,4 +1,12 @@
 ---
+name: themes
+description: A catalog of curated color palettes and typography pairings for professional presentations, reports, and generative art. Use when working with media, design, theme.
+version: 1.0.0
+category: design_media
+triggers: [media, design, theme, colors, fonts, themes]
+dependencies: [theme-factory]
+inputs: [brief, brand tokens]
+outputs: [design artifact, style spec]
 title: Media & Presentation Themes
 date: 2026-03-08
 task_ref: skill-migration

@@ -1,4 +1,12 @@
 ---
+name: web-artifacts-builder
+description: Guidelines for building complex, multi-component React artifacts using `shadcn/ui`, `Tailwind CSS`, and `Vite`. Use when working with infrastructure, frontend, react.
+version: 1.0.0
+category: ai_infrastructure
+triggers: [infrastructure, frontend, react, shadcn, tailwind, vite, web, artifacts]
+dependencies: [frontend-design, skill-creator]
+inputs: [corpus or prompt, model config]
+outputs: [pipeline code, evaluation results]
 title: Web Artifacts Builder (React & shadcn/ui)
 date: 2026-03-08
 task_ref: initial-setup

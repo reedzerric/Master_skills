@@ -1,4 +1,12 @@
 ---
+name: agent-handoff-elite
+description: Guidelines for implementing reliable, state-aware handoffs between specialized agents to prevent intent drift and context explosion. Use when working with infrastructure, agents, protocol.
+version: 1.0.0
+category: ai_infrastructure
+triggers: [infrastructure, agents, protocol, handoff, a2a, state-transfer, agent]
+dependencies: [agent-swarms-elite]
+inputs: [corpus or prompt, model config]
+outputs: [pipeline code, evaluation results]
 title: Agent Handoff Protocols (2026)
 date: 2026-03-08
 task_ref: swarm-deep-dive

@@ -1,4 +1,12 @@
 ---
+name: api-contracts-elite
+description: Guidelines for enforcing strict, machine-readable contracts between all microservices, frontends, and AI agents BEFORE writing business logic. Use when working with backend, api, openapi.
+version: 1.0.0
+category: core
+triggers: [backend, api, openapi, grpc, protobuf, contracts]
+dependencies: [architectural-patterns]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: API Contract-First Engineering (2026)
 date: 2026-03-08
 task_ref: mit-professor-critique

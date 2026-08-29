@@ -1,4 +1,12 @@
 ---
+name: github-actions-elite
+description: Guidelines for architecting high-performance, zero-secret CI/CD pipelines. Use when working with infrastructure, devops, ci.
+version: 1.0.0
+category: core
+triggers: [infrastructure, devops, ci, cd, github-actions, security, github, actions]
+dependencies: [docker-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: GitHub Actions Elite CI/CD (2026)
 date: 2026-03-08
 task_ref: all-facets-expansion

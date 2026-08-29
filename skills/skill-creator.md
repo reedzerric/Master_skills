@@ -1,4 +1,12 @@
 ---
+name: skill-creator
+description: A meta-skill for building, testing, and iteratively improving other skills. Use when working with meta, skill, creation.
+version: 1.0.0
+category: core
+triggers: [meta, skill, creation, evaluation, benchmark, creator]
+dependencies: [skill-standard]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Skill Creator Framework
 date: 2026-03-08
 task_ref: initial-setup

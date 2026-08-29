@@ -1,4 +1,12 @@
 ---
+name: git-velocity-elite
+description: Guidelines for maximizing engineering velocity and minimizing integration pain using 2026 version control standards. Use when working with git, velocity, trunk-based.
+version: 1.0.0
+category: core
+triggers: [git, velocity, trunk-based, stacked-prs, graphite]
+dependencies: [git-ops-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Git Velocity & Trunk-Based Development (2026)
 date: 2026-03-08
 task_ref: velocity-expansion

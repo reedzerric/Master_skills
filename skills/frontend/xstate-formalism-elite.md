@@ -1,4 +1,12 @@
 ---
+name: xstate-formalism-elite
+description: Guidelines for managing complex frontend logic using deterministic state machines and the Actor Model (XState v5+). Use when working with frontend, xstate, state-machine.
+version: 1.0.0
+category: core
+triggers: [frontend, xstate, state-machine, actor-model, formalism]
+dependencies: [js-html-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: XState & Actor Model Formalism (2026)
 date: 2026-03-08
 task_ref: mit-professor-phase-4

@@ -1,4 +1,12 @@
 ---
+name: error-codes
+description: Always use the SDK's typed exception classes instead of string matching. Use when working with ai, claude, api.
+version: 1.0.0
+category: ai_infrastructure
+triggers: [ai, claude, api, errors, troubleshooting, error, codes]
+dependencies: [claude-api]
+inputs: [corpus or prompt, model config]
+outputs: [pipeline code, evaluation results]
 title: Claude API Error Codes
 date: 2026-03-08
 task_ref: skill-migration

@@ -1,4 +1,12 @@
 ---
+name: agent-consensus-elite
+description: Guidelines for implementing consensus algorithms and coordination mechanisms for decentralized agent swarms. Use when working with knowledge, agents, consensus.
+version: 1.0.0
+category: ai_infrastructure
+triggers: [knowledge, agents, consensus, coordination, swarm, adjudicator, agent]
+dependencies: [agent-swarms-elite]
+inputs: [corpus or prompt, model config]
+outputs: [pipeline code, evaluation results]
 title: Agent Consensus & Coordination (2026)
 date: 2026-03-08
 task_ref: swarm-deep-dive

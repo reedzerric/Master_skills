@@ -1,0 +1,84 @@
+#!/bin/sh
+#
+# Master Skills pre-commit hook.
+#
+# Guards the two invariants that break agent routing silently:
+#   1. skills_manifest.json must match the skill files on disk.
+#   2. every skill file must satisfy SKILL_STANDARD.md.
+#
+# Install (once per clone):
+#     git config core.hooksPath tools/hooks
+#
+# Bypass for a single commit (use sparingly — a stale manifest routes
+# agents to paths that do not exist):
+#     git commit --no-verify
+
+set -e
+
+ROOT=$(git rev-parse --show-toplevel)
+cd "$ROOT"
+
+# Only run when something that feeds the manifest actually changed.
+if ! git diff --cached --name-only | grep -qE '\.md$|skills_manifest\.json$|memory_validator/|tools/build_manifest\.py$'; then
+    exit 0
+fi
+
+# Resolve an interpreter that can actually run the checks. Presence of a
+# .venv does not imply pytest is installed in it, so probe rather than guess.
+PY=""
+for candidate in "uv run python" "python" "python3"; do
+    command -v "${candidate%% *}" >/dev/null 2>&1 || continue
+    if $candidate -m pytest --version >/dev/null 2>&1; then
+        PY="$candidate"
+        break
+    fi
+    # Remember the first interpreter that at least exists, as a fallback.
+    [ -z "$PY_FALLBACK" ] && PY_FALLBACK="$candidate"
+done
+
+if [ -z "$PY" ]; then
+    if [ -n "$PY_FALLBACK" ]; then
+        echo "pre-commit: pytest not installed for any interpreter." >&2
+        echo "            Run 'uv add --dev pytest pyyaml' (or pip install)." >&2
+        echo "            Commit blocked — use --no-verify to override." >&2
+        exit 1
+    fi
+    echo "pre-commit: no Python interpreter found; skipping checks." >&2
+    echo "            Install Python or commit with --no-verify." >&2
+    exit 0
+fi
+
+echo "pre-commit: regenerating routing map..."
+if ! $PY tools/build_manifest.py; then
+    echo >&2
+    echo "BLOCKED: tools/build_manifest.py failed." >&2
+    echo "         Fix the reported frontmatter problems, then commit again." >&2
+    exit 1
+fi
+
+# The generator prints validation problems but exits 0 on them, so check
+# explicitly for a non-canonical category or a missing required field.
+if $PY tools/build_manifest.py 2>&1 | grep -q "validation problems"; then
+    echo >&2
+    echo "BLOCKED: one or more skill files fail SKILL_STANDARD.md." >&2
+    echo "         See the problems listed above." >&2
+    exit 1
+fi
+
+# A regenerated manifest that differs from the staged one is drift. Stage it
+# rather than failing — the commit then carries a manifest that matches its
+# own content, which is the whole point of the guard.
+if ! git diff --quiet -- skills_manifest.json; then
+    git add skills_manifest.json
+    echo "pre-commit: skills_manifest.json was stale — regenerated and staged."
+fi
+
+echo "pre-commit: validating schema..."
+if ! $PY -m pytest tests/ -q; then
+    echo >&2
+    echo "BLOCKED: schema validation failed." >&2
+    echo "         Run 'uv run pytest tests/ -v' to see which files are invalid." >&2
+    exit 1
+fi
+
+echo "pre-commit: OK"

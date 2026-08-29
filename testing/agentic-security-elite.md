@@ -1,4 +1,12 @@
 ---
+name: agentic-security-elite
+description: Guidelines for transitioning from static security scans to autonomous, agentic security validation and remediation. Use when working with testing, security, ai.
+version: 1.0.0
+category: core
+triggers: [testing, security, ai, pen-testing, sast, dast, agentic]
+dependencies: [security-agentic-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Agentic Security & Autonomous Validation (2026)
 date: 2026-03-08
 task_ref: security-expansion

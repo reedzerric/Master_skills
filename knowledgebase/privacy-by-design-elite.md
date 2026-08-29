@@ -1,4 +1,12 @@
 ---
+name: privacy-by-design-elite
+description: Guidelines for architecting systems that meet the rigorous 2026 standards for data privacy, cryptographic erasure, and EU AI Act compliance. Use when working with knowledge, privacy, gdpr.
+version: 1.0.0
+category: core
+triggers: [knowledge, privacy, gdpr, cryptography, security, edge-ai, by, design]
+dependencies: [security-agentic-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Privacy by Design & GDPR (2026)
 date: 2026-03-08
 task_ref: mit-professor-phase-3

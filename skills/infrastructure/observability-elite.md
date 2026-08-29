@@ -1,4 +1,12 @@
 ---
+name: observability-elite
+description: Guidelines for architecting unified, actionable, and cost-aware observability systems. Use when working with infrastructure, observability, opentelemetry.
+version: 1.0.0
+category: core
+triggers: [infrastructure, observability, opentelemetry, ebpf, pltg]
+dependencies: [github-actions-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Enterprise Observability & Monitoring (2026)
 date: 2026-03-08
 task_ref: all-facets-expansion

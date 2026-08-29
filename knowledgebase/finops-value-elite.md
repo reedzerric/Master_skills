@@ -1,4 +1,12 @@
 ---
+name: finops-value-elite
+description: Guidelines for architecting financially efficient cloud systems and aligning engineering spend with business value. Use when working with knowledge, finops, cost.
+version: 1.0.0
+category: core
+triggers: [knowledge, finops, cost, cloud, ai, focus, value]
+dependencies: [bigquery-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: FinOps & Cloud Value Management (2026)
 date: 2026-03-08
 task_ref: mit-professor-phase-3

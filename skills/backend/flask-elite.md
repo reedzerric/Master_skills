@@ -1,4 +1,12 @@
 ---
+name: flask-elite
+description: Guidelines for building enterprise-grade, modular Flask applications. Use for any non-trivial Flask backend. Use when working with backend, python, flask.
+version: 1.0.0
+category: core
+triggers: [backend, python, flask, blueprints, patterns]
+dependencies: [python-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Flask Elite Backend Architecture (2026)
 date: 2026-03-08
 task_ref: tech-expansion

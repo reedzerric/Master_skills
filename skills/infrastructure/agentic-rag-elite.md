@@ -1,4 +1,12 @@
 ---
+name: agentic-rag-elite
+description: Guidelines for architecting autonomous reasoning systems that go beyond simple "Retrieve -> Generate" pipelines. Use when working with infrastructure, agents, rag.
+version: 1.0.0
+category: ai_infrastructure
+triggers: [infrastructure, agents, rag, reasoning, loops, graphrag, agentic]
+dependencies: [agent-swarms-elite]
+inputs: [corpus or prompt, model config]
+outputs: [pipeline code, evaluation results]
 title: Agentic RAG & Reasoning Loops (2026)
 date: 2026-03-08
 task_ref: swarm-deep-dive

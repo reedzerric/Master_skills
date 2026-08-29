@@ -1,4 +1,12 @@
 ---
+name: tla-plus-formalism
+description: Guidelines for mathematically verifying distributed systems and complex concurrent logic before implementation. Use when working with testing, formal-methods, tla+.
+version: 1.0.0
+category: core
+triggers: [testing, formal-methods, tla+, verification, distributed-systems, tla, plus, formalism]
+dependencies: [system-design-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: TLA+ Formal Verification (2026)
 date: 2026-03-08
 task_ref: mit-professor-phase-4

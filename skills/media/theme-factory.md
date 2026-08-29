@@ -1,4 +1,12 @@
 ---
+name: theme-factory
+description: Guidelines for applying professional styling to artifacts (slides, docs, reports) using curated themes. Use when working with media, design, theme.
+version: 1.0.0
+category: design_media
+triggers: [media, design, theme, colors, fonts, factory]
+dependencies: [pdf]
+inputs: [brief, brand tokens]
+outputs: [design artifact, style spec]
 title: Theme Factory & Styling
 date: 2026-03-08
 task_ref: initial-setup

@@ -1,4 +1,12 @@
 ---
+name: postgresql-elite
+description: Guidelines for architecting high-concurrency, performant relational databases using PostgreSQL 18+ features. Use when working with database, postgresql, indexing.
+version: 1.0.0
+category: core
+triggers: [database, postgresql, indexing, jsonb, performance]
+dependencies: [rust-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: PostgreSQL Elite Storage & Indexing (2026)
 date: 2026-03-08
 task_ref: all-facets-expansion

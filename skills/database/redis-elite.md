@@ -1,4 +1,12 @@
 ---
+name: redis-elite
+description: Guidelines for architecting high-performance caching, rate-limiting, and messaging using Redis. Use when working with database, redis, caching.
+version: 1.0.0
+category: core
+triggers: [database, redis, caching, pub-sub, performance]
+dependencies: [postgresql-elite]
+inputs: [source files, project config]
+outputs: [refactored code, review findings]
 title: Redis High-Performance Caching (2026)
 date: 2026-03-08
 task_ref: all-facets-expansion

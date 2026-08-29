@@ -1,4 +1,12 @@
 ---
+name: algorithmic-art
+description: Guidelines for creating interactive, seeded generative art using p5.js. Use when users request "code-based art," "flow fields," or "generative sketches."
+version: 1.0.0
+category: design_media
+triggers: [media, art, generative, p5js, javascript, algorithmic]
+dependencies: [theme-factory]
+inputs: [brief, brand tokens]
+outputs: [design artifact, style spec]
 title: Algorithmic & Generative Art (p5.js)
 date: 2026-03-08
 task_ref: initial-setup

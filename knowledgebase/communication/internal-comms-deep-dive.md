@@ -1,4 +1,12 @@
 ---
+name: internal-comms-deep-dive
+description: Succinct, data-driven updates for leadership and teammates. Intended to be read in <60 seconds. Use when working with communication, management, internal-comms.
+version: 1.0.0
+category: utilities
+triggers: [communication, management, internal-comms, patterns, internal, comms, deep, dive]
+dependencies: [internal-comms]
+inputs: [input document or dataset]
+outputs: [generated file]
 title: Internal Communication Patterns
 date: 2026-03-08
 task_ref: skill-migration

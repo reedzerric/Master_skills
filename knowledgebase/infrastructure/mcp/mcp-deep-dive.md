@@ -1,4 +1,12 @@
 ---
+name: mcp-deep-dive
+description: from mcp.server.fastmcp import FastMCP. Use when working with infrastructure, mcp, protocol.
+version: 1.0.0
+category: ai_infrastructure
+triggers: [infrastructure, mcp, protocol, typescript, python, deep, dive]
+dependencies: [mcp-builder, evaluation-guide]
+inputs: [corpus or prompt, model config]
+outputs: [pipeline code, evaluation results]
 title: MCP Server Deep Dive
 date: 2026-03-08
 task_ref: skill-migration

@@ -1,4 +1,12 @@
 ---
+name: slack-gif-creator
+description: Guidelines for creating animated GIFs optimized for Slack (emojis or messages). Use when working with media, animation, gif.
+version: 1.0.0
+category: design_media
+triggers: [media, animation, gif, slack, python, creator]
+dependencies: [canvas-design]
+inputs: [brief, brand tokens]
+outputs: [design artifact, style spec]
 title: Slack GIF Creator (Animated GIFs)
 date: 2026-03-08
 task_ref: initial-setup
