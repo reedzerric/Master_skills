@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated": "2026-08-29",
+  "generated": "2026-08-30",
   "repository": "Master_skills",
   "categories": {
     "ai_infrastructure": [
@@ -111,6 +111,7 @@
       "handoff",
       "internal-comms",
       "internal-comms-deep-dive",
+      "narrative-authenticity",
       "pdf",
       "pptx",
       "teach",
@@ -3407,6 +3408,43 @@
       "companions": []
     },
     {
+      "name": "narrative-authenticity",
+      "path": "skills/writing/narrative-authenticity/SKILL.md",
+      "category": "utilities",
+      "version": "1.0.0",
+      "description": "Write or revise fiction so it does not carry the structural fingerprints of AI-generated prose \u2014 thematic over-explanation, embodied-emotion overuse, single-track causality, protagonist-driven resolution, and flat chronology. Use when drafting a short story or novel chapter, when prose \"reads like AI\" despite clean sentences, or when revising generated fiction toward publishable texture. For workplace and status writing, use doc-coauthoring; for game event systems, use narrative-event-system.",
+      "triggers": [
+        "my story reads like ai",
+        "make this fiction less ai",
+        "write a short story",
+        "this prose feels generated",
+        "revise my fiction",
+        "why does my writing sound like chatgpt",
+        "humanize this story",
+        "my fiction feels flat"
+      ],
+      "dependencies": [],
+      "inputs": [
+        "a premise or draft",
+        "a target length",
+        "a genre or register"
+      ],
+      "outputs": [
+        "fiction that clears the checklist",
+        "a revision pass with named violations"
+      ],
+      "tags": [
+        "fiction",
+        "writing",
+        "narrative",
+        "craft",
+        "prose"
+      ],
+      "companions": [
+        "BENCHMARKS.md"
+      ]
+    },
+    {
       "name": "pdf",
       "path": "skills/documents/pdf.md",
       "category": "utilities",
@@ -4373,6 +4411,9 @@
     "human approval before an agent acts": [
       "security-agentic-elite"
     ],
+    "humanize this story": [
+      "narrative-authenticity"
+    ],
     "i cannot answer this": [
       "to-questionnaire"
     ],
@@ -4499,6 +4540,9 @@
     "make a slack gif": [
       "slack-gif-creator"
     ],
+    "make this fiction less ai": [
+      "narrative-authenticity"
+    ],
     "make this look designed": [
       "frontend-design"
     ],
@@ -4616,6 +4660,9 @@
     "my draft is not landing": [
       "doc-coauthoring"
     ],
+    "my fiction feels flat": [
+      "narrative-authenticity"
+    ],
     "my migration locked the table": [
       "zero-downtime-migrations"
     ],
@@ -4633,6 +4680,9 @@
     ],
     "my skill is not being triggered": [
       "skill-creator"
+    ],
+    "my story reads like ai": [
+      "narrative-authenticity"
     ],
     "my test suite is slow": [
       "pytest-elite"
@@ -4991,6 +5041,9 @@
     "review this branch": [
       "code-review"
     ],
+    "revise my fiction": [
+      "narrative-authenticity"
+    ],
     "reward curve": [
       "run-economy-balancing"
     ],
@@ -5306,6 +5359,9 @@
     "thinking effort parameter": [
       "models"
     ],
+    "this prose feels generated": [
+      "narrative-authenticity"
+    ],
     "thiserror or anyhow": [
       "rust-elite"
     ],
@@ -5495,6 +5551,9 @@
     "which skill": [
       "skill-router"
     ],
+    "why does my writing sound like chatgpt": [
+      "narrative-authenticity"
+    ],
     "why does this look off": [
       "frontend-design"
     ],
@@ -5521,6 +5580,9 @@
     ],
     "write a post mortem": [
       "sre-incident-protocol"
+    ],
+    "write a short story": [
+      "narrative-authenticity"
     ],
     "write a skill": [
       "writing-for-agents"
