@@ -22,6 +22,14 @@ from pathlib import Path
 
 MANIFEST = Path(__file__).resolve().parent.parent / "skills_manifest.json"
 
+#: Opt-in trace, enabled by the file's existence — `touch` it to turn logging on,
+#: delete it to turn logging off. No config, and off by default.
+#:
+#: Exists to separate "the hook ran and matched nothing" from "the hook never
+#: ran", which is otherwise unobservable: a silent hook and an unwired one look
+#: identical from inside a session.
+TRACE = Path.home() / ".claude" / "skill-router.log"
+
 #: Minimum fraction of a trigger's content tokens that must appear in the prompt.
 #: 0.6 means a 3-token trigger needs 2, a 4-token trigger needs 3, and a 2-token
 #: trigger needs both. Lower admits noise; higher misses paraphrases.
@@ -63,6 +71,21 @@ def score_triggers(prompt_tokens: set[str], trigger_index: dict) -> dict[str, fl
     return best
 
 
+def trace(prompt: str, matched: list[str]) -> None:
+    """Append one line to the trace file, but only if it already exists."""
+    try:
+        if not TRACE.exists():
+            return
+        from datetime import datetime
+
+        stamp = datetime.now().isoformat(timespec="seconds")
+        hit = ",".join(matched) if matched else "-"
+        with TRACE.open("a", encoding="utf-8") as fh:
+            fh.write(f"{stamp}\t{hit}\t{prompt[:120]!r}\n")
+    except Exception:
+        pass
+
+
 def main() -> None:
     try:
         payload = json.load(sys.stdin)
@@ -70,19 +93,23 @@ def main() -> None:
         return
     prompt = (payload or {}).get("prompt") or ""
     if not prompt.strip():
+        trace(prompt, [])
         return
 
     try:
         manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     except Exception:
+        trace(prompt, [])
         return
 
     prompt_tokens = tokens(prompt)
     if not prompt_tokens:
+        trace(prompt, [])
         return
 
     scored = score_triggers(prompt_tokens, manifest.get("trigger_index", {}))
     if not scored:
+        trace(prompt, [])
         return
 
     by_name = {s["name"]: s for s in manifest.get("skills", [])}
@@ -92,7 +119,9 @@ def main() -> None:
         key=lambda n: (-scored[n], -len(by_name[n].get("description", ""))),
     )[:MAX_SKILLS]
     if not ranked:
+        trace(prompt, [])
         return
+    trace(prompt, ranked)
 
     root = MANIFEST.parent
     lines = [

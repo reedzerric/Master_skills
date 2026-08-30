@@ -140,6 +140,45 @@ def test_pointer_paths_exist_on_disk():
             assert path.is_file(), f"routed to a path that does not exist: {path}"
 
 
+# --- trace file ------------------------------------------------------------
+
+def _run_with_trace(tmp_path, prompt, create_log):
+    """Run the hook with HOME redirected so the real trace file is untouched."""
+    import os
+
+    env = dict(os.environ, HOME=str(tmp_path), USERPROFILE=str(tmp_path))
+    log = tmp_path / ".claude" / "skill-router.log"
+    log.parent.mkdir(parents=True, exist_ok=True)
+    if create_log:
+        log.touch()
+    proc = subprocess.run(
+        [sys.executable, str(HOOK)],
+        input=json.dumps({"prompt": prompt}),
+        capture_output=True,
+        text=True,
+        cwd=str(ROOT),
+        env=env,
+    )
+    assert proc.returncode == 0
+    return log
+
+
+def test_trace_is_off_unless_the_log_file_exists(tmp_path):
+    """The hook must never create files on its own."""
+    log = _run_with_trace(tmp_path, "my docker image is too big", create_log=False)
+    assert not log.exists()
+
+
+def test_trace_records_both_hits_and_misses(tmp_path):
+    """A miss must be logged too, or it cannot be told from a hook that never ran."""
+    log = _run_with_trace(tmp_path, "my docker image is too big", create_log=True)
+    assert "docker-elite" in log.read_text(encoding="utf-8")
+
+    log = _run_with_trace(tmp_path, "what is the weather today", create_log=True)
+    lines = [l for l in log.read_text(encoding="utf-8").splitlines() if l.strip()]
+    assert any("\t-\t" in l for l in lines), "a miss must still leave a trace line"
+
+
 def test_never_exceeds_max_skills():
     """A prompt stuffed with trigger words must still stay bounded."""
     from importlib import util
