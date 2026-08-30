@@ -20,6 +20,19 @@ ROOT = Path(__file__).resolve().parent.parent
 HOOK = ROOT / "tools" / "skill_router_hook.py"
 
 
+@pytest.fixture(autouse=True)
+def isolated_home(tmp_path, monkeypatch):
+    """Point HOME at a temp dir for every test in this module.
+
+    Without this, the subprocess tests inherit the real HOME and append to the
+    user's live ~/.claude/skill-router.log whenever tracing is enabled. Running
+    the suite must never write to the user's home directory.
+    """
+    monkeypatch.setenv("HOME", str(tmp_path))
+    monkeypatch.setenv("USERPROFILE", str(tmp_path))
+    return tmp_path
+
+
 def run_hook(payload, cwd=None):
     """Invoke the hook as the harness does; return (returncode, parsed|None)."""
     proc = subprocess.run(
@@ -143,23 +156,13 @@ def test_pointer_paths_exist_on_disk():
 # --- trace file ------------------------------------------------------------
 
 def _run_with_trace(tmp_path, prompt, create_log):
-    """Run the hook with HOME redirected so the real trace file is untouched."""
-    import os
-
-    env = dict(os.environ, HOME=str(tmp_path), USERPROFILE=str(tmp_path))
+    """Run the hook against the isolated HOME, optionally enabling the trace."""
     log = tmp_path / ".claude" / "skill-router.log"
     log.parent.mkdir(parents=True, exist_ok=True)
     if create_log:
         log.touch()
-    proc = subprocess.run(
-        [sys.executable, str(HOOK)],
-        input=json.dumps({"prompt": prompt}),
-        capture_output=True,
-        text=True,
-        cwd=str(ROOT),
-        env=env,
-    )
-    assert proc.returncode == 0
+    code, _ = run_hook({"prompt": prompt})
+    assert code == 0
     return log
 
 
