@@ -36,6 +36,7 @@ NON_SKILL_FILES = frozenset({
     "CORE_MEMORY_PROTOCOL.md",
     "WORKSPACE_INDEX.md",
     "THIRD_PARTY_LICENSES.md",
+    "AGENTS.md",
 })
 
 #: `.scratch` holds the local-markdown issue tracker (maps, tickets, specs).

@@ -26,6 +26,7 @@ SKIP_FILES = {
     "CORE_MEMORY_PROTOCOL.md",
     "WORKSPACE_INDEX.md",
     "THIRD_PARTY_LICENSES.md",
+    "AGENTS.md",
 }
 
 CANONICAL = {
