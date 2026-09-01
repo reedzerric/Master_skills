@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated": "2026-08-30",
+  "generated": "2026-08-31",
   "repository": "Master_skills",
   "categories": {
     "ai_infrastructure": [
@@ -3411,7 +3411,7 @@
       "name": "narrative-authenticity",
       "path": "skills/writing/narrative-authenticity/SKILL.md",
       "category": "utilities",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "description": "Write or revise fiction so it does not carry the structural fingerprints of AI-generated prose \u2014 thematic over-explanation, embodied-emotion overuse, single-track causality, protagonist-driven resolution, and flat chronology. Use when drafting a short story or novel chapter, when prose \"reads like AI\" despite clean sentences, or when revising generated fiction toward publishable texture. For workplace and status writing, use doc-coauthoring; for game event systems, use narrative-event-system.",
       "triggers": [
         "my story reads like ai",
@@ -3421,7 +3421,11 @@
         "revise my fiction",
         "why does my writing sound like chatgpt",
         "humanize this story",
-        "my fiction feels flat"
+        "my fiction feels flat",
+        "write some fiction",
+        "write a novel",
+        "novel chapter",
+        "edit my short story"
       ],
       "dependencies": [],
       "inputs": [
@@ -4167,6 +4171,9 @@
     "edit claude.md": [
       "writing-for-agents"
     ],
+    "edit my short story": [
+      "narrative-authenticity"
+    ],
     "edit ooxml directly": [
       "docx"
     ],
@@ -4698,6 +4705,9 @@
     ],
     "noise based visuals": [
       "algorithmic-art"
+    ],
+    "novel chapter": [
+      "narrative-authenticity"
     ],
     "ocr a scanned document": [
       "pdf"
@@ -5578,6 +5588,9 @@
     "write a memo or letter": [
       "docx"
     ],
+    "write a novel": [
+      "narrative-authenticity"
+    ],
     "write a post mortem": [
       "sre-incident-protocol"
     ],
@@ -5610,6 +5623,9 @@
     ],
     "write pytest tests": [
       "pytest-elite"
+    ],
+    "write some fiction": [
+      "narrative-authenticity"
     ],
     "write the adr": [
       "grill-with-docs"

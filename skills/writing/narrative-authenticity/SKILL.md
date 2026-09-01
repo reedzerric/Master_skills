@@ -1,9 +1,9 @@
 ---
 name: narrative-authenticity
 description: Write or revise fiction so it does not carry the structural fingerprints of AI-generated prose — thematic over-explanation, embodied-emotion overuse, single-track causality, protagonist-driven resolution, and flat chronology. Use when drafting a short story or novel chapter, when prose "reads like AI" despite clean sentences, or when revising generated fiction toward publishable texture. For workplace and status writing, use doc-coauthoring; for game event systems, use narrative-event-system.
-version: 1.0.0
+version: 1.1.0
 category: utilities
-triggers: [my story reads like ai, make this fiction less ai, write a short story, this prose feels generated, revise my fiction, why does my writing sound like chatgpt, humanize this story, my fiction feels flat]
+triggers: [my story reads like ai, make this fiction less ai, write a short story, this prose feels generated, revise my fiction, why does my writing sound like chatgpt, humanize this story, my fiction feels flat, write some fiction, write a novel, novel chapter, edit my short story]
 dependencies: []
 inputs: [a premise or draft, a target length, a genre or register]
 outputs: [fiction that clears the checklist, a revision pass with named violations]
