@@ -1,0 +1,4 @@
+{"timestamp": "2026-09-05 00:37:12", "action": "click:Transmit", "total_ms": 70.74, "stages_ms": {"perception_find": 70.72}, "metadata": {"status": "not_found"}}
+{"timestamp": "2026-09-05 00:37:25", "action": "click:Fido", "total_ms": 331.74, "stages_ms": {"perception_find": 331.72}, "metadata": {"status": "not_found"}}
+{"timestamp": "2026-09-05 00:39:01", "action": "voice_dispatch", "total_ms": 2628.72, "stages_ms": {"prompt_injection": 2628.71}, "metadata": {"text": "But we might want to move your enti"}}
+{"timestamp": "2026-09-05 00:39:20", "action": "voice_dispatch", "total_ms": 2579.81, "stages_ms": {"prompt_injection": 2579.8}, "metadata": {"text": "I think we want to take your curren"}}

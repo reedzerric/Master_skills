@@ -28,6 +28,7 @@ if str(TOOLS_DIR) not in sys.path:
 
 from fido_speak import speak
 from fido_vision import capture_eyes
+from fido_telemetry import LatencyTracker
 
 import sounddevice as sd
 from faster_whisper import WhisperModel
@@ -264,7 +265,8 @@ class FidoHUD(tk.Tk):
         self._poll_ui_timer()
 
     def _track_target_window(self):
-        """Continuously monitor active user window (e.g. agy/terminal/code)."""
+        """Continuously monitor prompt/terminal window (agy/terminal/powershell/code)."""
+        prompt_keywords = ["agy", "powershell", "terminal", "code", "cmd", "bash", "antigravity", "prompt", "mintty"]
         buf = ctypes.create_unicode_buffer(512)
         while True:
             try:
@@ -272,17 +274,21 @@ class FidoHUD(tk.Tk):
                 if fg != 0:
                     user32.GetWindowTextW(fg, buf, 512)
                     title = buf.value.strip()
-                    if title and "Fido Voice & Vision" not in title:
-                        self.target_hwnd = fg
-                        self.target_title = title
-                        self.after(0, self._update_target_label)
+                    tl = title.lower()
+                    if title and "fido" not in tl:
+                        # Only bind to actual CLI/editor prompt windows, never browsers or games
+                        is_prompt_window = any(k in tl for k in prompt_keywords) and not any(b in tl for b in ["edge", "chrome", "firefox", "brave"])
+                        if is_prompt_window or not self.target_hwnd:
+                            self.target_hwnd = fg
+                            self.target_title = title
+                            self.after(0, self._update_target_label)
             except Exception:
                 pass
             time.sleep(0.15)
 
     def _update_target_label(self):
         short = self.target_title if len(self.target_title) < 40 else self.target_title[:37] + "..."
-        self.target_label.config(text=f"Target Window: {short}")
+        self.target_label.config(text=f"Target: {short} 🔒", fg="#38bdf8")
 
     def _init_models_and_calibration(self):
         self.status_label.config(text="Calibrating mic & loading 'base.en' Whisper...", fg="#fbbf24")
@@ -652,6 +658,7 @@ class FidoHUD(tk.Tk):
     def _stop_recording_and_process(self):
         if not self.is_recording:
             return
+        self.turnaround_tracker = LatencyTracker("voice_dispatch")
         self.is_recording = False
         self.ptt_button.config(
             bg="#1e293b",
@@ -800,6 +807,14 @@ class FidoHUD(tk.Tk):
             time.sleep(0.02)
             user32.keybd_event(0x0D, 0, 0, 0)
             user32.keybd_event(0x0D, 2, 0)
+
+            if hasattr(self, "turnaround_tracker") and self.turnaround_tracker:
+                self.turnaround_tracker.mark("prompt_injection")
+                rec = self.turnaround_tracker.finish({"text": text[:35]})
+                stt_ms = rec["stages_ms"].get("whisper_stt", 0)
+                disp_ms = rec["stages_ms"].get("prompt_injection", 0)
+                tot_ms = rec["total_ms"]
+                self._append_log(f"[⚡ BENCHMARK] STT: {stt_ms:.0f}ms | Inject: {disp_ms:.0f}ms | Total Turnaround: {tot_ms:.0f}ms\n")
 
             self._append_log(f"[+] Sent to: {self.target_title}\n")
         except Exception as e:

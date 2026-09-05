@@ -124,6 +124,23 @@ def find_element(query: str, root_control=None) -> Optional[Dict[str, Any]]:
         if q in el["type"].lower():
             return el
 
+    # If not found in active window, search across other visible desktop windows
+    if root_control is None:
+        try:
+            desktop = auto.GetRootControl()
+            for win in desktop.GetChildren():
+                if win.ControlTypeName == "WindowControl" and win.BoundingRectangle.width > 100:
+                    win_elements = extract_ui_elements(root_control=win, max_depth=3, max_elements=40, interactive_only=False)
+                    for el in win_elements:
+                        if q in el["name"].lower():
+                            try:
+                                win.SetActive()
+                            except Exception:
+                                pass
+                            return el
+        except Exception:
+            pass
+
     return None
 
 

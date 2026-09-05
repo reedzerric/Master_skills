@@ -28,6 +28,8 @@ import fido_hands
 from fido_speak import speak
 import pyautogui
 
+from desktop_engine import attach_to_interactive_desktop, DesktopEngine
+
 attach_to_interactive_desktop()
 user32 = ctypes.windll.user32
 kernel32 = ctypes.windll.kernel32
@@ -38,21 +40,26 @@ WNDENUMPROC = ctypes.WINFUNCTYPE(ctypes.c_bool, ctypes.c_int, ctypes.c_int)
 buf = ctypes.create_unicode_buffer(512)
 
 def enum_cb(hwnd, lparam):
-    user32.GetWindowTextW(hwnd, buf, 512)
-    t = buf.value.strip()
-    if "Hello World" in t or "Fido Autonomous Agent" in t:
-        if user32.IsWindowVisible(hwnd):
-            found_hwnds.append((hwnd, t))
+    try:
+        user32.GetWindowTextW(hwnd, buf, 512)
+        t = buf.value.strip()
+        tl = t.lower()
+        if ("hello world" in tl or "fido autonomous agent" in tl or "hello, world" in tl) and "code" not in tl:
+            if user32.IsWindowVisible(hwnd):
+                found_hwnds.append((hwnd, t))
+    except Exception:
+        pass
     return True
 
 user32.EnumWindows(WNDENUMPROC(enum_cb), 0)
 
 if not found_hwnds:
-    # Launch browser if not already open
+    # Launch browser explicitly on WinSta0\Default via CreateProcessW
     html_path = str(TOOLS_DIR / "cache" / "hello_world.html")
     edge_exe = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
-    subprocess.Popen([edge_exe, html_path])
-    time.sleep(1.8)
+    launch_cmd = f'"{edge_exe}" --new-window "{html_path}"'
+    DesktopEngine.launch_app_on_desktop(launch_cmd, maximized=False)
+    time.sleep(2.5)
     user32.EnumWindows(WNDENUMPROC(enum_cb), 0)
 
 if found_hwnds:

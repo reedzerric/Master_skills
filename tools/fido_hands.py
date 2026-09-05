@@ -63,24 +63,34 @@ def smooth_move(target_x: int, target_y: int, duration: float = 0.25, steps: int
     pyautogui.moveTo(target_x, target_y)
 
 
+from fido_telemetry import LatencyTracker
+
+
 def click_on(query: str, button: str = "left", double: bool = False) -> bool:
     """
     Semantically find an interactive element by query and click it.
     Returns True if element was found and clicked, False otherwise.
     """
+    tracker = LatencyTracker(f"click:{query}")
     attach_to_interactive_desktop()
     el = fido_eyes.find_element(query)
+    tracker.mark("perception_find")
     if not el:
+        tracker.finish({"status": "not_found"})
         return False
 
     cx, cy = el["center"]
     smooth_move(cx, cy, duration=0.2)
-    time.sleep(0.04)
+    tracker.mark("cursor_movement")
+    time.sleep(0.02)
 
     if double:
         pyautogui.doubleClick(cx, cy, button=button)
     else:
         pyautogui.click(cx, cy, button=button)
+    tracker.mark("hardware_click")
+    rec = tracker.finish({"status": "clicked", "type": el["type"], "name": el["name"]})
+    print(f"[*] Clicked '{query}' in {rec['total_ms']:.1f}ms (Perceive: {rec['stages_ms'].get('perception_find', 0):.1f}ms | Move: {rec['stages_ms'].get('cursor_movement', 0):.1f}ms | Click: {rec['stages_ms'].get('hardware_click', 0):.1f}ms)")
     return True
 
 
