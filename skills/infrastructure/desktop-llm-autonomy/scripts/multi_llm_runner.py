@@ -41,7 +41,7 @@ class MultiLLMDispatcher:
                 "anthropic": "claude-3-5-sonnet-20241022",
                 "openai": "gpt-4o",
                 "gemini": "gemini-2.0-flash",
-                "ollama": "llama3.2-vision",
+                "ollama": "gemma3:12b",
                 "mock": "mock-test-agent",
             }
             self.model_name = defaults.get(self.provider, "mock-test-agent")

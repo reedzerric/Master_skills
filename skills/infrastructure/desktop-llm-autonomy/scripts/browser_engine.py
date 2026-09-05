@@ -62,31 +62,80 @@ class BrowserEngine:
         current_url = self._page.url
         self.guard.validate_email_transmission(current_url, selector)
         
-        element = self._page.locator(selector).first
-        await element.click(timeout=10000)
-        return True
+        try:
+            element = self._page.locator(selector).first
+            await element.click(timeout=8000)
+            return True
+        except Exception:
+            try:
+                alt = self._page.get_by_text(selector, exact=False).first
+                await alt.click(timeout=5000)
+                return True
+            except Exception:
+                raise
 
-    async def type_text(self, selector: str, text: str, press_enter: bool = False):
+    async def type_text(self, selector: Optional[str], text: str, press_enter: bool = False):
         """Type text into input field matching selector with credential field protection."""
         self.guard.increment_step()
         self.guard.validate_text_input(text)
         if not self._page:
             raise RuntimeError("Browser not started.")
         
-        element = self._page.locator(selector).first
-        try:
-            el_type = await element.get_attribute("type") or ""
-            el_name = await element.get_attribute("name") or ""
-            el_auto = await element.get_attribute("autocomplete") or ""
-            self.guard.validate_input_element({"type": el_type, "name": el_name, "autocomplete": el_auto})
-        except SafetyViolation:
-            raise
-        except Exception:
-            pass
+        element = None
+        if selector:
+            try:
+                candidate = self._page.locator(selector).first
+                if await candidate.count() > 0:
+                    element = candidate
+            except Exception:
+                element = None
 
-        await element.fill(text, timeout=10000)
+        if not element:
+            candidate = self._page.locator("textarea:visible, input:visible:not([type='file']), [contenteditable='true']").first
+            try:
+                if await candidate.count() > 0:
+                    element = candidate
+            except Exception:
+                pass
+
+        if element:
+            try:
+                el_type = await element.get_attribute("type") or ""
+                el_name = await element.get_attribute("name") or ""
+                el_auto = await element.get_attribute("autocomplete") or ""
+                self.guard.validate_input_element({"type": el_type, "name": el_name, "autocomplete": el_auto})
+            except SafetyViolation:
+                raise
+            except Exception:
+                pass
+
+            try:
+                await element.fill(text, timeout=5000)
+                if press_enter:
+                    await element.press("Enter")
+                return
+            except Exception:
+                # Fallback to click + keyboard typing
+                try:
+                    await element.click(timeout=3000)
+                except Exception:
+                    pass
+
+        await self._page.keyboard.type(text)
         if press_enter:
-            await element.press("Enter")
+            await self._page.keyboard.press("Enter")
+
+    async def press_key(self, key: str):
+        """Press keyboard key on page."""
+        self.guard.increment_step()
+        if not self._page:
+            raise RuntimeError("Browser not started.")
+        key_norm = "Enter" if key.lower() == "enter" else key
+        await self._page.keyboard.press(key_norm)
+
+    async def wait(self, seconds: float = 1.0):
+        """Wait for specified duration."""
+        await asyncio.sleep(seconds)
 
     async def extract_visible_text(self) -> str:
         """Extract primary readable text content from the current page."""

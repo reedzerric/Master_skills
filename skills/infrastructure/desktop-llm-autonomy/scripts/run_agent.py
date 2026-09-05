@@ -68,13 +68,29 @@ async def run_browser_loop(
                 history.append({"action": "navigate", "url": url, "status": nav_res.get("status")})
             elif action == "click":
                 selector = params.get("selector")
-                await engine.click(selector)
-                history.append({"action": "click", "selector": selector})
+                try:
+                    await engine.click(selector)
+                    history.append({"action": "click", "selector": selector})
+                except Exception as e:
+                    print(f"[!] Click warning: {e}")
+                    history.append({"action": "click", "selector": selector, "error": str(e)})
             elif action == "type_text":
                 selector = params.get("selector")
                 text = params.get("text", "")
-                await engine.type_text(selector, text, press_enter=params.get("press_enter", False))
-                history.append({"action": "type_text", "selector": selector, "text": text})
+                try:
+                    await engine.type_text(selector, text, press_enter=params.get("press_enter", False))
+                    history.append({"action": "type_text", "selector": selector, "text": text})
+                except Exception as e:
+                    print(f"[!] Type warning: {e}")
+                    history.append({"action": "type_text", "selector": selector, "text": text, "error": str(e)})
+            elif action == "press_key":
+                key = params.get("key", "Enter")
+                await engine.press_key(key)
+                history.append({"action": "press_key", "key": key})
+            elif action == "wait":
+                seconds = float(params.get("seconds", 1.0))
+                await engine.wait(seconds)
+                history.append({"action": "wait", "seconds": seconds})
             else:
                 print(f"[!] Unknown action '{action}', skipping.")
 

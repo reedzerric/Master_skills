@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🐕 Fido Autonomous Agent — Hello World</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
+      color: #f8fafc;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    .card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 20px;
+      padding: 48px 64px;
+      text-align: center;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 30px rgba(56, 189, 248, 0.2);
+      max-width: 600px;
+      animation: fadeIn 0.8s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(14, 165, 233, 0.15);
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 48px;
+      font-weight: 800;
+      margin: 0 0 16px 0;
+      background: linear-gradient(135deg, #ffffff 0%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      color: #94a3b8;
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0 0 32px 0;
+    }
+    .input-group {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    input[type="text"] {
+      padding: 14px 20px;
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 16px;
+      outline: none;
+      width: 280px;
+      transition: border-color 0.2s;
+    }
+    input[type="text"]:focus {
+      border-color: #38bdf8;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+    }
+    button {
+      padding: 14px 28px;
+      background: #0284c7;
+      border: none;
+      border-radius: 12px;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+    button:hover {
+      background: #0369a1;
+    }
+    button:active {
+      transform: scale(0.98);
+    }
+    .status {
+      font-size: 14px;
+      color: #34d399;
+      font-weight: 600;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">Autonomous Desktop Execution</div>
+    <h1>Hello, World!</h1>
+    <p>🐕 <strong>Fido Sensory Embodiment Online.</strong><br>Ears, Eyes, and Hands fully operational on physical display.</p>
+    
+    <div class="input-group">
+      <input type="text" id="userInput" placeholder="Fido interactive input..." value="Hello World from Fido!" aria-label="Fido interactive input">
+      <button id="actionBtn" onclick="onActionClick()">Transmit</button>
+    </div>
+    
+    <div class="status" id="statusMessage">🟢 Physical Station: WinSta0\Default Active</div>
+  </div>
+
+  <script>
+    function onActionClick() {
+      const val = document.getElementById('userInput').value;
+      const status = document.getElementById('statusMessage');
+      status.innerText = '⚡ Transmitted: "' + val + '" at ' + new Date().toLocaleTimeString();
+      status.style.color = '#38bdf8';
+    }
+  </script>
+</body>
+</html>

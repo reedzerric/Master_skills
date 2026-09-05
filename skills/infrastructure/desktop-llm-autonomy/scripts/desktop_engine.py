@@ -248,3 +248,31 @@ class DesktopEngine:
     def get_cursor_position(self) -> Tuple[int, int]:
         """Return current mouse cursor position."""
         return pyautogui.position()
+
+    def click_element(self, query: str, button: str = "left", double: bool = False) -> bool:
+        """Find element by semantic name/label via UIA and click it smoothly."""
+        import fido_hands
+        self.guard.increment_step()
+        self.guard.check_app_target(self.get_active_window_title())
+        return fido_hands.click_on(query, button=button, double=double)
+
+    def select_element(self, query: str) -> bool:
+        """Select element by semantic name/label via UIA."""
+        import fido_hands
+        self.guard.increment_step()
+        self.guard.check_app_target(self.get_active_window_title())
+        return fido_hands.select_element(query)
+
+    def type_into_element(self, query: str, text: str, clear_first: bool = True, press_enter: bool = False) -> bool:
+        """Find input element by name, focus it, and type text."""
+        import fido_hands
+        self.guard.increment_step()
+        self.guard.check_app_target(self.get_active_window_title())
+        self.guard.validate_text_input(text)
+        return fido_hands.type_into(query, text, clear_first=clear_first, press_enter=press_enter)
+
+    def get_semantic_elements(self, max_depth: int = 4) -> List[Dict[str, Any]]:
+        """Retrieve interactive UI elements from foreground window without screenshot tokens."""
+        import fido_eyes
+        root = fido_eyes.get_active_window_control()
+        return fido_eyes.extract_ui_elements(root_control=root, max_depth=max_depth)

@@ -145,6 +145,21 @@ Git rejects files >100MB, preventing direct commit of Playwright's 306MB Chromiu
      ```
    - Bundles the skill, code, `.venv`, and pre-installed Chromium into a self-contained archive ready for USB/offline execution.
 
+## Voice (Ears & Mouth) and Vision (Eyes) Multimodal Companion
+
+Fido integrates native zero-dependency Windows voice duplex and screen perception:
+
+- **Ears (Speech Recognition):** Uses Windows native `System.Speech.Recognition` (`MS-1033-80-DESK`) to capture headset microphone input via push-to-talk or on-demand listening (`tools/fido_listen.py`).
+- **Mouth (Speech Synthesis):** Uses Windows native `System.Speech.Synthesis` (`Microsoft Zira Desktop` / `Microsoft David Desktop`) for instant audio output to the user's headset (`tools/fido_speak.py`).
+- **Eyes (Screen Perception):** High-speed desktop snapshot via `tools/fido_vision.py`. Automatically downscales to max 1024px for token efficiency, extracts active foreground window title, and handles workstation lock states gracefully.
+- **Interactive Companion (`tools/fido_companion.py`):** Interactive voice loop bridging headset mic, eyes, and active Gemini session:
+  ```bash
+  fido speak "Task complete"
+  fido look
+  fido listen
+  fido companion
+  ```
+
 ## Companion Files in this Skill
 
 - [`setup.bat`](setup.bat): 1-click Windows bootstrap launcher.
@@ -158,4 +173,9 @@ Git rejects files >100MB, preventing direct commit of Playwright's 306MB Chromiu
 - [`scripts/multi_llm_runner.py`](scripts/multi_llm_runner.py): Universal dispatcher for OpenAI, Anthropic, Gemini, and Ollama.
 - [`scripts/run_agent.py`](scripts/run_agent.py): CLI orchestrator.
 - [`scripts/test_harness.py`](scripts/test_harness.py): Comprehensive test suite.
+- [`../../tools/fido_speak.py`](../../tools/fido_speak.py): Native Windows headset TTS synthesizer.
+- [`../../tools/fido_listen.py`](../../tools/fido_listen.py): Native Windows headset STT speech recognizer.
+- [`../../tools/fido_vision.py`](../../tools/fido_vision.py): Token-efficient screen perception capture.
+- [`../../tools/fido_companion.py`](../../tools/fido_companion.py): Interactive voice & vision companion loop.
+
 
