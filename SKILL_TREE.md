@@ -68,7 +68,7 @@ touching.
 | **Operations** | `git-ops-elite` · `git-velocity-elite` · `sre-incident-protocol` |
 | **Meta** | `skill-standard` · `skill-creator` · `agent-skills-spec` |
 
-## `ai_infrastructure` — 17 skills
+## `ai_infrastructure` — 18 skills
 
 Retrieval, LLM pipelines, prompt chaining, agent orchestration, and the Claude
 platform surface.
@@ -80,7 +80,7 @@ platform surface.
 | **Prompt chaining** | `product-spec-chain` ⁺ |
 | **MCP** | `mcp-builder` · `mcp-deep-dive` · `evaluation-guide` |
 | **Claude platform** | `claude-api` · `models` · `error-codes` · `tool-use-concepts` · `python-deep-dive` · `typescript-deep-dive` |
-| **Agent tooling** | `web-artifacts-builder` · `memory-validation` |
+| **Agent tooling** | `web-artifacts-builder` · `memory-validation` · `desktop-llm-autonomy` ⁺ |
 
 ## `game_design` — 5 skills
 

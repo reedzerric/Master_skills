@@ -1,0 +1,7 @@
+# Local portable environment & browser binaries (too large for git)
+.venv/
+.browsers/
+__pycache__/
+*.pyc
+*.zip
+dist_bundle/

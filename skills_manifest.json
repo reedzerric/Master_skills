@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "generated": "2026-08-31",
+  "generated": "2026-09-04",
   "repository": "Master_skills",
   "categories": {
     "ai_infrastructure": [
@@ -9,6 +9,7 @@
       "agent-swarms-elite",
       "agentic-rag-elite",
       "claude-api",
+      "desktop-llm-autonomy",
       "error-codes",
       "evaluation-guide",
       "mcp-builder",
@@ -292,6 +293,49 @@
         "claude",
         "api",
         "sdk"
+      ],
+      "companions": []
+    },
+    {
+      "name": "desktop-llm-autonomy",
+      "path": "skills/infrastructure/desktop-llm-autonomy/SKILL.md",
+      "category": "ai_infrastructure",
+      "version": "1.0.0",
+      "description": "'Autonomous computer-use and desktop action harness for any LLM (OpenAI, Gemini, Anthropic, Ollama) on Windows and macOS. Combines Playwright/browser-use DOM navigation with PyAutoGUI OS-level vision-action loops, safety confirmation gates, coordinate validation, and multi-model dispatch. Use when the user asks to give an LLM autonomy to take actions, automate desktop tasks, navigate web applications, click/type on their behalf, or build an autonomous computer-use agent. For building pure MCP servers without GUI control, use mcp-builder instead.'",
+      "triggers": [
+        "enable llm computer use",
+        "desktop autonomy for llm",
+        "give agent autonomy to take action",
+        "automate desktop with llm",
+        "browser-use agent",
+        "multi-llm computer use",
+        "autonomous desktop agent",
+        "desktop actions on my behalf",
+        "claude cowork alternative"
+      ],
+      "dependencies": [
+        "mcp-builder"
+      ],
+      "inputs": [
+        "task goal",
+        "target application or web URL",
+        "model provider credentials or local endpoint"
+      ],
+      "outputs": [
+        "executed desktop/browser action",
+        "execution history log",
+        "screenshot trajectory",
+        "completion status"
+      ],
+      "tags": [
+        "agent",
+        "automation",
+        "computer-use",
+        "browser-use",
+        "pyautogui",
+        "desktop",
+        "autonomy",
+        "vision-action"
       ],
       "companions": []
     },
@@ -3775,6 +3819,12 @@
     "automate a web page with playwright": [
       "webapp-testing"
     ],
+    "automate desktop with llm": [
+      "desktop-llm-autonomy"
+    ],
+    "autonomous desktop agent": [
+      "desktop-llm-autonomy"
+    ],
     "autonomous pen testing": [
       "agentic-security-elite"
     ],
@@ -3816,6 +3866,9 @@
     ],
     "brief a subagent": [
       "agent-handoff-elite"
+    ],
+    "browser-use agent": [
+      "desktop-llm-autonomy"
     ],
     "brute force": [
       "django-auth-hardening"
@@ -3900,6 +3953,9 @@
     ],
     "claude api returned 429": [
       "error-codes"
+    ],
+    "claude cowork alternative": [
+      "desktop-llm-autonomy"
     ],
     "claude model": [
       "models"
@@ -4081,6 +4137,12 @@
     "design an api contract": [
       "api-contracts-elite"
     ],
+    "desktop actions on my behalf": [
+      "desktop-llm-autonomy"
+    ],
+    "desktop autonomy for llm": [
+      "desktop-llm-autonomy"
+    ],
     "diagnose": [
       "diagnosing-bugs"
     ],
@@ -4176,6 +4238,9 @@
     ],
     "edit ooxml directly": [
       "docx"
+    ],
+    "enable llm computer use": [
+      "desktop-llm-autonomy"
     ],
     "error budget exhausted": [
       "sre-incident-protocol"
@@ -4354,6 +4419,9 @@
     ],
     "github actions cache miss": [
       "github-actions-elite"
+    ],
+    "give agent autonomy to take action": [
+      "desktop-llm-autonomy"
     ],
     "graphite or ghstack": [
       "git-velocity-elite"
@@ -4642,6 +4710,9 @@
     ],
     "multi-format output": [
       "rag-content-generation"
+    ],
+    "multi-llm computer use": [
+      "desktop-llm-autonomy"
     ],
     "murder mystery": [
       "social-deduction-design"
