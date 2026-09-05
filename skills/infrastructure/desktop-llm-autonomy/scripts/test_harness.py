@@ -53,6 +53,49 @@ class TestSafetyGuardrails(unittest.TestCase):
         with self.assertRaises(SafetyViolation):
             self.guard.increment_step()  # Step 4 (exceeds max_steps=3)
 
+    def test_financial_domain_blocking(self):
+        # Blocked domains
+        with self.assertRaises(SafetyViolation):
+            self.guard.validate_url("https://www.chase.com/login")
+        with self.assertRaises(SafetyViolation):
+            self.guard.validate_url("https://paypal.com/signin")
+        with self.assertRaises(SafetyViolation):
+            self.guard.validate_url("https://app.1password.com")
+        
+        # Allowed benign domain
+        self.guard.validate_url("https://example.com/dashboard")
+
+    def test_password_field_protection(self):
+        with self.assertRaises(SafetyViolation):
+            self.guard.validate_input_element({"type": "password"})
+        with self.assertRaises(SafetyViolation):
+            self.guard.validate_input_element({"name": "current_password", "type": "text"})
+        
+        # Benign input
+        self.guard.validate_input_element({"type": "text", "name": "search_query"})
+
+    def test_unauthorized_email_sending_blocked(self):
+        # Default guard blocks email sending
+        with self.assertRaises(SafetyViolation):
+            self.guard.validate_email_transmission("https://mail.google.com/mail/u/0", "button:has-text('Send')")
+        with self.assertRaises(SafetyViolation):
+            self.guard.validate_email_transmission("https://outlook.office.com/mail", "click send")
+
+        # Non-mail domain is fine
+        self.guard.validate_email_transmission("https://github.com", "submit issue")
+
+        # Explicitly permitted guard allows send
+        perm_guard = SafetyGuard(screen_size=(1920, 1080), allow_email_send=True)
+        perm_guard.validate_email_transmission("https://mail.google.com/mail/u/0", "button:has-text('Send')")
+
+    def test_token_image_optimization(self):
+        from PIL import Image
+        big_img = Image.new("RGB", (1920, 1080), color=(100, 100, 100))
+        optimized = SafetyGuard.optimize_image_for_tokens(big_img, max_dim=1024)
+        self.assertLessEqual(max(optimized.size), 1024)
+        self.assertEqual(optimized.size[0], 1024)
+
+
 
 class TestDesktopEngine(unittest.TestCase):
     def test_screen_capture_and_dimensions(self):

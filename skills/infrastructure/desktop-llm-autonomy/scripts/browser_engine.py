@@ -41,6 +41,7 @@ class BrowserEngine:
     async def goto(self, url: str) -> Dict[str, Any]:
         """Navigate to URL and wait for DOM load."""
         self.guard.increment_step()
+        self.guard.validate_url(url)
         if not self._page:
             raise RuntimeError("Browser not started. Call start() first.")
         
@@ -58,18 +59,31 @@ class BrowserEngine:
         if not self._page:
             raise RuntimeError("Browser not started.")
         
+        current_url = self._page.url
+        self.guard.validate_email_transmission(current_url, selector)
+        
         element = self._page.locator(selector).first
         await element.click(timeout=10000)
         return True
 
     async def type_text(self, selector: str, text: str, press_enter: bool = False):
-        """Type text into input field matching selector."""
+        """Type text into input field matching selector with credential field protection."""
         self.guard.increment_step()
         self.guard.validate_text_input(text)
         if not self._page:
             raise RuntimeError("Browser not started.")
         
         element = self._page.locator(selector).first
+        try:
+            el_type = await element.get_attribute("type") or ""
+            el_name = await element.get_attribute("name") or ""
+            el_auto = await element.get_attribute("autocomplete") or ""
+            self.guard.validate_input_element({"type": el_type, "name": el_name, "autocomplete": el_auto})
+        except SafetyViolation:
+            raise
+        except Exception:
+            pass
+
         await element.fill(text, timeout=10000)
         if press_enter:
             await element.press("Enter")

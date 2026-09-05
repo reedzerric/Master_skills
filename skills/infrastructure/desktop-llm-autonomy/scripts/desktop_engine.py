@@ -167,8 +167,11 @@ class DesktopEngine:
         else:
             display_img = screenshot
 
+        # Token efficiency optimization: cap max dimension to 1024 to slash vision token spend
+        display_img = self.guard.optimize_image_for_tokens(display_img, max_dim=1024, quality=75)
+
         buffer = io.BytesIO()
-        display_img.save(buffer, format="JPEG", quality=85)
+        display_img.save(buffer, format="JPEG", quality=75)
         b64_data = base64.b64encode(buffer.getvalue()).decode("utf-8")
 
         return {
@@ -180,9 +183,24 @@ class DesktopEngine:
             "image": display_img,
         }
 
+    def get_active_window_title(self) -> str:
+        """Get the title of the current foreground window on Windows."""
+        try:
+            user32 = ctypes.windll.user32
+            hwnd = user32.GetForegroundWindow()
+            if hwnd:
+                length = user32.GetWindowTextLengthW(hwnd)
+                buf = ctypes.create_unicode_buffer(length + 1)
+                user32.GetWindowTextW(hwnd, buf, length + 1)
+                return buf.value
+        except Exception:
+            pass
+        return ""
+
     def click(self, x: int, y: int, button: str = "left", double: bool = False):
-        """Move to (x, y) and perform single or double click."""
+        """Move to (x, y) and perform single or double click with security checks."""
         self.guard.increment_step()
+        self.guard.check_app_target(self.get_active_window_title())
         valid_x, valid_y = self.guard.validate_coordinates(x, y)
         
         pyautogui.moveTo(valid_x, valid_y, duration=0.2)
@@ -194,6 +212,7 @@ class DesktopEngine:
     def type_text(self, text: str, press_enter: bool = False):
         """Type text into active input field with blocklist validation."""
         self.guard.increment_step()
+        self.guard.check_app_target(self.get_active_window_title())
         self.guard.validate_text_input(text)
         
         # PyAutoGUI write with small interval
@@ -202,13 +221,15 @@ class DesktopEngine:
             pyautogui.press("enter")
 
     def press_key(self, key_name: str):
-        """Press a keyboard key (e.g. 'enter', 'esc', 'tab', 'backspace')."""
+        """Press a keyboard key with security checks."""
         self.guard.increment_step()
+        self.guard.check_app_target(self.get_active_window_title())
         pyautogui.press(key_name)
 
     def hotkey(self, *keys: str):
-        """Trigger keyboard shortcut (e.g. 'ctrl', 'c' or 'win', 'r')."""
+        """Trigger keyboard shortcut with security checks."""
         self.guard.increment_step()
+        self.guard.check_app_target(self.get_active_window_title())
         pyautogui.hotkey(*keys)
 
     def drag(self, start_x: int, start_y: int, end_x: int, end_y: int, duration: float = 0.5):
